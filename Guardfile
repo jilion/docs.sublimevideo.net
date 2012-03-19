@@ -19,7 +19,7 @@ guard :pow do
   watch(%r{^config/initializers/.*\.rb$})
 end
 
-guard :rspec, cli: "--color -f doc" do
+guard :rspec, bundler: false, cli: "--color -f doc" do
   watch(%r{^spec/.+_spec\.rb$})
   watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
   watch('spec/spec_helper.rb')  { "spec" }
