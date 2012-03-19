@@ -1,3 +1,6 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery
+  caches_page :show, :index
+  before_filter { @page_caching = true }
+
+  # protect_from_forgery
 end

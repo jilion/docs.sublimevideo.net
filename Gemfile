@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 source 'https://gems.gemfury.com/8dezqz7z7HWea9vtaFwg/' # thibaud@jilion.com account
 
 gem 'rails', '3.2.2'
-gem 'sublimevideo_layout'
+# gem 'sublimevideo_layout' # hosted on gemfury
+gem 'sublimevideo_layout', path: '/Users/Thibaud/Codes/Jilion/Products/SublimeVideo/sublimevideo_layout'
 
 # Views
 gem 'haml'
@@ -11,7 +12,6 @@ gem 'coderay',       '~> 1.0.4'
 gem 'haml-coderay',  '~> 0.1.2'
 
 # Internals
-# gem 'dalli',         '~> 1.1.3'
 gem 'airbrake',      '~> 3.0.5'
 
 # Gems used only for assets and not required
@@ -24,7 +24,9 @@ end
 
 group :production do
   gem 'thin'
-  # gem 'rack-cache'
+  gem 'dalli'
+  gem 'rack-google-analytics', '~> 0.9.2', require: 'rack/google-analytics'
+  gem 'rack-cache'
 end
 
 group :staging, :production do
