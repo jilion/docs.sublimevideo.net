@@ -1,5 +1,5 @@
 class Release
-
+  extend ActiveModel::Naming
   attr_accessor :datetime, :content
 
   def initialize(attrs)
@@ -22,6 +22,18 @@ class Release
     content.to_str.split("\n").each do |line|
       line.sub!(%r{<span\s+class="label\s+[a-z]+">([a-z]+)</span>}) { "[#{$1.try(:upcase)}]" }
     end.join("\n")
+  end
+
+  # ===========
+  # = Caching =
+  # ===========
+
+  def updated_at
+    datetime
+  end
+
+  def cache_key
+    "release-#{datetime}"
   end
 
 end
