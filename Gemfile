@@ -19,25 +19,22 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.0'
   gem 'coffee-rails', '~> 3.2.0'
   gem 'uglifier'
+  gem 'asset_sync'
 end
 
 group :production do
   gem 'thin'
   gem 'dalli'
   gem 'rack-google-analytics', '~> 0.9.2', require: 'rack/google-analytics'
-  gem 'rack-cache'
 end
 
 group :staging, :production do
-  gem 'rpm_contrib', git: 'git://github.com/titanous/rpm_contrib.git', branch: 'mongoid-instrumentation'
   gem 'newrelic_rpm'
 end
 
 group :development, :test do
   gem 'rspec-rails'
-
   gem 'rack-livereload'
-  gem 'rails-dev-tweaks', '~> 0.6.0'
 end
 
 group :test do
