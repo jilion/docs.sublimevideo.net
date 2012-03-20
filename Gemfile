@@ -24,7 +24,6 @@ end
 
 group :production do
   gem 'thin'
-  gem 'memcachier'
   gem 'dalli'
   gem 'rack-google-analytics', '~> 0.9.2', require: 'rack/google-analytics'
 end
