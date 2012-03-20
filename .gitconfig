@@ -2,7 +2,6 @@
   name  = YOUR NAME
   email = YOUR EMAIL
 
-
 [core]
   repositoryformatversion = 0
   filemode                = true
@@ -10,21 +9,19 @@
   logallrefupdates        = true
   ignorecase              = true
 
-
 [heroku]
   remote = staging # change this to production if you know what you're doing
-
 
 [remote "origin"]
   url   = git@github.com:jilion/docs.sublimevideo.net.git
   fetch = +refs/heads/*:refs/remotes/origin/*
 
 [remote "staging"]
-  url   = git@heroku.com:docs-sublimevideo-staging.git
+  url   = git@heroku.com:sublimevideo-docs-staging.git
   fetch = +refs/heads/master:refs/remotes/staging/master
 
 [remote "production"]
-  url   = git@heroku.com:docs-sublimevideo.git
+  url   = git@heroku.com:sublimevideo-docs.git
   fetch = +refs/heads/master:refs/remotes/production/master
   push  = master:master
 
