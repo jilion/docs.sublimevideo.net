@@ -1,5 +1,4 @@
 class Release
-  extend ActiveModel::Naming
   attr_accessor :datetime, :content
 
   def initialize(attrs)
