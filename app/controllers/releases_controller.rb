@@ -4,8 +4,9 @@ class ReleasesController < ApplicationController
   def index
     @releases = Release.all.reverse
 
-    fresh_when(@releases.first, public: true)
-    respond_with(@releases)
+    if stale?(@releases.first, public: true)
+      respond_with(@releases)
+    end
   end
 
 end
