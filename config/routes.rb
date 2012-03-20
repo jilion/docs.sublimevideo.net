@@ -13,7 +13,7 @@ DocsSublimeVideo::Application.routes.draw do
 
   resources :releases, only: :index
 
-  get '/:page' => 'pages#show', as: :page, constraints: DocsPages, format: false
+  get '/*page' => 'pages#show', as: :page, constraints: DocsPages, format: false
 
   root to: redirect('/quickstart-guide')
 end
