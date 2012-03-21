@@ -1,3 +1,4 @@
+require 'fast_spec_helper'
 require File.expand_path('app/models/release')
 require 'active_support/core_ext/string'
 require 'RedCloth'
