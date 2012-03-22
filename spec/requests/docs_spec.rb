@@ -3,7 +3,7 @@ require 'spec_helper'
 
 feature "encode-videos-for-the-web" do
   it "should contain text" do
-    go 'docs', 'encode-videos-for-the-web'
+    visit '/encode-videos-for-the-web'
 
     current_url.should eq "http://docs.sublimevideo.dev/encode-videos-for-the-web"
     # first line
@@ -15,7 +15,7 @@ end
 
 feature "faq" do
   it "should contain text" do
-    go 'docs', 'faq'
+    visit '/faq'
 
     current_url.should eq "http://docs.sublimevideo.dev/faq"
   end
@@ -23,7 +23,7 @@ end
 
 feature "javascript-api" do
   it "should contain text" do
-    go 'docs', 'javascript-api'
+    visit '/javascript-api'
 
     current_url.should eq "http://docs.sublimevideo.dev/javascript-api/usage"
     # title
@@ -35,7 +35,7 @@ end
 
 feature "put-video-in-a-floating-lightbox" do
   it "should contain text" do
-    go 'docs', 'put-video-in-a-floating-lightbox'
+    visit '/put-video-in-a-floating-lightbox'
 
     current_url.should eq "http://docs.sublimevideo.dev/put-video-in-a-floating-lightbox"
     # 1st paragraph: first line
@@ -55,7 +55,7 @@ end
 
 feature "quickstart-guide" do
   it "should contain text" do
-    go 'docs', 'quickstart-guide'
+    visit '/quickstart-guide'
 
     current_url.should eq "http://docs.sublimevideo.dev/quickstart-guide"
     # 1st paragraph: first line
@@ -73,7 +73,7 @@ end
 
 feature "supported-browsers-and-platforms" do
   it "should contain text" do
-    go 'docs', 'supported-browsers-and-platforms'
+    visit '/supported-browsers-and-platforms'
 
     current_url.should eq "http://docs.sublimevideo.dev/supported-browsers-and-platforms"
     # first line
@@ -85,7 +85,7 @@ end
 
 feature "troubleshooting" do
   it "should contain text" do
-    go 'docs', 'troubleshooting'
+    visit '/troubleshooting'
 
     current_url.should eq "http://docs.sublimevideo.dev/troubleshooting"
     # 1st paragraph: first line
@@ -97,7 +97,7 @@ end
 
 feature "releases" do
   it "should be accessible" do
-    go 'docs', 'releases'
+    visit '/releases'
 
     current_url.should eq "http://docs.sublimevideo.dev/releases"
   end
@@ -105,7 +105,7 @@ end
 
 feature "write-proper-video-elements" do
   it "should contain text" do
-    go 'docs', 'write-proper-video-elements'
+    visit '/write-proper-video-elements'
 
     current_url.should eq "http://docs.sublimevideo.dev/write-proper-video-elements"
     # 1st paragraph: first line
