@@ -3,12 +3,10 @@ class PagesController < ApplicationController
   def show
     @body_class = params[:page]
 
-    if stale?(etag: page_md5, last_modified: page_file.mtime, public: true)
-      render "pages/#{params[:page]}"
-    end
+    render "pages/#{params[:page]}" if stale?(etag: page_md5, last_modified: page_file.mtime, public: true)
   end
 
-private
+  private
 
   def page_md5
     Digest::SHA1.file(page_file).to_s
