@@ -29,6 +29,7 @@ group :production do
 end
 
 group :staging, :production do
+  gem 'rack-ssl-enforcer'
   gem 'newrelic_rpm'
 end
 
