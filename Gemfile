@@ -23,12 +23,12 @@ group :assets do
 end
 
 group :production do
-  gem 'thin'
-  gem 'dalli'
   gem 'rack-google-analytics', '~> 0.9.2', require: 'rack/google-analytics'
 end
 
 group :staging, :production do
+  gem 'thin'
+  gem 'dalli'
   gem 'rack-cache'
   gem 'rack-ssl-enforcer'
   gem 'newrelic_rpm'
