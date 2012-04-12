@@ -36,9 +36,9 @@
   h4. The &lt;video&gt; attributes
 
   *Line 1.*
-  
+
   * SublimeVideo only operates on @<video>@ elements that have the "_sublime_" @class@, unless you use our "JavaScript API":/javascript-api to prepare your @<video>@s.
-  * %(red)We highly recommend that you to provide the proper @width@ and @height@ attributes in order to be sure the *proportions* of the original video are maintained%. These values don't necessarily have to match the width and height of the original video: you can use smaller values to scale down the video, but be sure the proportions are maintained. Otherwise your video will appear with black bars above/below it or on the sides (a.k.a _letterboxed_ or _pillarboxed_).
+  * %(red)We highly recommend that you to provide the proper @width@ and @height@ attributes in order to be sure the *proportions* of the original video are maintained%. These values don't necessarily have to match the width and height of the original video: you can use smaller values to scale down the video, but be sure the proportions are maintained. Otherwise your video will appear with a letterboxed/pillarboxed player (black bars around the video).
   _Example_: if the resolution of the original video is 1280x720, you could use @width="640" height="360"@ or @width="800" height="450"@ to have the video properly scaled down with its original proportions maintained.
   * We recommend you always specify a poster frame. It's the image displayed behind the initial play button. It represents the video until the user starts playing it.
   * The @preload="none"@ attribute allows you to save bandwidth by avoiding to start preloading (buffering) the video when the page is loaded. It is supported by most modern browsers (Safari 5, Chrome 6, Firefox 4 and Opera 10.6) . We recommend you always specify this attribute otherwise your videos might start preloading in the background even if the user never clicked the initial play button.
