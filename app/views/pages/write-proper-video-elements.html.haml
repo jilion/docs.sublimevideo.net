@@ -1,3 +1,8 @@
+= content_for :javascript do
+  = sublimevideo_include_tag(request.ssl?, :docs).html_safe
+  :javascript
+    jQuery(document).ready(function(){sublimevideo.load();});
+
 - @page_title = "Write proper video elements"
 
 %h2= "Write proper <video> elements"
