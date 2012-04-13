@@ -1,8 +1,3 @@
-= content_for :javascript do
-  = sublimevideo_include_tag(request.ssl?, :docs).html_safe
-  :javascript
-    jQuery(document).ready(function(){sublimevideo.load();});
-
 - @page_title = "Write proper video elements"
 
 %h2= "Write proper <video> elements"
@@ -13,11 +8,13 @@
 
   h3. Automatically configuring your &lt;video&gt; elements
 
-  You can use our #{link_to "Video Code Generator", my_url('video-code-generator')} to create @<video>@ elements for your site that are optimized for SublimeVideo. This is the easiest way to properly configure your @<video>@ code.
+  SublimeVideo's #{link_to "Video Code Generator", my_url('video-code-generator')} lets you easily create properly configured @<video>@ elements that are automatically optimized for SublimeVideo.
 
-  h3. Manually configuring your &lt;video&gt; elements
+  The Video Code Generator includes some powerful features to assist you in resolving common problems you may face when creating your own @<video>@ elements and helps you set up video attributes to optimize your videos for SublimeVideo's "Universal, Real-Time Statistics platform":/real-time-stats. Learn more on "this page":video-code-generator.
 
   If you want to manually create your @<video>@ elements yourself or simply better understand the code, please read on.
+
+  h3. Manually configuring your &lt;video&gt; elements
 
   There's no need to worry about browsers that don't support HTML5 (like Internet Explorer 6, 7, 8), and no need to add extra markup code for the Flash fallback. You just need to write a simple @<video>@ element for each video you want to embed and SublimeVideo will take care of the rest.
 

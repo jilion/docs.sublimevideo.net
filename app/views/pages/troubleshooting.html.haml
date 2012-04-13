@@ -1,3 +1,8 @@
+= content_for :javascript do
+  = sublimevideo_include_tag(request.ssl?, :docs).html_safe
+  :javascript
+    jQuery(document).ready(function(){sublimevideo.load();});
+
 - @page_title = "Troubleshooting"
 
 %h2= @page_title
@@ -5,7 +10,7 @@
 :textile
   h3(#videos-dont-start-playing). "Videos don't start playing":#videos-dont-start-playing
 
-  The most common cause of this problem is MIME types misconfiguration in your web server. While most web servers are already configured to serve _.mp4_ files with the proper MIME type, they are often not configured to properly serve _.ogv_ and _.webm_ files.
+  The most common cause of this problem is a MIME types (a.k.a Content-types) misconfiguration in your web server. While most web servers are already configured to serve _.mp4_ files with the proper MIME type, they are often not configured to properly serve _.ogv_ and _.webm_ files.
 
   Here is how MIME types should be configured in your web server:
 
@@ -15,14 +20,29 @@
   |.ogv|video/ogg|
   |.webm|video/webm|
 
-  h4. Videos served by Apache
+  h4. Check your MIME types
 
-  Please read "this article":http://diveintohtml5.info/video.html#video-mime-types to learn more about how to configure the Apache web server.
+  You can use our #{link_to "Video Code Generator", my_url('video-code-generator')} to check if your video assets are served with a correct MIME type. If the generator reports MIME Type errors (#{link_to('see an example', asset_path('video-code-generator/incorrect_mime_types.png'), class: 'sublime zoom')}), the following sections will help you correct this issue.
 
-  h4. Videos served by Amazon S3
+  h4. Configure MIME types for videos served by Apache
+
+  You can use an @AddType@ directive in your site-wide @httpd.conf@ or in an @.htaccess@ file in the directory where you store your video files.
+
+:coderay
+  #{coderay_options(:apache)}
+  AddType video/mp4 .mp4 .m4v
+  AddType video/webm .webm
+  AddType video/ogg .ogv
+
+:textile
+  Please read "this article":http://diveintohtml5.info/video.html#video-mime-types for more information.
+
+  h4. Configure MIME types for videos served by Amazon S3
 
   If your are using Amazon S3 to host Ogg and WebM videos, you might want to check that the proper MIME types are set when uploading the video files.
   For MP4 videos this shouldn't be necessary (as the proper MIME type is already set by default).
+
+  Please read "this thread":https://getsatisfaction.com/sublimevideo/topics/cannot_get_amazon_s3_video_hosting_to_work in our Community forum for more information.
 
   h3(#videos-dont-play-on-the-iphone-or-other-mobile-devices). "Videos don't play on the iPhone or other mobile devices":#videos-dont-play-on-the-iphone-or-other-mobile-devices
 

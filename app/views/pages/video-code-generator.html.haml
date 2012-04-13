@@ -1,0 +1,47 @@
+= content_for :javascript do
+  = sublimevideo_include_tag(request.ssl?, :docs).html_safe
+  :javascript
+    jQuery(document).ready(function(){sublimevideo.load();});
+
+- @page_title = "Video Code Generator"
+
+%h2= @page_title
+
+:textile
+  SublimeVideo's #{link_to "Video Code Generator", my_url('video-code-generator')} lets you easily create properly configured @<video>@ elements that are automatically optimized for SublimeVideo.
+
+  h3(#usage). "Using the Video Code Generator":#usage
+
+  To use the Code Generator, simply select the type of player implementation you need (Standard, Lightbox or Iframe Embed) and enter the URLs of your video assets. The live preview shows you exactly how your video will look in SublimeVideo Player. 
+
+  Existing users just need to copy the generated code and paste it into the page(s) on their site where they want to add video. Non-registered users who like what they see can quickly sign up for one of our #{link_to "free or paid plans", layout_url('plans')} and add SublimeVideo to their site in minutes.
+
+  h3(#under-the-hood). "Under the hood":#under-the-hood
+
+  SublimeVideo's Video Code Generator includes some powerful features to assist you in resolving common problems you may face when creating your own @<video>@ elements:
+
+  h4(#incorrectly-configured-mime-types). "1. Incorrectly configured MIME Types":#incorrectly-configured-mime-types
+
+  If a source is hosted and served with the incorrect MIME Type, the video simply won't play. The Video Code Generator automatically detects the video source's MIME Type and informs you if your web server needs to be reconfigured.
+
+  #{link_to(image_tag('video-code-generator/incorrect_mime_types.png', width: 640, class: 'screenshot', title: 'Incorrect MIME Types'), asset_path('video-code-generator/incorrect_mime_types.png'), class: 'sublime zoom')}
+
+  h4(#incorrectly-configured-video-elements). "2. Incorrectly configured &lt;video&gt; elements":#incorrectly-configured-video-elements
+
+  #{link_to(image_tag('video-code-generator/settings.png', class: 'screenshot', style: 'float:left; margin:20px 20px 0 0', width: 213, title: 'Settings'), asset_path('video-code-generator/settings.png'), class: 'sublime zoom', style: 'display:block')}
+
+  A common example of a @<video>@ element being configured incorrectly would be when its width or height values don’t retain the source’s aspect ratio, resulting in a letterboxed/pillarboxed player (black bars around the video). The Video Code Generator detects the original size and aspect ratio of the source file(s) and automatically provides the user with correctly proportioned width and height values. It also fixes other common configuration issues including incorrect ordering of the @<source>@ elements.
+
+  h4(#malformed-video-code). "3. Malformed &lt;video&gt; code":#malformed-video-code
+
+  It's common to see the @<video>@ code formatted incorrectly. For example, being split across multiple lines or missing small elements of the code itself.
+
+  The Video Code Generator always generates properly formatted @<video>@ elements, so you no longer have to worry about formatting details.
+
+  h3(#optimized-for-sublimevideo). "Optimized for SublimeVideo":#optimized-for-sublimevideo
+
+  In addition to helping you resolve these issues, the Video Code Generator also helps you set up SublimeVideo-specific features such as "Lightboxes":/put-video-in-a-floating-lightbox, "HD Switching":/hd-switching, "Embeds":/embeds and video metadata to optimize your videos for SublimeVideo's "Universal, Real-Time Statistics platform":/real-time-stats.
+
+  <div class="breakline" style="margin:30px 0 25px"></div>
+
+  Please share your comments and suggestions about how you think we can improve our Video Code Generator on the "SublimeVideo Community Forum":http://getsatisfaction.com/sublimevideo.
