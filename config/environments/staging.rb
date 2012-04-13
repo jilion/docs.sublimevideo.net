@@ -1,9 +1,9 @@
 DocsSublimeVideo::Application.configure do
   # Settings specified here will take precedence over those in config/environment.rb
-  config.middleware.insert_after Rack::Lock, "::Rack::Auth::Basic", "Staging" do |u, p|
+  config.middleware.insert_before Rack::Cache, Rack::SslEnforcer, except_hosts: 'docs.sublimevideo-staging.net', strict: true
+  config.middleware.insert_after Rack::SslEnforcer, Rack::Auth::Basic, "Staging" do |u, p|
     [u, p] == ['jilion', ENV['PRIVATE_CODE']]
   end
-  config.middleware.insert_before Rack::Cache, Rack::SslEnforcer, except_hosts: 'docs.sublimevideo-staging.net', strict: true
 
   # The production environment is meant for finished, "live" apps.
   # Code is not reloaded between requests

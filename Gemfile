@@ -60,4 +60,3 @@ group :tools do
   gem 'guard-livereload'
   gem 'guard-rspec'
 end
-
