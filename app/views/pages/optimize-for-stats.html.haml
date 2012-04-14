@@ -22,8 +22,8 @@
     <source src="http://yoursite.com/some-great-landscapes.mp4" />
     <source src="http://yoursite.com/some-great-landscapes.webm" />
   </video>
-
 :textile
+
   Although this id can be any string, we recommend that you use small strings (between 4 and 20 characters, probably depending on the number of videos you have).
 
   Note that if you plan to use video statistics extensively, we recommend that you always set the @data-uid@ attribute to all of your @<video>@ elements.
@@ -40,10 +40,18 @@
     <source src="http://yoursite.com/some-great-landscapes.mp4" />
     <source src="http://yoursite.com/some-great-landscapes.webm" />
   </video>
-
 :textile
-  Your video will appear (along with a small thumbnail of its poster frame) with the name _"Some great landscapes"_.
 
-  However if you'd like to customize the title that appears in your statistics page, you can then add a @data-name@ attribute to your @<video>@. The attribute content will replace the default title we use in your statistics page.
+  Your video will appear (along with a small thumbnail of its poster frame) with the name "Some great landscapes".
+
+  However if you'd like to customize the title that appears in your statistics page, you can then add a @data-name@ attribute to your @<video>@. The attribute content will replace the default title we use in your statistics page. Here is an example:
+
+:coderay
+  #{coderay_options(:html)}
+  <video class="sublime" poster="some-great-landscapes.jpg" data-name="My great landscapes">
+    <source src="http://yoursite.com/some-great-landscapes.mp4" />
+    <source src="http://yoursite.com/some-great-landscapes.webm" />
+  </video>
+:textile
 
   *Note*: You can update the @data-name@ as often as you’d like. Such changes will be reflected in the statistics page in near real-time.

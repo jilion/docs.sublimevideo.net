@@ -27,9 +27,10 @@
   </body>
 
 :textile
-  Important information:
-  * Replace _YOUR_TOKEN_ with your actual site's token (you can find it in the #{link_to content_tag(:em, '"My sites"'), my_url('sites')} page after clicking the "embed code" button).
-  * %(red)Add the _"sv_iframe_embed"_ @class@ to your @<video>@ element and *omit its @width@ and @height@ attributes*.%
+  *Important information:*
+
+  * Replace _YOUR_TOKEN_ with your actual site's token (you can find it in the _#{link_to "My Sites", my_url('sites')}_ page after clicking the "embed code" button).
+  * %(red)Add the _sv_iframe_embed_ @class@ to your @<video>@ element and *omit its @width@ and @height@ attributes*.%
   * @style="display:none"@ is optional, but we recommend it to prevent UI flickering when the iframe is first loaded.
   * Host this file on a domain that is registered on #{link_to "MySublimeVideo", my_url('sites')}. For instance, if your registered domain is _yourdomain.com_, you could save this page at _http://yourdomain.com/embeds/video1.html_.
 
@@ -38,14 +39,11 @@
   Here is the sharable snippet of code that your audience can copy and paste into another site.
 
   <div class="code">
-
-  <pre>
-  <iframe src="http://yourdomain.com/embeds/video1.html" width="400" height="168" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>
-  </pre>
-
+  <pre><iframe src="http://yourdomain.com/embeds/video1.html" width="400" height="168" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></pre>
   </div>
 
-:textile
+  *Important information:*
+
   * Replace _http://yourdomain.com/embeds/video1.html_ with the actual address of your HTML page.
   * Set the @width@ and @height@ attributes according to your actual video dimensions.
   * Leave the other attributes as they are (@frameborder@, @allowfullscreen@, @webkitallowfullscreen@ and @mozallowfullscreen@).
