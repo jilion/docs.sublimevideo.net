@@ -11,8 +11,7 @@
 
   h3(#data-uid). "The _data-uid_ attribute":#data-uid
 
-  Although the default behavior should be totally fine if you never modify your @<source />@ elements, this will cause a problem if you do.
-  In fact, the @<source />@ modification will make the video appear as a new video in your statistics page since we use the first @<source />@ to track a video.
+  If your video doesn't have a @data-uid@ and you modify its first @<source />@'s @src@ attribute, the video will appear as a new video on your statistics page (we use the first @<source />@ to track a video).
 
   To avoid this, you can set a unique id to your @<video>@ element by adding a @data-uid@ attribute to it. Your video will then be identified by this unique id instead of by its first @<source />@. Here is an example:
 
@@ -26,7 +25,7 @@
 
   Although this id can be any string, we recommend that you use small strings (between 4 and 20 characters, probably depending on the number of videos you have).
 
-  Note that if you plan to use video statistics extensively, we recommend that you always set the @data-uid@ attribute to all of your @<video>@ elements.
+  *Note that if you plan to use video statistics extensively, we recommend that you always set the @data-uid@ attribute to all of your @<video>@ elements.*
 
   h3(#data-name). "The _data-name_ attribute":#data-name
 
