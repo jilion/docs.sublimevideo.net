@@ -3,20 +3,20 @@
 %h2= @page_title
 
 :textile
-  SublimeVideo's integrated lightbox offers you another great way to present your videos.
+  SublimeVideo's integrated lightbox displays your videos in a floating player.
 
   While it is possible to integrate SublimeVideo with other lightbox libraries (you'll need to use our "JavaScript API":/javascript-api for this), we highly recommend using SublimeVideo's integrated capabilities described here to get the easiest and best possible lightbox integration for your videos.
 
   Here is the HTML code needed to obtain the lightbox effect:
 
 :coderay
-  #{coderay_options(:html, line_numbers: :inline, line_number_anchors: 'basic', bold_every: false)}
-   <a class="sublime" href="http://yoursite.com/video-mobile.mp4">
-     <img src="http://yoursite.com/video-thumb.jpg" alt="" />
-   </a>
-   <video style="display:none" class="sublime zoom" width="640" height="360" poster="http://yoursite.com/video-poster.jpg" preload="none">
-      <source src="http://yoursite.com/video.mp4" />
-      <source src="http://yoursite.com/video.webm" />
+  #{coderay_options(:html, line_numbers: :inline)}
+  <a class="sublime" href="http://yoursite.com/video-mobile.mp4">
+    <img src="http://yoursite.com/video-thumb.jpg" alt="" />
+  </a>
+  <video style="display:none" class="sublime lightbox" width="640" height="360" poster="http://yoursite.com/video-poster.jpg" preload="none">
+    <source src="http://yoursite.com/video.mp4" />
+    <source src="http://yoursite.com/video.webm" />
   </video>
 :textile
 
@@ -25,7 +25,7 @@
   * The @<a>@ element *must* be present and adjacent to the @<video>@ element in order for the lightbox effect to work properly.
   * Please be sure there is no HTML element (even a @<br />@) between the @<a>@ and the @<video>@.
 
-  *Notes*
+  *Other notes:*
 
   The first 3 lines represent the "clickable thumbnail":
 
@@ -39,7 +39,7 @@
   *Line 4.*
 
   * It needs to be initially hidden.
-  * It needs the _zoom_ @class@ (in addition to the _sublime_ @class@).
+  * It needs the _lightbox_ @class@ (in addition to the _sublime_ @class@).
 
   h3(#magnifying-glass). "Optional: Add a magnifying glass icon over the thumbnail":#magnifying-glass
 
@@ -48,17 +48,17 @@
   h4. HTML Code
 
 :coderay
-  #{coderay_options(:html, line_numbers: :inline, line_number_anchors: 'advanced', bold_every: false)}
+  #{coderay_options(:html, line_numbers: :inline)}
   <a class="sublime zoomable" href="http://yoursite.com/video-mobile.mp4">
     <img src="http://yoursite.com/video-thumb.jpg" alt="" />
     <span class="zoom_icon"></span>
   </a>
-  <video style="display:none" class="sublime zoom" width="640" height="360" poster="http://yoursite.com/video-poster.jpg" preload="none">
+  <video style="display:none" class="sublime lightbox" width="640" height="360" poster="http://yoursite.com/video-poster.jpg" preload="none">
     <source src="http://yoursite.com/video.mp4" />
     <source src="http://yoursite.com/video.webm" />
   </video>
 :textile
-  Additional code is composed of the _zoomable_ @class@ ("line 1":#advanced1) and a @<span>@ element ("line 3":#advanced3).
+  Additional code is composed of the _zoomable_ @class@ (line 1) and a @<span>@ element (line 3).
 
 :textile
   h4. CSS Code
@@ -94,9 +94,7 @@
   a.zoomable:hover span.zoom_icon {opacity:1}
 
 :textile
-  **Notes**
-
-  The icon can be found "here":http://f.cl.ly/items/3C1V2w2r36360V3c1b3x/sv_zoom_icon.png.
+  *Note:* The icon can be found "here":http://f.cl.ly/items/3C1V2w2r36360V3c1b3x/sv_zoom_icon.png.
 
   h3(#demo). "Demo":#demo
 

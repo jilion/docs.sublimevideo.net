@@ -7,7 +7,7 @@
 .CodeRay pre {
   width:800px;
   overflow:auto;
-  color: #496594;
+  color:#496594;
 }
 
 .CodeRay pre::-webkit-scrollbar {

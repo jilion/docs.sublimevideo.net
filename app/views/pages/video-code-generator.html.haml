@@ -24,11 +24,11 @@
 
   If a source is hosted and served with the incorrect MIME Type, the video simply won't play. The Video Code Generator automatically detects the video source's MIME Type and informs you if your web server needs to be reconfigured.
 
-  #{link_to(image_tag('video-code-generator/incorrect_mime_types.png', width: 640, class: 'screenshot', title: 'Incorrect MIME Types'), asset_path('video-code-generator/incorrect_mime_types.png'), class: 'sublime zoom')}
+  #{link_to(image_tag('video-code-generator/incorrect_mime_types.png', width: 640, class: 'screenshot', title: 'Incorrect MIME Types'), asset_path('video-code-generator/incorrect_mime_types.png'), class: 'sublime lightbox')}
 
   h4(#incorrectly-configured-video-elements). "2. Incorrectly configured &lt;video&gt; elements":#incorrectly-configured-video-elements
 
-  #{link_to(image_tag('video-code-generator/settings.png', class: 'screenshot', style: 'float:left; margin:20px 20px 0 0', width: 213, title: 'Settings'), asset_path('video-code-generator/settings.png'), class: 'sublime zoom', style: 'display:block')}
+  #{link_to(image_tag('video-code-generator/settings.png', class: 'screenshot', style: 'float:left; margin:20px 20px 0 0', width: 213, title: 'Settings'), asset_path('video-code-generator/settings.png'), class: 'sublime lightbox', style: 'display:block')}
 
   A common example of a @<video>@ element being configured incorrectly would be when its width or height values don’t retain the source’s aspect ratio, resulting in a letterboxed/pillarboxed player (black bars around the video). The Video Code Generator detects the original size and aspect ratio of the source file(s) and automatically provides the user with correctly proportioned width and height values. It also fixes other common configuration issues including incorrect ordering of the @<source>@ elements.
 
@@ -40,7 +40,7 @@
 
   h3(#optimized-for-sublimevideo). "Optimized for SublimeVideo":#optimized-for-sublimevideo
 
-  In addition to helping you resolve these issues, the Video Code Generator also helps you set up SublimeVideo-specific features such as "Lightboxes":/put-video-in-a-floating-lightbox, "HD Switching":/hd-switching, "Embeds":/embeds and video metadata to optimize your videos for SublimeVideo's "Universal, Real-Time Statistics platform":/real-time-stats.
+  In addition to helping you resolve these issues, the Video Code Generator also helps you set up SublimeVideo-specific features such as "Lightboxes":/lightbox, "HD Switching":/hd-switching, "Embeds":/embeds and video metadata to optimize your videos for SublimeVideo's "Universal, Real-Time Statistics platform":/real-time-stats.
 
   <div class="breakline" style="margin:30px 0 25px"></div>
 
