@@ -1,0 +1,1 @@
+* <span class="label new">new</span> Added support for the _lightbox_ class on @<video>@ elements that use the "lightbox effect":http://docs.sublimevideo.net/lightbox. The _zoom_ class is now deprecated and should be replaced by the _lightbox_ class.
