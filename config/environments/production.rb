@@ -1,7 +1,7 @@
 DocsSublimeVideo::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
-  config.middleware.use Rack::GoogleAnalytics, tracker: 'UA-10280941-8'
-  config.middleware.insert_before Rack::Lock, Rack::SslEnforcer, :except_hosts => 'docs.sublimevideo.net', :strict => true
+  config.middleware.insert_before Rack::Cache, Rack::GoogleAnalytics, tracker: 'UA-10280941-8'
+  config.middleware.insert_before Rack::Cache, Rack::SslEnforcer, except_hosts: 'docs.sublimevideo.net', strict: true
 
   # Code is not reloaded between requests
   config.cache_classes = true
@@ -46,6 +46,12 @@ DocsSublimeVideo::Application.configure do
 
   # Use a different cache store in production
   config.cache_store = :dalli_store
+  # https://devcenter.heroku.com/articles/rack-cache-memcached-static-assets-rails31
+  config.action_dispatch.rack_cache = {
+    :metastore    => Dalli::Client.new,
+    :entitystore  => 'file:tmp/cache/rack/body',
+    :allow_reload => false
+  }
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server
   config.action_controller.asset_host = "http://d1p69vb2iuddhr.cloudfront.net"

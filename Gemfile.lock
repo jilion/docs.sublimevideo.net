@@ -241,6 +241,7 @@ DEPENDENCIES
   newrelic_rpm
   powder
   pry
+  rack-cache
   rack-google-analytics (~> 0.9.2)
   rack-livereload
   rack-ssl-enforcer
