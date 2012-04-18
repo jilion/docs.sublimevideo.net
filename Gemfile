@@ -37,6 +37,8 @@ end
 group :development, :test do
   gem 'rspec-rails'
   gem 'rack-livereload'
+  gem 'quiet_assets'
+  gem 'silent-postgres'
 end
 
 group :test do
