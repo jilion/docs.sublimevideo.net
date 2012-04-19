@@ -8,12 +8,7 @@ class DocsPages
 end
 
 DocsSublimeVideo::Application.routes.draw do
-  # Conflict with Rack::Cache, moved to RootRedirect middleware
-  # root to: redirect('/quickstart-guide')
-
-  # Deprecated routes
-  %w[javascript-api js-api].each { |r| get r => redirect('/javascript-api/usage') }
-  get 'put-video-in-a-floating-lightbox' => redirect('/lightbox')
+  # Please also check Rack::Redirect middleware in lib/rack
 
   resources :releases, only: :index
   get '/*page' => 'pages#show', as: :page, constraints: DocsPages, format: false
