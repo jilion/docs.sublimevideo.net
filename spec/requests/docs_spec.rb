@@ -18,6 +18,13 @@ feature 'redirect legacy routes' do
   end
 end
 
+feature "root redirect to /quickstart-guide" do
+  it "redirect" do
+    visit '/'
+    current_url.should eq "http://docs.sublimevideo.dev/quickstart-guide"
+  end
+end
+
 feature "encode-videos-for-the-web" do
   it "is viewable" do
     visit '/encode-videos-for-the-web'

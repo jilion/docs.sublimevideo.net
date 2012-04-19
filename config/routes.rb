@@ -8,7 +8,8 @@ class DocsPages
 end
 
 DocsSublimeVideo::Application.routes.draw do
-  root to: redirect('/quickstart-guide')
+  # Conflict with Rack::Cache, moved to RootRedirect middleware
+  # root to: redirect('/quickstart-guide')
 
   # Deprecated routes
   %w[javascript-api js-api].each { |r| get r => redirect('/javascript-api/usage') }
