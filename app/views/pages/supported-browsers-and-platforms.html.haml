@@ -117,7 +117,7 @@
     %td.notes
   %tr
     %td.platform.empty
-    %td.browser= "Firefox 4-9"
+    %td.browser= "Firefox ≥ 4"
     %td.html5.yes
       %table.formats
         %tr
@@ -170,7 +170,7 @@
     %td.notes
   %tr.alt
     %td.platform.empty
-    %td.browser= "Chrome 6-16"
+    %td.browser= "Chrome ≥ 6"
     %td.html5.yes
       %table.formats
         %tr
@@ -223,7 +223,7 @@
     %td.notes
   %tr
     %td.platform.empty
-    %td.browser= "Opera 10.6, 11, 12"
+    %td.browser= "Opera ≥ 10.6"
     %td.html5.yes
       %table.formats
         %tr
@@ -243,7 +243,7 @@
     %td.notes
   %tr.alt
     %td.platform.empty
-    %td.browser= "Safari 3.1, 4, 5"
+    %td.browser= "Safari ≥ 3.1"
     %td.html5.yes
       %table.formats
         %tr
@@ -277,7 +277,7 @@
     %td.notes
   %tr.alt
     %td.platform.empty
-    %td.browser= "Safari 3.1, 4, 5"
+    %td.browser= "Safari ≥ 3.1"
     %td.html5.yes
       %table.formats
         %tr
@@ -330,7 +330,7 @@
     %td.notes
   %tr
     %td.platform.empty
-    %td.browser= "Firefox 4-9"
+    %td.browser= "Firefox ≥ 4"
     %td.html5.yes
       %table.formats
         %tr
@@ -383,7 +383,7 @@
     %td.notes
   %tr.alt
     %td.platform.empty
-    %td.browser= "Chrome 6-16"
+    %td.browser= "Chrome ≥ 6"
     %td.html5.yes
       %table.formats
         %tr
@@ -436,7 +436,7 @@
     %td.notes
   %tr
     %td.platform.empty
-    %td.browser= "Opera 10.6, 11, 12"
+    %td.browser= "Opera ≥ 10.6"
     %td.html5.yes
       %table.formats
         %tr
@@ -490,7 +490,7 @@
     %td.notes
   %tr.alt
     %td.platform.empty
-    %td.browser= "Firefox 4-9"
+    %td.browser= "Firefox ≥ 4"
     %td.html5.yes
       %table.formats
         %tr
@@ -543,7 +543,7 @@
     %td.notes
   %tr
     %td.platform.empty
-    %td.browser= "Chrome 6-16"
+    %td.browser= "Chrome ≥ 6"
     %td.html5.yes
       %table.formats
         %tr
@@ -596,7 +596,7 @@
     %td.notes
   %tr.alt
     %td.platform.empty
-    %td.browser= "Opera 10.6, 11, 12"
+    %td.browser= "Opera ≥ 10.6"
     %td.html5.yes
       %table.formats
         %tr
@@ -629,7 +629,7 @@
     %td.notes
   %tr.alt
     %td.platform.empty
-    %td.browser= "Konqueror 4.4+"
+    %td.browser= "Konqueror ≥ 4.4"
     %td.html5.yes
       %table.formats
         %tr
@@ -650,7 +650,7 @@
   %tr
     %td.platform
       %strong= "iOS"
-    %td.browser= "iPhone 3, 4, 5"
+    %td.browser= "iPhone ≥ 3"
     %td.html5.yes
       %table.formats
         %tr
@@ -665,7 +665,7 @@
     %td.notes= "Previous versions (v1, v2) didn't support HTML5 video and are now deprecated (any iPhone model can be freely upgraded to OS 3)"
   %tr.alt
     %td.platform.empty
-    %td.browser= "iPad 3.2, 4, 5"
+    %td.browser= "iPad ≥ 3.2"
     %td.html5.yes
       %table.formats
         %tr
@@ -681,7 +681,7 @@
   %tr
     %td.platform
       %strong= "Android"
-    %td.browser= "Android 2.1, 2.2, 3"
+    %td.browser= "Android ≥ 2.1"
     %td.html5.yes
       %table.formats
         %tr
@@ -697,7 +697,10 @@
   %tr.alt
     %td.platform
       %strong= "Windows Phone"
-    %td.browser= "Windows Phone 7"
+    %td.browser
+      = "Windows"
+      %br
+      = "Phone ≥ 7"
     %td.html5.yes
       %table.formats
         %tr
@@ -713,7 +716,7 @@
   %tr
     %td.platform
       %strong= "BlackBerry"
-    %td.browser= "BlackBerry 6, 7"
+    %td.browser= "BlackBerry ≥ 6"
     %td.html5.yes
       %table.formats
         %tr
@@ -726,10 +729,26 @@
     %td.flash.no
       %span= "No"
     %td.notes
-  %tr.alt.last
+  %tr.alt
+    -#
+    %td.platform.empty
+    %td.browser= "PlayBook ≥ 1"
+    %td.html5.yes
+      %table.formats
+        %tr
+          %td.icon{ :colspan => 3 }
+            %span= "Yes"
+        %tr.labels
+          %td= "mp4"
+          %td
+          %td
+    %td.flash.no
+      %span= "No"
+    %td.notes
+  %tr.last
     %td.platform
       %strong= "webOS"
-    %td.browser= "webOS 1, 2"
+    %td.browser= "webOS ≥ 1"
     %td.html5.yes
       %table.formats
         %tr
