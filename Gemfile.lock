@@ -255,6 +255,6 @@ DEPENDENCIES
   sass-rails (~> 3.2.0)
   shoulda-matchers
   silent-postgres
-  sublimevideo_layout (= 0.6.11)
+  sublimevideo_layout
   thin
   uglifier
