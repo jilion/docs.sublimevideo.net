@@ -229,6 +229,7 @@ DEPENDENCIES
   RedCloth (~> 4.2.9)
   airbrake (~> 3.0.5)
   asset_sync
+  bundler (~> 1.2.0.pre.1)
   capybara
   coderay (~> 1.0.4)
   coffee-rails (~> 3.2.0)
