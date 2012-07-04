@@ -14,7 +14,7 @@
 
   h3(#step-2). "Step 2: Embed the player's code":#step-2
 
-  Copy the SublimeVideo Player embed code for #{link_to "your site", my_url('sites')} and paste it into the page where you plan to add your video(s). It's a single line of code that will load the player you've created in the previous step. We highly recommend you paste this line inside the @<head>@ tag[^"1":#fn-1^]:
+  Copy the SublimeVideo Player embed code for #{link_to "your site", my_url('sites')} and paste it into the page where you plan to add your video(s). It's a single line of code that will load the player you've created in the previous step. To ensure compatibility with old browsers that do not support HTML5, *we highly recommend you paste this line inside the @<head>@ tag[^"1":#fn-1^]*:
 
 :coderay
   #{coderay_options(:html)}
@@ -49,5 +49,5 @@
 :textile
 
   <div class="footnotes">
-  #(#fn-1) If you want to put it elsewhere, please make sure it's before any @<video>@ element. This is necessary to ensure compatibility with old browsers that do not support HTML5.
+  #(#fn-1) If you want to put it elsewhere, please make sure it's before any @<video>@ element.
   </div>

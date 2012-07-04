@@ -1,8 +1,12 @@
 source 'https://rubygems.org'
 source 'https://gems.gemfury.com/8dezqz7z7HWea9vtaFwg/' # thibaud@jilion.com account
 
-gem 'rails',              '3.2.6'
-gem 'sublimevideo_layout' # hosted on gemfury
+ruby '1.9.3'
+
+gem 'bundler', '~> 1.2.0.pre.1'
+
+gem 'rails',               '3.2.6'
+gem 'sublimevideo_layout', '1.1.1' # hosted on gemfury
 
 # Views
 gem 'haml'
