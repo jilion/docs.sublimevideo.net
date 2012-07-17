@@ -1,0 +1,1 @@
+* <span class="label fixed">fixed</span> Issue with iframe embeds when exiting full-screen on the latest version of Chrome (20) and the upcoming Safari 6.
