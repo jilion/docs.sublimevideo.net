@@ -3,8 +3,7 @@ class PagesController < ApplicationController
   def show
     @body_class = params[:page]
 
-    expires_in 30.seconds, 'max-stale' => 0, public: true
-    render "pages/#{params[:page]}" if stale?(etag: page_md5, last_modified: page_file.mtime)
+    render "pages/#{params[:page]}" if stale?(etag: page_md5, last_modified: page_file.mtime, public: true)
   end
 
   private

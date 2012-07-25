@@ -17,6 +17,8 @@ gem 'haml-coderay',  '~> 0.1.2'
 # Internals
 gem 'airbrake',      '~> 3.0.5'
 
+gem 'dalli'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -32,7 +34,6 @@ end
 
 group :staging, :production do
   gem 'thin'
-  gem 'dalli'
   gem 'rack-cache'
   gem 'rack-ssl-enforcer'
   gem 'newrelic_rpm'

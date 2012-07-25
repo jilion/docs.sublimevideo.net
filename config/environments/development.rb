@@ -14,7 +14,13 @@ DocsSublimeVideo::Application.configure do
   # Show full error reports and disable caching
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
-
+  config.cache_store = :dalli_store
+  # https://devcenter.heroku.com/articles/rack-cache-memcached-static-assets-rails31
+  config.action_dispatch.rack_cache = {
+    :metastore    => Dalli::Client.new,
+    :entitystore  => 'file:tmp/cache/rack/body',
+    :allow_reload => false
+  }
   # Don't care if the mailer can't send
   # config.action_mailer.raise_delivery_errors = false
 
