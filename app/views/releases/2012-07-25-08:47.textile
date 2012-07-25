@@ -1,0 +1,1 @@
+* <span class="label improved">improved</span> Better compatibility with Chrome Frame (IE).
