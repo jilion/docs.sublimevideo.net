@@ -1,7 +1,7 @@
 namespace :search do
 
   desc "Index all document for full-text search"
-  task indexing: :environment do
+  task index: :environment do
     pages_glob = Rails.root.join('app', 'views', 'pages', '**', '*.html.haml')
     documents  = []
 
