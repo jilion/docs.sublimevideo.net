@@ -59,3 +59,5 @@ module DocsSublimeVideo
     config.assets.version = '1.0'
   end
 end
+
+require 'env_yaml'

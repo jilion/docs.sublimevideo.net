@@ -1,0 +1,7 @@
+- @page_title = "Search results for “#{params[:search]}”"
+
+%h2= @page_title
+
+%ul
+  - @results['results'].each do |doc|
+    %li= link_to doc['title'], doc['docid']
