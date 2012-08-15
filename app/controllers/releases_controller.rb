@@ -1,5 +1,6 @@
 class ReleasesController < ApplicationController
   respond_to :html, :atom
+  caches_page :index
 
   def index
     params[:page] = 'releases' # for trigger the menu 'active' class
