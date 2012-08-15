@@ -13,17 +13,21 @@ module Search
         index.batch_insert(documents)
       end
 
+      def add_function(num, fn)
+        puts "Adding function ##{num}: #{fn}"
+        index.functions(num, fn).add
+      end
+
       def delete_index
         puts "Deleting 'idx' index..."
-        resp = index.delete
-        puts resp.inspect
+        index.delete
         @index = nil
       end
 
     private
 
       def client
-        @client ||= IndexTank::Client.new(ENV['HOUNDSLEUTH_URL'])
+        @client ||= IndexTank::Client.new(ENV['INDEXDEN_URL'])
       end
 
       def index
