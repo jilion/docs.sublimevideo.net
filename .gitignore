@@ -22,3 +22,4 @@ vendor/bundler
 !.bundle/*
 !public/assets/*.gz
 .env
+config/env.yml
