@@ -5,7 +5,7 @@ ruby '1.9.3'
 
 gem 'bundler', '~> 1.2.0.pre.1'
 
-gem 'rails',               '3.2.6'
+gem 'rails',               '3.2.8'
 gem 'sublimevideo_layout', '1.1.1' # hosted on gemfury
 
 # Views
@@ -15,9 +15,9 @@ gem 'coderay',       '~> 1.0.4'
 gem 'haml-coderay',  '~> 0.1.2'
 
 # Internals
-gem 'airbrake',      '~> 3.0.5'
-
-gem 'dalli'
+gem 'dalli',     '~> 2.1.0'
+gem 'indextank', '~> 1.0.12'
+gem 'airbrake',  '~> 3.0.5'
 
 # Gems used only for assets and not required
 # in production environments by default.
