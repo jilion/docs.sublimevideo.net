@@ -1,13 +1,10 @@
 # Thanks to http://michaeldwan.com/writings/customize-your-heroku-deployment.html
 
 # List of environments and their heroku git remotes
-ENVIRONMENTS = {
-  staging: 'sv-docs-staging',
-  production: 'sv-docs'
-}
+ENVIRONMENTS = %w[staging production]
 
 namespace :deploy do
-  ENVIRONMENTS.keys.each do |env|
+  ENVIRONMENTS.each do |env|
     desc "Deploy to #{env}"
     task env do
       current_branch = `git branch | grep ^* | awk '{ print $2 }'`.strip
@@ -38,8 +35,8 @@ namespace :deploy do
 
   task :update_code, :env, :branch do |t, args|
     FileUtils.cd Rails.root do
-      puts "Updating #{ENVIRONMENTS[args[:env]]} with branch #{args[:branch]}"
-      `git push #{ENVIRONMENTS[args[:env]]} +#{args[:branch]}:master`
+      puts "Updating #{args[:env]} with branch #{args[:branch]}"
+      `git push #{args[:env]} +#{args[:branch]}:master`
     end
   end
 end

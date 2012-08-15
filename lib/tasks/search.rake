@@ -9,7 +9,7 @@ namespace :search do
       permalink = page.sub(/#{Rails.root.join('app', 'views', 'pages/').to_s}([\w\-\/]+)\.html\.haml$/, '\1')
       file      = File.new(page)
 
-      documents << { docid: permalink, fields: { text: file.read, title: Page.menu_title(permalink) } }
+      documents << { docid: permalink, fields: { text: file.read, title: Navigation.menu_title(permalink) } }
     end
 
     Search::IndexTankWrapper.delete_index
