@@ -9,12 +9,11 @@ namespace :search do
       permalink = page.sub(/#{Rails.root.join('app', 'views', 'pages/').to_s}([\w\-\/]+)\.html\.haml$/, '\1')
       file      = File.new(page)
 
-      documents << { docid: permalink, fields: { text: file.read, title: Page.menu_title(permalink), timestamp: file.mtime.to_i } }
+      documents << { docid: permalink, fields: { text: file.read, title: Page.menu_title(permalink) } } # , timestamp: file.mtime.to_i } }
     end
 
-    response = Search::IndexTankWrapper.batch_insert(documents)
-
-    puts response.inspect
+    Search::IndexTankWrapper.delete_index
+    Search::IndexTankWrapper.batch_insert(documents)
   end
 
 end
