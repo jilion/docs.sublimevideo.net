@@ -7,29 +7,27 @@ module Navigation
     end
 
     def sections
-      @sections ||= yml.keys
+      @sections ||= tree.keys
     end
 
     def pages
       @pages ||= begin
         p = {}
-        yml.each { |k, h| p.merge!(h) }
+        tree.each { |k, h| p.merge!(h) }
         p
       end
     end
 
     def section_for_page(permalink)
-      if section = yml.find { |section, items| items.find { |plink, title| plink == permalink } }
+      if section = tree.find { |section, items| items.find { |plink, title| plink == permalink } }
         section[0]
       else
         ''
       end
     end
 
-    private
-
-    def yml
-      @yml ||= YAML.load_file(Rails.root.join('config', 'navigation.yml'))
+    def tree
+      @tree ||= YAML.load_file(Rails.root.join('config', 'navigation.yml'))
     end
   end
 

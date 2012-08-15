@@ -4,55 +4,5 @@
       = text_field_tag :q, '', value: params[:q], placeholder: "Search", type: "search", autofocus: true, autocomplete: :off
       = submit_tag 'Search'
 
-  %ul
-    %li
-      %ul.pages
-        %li.title
-          %h3 Getting Started
-        = li_with_page_link "quickstart-guide"
-        = li_with_page_link "write-proper-video-elements"
-        = li_with_page_link "encode-videos-for-the-web"
-        = li_with_page_link "create-poster-frame"
-    %li
-      %ul.pages
-        %li.title
-          %h3 How To
-        = li_with_page_link "lightbox"
-        = li_with_page_link "hd-switching"
-        = li_with_page_link "playlists"
-        = li_with_page_link "customizing-the-initial-play-button"
-        = li_with_page_link "autoplay-video-upon-page-load"
-        = li_with_page_link "loop-a-video"
-        = li_with_page_link "returning-to-the-initial-state-once-video-playback-ends"
-        = li_with_page_link "embeds"
-        = li_with_page_link "optimize-for-stats"
-        = li_with_page_link "ssl"
-    %li
-      %ul.pages
-        %li.title
-          %h3 JavaScript API
-        = li_with_page_link "javascript-api/usage"
-        = li_with_page_link "javascript-api/methods"
-        = li_with_page_link "javascript-api/listeners"
+  = display_menu
 
-    %li
-      %ul.pages
-        %li.title
-          %h3 Integration Tools
-        = li_with_page_link "video-code-generator"
-        = li_with_page_link "wordpress"
-    %li
-      %ul.pages
-        %li.title
-          %h3 Service
-        = li_with_page_link "real-time-stats"
-        = li_with_page_link "peak-insurance"
-        = li_with_page_link "site-settings"
-    %li
-      %ul.pages
-        %li.title
-          %h3 Other
-        = li_with_page_link "faq"
-        = li_with_page_link "troubleshooting"
-        = li_with_page_link "supported-browsers-and-platforms"
-        = li_with_page_link "releases"

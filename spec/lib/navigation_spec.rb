@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Navigation do
   before do
-    described_class.stub(:yml) { {"Getting Started"=>{"quickstart-guide"=>"Quickstart Guide" }, "How To"=>{"lightbox"=>"Floating lightbox"} } }
+    described_class.stub(:tree) { {"Getting Started"=>{"quickstart-guide"=>"Quickstart Guide" }, "How To"=>{"lightbox"=>"Floating lightbox"} } }
   end
 
   describe '.menu_title' do
