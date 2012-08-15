@@ -1,0 +1,32 @@
+'Getting Started':
+  'quickstart-guide': 'Quickstart Guide'
+  'write-proper-video-elements': 'Write <video> elements'
+  'encode-videos-for-the-web': 'Video encoding'
+  'create-poster-frame': 'Create poster frame'
+'How To':
+  'lightbox': 'Floating lightbox'
+  'hd-switching': 'HD switching'
+  'playlists': 'Playlists'
+  'customizing-the-initial-play-button': 'Custom play button'
+  'autoplay-video-upon-page-load': 'Autoplay a video'
+  'loop-a-video': 'Loop a video'
+  'returning-to-the-initial-state-once-video-playback-ends': 'Back to initial state on end'
+  'embeds': 'Embeds'
+  'optimize-for-stats': 'Optimize <video> for stats'
+  'ssl': 'SSL Serving'
+'Javascript API':
+  'javascript-api/usage': 'Usage'
+  'javascript-api/methods': 'Methods'
+  'javascript-api/listeners': 'Listeners'
+'Integration Tools':
+  'video-code-generator': 'Video code generator'
+  'wordpress': 'WordPress plugin'
+'Service':
+  'real-time-stats': 'Real-Time Statistics'
+  'peak-insurance': 'Peak insurance'
+  'site-settings': 'Site settings'
+'Other':
+  'faq': 'FAQ'
+  'troubleshooting': 'Troubleshooting'
+  'supported-browsers-and-platforms': 'Supported platforms'
+  'releases': 'Release Notes'
