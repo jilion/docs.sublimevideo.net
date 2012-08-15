@@ -4,4 +4,5 @@
 
 %ul
   - @results['results'].each do |doc|
-    %li= link_to doc['title'], doc['docid']
+    %li
+      = link_to "#{Navigation.section_for_page(doc['docid'])}: #{doc['title']}", doc['docid']
