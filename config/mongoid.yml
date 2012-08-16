@@ -1,0 +1,71 @@
+development:
+  sessions:
+    default:
+      database: sv-docs-dev
+      # Provides the hosts the default session can connect to. Must be an array
+      # of host:port pairs. (required)
+      hosts:
+        - localhost:27017
+      options:
+        # Change the default consistency model to :eventual or :strong.
+        # :eventual will send reads to secondaries, :strong sends everything
+        # to master. (default: :eventual)
+        consistency: :eventual
+  # Configure Mongoid specific options. (optional)
+  options:
+    # User Active Support's time zone in conversions. (default: true)
+    use_activesupport_time_zone: false
+
+    # Ensure all times are UTC in the app side. (default: false)
+    use_utc: true
+
+test:
+  sessions:
+    default:
+      database: sv-docs-test
+      hosts:
+        - localhost:27017
+      options:
+        consistency: :eventual
+  options:
+    use_activesupport_time_zone: false
+    use_utc: true
+
+staging:
+  sessions:
+    default:
+      uri: <%= ENV['MONGOHQ_URL'] %>
+      preload_models: true
+      skip_version_check: true
+      logger: false
+      op_timeout: 30
+      connect_timeout: 30
+      pool_size: 10
+      options:
+        consistency: :eventual
+  options:
+    use_activesupport_time_zone: false
+    use_utc: true
+
+production:
+  sessions:
+    default:
+<% if ARGV.join.include? 'assets:precompile' %>
+      # make rake asset:precompile work
+      preload_models: false
+      hosts:
+        - localhost:27017
+<% else %>
+      uri: <%= ENV['MONGOHQ_URL'] %>
+      preload_models: true
+      skip_version_check: true
+      logger: false
+      op_timeout: 30
+      connect_timeout: 30
+      pool_size: 10
+<% end %>
+      options:
+        consistency: :eventual
+  options:
+    use_activesupport_time_zone: false
+    use_utc: true

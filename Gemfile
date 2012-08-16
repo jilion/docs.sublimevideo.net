@@ -15,6 +15,7 @@ gem 'coderay',       '~> 1.0.4'
 gem 'haml-coderay',  '~> 0.1.2'
 
 # Internals
+gem 'mongoid',   '~> 3.0.4'
 gem 'dalli',     '~> 2.1.0'
 gem 'indextank', '~> 1.0.12'
 gem 'airbrake',  '~> 3.0.5'
