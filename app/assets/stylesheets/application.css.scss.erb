@@ -67,7 +67,7 @@ body {
 
 #content nav input.search:focus {
   outline:0;
-  @include box-shadow((inset rgba(0,0,0,0.4) 0 1px 5px, rgba(255,255,255,.1) 0 1px 0, #2a93ff 0 0 4px, #2a93ff 0 0 4px, #2a93ff 0 0 4px));
+  @include box-shadow((inset rgba(0,0,0,0.1) 0 1px 3px, rgba(255,255,255,.1) 0 1px 0, #1185FF 0 0 4px, #1185FF 0 0 4px, #1185FF 0 0 4px));
 }
 
 #content nav .search_form {
@@ -220,9 +220,18 @@ body {
   line-height:24px;
 }
 
+.content_wrapper ul.search_results {
+  line-height:36px;
+  font-size:20px;
+}
+
 .content_wrapper ul li {
   padding:3px 0 3px 16px;
   background:url(<%= asset_data_uri 'bullet.png' %>) no-repeat 0 11px;
+}
+
+.content_wrapper ul.search_results li {
+  background-position: 0 50%;
 }
 
 .content_wrapper ol {
@@ -344,7 +353,6 @@ body {
 .content_wrapper pre .line-numbers {
   margin-right:10px;
 }
-
 
 .content_wrapper a:hover {
   padding-bottom:1px;
