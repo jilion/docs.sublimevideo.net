@@ -40,6 +40,51 @@ body {
   float:left;
 }
 
+#content nav input.search {
+  width:210px;
+  height:44px;
+  background:#d9e1ec;
+  text-shadow:rgba(255,255,255,0.75) 0 1px 0;
+  border:none;
+  font-size:22px;
+  font-family:inherit;
+  color:#00235a;
+  padding:0 5px 0 45px;
+  margin:0 0 20px;
+  @include border-radius(5px);
+  @include box-shadow((inset rgba(0,0,0,0.3) 0 1px 3px, rgba(255,255,255,1) 0 1px 0));
+}
+
+#content nav ::-webkit-input-placeholder {
+  color:#899bb1;
+  text-shadow:rgba(255,255,255,1) 0 1px 0;
+}
+
+#content nav :-moz-placeholder {
+  color:#899bb1;
+  text-shadow:rgba(255,255,255,1) 0 1px 0;
+}
+
+#content nav input.search:focus {
+  outline:0;
+  @include box-shadow((inset rgba(0,0,0,0.4) 0 1px 5px, rgba(255,255,255,.1) 0 1px 0, #2a93ff 0 0 4px, #2a93ff 0 0 4px, #2a93ff 0 0 4px));
+}
+
+#content nav .search_form {
+  position:relative;
+}
+
+#content nav .search_form label {
+  width:23px;
+  height:24px;
+  position:absolute;
+  top:10px;
+  left:9px;
+  background:url(<%= asset_data_uri "search_icon.png" %>) no-repeat;
+}
+
+#content nav .search_form label span {display:none}
+
 #content nav ul {
   list-style-type:none;
 }
