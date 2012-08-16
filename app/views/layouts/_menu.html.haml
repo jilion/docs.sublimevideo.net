@@ -1,8 +1,9 @@
 %nav
   .search_form
     = form_tag '/search' do
-      = text_field_tag :q, '', value: params[:q], placeholder: "Search", type: "search", autofocus: true, autocomplete: :off
-      = submit_tag 'Search'
+      = label_tag "q", "" do
+        %span= "Search"
+      = text_field_tag :q, '', value: params[:q], placeholder: "Search", autocomplete: :off, class: "search"
 
   = display_menu
 
