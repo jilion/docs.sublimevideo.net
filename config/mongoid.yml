@@ -52,6 +52,7 @@ production:
     default:
 <% if ARGV.join.include? 'assets:precompile' %>
       # make rake asset:precompile work
+      database: sv-docs-dev
       preload_models: false
       hosts:
         - localhost:27017

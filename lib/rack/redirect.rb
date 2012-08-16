@@ -24,8 +24,6 @@ module Rack
       case request.path
       when '/'
         url(request, 'quickstart-guide')
-      when %r{/search}
-        url(request, "search?q=#{request.params['q']}") if request.post? && !request.params['q'].nil?
       when '/javascript-api', '/js-api'
         url(request, 'javascript-api/usage')
       when '/put-video-in-a-floating-lightbox'
