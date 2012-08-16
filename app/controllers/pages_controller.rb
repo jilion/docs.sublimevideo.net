@@ -4,12 +4,16 @@ class PagesController < ApplicationController
   def show
     @body_class = params[:page]
 
-    render "pages/#{params[:page]}" if stale?(etag: page_md5, last_modified: page_file.mtime, public: true)
+    render "pages/#{params[:page]}" if fresh_required?
   end
 
   private
 
-  def page_md5
+  def fresh_required?
+    Rails.env.development? || Rails.env.test? || stale?(etag: page_sha1, last_modified: page_file.mtime, public: true)
+  end
+
+  def page_sha1
     Digest::SHA1.file(page_file).to_s
   end
 
