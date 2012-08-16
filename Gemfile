@@ -23,7 +23,6 @@ gem 'airbrake',  '~> 3.0.5'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass',         '3.2.0.alpha.278' # there's an issue in 3.2.0!!!!
   gem 'sass-rails',   '~> 3.2.0'
   gem 'coffee-rails', '~> 3.2.0'
   gem 'uglifier'
@@ -31,7 +30,8 @@ group :assets do
 end
 
 group :production do
-  gem 'rack-google-analytics', '~> 0.9.2', require: 'rack/google-analytics'
+  # gem 'rack-google-analytics', '~> 0.9.2', require: 'rack/google-analytics'
+  gem 'rack-google-analytics', github: 'jilion/rack-google-analytics', require: 'rack/google-analytics'
 end
 
 group :staging, :production do
