@@ -12,9 +12,9 @@ namespace :search do
       documents << { docid: permalink, fields: { text: file.read, title: Navigation.menu_title(permalink) } }
     end
 
-    Search::IndexTankWrapper.delete_index
-    Search::IndexTankWrapper.batch_insert(documents)
-    Search::IndexTankWrapper.add_function(0, 'relevance')
+    Search.delete_index
+    Search.add_documents(documents)
+    Search.add_function(0, 'relevance')
   end
 
 end

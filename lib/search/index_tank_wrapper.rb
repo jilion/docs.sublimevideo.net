@@ -8,7 +8,7 @@ module Search
         index.search(*args)
       end
 
-      def batch_insert(documents)
+      def add_documents(documents)
         puts "Indexing #{documents.size} documents..."
         index.batch_insert(documents)
       end
