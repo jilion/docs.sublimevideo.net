@@ -10,7 +10,7 @@ end
 DocsSublimeVideo::Application.routes.draw do
   # Please also check Rack::Redirect middleware in lib/rack
 
-  match '/search' => 'search#index', via: [:get, :post], as: 'search'
+  get '/search' => 'search#index', as: 'search'
   resources :releases, only: :index
   get '/*page' => 'pages#show', as: 'page', constraints: DocsPages, format: false
 end

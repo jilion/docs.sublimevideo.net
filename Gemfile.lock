@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/jilion/rack-google-analytics.git
-  revision: f950d871eed4a32bc00b644afc5a19e8eb19c3d3
+  revision: 2117698c50075ae031a16d8f22d2a0a57ac3fbce
   specs:
     rack-google-analytics (0.10.0)
 
