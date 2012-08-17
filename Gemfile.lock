@@ -234,7 +234,7 @@ GEM
       hike (~> 1.2)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sublimevideo_layout (1.2.0)
+    sublimevideo_layout (1.2.3)
       coffee-rails (~> 3.2.0)
       haml
       jquery-rails (~> 2.0.2)
@@ -263,7 +263,7 @@ DEPENDENCIES
   RedCloth (~> 4.2.9)
   airbrake (~> 3.0.5)
   asset_sync
-  bundler (~> 1.2.0.pre.1)
+  bundler (~> 1.2.0.rc.2)
   capybara
   coderay (~> 1.0.4)
   coffee-rails (~> 3.2.2)
@@ -292,6 +292,6 @@ DEPENDENCIES
   sass-rails (~> 3.2.5)
   shoulda-matchers
   silent-postgres
-  sublimevideo_layout (= 1.2.0)
+  sublimevideo_layout (= 1.2.3)
   thin
   uglifier
