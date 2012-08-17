@@ -1,6 +1,5 @@
 DocsSublimeVideo::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
-  config.middleware.insert_before Rack::Cache, Rack::Redirect
   config.middleware.insert_before Rack::Cache, Rack::GoogleAnalytics, tracker: 'UA-10280941-8'
   config.middleware.insert_before Rack::Cache, Rack::SslEnforcer, except_hosts: 'docs.sublimevideo.net', strict: true
 

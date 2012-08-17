@@ -8,9 +8,12 @@ class DocsPages
 end
 
 DocsSublimeVideo::Application.routes.draw do
-  # Please also check Rack::Redirect middleware in lib/rack
+  %w[javascript-api js-api].each { |path| get "/#{path}" => redirect('/javascript-api/usage') }
+  get '/put-video-in-a-floating-lightbox' => redirect('/lightbox')
 
   get '/search' => 'search#index', as: 'search'
   resources :releases, only: :index
   get '/*page' => 'pages#show', as: 'page', constraints: DocsPages, format: false
+
+  root to: redirect('/quickstart-guide')
 end
