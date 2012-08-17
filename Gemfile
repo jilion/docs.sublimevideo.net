@@ -6,7 +6,7 @@ ruby '1.9.3'
 gem 'bundler', '~> 1.2.0.pre.1'
 
 gem 'rails',               '3.2.8'
-gem 'sublimevideo_layout', '1.1.1' # hosted on gemfury
+gem 'sublimevideo_layout', '1.2.0' # hosted on gemfury
 
 # Views
 gem 'haml'
@@ -23,8 +23,8 @@ gem 'airbrake',  '~> 3.0.5'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.0'
-  gem 'coffee-rails', '~> 3.2.0'
+  gem 'sass-rails',   '~> 3.2.5'
+  gem 'coffee-rails', '~> 3.2.2'
   gem 'uglifier'
   gem 'asset_sync'
 end
