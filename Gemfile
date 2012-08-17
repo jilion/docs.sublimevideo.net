@@ -31,7 +31,7 @@ end
 
 group :production do
   # gem 'rack-google-analytics', '~> 0.9.2', require: 'rack/google-analytics'
-  gem 'rack-google-analytics', github: 'jilion/rack-google-analytics', require: 'rack/google-analytics'
+  gem 'rack-google-analytics', github: 'jilion/rack-google-analytics'
 end
 
 group :staging, :production do
