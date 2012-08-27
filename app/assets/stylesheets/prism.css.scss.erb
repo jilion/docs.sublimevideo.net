@@ -1,3 +1,5 @@
+@import "css3";
+
 /**
  * prism.js default theme for JavaScript, CSS and HTML
  * Based on dabblet (http://dabblet.com)
@@ -6,9 +8,9 @@
 
 code[class*="language-"],
 pre[class*="language-"] {
-	color: black;
+	color: #224579;
 	text-shadow: 0 1px white;
-	font-family: Consolas, Monaco, 'Andale Mono', monospace;
+	font-family: Monaco, 'Andale Mono', monospace;
 	direction: ltr;
 	text-align: left;
 	white-space: pre;
@@ -33,7 +35,9 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: #f5f2f0;
+	background:#fff;
+  @include border-radius(4px);
+  @include box-shadow(inset hsla(220,25.8533%,68%,.7) 0 0 10px);
 }
 
 /* Inline code */
@@ -130,14 +134,14 @@ pre[data-line] {
 		left: .6em;
 		min-width: 1em;
 		padding: 0 .5em;
-		background-color: hsla(24, 20%, 50%,.4);
-		color: hsl(24, 20%, 95%);
+		background-color: hsl(220,25.8533%,65%);
+		color: #fff;
 		font: bold 75%/1.5 sans-serif;
 		text-align: center;
 		vertical-align: .3em;
-		border-radius: 999px;
 		text-shadow: none;
 		box-shadow: 0 1px white;
+    @include border-radius(999px);
 	}
 
 	.line-highlight[data-end]:after {
