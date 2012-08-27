@@ -4,12 +4,10 @@ require File.expand_path('../boot', __FILE__)
 require 'action_controller/railtie'
 require 'sprockets/railtie'
 
-if defined?(Bundler)
-  # If you precompile assets before deploying to production, use this line
-  Bundler.require(*Rails.groups(:assets => %w(development test)))
-  # If you want your assets lazily compiled in production, use this line
-  # Bundler.require(:default, :assets, Rails.env)
-end
+# If you precompile assets before deploying to production, use this line
+Bundler.require *Rails.groups(assets: %w(development test))
+# If you want your assets lazily compiled in production, use this line
+# Bundler.setup(:default, :assets, Rails.env)
 
 module DocsSublimeVideo
   class Application < Rails::Application
@@ -17,8 +15,11 @@ module DocsSublimeVideo
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
-    # Custom directories with classes and modules you want to be autoloadable.
-    config.autoload_paths += %W(#{config.root}/lib)
+    # http://ileitch.github.com/2012/03/24/rails-32-code-reloading-from-lib.html
+    config.watchable_dirs['lib'] = [:rb]
+
+    # Enable the asset pipeline
+    config.assets.enabled = true
 
     # Only load the plugins named here, in the order given (default is alphabetical).
     # :all can be used as a placeholder for all plugins not explicitly named.
@@ -51,9 +52,6 @@ module DocsSublimeVideo
     # in your app. As such, your models will need to explicitly whitelist or blacklist accessible
     # parameters by using an attr_accessible or attr_protected declaration.
     # config.active_record.whitelist_attributes = true
-
-    # Enable the asset pipeline
-    config.assets.enabled = true
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'

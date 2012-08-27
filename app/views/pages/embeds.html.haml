@@ -11,9 +11,7 @@
 
   h3(#iframe-content). "The &lt;iframe&gt; content":#iframe-content
 
-:coderay
-  #{coderay_options(:html)}
-  <!DOCTYPE html>
+  <pre data-line=5,8><code class="language-markup"><!DOCTYPE html>
   <html>
   <head>
     <title></title>
@@ -24,23 +22,24 @@
       <source src="http://yoursite.com/video.mp4" />
       <source src="http://yoursite.com/video.webm" />
     </video>
-  </body>
+  </body></code></pre>
 
-:textile
   *Important information:*
 
-  * Replace _YOUR_TOKEN_ with your actual site's token (you can find it in the _#{link_to "My Sites", my_url('sites')}_ page after clicking the "embed code" button).
+  *Line 5.* Replace _YOUR_TOKEN_ with your actual site's token (you can find it in the _#{link_to "My Sites", my_url('sites')}_ page after clicking the "embed code" button).
+
+  *Line 8.*
+
   * %(red)Add the _sv_iframe_embed_ @class@ to your @<video>@ element and *omit its @width@ and @height@ attributes*.%
   * @style="display:none"@ is optional, but we recommend it to prevent UI flickering when the iframe is first loaded.
-  * Host this file on a domain that is registered on #{link_to "MySublimeVideo", my_url('sites')}. For instance, if your registered domain is _yourdomain.com_, you could save this page at _http://yourdomain.com/embeds/video1.html_.
+
+  Host this file on a domain that is registered on #{link_to "MySublimeVideo", my_url('sites')}. For instance, if your registered domain is _yourdomain.com_, you could save this page at _http://yourdomain.com/embeds/video1.html_.
 
   h3(#embed-code). "The embed code":#embed-code
 
   Here is the sharable snippet of code that your audience can copy and paste into another site.
 
-  <div class="code">
-  <pre><iframe src="http://yourdomain.com/embeds/video1.html" width="400" height="168" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></pre>
-  </div>
+  bc(language-markup). <iframe src="http://yourdomain.com/embeds/video1.html" width="400" height="168" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>
 
   *Important information:*
 

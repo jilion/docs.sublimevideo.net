@@ -1,5 +1,5 @@
 /*
-*= require 'coderay'
+*= require 'prism'
 */
 
 @import "css3";
@@ -243,7 +243,7 @@ body {
   padding:3px 0;
 }
 
-.content_wrapper code {
+.content_wrapper p code, .content_wrapper ul code {
   font-family:Monaco, Courier, monospace;
   font-size:13px;
   background:#c8d5f0;
@@ -255,20 +255,20 @@ body {
   border-radius:4px;
 }
 
-.content_wrapper strong code {font-weight:normal;}
+.content_wrapper p strong code, .content_wrapper ul strong code {font-weight:normal;}
 
-.content_wrapper span.param code {
+.content_wrapper p span.param code, .content_wrapper ul span.param code {
   color:#b53148;
 }
 
-.content_wrapper a.c:hover {
+.content_wrapper p a.c:hover, .content_wrapper ul a.c:hover {
   border:none;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 
-.content_wrapper a code {
+.content_wrapper p a code, .content_wrapper ul a code {
   background:#abc1ee;
   border-bottom:1px solid rgba(0,0,0,0.3);
   -o-transition: background 0.25s linear;
@@ -277,7 +277,7 @@ body {
   transition: background 0.25s linear;
 }
 
-.content_wrapper a:hover code {
+.content_wrapper p a:hover code, .content_wrapper ul a:hover code {
   background:#aadefe;
 }
 
@@ -290,34 +290,6 @@ body {
 #content .content_wrapper h3 a:hover code, #content .content_wrapper h4 a:hover code {
   background:transparent;
   border-bottom:none;
-}
-
-.content_wrapper .code {
-  padding:10px 0;
-}
-
-.content_wrapper .code .line {
-  width:20px;
-  float:left;
-  padding:0 10px 0 0;
-  text-align:left;
-}
-
-.content_wrapper .code .line ol {
-  line-height:inherit;
-  padding:0;
-  list-style-type:none;
-}
-
-.content_wrapper .code .line li {
-  padding:0;
-  background:none;
-  color:#496594;
-}
-
-.content_wrapper .code.two_columns .content {
-  width:520px;
-  float:left;
 }
 
 .content_wrapper .code, .content_wrapper pre {
@@ -348,10 +320,6 @@ body {
 .content_wrapper pre::-webkit-scrollbar-thumb:horizontal {
   background-color:#657a8f;
   -webkit-border-radius:6px;
-}
-
-.content_wrapper pre .line-numbers {
-  margin-right:10px;
 }
 
 .content_wrapper a:hover {

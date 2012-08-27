@@ -19,14 +19,12 @@
   h3(#manually-configuring-video). "Manually configuring your &lt;video&gt; elements":#manually-configuring-video
 
   This is an example of a properly configured @<video>@ element:
-:coderay
-  #{coderay_options(:html, line_numbers: :inline)}
-  <video class="sublime" width="640" height="360" poster="video-poster.jpg" data-uid="my-video-1" data-name="My Video #1" preload="none">
+
+  <pre data-line=1,2,3,4><code class="language-markup"><video class="sublime" width="640" height="360" poster="video-poster.jpg" data-uid="my-video-1" data-name="My Video #1" preload="none">
     <source src="http://yoursite.com/video.mp4" />
     <source src="http://yoursite.com/video-mobile.mp4" />
     <source src="http://yoursite.com/video.webm" />
-  </video>
-:textile
+  </video></code></pre>
 
   Let's go through the above code line by line.
 
@@ -47,7 +45,7 @@
 
   *Line 2.* You must provide at least one @<source>@ element linking to the MP4/H.264 video file. This will enable SublimeVideo HTML5 mode in browsers like Chrome and Safari. But if you only specify this source you won't get HTML5 mode in Firefox and Opera (although the video will still be visible on those browsers through SublimeVideo's Flash mode). %(red)Please do not forget the *closing slash* @/>@ at the end of every @<source>@ element%, this is necessary to ensure compatibility with IE 6, 7, 8.
 
-  *Line 3.* In case the MP4 source specified above (line 2.) exceeds the maximum resolution/bitrate supported by the iPhone and other mobile platforms, you need to provide a specific version of the video encoded for these mobile devices. Learn more about "how to encode for mobile devices":http://diveintohtml5.info/video.html#handbrake-gui.
+  *Line 3.* In case the MP4 source specified above (line 2) exceeds the maximum resolution/bitrate supported by the iPhone and other mobile platforms, you need to provide a specific version of the video encoded for these mobile devices. Learn more about "how to encode for mobile devices":http://diveintohtml5.info/video.html#handbrake-gui.
 
   *Lines 4.* Providing the WebM source (in addition to MP4) enables SublimeVideo HTML5 mode in all modern HTML5-capable browsers, meaning Flash mode will only be used on browsers that do not support HTML5 (like IE 6, 7, 8) and on very old versions of Firefox that did not support WebM (v3.6 and earlier). You are not obliged to provide a WebM source: *you could completely omit line 4* and the video would still be watchable on all browsers; BUT in this case SublimeVideo will switch to Flash mode on Firefox and Opera.
 

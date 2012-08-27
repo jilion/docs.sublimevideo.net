@@ -28,13 +28,10 @@
 
   You can use an @AddType@ directive in your site-wide @httpd.conf@ or in an @.htaccess@ file in the directory where you store your video files.
 
-:coderay
-  #{coderay_options(:apache)}
-  AddType video/mp4 .mp4 .m4v
+  bc(language-unknown). AddType video/mp4 .mp4 .m4v
   AddType video/webm .webm
   AddType video/ogg .ogv
 
-:textile
   Please read "this article":http://diveintohtml5.info/video.html#video-mime-types for more information.
 
   h4. Configure MIME types for videos served by Amazon S3
@@ -63,20 +60,17 @@
 
   Here is a valid example:
 
-:coderay
-  #{coderay_options(:html)}
-  <!DOCTYPE html>
+  bc(language-markup). <!DOCTYPE html>
   <html>
     <head>
       <title>My website</title>
-      <script src="http://cdn.sublimevideo.net/js/YOURTOKEN.js" type="text/javascript"></script>
+      <script src="http://cdn.sublimevideo.net/js/YOUR_TOKEN.js" type="text/javascript"></script>
     </head>
     <body>
       <!-- Content of your website -->
     </body>
   </html>
 
-:textile
   h3(#not-properly-registered). "I'm seeing the message “SublimeVideo Player is not properly registered for this site”, why?":#not-properly-registered
 
   The alert is displayed if you have multiple sites registered on #{link_to "MySublimeVideo", my_url('sites')} and are using another site’s SublimeVideo Player embed code in the site receiving the error message. Please check that the embed code you are using on your site is the same as the one displayed when you click the 'Embed Code' button for that site on #{link_to "MySublimeVideo", my_url('sites')}.

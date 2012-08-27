@@ -1,3 +1,5 @@
+require 'navigation'
+
 module DocsHelper
 
   def display_menu

@@ -1,9 +1,9 @@
 - @page_title_prefix = "SublimeVideo Documentation"
 
-= content_for :header do
-  = render 'layouts/header'
+= content_for :javascript, javascript_include_tag('application')
 
-= content_for :content_menu do
-  = render 'layouts/menu'
+= content_for :header, render('layouts/header')
+
+= content_for :content_menu, render('layouts/menu')
 
 = render template: 'layouts/sublimevideo'

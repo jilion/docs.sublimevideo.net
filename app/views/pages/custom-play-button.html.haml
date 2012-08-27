@@ -11,15 +11,12 @@
 
   h4. HTML Code
 
-:coderay
-  #{coderay_options(:html)}
-  <img id="posterframe_video1" class="custom_play_button" src="posterframe.jpg" width="640" height="360" />
+  bc(language-markup). <img id="posterframe_video1" class="custom_play_button" src="posterframe.jpg" width="640" height="360" />
   <video id="video1" style="display:none;" poster="posterframe.jpg" width="640" height="360" preload="none">
     <source src="video.mp4" />
     <source src="video.webm" />
   </video>
 
-:textile
   *Note:* When implementing this functionality, you *must not add* the _sublime_ @class@ to the @<video>@ element. This is because the video will be prepared through the JS API.
 
   h4. JavaScript Code
@@ -28,27 +25,20 @@
 
   Below we provide 2 examples of the required code using jQuery and Prototype, please make sure that you embed the chosen library in your page!
 
-  **jQuery Version:**
+  p. **jQuery Version:**
 
-:coderay
-  #{coderay_options(:javascript)}
-  sublimevideo.ready(function() {
-    jQuery("img.custom_play_button").each(function() {
-      jQuery(this).click(function(event) {
-        event.preventDefault();
-        // Hide the posterframe and prepare and play the video
-        sublimevideo.prepareAndPlay(jQuery(this).attr("id").replace(/^posterframe_/, ""));
-        jQuery(this).hide();
-      });
+  bc(language-javascript). sublimevideo.ready(function() {
+    jQuery("img.custom_play_button").click(function(event) {
+      event.preventDefault();
+      // Hide the posterframe and prepare and play the video
+      sublimevideo.prepareAndPlay(jQuery(this).attr("id").replace(/^posterframe_/, ""));
+      jQuery(this).hide();
     });
   });
 
-:textile
-  **Prototype Version:**
+  p. **Prototype Version:**
 
-:coderay
-  #{coderay_options(:javascript)}
-  sublimevideo.ready(function() {
+  bc(language-javascript). sublimevideo.ready(function() {
     $$("img.custom_play_button").each(function(img) {
       img.on("click", function(event) {
         event.stop();
@@ -59,8 +49,7 @@
     }.bind(this));
   });
 
-:textile
-  *Note:* Here, the _custom_play_button_ @class@ is used to bind the JavaScript API "(c)@sublimevideo.prepareAndPlay@":/javascript-api/methods#prepareAndPlay method to the @onclick@ event of the @<img>@ elements that are used as initial play buttons.
+  p. *Note:* Here, the _custom_play_button_ @class@ is used to bind the JavaScript API "(c)@sublimevideo.prepareAndPlay@":/javascript-api/methods#prepareAndPlay method to the @onclick@ event of the @<img>@ elements that are used as initial play buttons.
 
   h3(#demo). "Demo":#demo
 

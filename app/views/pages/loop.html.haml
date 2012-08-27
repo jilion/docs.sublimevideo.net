@@ -9,29 +9,23 @@
 
   h4. HTML Code
 
-:coderay
-  #{coderay_options(:html)}
-  <video class="sublime" poster="posterframe.jpg" width="640" height="360" preload="none">
+  bc(language-markup). <video class="sublime" poster="posterframe.jpg" width="640" height="360" preload="none">
     <source src="video.mp4" />
     <source src="video.webm" />
   </video>
 
-:textile
   *Note:* This is a classic @<video>@, nothing special here.
 
   h4. JavaScript Code
 
   Put this code in a @<script>@ element just before the @</body>@ tag, or in an external file.
 
-:coderay
-  #{coderay_options(:javascript)}
-  sublimevideo.ready(function() {
+  bc(language-javascript). sublimevideo.ready(function() {
     sublimevideo.onEnd(function(sv) {
       sublimevideo.play(sv.element);
     });
   });
 
-:textile
   *Note:* If you don't want to loop all of the videos in your page, you can add conditions before calling "(c)@sublimevideo.play@":/javascript-api/methods#play (for example adding an @id@ to your @<video>@ element and then perform a check on @sv.element.id@).
 
   h3(#demo). "Demo":#demo

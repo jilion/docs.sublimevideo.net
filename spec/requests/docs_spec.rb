@@ -12,6 +12,26 @@ feature 'redirect legacy routes' do
     current_url.should eq "http://docs.sublimevideo.dev/javascript-api/usage"
   end
 
+  it "redirect /autoplay-video-upon-page-load to /autoplay" do
+    visit '/autoplay-video-upon-page-load'
+    current_url.should eq "http://docs.sublimevideo.dev/autoplay"
+  end
+
+  it "redirect /customizing-the-initial-play-button to /custom-play-button" do
+    visit '/customizing-the-initial-play-button'
+    current_url.should eq "http://docs.sublimevideo.dev/custom-play-button"
+  end
+
+  it "redirect /loop-a-video to /loop" do
+    visit '/loop-a-video'
+    current_url.should eq "http://docs.sublimevideo.dev/loop"
+  end
+
+  it "redirect /returning-to-the-initial-state-once-video-playback-ends to /back-to-initial-state-on-end" do
+    visit '/returning-to-the-initial-state-once-video-playback-ends'
+    current_url.should eq "http://docs.sublimevideo.dev/back-to-initial-state-on-end"
+  end
+
   it "redirect /put-video-in-a-floating-lightbox to /lightbox" do
     visit '/put-video-in-a-floating-lightbox'
     current_url.should eq "http://docs.sublimevideo.dev/lightbox"

@@ -1,32 +1,30 @@
 source 'https://rubygems.org'
-source 'https://gems.gemfury.com/8dezqz7z7HWea9vtaFwg/' # thibaud@jilion.com account
+source 'https://gems.gemfury.com/8dezqz7z7HWea9vtaFwg' # thibaud@jilion.com account
 
 ruby '1.9.3'
 
 gem 'bundler', '~> 1.2.0.rc.2'
 
 gem 'rails',               '3.2.8'
-gem 'sublimevideo_layout', '1.2.3' # hosted on gemfury
+gem 'sublimevideo_layout', '1.2.5' # hosted on gemfury
 
 # Views
 gem 'haml'
-gem 'RedCloth',      '~> 4.2.9'
-gem 'coderay',       '~> 1.0.4'
-gem 'haml-coderay',  '~> 0.1.2'
+gem 'RedCloth', '~> 4.2.9'
 
 # Internals
-gem 'mongoid',   '~> 3.0.4'
+gem 'mongoid',   '~> 3.0.5'
 gem 'dalli',     '~> 2.1.0'
 gem 'indextank', '~> 1.0.12'
-gem 'airbrake',  '~> 3.0.5'
+gem 'airbrake',  '~> 3.1.2'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
+  gem 'asset_sync'
   gem 'sass-rails',   '~> 3.2.5'
   gem 'coffee-rails', '~> 3.2.2'
   gem 'uglifier'
-  gem 'asset_sync'
 end
 
 group :production do
@@ -59,9 +57,9 @@ group :tools do
   gem 'pry'
 
   # Guard
-  gem 'growl'
+  gem 'terminal-notifier-guard'
   platforms :ruby do
-    gem 'rb-readline'
+    gem 'coolline'
   end
 
   gem 'guard-pow'

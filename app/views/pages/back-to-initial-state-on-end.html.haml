@@ -7,17 +7,14 @@
 
   Simply put the following JavaScript code in a @<script>@ element just before the @</body>@ tag, or in an external file.
 
-:coderay
-  #{coderay_options(:javascript)}
-  sublimevideo.ready(function() {
+  bc(language-javascript). sublimevideo.ready(function() {
     sublimevideo.onEnd(function(sv) {
       sublimevideo.stop();
     });
   });
 
-:textile
-  *Note:* As discussed in the "Loop a video":/loop-a-video page, if you don’t want to apply this effect to all the videos in your page, you can add conditions before calling "(c)@sublimevideo.stop@":/javascript-api/methods#stop (for example adding an @id@ to your @<video>@ element and then perform a check on @sv.element.id@).
+  *Note:* As discussed in the "Loop a video":/loop page, if you don’t want to apply this effect to all the videos in your page, you can add conditions before calling "(c)@sublimevideo.stop@":/javascript-api/methods#stop (for example adding an @id@ to your @<video>@ element and then perform a check on @sv.element.id@).
 
   h3(#demo). "Demo":#demo
 
-  You can see this feature in action "on this page":http://test.sublimevideo.net/back_to_posterframe.
+  You can see this feature in action "on this page":http://test.sublimevideo.net/back-to-initial-state-on-end.

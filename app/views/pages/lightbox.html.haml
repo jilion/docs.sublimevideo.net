@@ -9,16 +9,13 @@
 
   Here is the HTML code needed to obtain the lightbox effect:
 
-:coderay
-  #{coderay_options(:html, line_numbers: :inline)}
-  <a class="sublime" href="http://yoursite.com/video-mobile.mp4">
+  <pre data-line=1,2,4-7><code class="language-markup"><a class="sublime" href="http://yoursite.com/video-mobile.mp4">
     <img src="http://yoursite.com/video-thumb.jpg" alt="" />
   </a>
   <video style="display:none" class="sublime lightbox" width="640" height="360" poster="http://yoursite.com/video-poster.jpg" preload="none">
     <source src="http://yoursite.com/video.mp4" />
     <source src="http://yoursite.com/video.webm" />
-  </video>
-:textile
+  </video></code></pre>
 
   %(red)_*Important notes*_:%
 
@@ -36,10 +33,7 @@
 
   The @<video>@ element (lines 4-7) is very similar to the one we previously described in the "Write &lt;video&gt; elements":/write-proper-video-elements page except for two changes:
 
-  *Line 4.*
-
-  * It needs to be initially hidden.
-  * It needs the _lightbox_ @class@ (in addition to the _sublime_ @class@).
+  *Line 4.* The @<video>@ element needs to be initially hidden and must have the _lightbox_ @class@ (in addition to the _sublime_ @class@).
 
   h3(#magnifying-glass). "Optional: Add a magnifying glass icon over the thumbnail":#magnifying-glass
 
@@ -47,25 +41,20 @@
 
   h4. HTML Code
 
-:coderay
-  #{coderay_options(:html, line_numbers: :inline)}
-  <a class="sublime zoomable" href="http://yoursite.com/video-mobile.mp4">
+  <pre data-line=1,3><code class="language-markup"><a class="sublime zoomable" href="http://yoursite.com/video-mobile.mp4">
     <img src="http://yoursite.com/video-thumb.jpg" alt="" />
     <span class="zoom_icon"></span>
   </a>
   <video style="display:none" class="sublime lightbox" width="640" height="360" poster="http://yoursite.com/video-poster.jpg" preload="none">
     <source src="http://yoursite.com/video.mp4" />
     <source src="http://yoursite.com/video.webm" />
-  </video>
-:textile
+  </video></code></pre>
+
   Additional code is composed of the _zoomable_ @class@ (line 1) and a @<span>@ element (line 3).
 
-:textile
   h4. CSS Code
 
-:coderay
-  #{coderay_options(:css)}
-  a.zoomable {
+  <pre data-line=3-4,19><code class="language-css">a.zoomable {
     display:block;
     width:180px;
     height:76px;
@@ -91,10 +80,12 @@
     transition:opacity 0.25s;
   }
 
-  a.zoomable:hover span.zoom_icon {opacity:1}
+  a.zoomable:hover span.zoom_icon {opacity:1}</code></pre>
 
-:textile
-  *Note:* The icon can be found "here":http://f.cl.ly/items/3C1V2w2r36360V3c1b3x/sv_zoom_icon.png.
+  *Note:* Please be sure to:
+
+  * Adjust the @width@ and @height@ properties (line 3 & 4) according to your "zoomable thumbnail"'s dimensions;
+  * Upload the icon (you can found it "here":http://f.cl.ly/items/3C1V2w2r36360V3c1b3x/sv_zoom_icon.png) to your server and to set the correct path to it in your CSS code (line 19).
 
   h3(#demo). "Demo":#demo
 

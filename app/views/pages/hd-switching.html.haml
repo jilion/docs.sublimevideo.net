@@ -8,36 +8,30 @@
   Follow the examples below to get started.
 
   h4. Universal HD switching (MP4 and WebM)
-:coderay
-  #{coderay_options(:html)}
-  <video class="sublime" width="640" height="360" poster="http://yoursite.com/video-poster.jpg" preload="none">
+
+  bc(language-markup). <video class="sublime" width="640" height="360" poster="http://yoursite.com/video-poster.jpg" preload="none">
     <source src="http://yoursite.com/video.mp4" />
     <source src="http://yoursite.com/video_hd.mp4" data-quality="hd" />
     <source src="http://yoursite.com/video.webm" />
     <source src="http://yoursite.com/video_hd.webm" data-quality="hd" />
   </video>
-:textile
 
   h4. MP4-only HD switching
-:coderay
-  #{coderay_options(:html)}
-  <video class="sublime" width="640" height="360" poster="http://yoursite.com/video-poster.jpg" preload="none">
+
+  bc(language-markup). <video class="sublime" width="640" height="360" poster="http://yoursite.com/video-poster.jpg" preload="none">
     <source src="http://yoursite.com/video.mp4" />
     <source src="http://yoursite.com/video_hd.mp4" data-quality="hd" />
     <source src="http://yoursite.com/video.webm" />
   </video>
-:textile
 
   h4. Play HD first
-:coderay
-  #{coderay_options(:html)}
-  <video class="sublime" width="640" height="360" poster="http://yoursite.com/video-poster.jpg" preload="none">
+
+  bc(language-markup). <video class="sublime" width="640" height="360" poster="http://yoursite.com/video-poster.jpg" preload="none">
     <source src="http://yoursite.com/video_hd.mp4" data-quality="hd" />
     <source src="http://yoursite.com/video.mp4" />
     <source src="http://yoursite.com/video_hd.webm" data-quality="hd" />
     <source src="http://yoursite.com/video.webm" />
   </video>
-:textile
 
   *Note:* If you switch sources in Flash mode, the player won't remember the playback position and the video will start playing from the beginning. If you use the _Universal HD switching_ you will almost never encounter this issue (except in old versions of IE).
 
