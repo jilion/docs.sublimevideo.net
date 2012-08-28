@@ -14,4 +14,8 @@ class SearchKeyword
     sk.inc(:c, 1)
   end
 
+  def self.ranking
+    order_by(:c.desc).entries.inject("") { |text, sk| text += "#{sk.k}: #{sk.c}\n"; text }
+  end
+
 end
