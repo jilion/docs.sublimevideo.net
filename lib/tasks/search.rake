@@ -1,3 +1,5 @@
+require 'navigation'
+
 namespace :search do
 
   desc "Index all document for full-text search"
