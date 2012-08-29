@@ -10,6 +10,7 @@
   'custom-play-button': 'Custom play button'
   'autoplay': 'Autoplay a video'
   'loop': 'Loop a video'
+  'responsive-layout': 'Responsive layout'
   'back-to-initial-state-on-end': 'Back to initial state on end'
   'embeds': 'Embeds'
   'optimize-for-stats': 'Optimize <video> for stats'
