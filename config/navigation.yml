@@ -14,6 +14,7 @@
   'embeds': 'Embeds'
   'optimize-for-stats': 'Optimize <video> for stats'
   'ssl': 'SSL Serving'
+  'google-analytics-integration': 'Google Analytics integration'
 'Javascript API':
   'javascript-api/usage': 'Usage'
   'javascript-api/methods': 'Methods'
