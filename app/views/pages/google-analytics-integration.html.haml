@@ -3,7 +3,7 @@
 %h2= @page_title
 
 :textile
-  Integrating Google Analytics events tracking with SublimeVideo is very simple. Using our current "JavaScript API":/javascript-api you can track "video started" and "video ended" events. Following are the two steps you'll need to implement this integration.
+  Integrating Google Analytics Event Tracking with SublimeVideo is very simple. Using our current "JavaScript API":/javascript-api you can track "video started" and "video ended" events. Here are the two steps you'll need to implement this integration.
 
   h4. Step 1: Embed the Google Analytics tracking code
 
@@ -33,17 +33,17 @@
 
   h4. Additional parameters
 
-  You can send additional parameters when calling the @_gaq.push()@ method (lines 11 & 15). For instance you could send a "label" parameter with the value @sv.element.currentSrc + " [" + sv.mode + "]"@. This would send the played video URL and the mode used (_html5_ or _flash_).
+  You can send additional parameters when calling the @_gaq.push()@ method (lines 11 & 15). For instance you could send a "label" parameter with the value @sv.element.getAttribute("data-name") + " [" + sv.mode + "]"@. This would send the video "@data-name@ attribute":/optimize-for-stats and the mode used (_html5_ or _flash_).
 
   It would look something like this:
 
   <pre><code class="language-javascript">sublimevideo.ready(function() {
     sublimevideo.onStart(function(sv) {
-      _gaq.push(["_trackEvent", "Videos", "Started", sv.element.currentSrc + " [" + sv.mode + "]"]);
+      _gaq.push(["_trackEvent", "Videos", "Started", sv.element.getAttribute("data-name") + " [" + sv.mode + "]"]);
     });
 
     sublimevideo.onEnd(function(sv) {
-      _gaq.push(["_trackEvent", "Videos", "Ended", sv.element.currentSrc + " [" + sv.mode + "]"]);
+      _gaq.push(["_trackEvent", "Videos", "Ended", sv.element.getAttribute("data-name") + " [" + sv.mode + "]"]);
     });
   });</code></pre>
 
