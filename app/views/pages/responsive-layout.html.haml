@@ -7,7 +7,7 @@
 
   h4. HTML Code
 
-  bc(language-markup). <video id="video1" class="sv" poster="posterframe.jpg" width="640" height="360" preload="none">
+  bc(language-markup). <video id="video1" class="responsive" poster="posterframe.jpg" width="640" height="360" preload="none">
     <source src="video.mp4" />
     <source src="video.webm" />
   </video>
@@ -15,17 +15,17 @@
   *Notes:*
 
   * Don't set the _sublime_ @class@ to the @<video>@ element since the video will be prepared through the JS API.
-  * We'll use the _sv_ @class@ in the JavaScript code below.
+  * We'll use the _responsive_ @class@ in the JavaScript code below.
 
   h4. JavaScript Code (jQuery)
 
-  The following code will automatically resize all the @<video>@ elements that have the _sv_ @class@ on page load *and* when the window is resized. Put this code in a @<script>@ element.
+  The following code will automatically resize all the @<video>@ elements that have the _responsive_ @class@ on page load *and* when the window is resized. Put this code in a @<script>@ element.
 
   <pre data-line=8,18><code class="language-javascript">var fluidParent, newWidth;
 
-  // Prevents some flickering.
-  // For a better efficiency, you may want to put this line under each <video> element instead.
-  $("video.sv").css('visibility', 'hidden');
+  // Prevents some flickering. For a better efficiency, you may want to put
+  // this line in a <script> tag just below your <video> elements.
+  $("video.responsive").css('visibility', 'hidden');
 
   $(document).ready(function() {
     fluidParent = $("#content");
@@ -37,14 +37,14 @@
 
   function resizeVideo() {
     newWidth = fluidParent.width();
-    $("video.sv").each(function(){
+    $("video.responsive").each(function(){
       sublimevideo.resize($(this)[0], newWidth, newWidth / (16/9));
     });
   }
 
   sublimevideo.ready(function(){
-    // Prepare all the videos with the "sv" class
-    $("video.sv").each(function(){
+    // Prepare all the videos with the "responsive" class
+    $("video.responsive").each(function(){
       sublimevideo.prepare($(this)[0]);
     });
 
