@@ -3,7 +3,7 @@
 %h2= @page_title
 
 :textile
-  Thanks to our "JavaScript API":/javascript-api, making your videos scale along with your responsive layout is easy to achieve. In order to do this you have to listen to the browser’s window @resize@ event, and then call the @sublimevideo.resize@ method when the event is fired.
+  Thanks to our "JavaScript API":/javascript-api, making your videos scale along with your responsive layout is easy to achieve. In order to do this you have to listen to the browser’s window @resize@ event, and then call the "@sublimevideo.resize@":/javascript-api/methods#resize method when the event is fired.
 
   h4. HTML Code
 
@@ -14,7 +14,7 @@
 
   *Notes:*
 
-  * When implementing this functionality, you *must not add* the _sublime_ @class@ to the @<video>@ element. This is because the video will be prepared through the JS API.
+  * Don't set the _sublime_ @class@ to the @<video>@ element since the video will be prepared through the JS API.
   * We'll use the _sv_ @class@ in the JavaScript code below.
 
   h4. JavaScript Code (jQuery)
@@ -25,27 +25,27 @@
 
   // Prevents some flickering.
   // For a better efficiency, you may want to put this line under each <video> element instead.
-  jQuery("video.sv").css('visibility', 'hidden');
+  $("video.sv").css('visibility', 'hidden');
 
-  jQuery(document).ready(function() {
-    fluidParent = jQuery("#content");
+  $(document).ready(function() {
+    fluidParent = $("#content");
   });
 
-  jQuery(window).resize(function() {
+  $(window).resize(function() {
     resizeVideo();
   });
 
   function resizeVideo() {
     newWidth = fluidParent.width();
-    jQuery("video.sv").each(function(){
-      sublimevideo.resize(jQuery(this)[0], newWidth, newWidth / (16/9));
+    $("video.sv").each(function(){
+      sublimevideo.resize($(this)[0], newWidth, newWidth / (16/9));
     });
   }
 
   sublimevideo.ready(function(){
     // Prepare all the videos with the "sv" class
-    jQuery("video.sv").each(function(){
-      sublimevideo.prepare(jQuery(this)[0]);
+    $("video.sv").each(function(){
+      sublimevideo.prepare($(this)[0]);
     });
 
     resizeVideo();
