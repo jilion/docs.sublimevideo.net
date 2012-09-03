@@ -21,7 +21,7 @@
 
   The following code will automatically resize all the @<video>@ elements that have the _responsive_ @class@ on page load *and* when the window is resized. Put this code in a @<script>@ element.
 
-  <pre data-line=8,18><code class="language-javascript">var fluidParent, newWidth;
+  <pre data-line=8,29><code class="language-javascript">var fluidParent, newWidth;
 
   // Prevents some flickering. For a better efficiency, you may want to put
   // this line in a <script> tag just below your <video> elements.
@@ -31,28 +31,30 @@
     fluidParent = $("#content");
   });
 
-  $(window).resize(function() {
-    resizeVideo();
-  });
-
-  function resizeVideo() {
-    newWidth = fluidParent.width();
-    $("video.responsive").each(function(){
-      sublimevideo.resize($(this)[0], newWidth, newWidth / (16/9));
-    });
-  }
-
-  sublimevideo.ready(function(){
+  sublimevideo.ready(function() {
     // Prepare all the videos with the "responsive" class
     $("video.responsive").each(function(){
-      sublimevideo.prepare($(this)[0]);
+      sublimevideo.prepare(this);
     });
 
-    resizeVideo();
-  });</code></pre>
+    resizeVideos();
+
+    // Since resizeVideos calls the sublime api, $(window).resize
+    // must be registered inside the sublimevideo.ready callback, not before.
+    $(window).resize(function() {
+      resizeVideos();
+    });
+  });
+
+  function resizeVideos() {
+    newWidth = fluidParent.width();
+    $("video.responsive").each(function() {
+      sublimevideo.resize(this, newWidth, newWidth / (16/9));
+    });
+  }</code></pre>
 
   *Line 8.* Replace "content" with the actual @id@ of the container element to which the videos must adapt.
-  *Line 18.* Replace "(16/9)" with the actual width/height ratio of your videos.
+  *Line 29.* Replace "(16/9)" with the actual width/height ratio of your videos.
 
   h3(#demo). "Demo":#demo
 
