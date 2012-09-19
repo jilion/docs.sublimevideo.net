@@ -4,7 +4,7 @@ module DocsHelper
 
   def display_menu
     html = ''
-    Navigation.tree.each do |section, items|
+    Navigation.tree(params[:version]).each do |section, items|
       html += content_tag :ul do
         content_tag :li do
           content_tag :ul, class: 'pages' do
@@ -23,7 +23,7 @@ module DocsHelper
 
   def li_with_page_link(page, title)
     content_tag :li, class: (page == params[:page] ? 'active' : nil) do
-      link_to(title, "/#{page}")
+      link_to(title, "#{params[:version] != 'stable' ? "/#{params[:version]}" : ''}/#{page}")
     end
   end
 

@@ -1,0 +1,82 @@
+= content_for :javascript, javascript_include_tag('http://test.sublimevideo.net/cdn/js/12345678.js')
+
+- @page_title = "Add-ons: Lightbox"
+
+%h2= @page_title
+
+:textile
+  _The lightbox add-on is *available for free* in the standard player._
+
+  The lightbox add-on displays your videos but also your images in a floating player. The lightbox-opening trigger is a simple @<a>@ element, and you can have multiple @<a>@ that open the same video or image in a lightbox.
+
+  While it is possible to integrate SublimeVideo with other lightbox libraries (you'll need to use our "JavaScript API":/javascript-api for this), we highly recommend using SublimeVideo's lightbox add-on to get the easiest and best possible lightbox integration for your videos.
+
+  h3(#step-1). "Step 1: Create a &lt;a&gt; element":#step-1
+
+  bc(language-markup). <a class="sublime" href="#video1">Play the video with the ID "video1"</a>
+
+  * @class="sublime"@ is needed.
+  * @href@ must be set to "#UNIQUE_ID" where _UNIQUE_ID_ is the @DOM ID@ of the video that you'd like to open in a lightbox. *This allows you to have several links that opens the same @<video>@.*
+
+  h3(#step-2). "Step 2: Create a &lt;video&gt; element":#step-2
+
+  bc(language-markup). <video id="video1" style="display:none" width="640" height="360" poster="video-poster.jpg" preload="none">
+    <source src="http://yoursite.com/video.mp4" />
+    <source src="http://yoursite.com/video.webm" />
+  </video>
+
+  * The @DOM ID@ must corresponds to the value you've set in the @href@ of the @<a>@ element created in "Step 1":#step-1.
+  * Don't add the _sublime_ @class@ to the @<video>@.
+  * The @<video>@ element needs to be initially hidden.
+
+  h3(#lightbox-settings). "Lightbox settings":#lightbox-settings
+
+  It's easy to customize how your lightbox will look and behave with the settings listed below (be sure to set these settings on the @<a>@, not on the @<video>@). Please note that the lightbox settings respect the "Player settings syntax":player-settings.
+
+  h4. @autoplay@
+
+  Values: <span class="param">@true@</span> | <span class="param">@false@</span>
+
+  Default: <span class="param">@true@</span>
+
+  Example: @data-settings='autoplay: false'@
+
+  h4. @overlay-color@
+
+  Values:
+  * <span class="param">literal</span>: <span class="param">@blue@</span>, <span class="param">@red@</span> etc...
+  * <span class="param">hexadecimal</span>: <span class="param">@#fff@</span>, <span class="param">@#996633@</span> etc...
+  * <span class="param">rgb</span>: <span class="param">@rgb(255, 122, 25)@</span> etc...
+
+  Default: <span class="param">@black@</span>
+
+  Example: @data-settings='overlay-color: rgb(255, 122, 25)'@
+
+  h4. @overlay-opacity@
+
+  Values: Any decimal value between 0 and 1</span>: <span class="param">@0.25@</span>, <span class="param">@0.9@</span> etc...
+
+  Default: <span class="param">@0.7@</span>
+
+  Example: @data-settings='overlay-opacity: 0.9'@
+
+  h4. @close-button-position@
+
+  Values: <span class="param">@left@</span> | <span class="param">@right@</span>
+
+  Default: <span class="param">@left@</span>
+
+  Example: @data-settings='close-button-position: right'@
+
+  h4. @close-button@
+
+  Value: <span class="param">@none@</span>
+
+  Default: This setting isn't set by default.
+
+  Example: @data-settings='close-button: none'@
+
+  h3. Demo
+
+  <iframe style="width: 100%; height: 500px" src="http://jsfiddle.net/sublimevideo/G9748/embedded/result,html" allowfullscreen frameborder="0"></iframe>
+​

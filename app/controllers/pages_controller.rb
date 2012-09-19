@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   def show
     @body_class = params[:page]
 
-    render "pages/#{params[:page]}" if fresh_required?
+    render "pages/#{params[:version]}/#{params[:page]}" if fresh_required?
   end
 
   private
@@ -18,7 +18,7 @@ class PagesController < ApplicationController
   end
 
   def page_file
-    @page_file ||= File.new(Rails.root.join("app/views/pages/#{params[:page]}.html.haml"))
+    @page_file ||= File.new(Rails.root.join("app/views/pages/#{params[:version]}/#{params[:page]}.html.haml"))
   end
 
 end

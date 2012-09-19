@@ -1,0 +1,18 @@
+- @page_title = "Playlists"
+
+%h2= @page_title
+
+:textile
+  The example presented here will allow your visitors to select which video to play by clicking on the respective thumbnails of videos in the playlist. Only the selected video will be shown in the player; once each video finishes playing, the next video will automatically start playing.
+
+  In this example, we are making extensive use of our "JavaScript API":/javascript-api.
+
+  <iframe style="width: 100%; height: 600px" src="http://jsfiddle.net/sublimevideo/6nJkY/embedded/result,html,js,css" allowfullscreen frameborder="0"></iframe>
+
+  *Notes:*
+
+  * Make sure that you embed the jQuery library (you can find the latest version "here":http://code.google.com/apis/libraries/devguide.html#jquery) in your page!
+  * Put the JavaScript code in a @<script>@ element just before the @</body>@ tag, or in an external file.
+  * Put the CSS code in a @<style>@ element in the @<head>@ tag, or in an external file.
+  * Please make sure to adapt the CSS code to your site's own design as well as uploading the "playlist_play_icon.png":http://media.jilion.com/images/playlist_play_icon.png image to your own server.
+  * In future, we plan to include built-in playlist functionality that will make this feature even easier to implement, without needing to know any JavaScript.

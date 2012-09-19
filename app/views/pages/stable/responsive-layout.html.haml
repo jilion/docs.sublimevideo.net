@@ -1,0 +1,61 @@
+- @page_title = "Integration in a responsive layout"
+
+%h2= @page_title
+
+:textile
+  Thanks to our "JavaScript API":/javascript-api, making your videos scale along with your responsive layout is easy to achieve. In order to do this you have to listen to the browser’s window @resize@ event, and then call the "@sublimevideo.resize@":/javascript-api/methods#resize method when the event is fired.
+
+  h4. HTML Code
+
+  bc(language-markup). <video id="video1" class="responsive" poster="posterframe.jpg" width="640" height="360" preload="none">
+    <source src="video.mp4" />
+    <source src="video.webm" />
+  </video>
+
+  *Notes:*
+
+  * Don't set the _sublime_ @class@ to the @<video>@ element since the video will be prepared through the JS API.
+  * We'll use the _responsive_ @class@ in the JavaScript code below.
+
+  h4. JavaScript Code (jQuery)
+
+  The following code will automatically resize all the @<video>@ elements that have the _responsive_ @class@ on page load *and* when the window is resized. Put this code in a @<script>@ element.
+
+  <pre data-line=8,29><code class="language-javascript">var fluidParent, newWidth;
+
+  // Prevents some flickering. For a better efficiency, you may want to put
+  // this line in a <script> tag just below your <video> elements.
+  $("video.responsive").css('visibility', 'hidden');
+
+  $(document).ready(function() {
+    fluidParent = $("#content");
+  });
+
+  sublimevideo.ready(function() {
+    // Prepare all the videos with the "responsive" class
+    $("video.responsive").each(function(){
+      sublimevideo.prepare(this);
+    });
+
+    resizeVideos();
+
+    // Since resizeVideos calls the sublime api, $(window).resize
+    // must be registered inside the sublimevideo.ready callback, not before.
+    $(window).resize(function() {
+      resizeVideos();
+    });
+  });
+
+  function resizeVideos() {
+    newWidth = fluidParent.width();
+    $("video.responsive").each(function() {
+      sublimevideo.resize(this, newWidth, newWidth / (16/9));
+    });
+  }</code></pre>
+
+  *Line 8.* Replace "content" with the actual @id@ of the container element to which the videos must adapt.
+  *Line 29.* Replace "(16/9)" with the actual width/height ratio of your videos.
+
+  h3(#demo). "Demo":#demo
+
+  You can see this feature in action "on this page":http://test.sublimevideo.net/responsive-layout.

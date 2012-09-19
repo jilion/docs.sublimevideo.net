@@ -26,8 +26,9 @@ module Navigation
       end
     end
 
-    def tree
-      @tree ||= YAML.load_file(Rails.root.join('config', 'navigation.yml'))
+    def tree(version = 'stable')
+      @tree ||= {}
+      @tree[version] ||= YAML.load_file(Rails.root.join('config', 'navigation.yml'))[version]
     end
   end
 

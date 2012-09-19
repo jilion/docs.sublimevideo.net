@@ -17,9 +17,14 @@ feature 'redirect legacy routes' do
     current_url.should eq "http://docs.sublimevideo.dev/autoplay"
   end
 
-  it "redirect /customizing-the-initial-play-button to /custom-play-button" do
+  it "redirect /customizing-the-initial-play-button to /custom-start-view" do
     visit '/customizing-the-initial-play-button'
-    current_url.should eq "http://docs.sublimevideo.dev/custom-play-button"
+    current_url.should eq "http://docs.sublimevideo.dev/custom-start-view"
+  end
+
+  it "redirect /custom-play-button to /custom-play-button" do
+    visit '/custom-play-button'
+    current_url.should eq "http://docs.sublimevideo.dev/custom-start-view"
   end
 
   it "redirect /loop-a-video to /loop" do
@@ -105,5 +110,68 @@ feature "write-proper-video-elements" do
   it "is viewable" do
     visit '/write-proper-video-elements'
     current_url.should eq "http://docs.sublimevideo.dev/write-proper-video-elements"
+  end
+end
+
+feature "/beta/encode-videos-for-the-web" do
+  it "is viewable" do
+    visit '/beta/encode-videos-for-the-web'
+    current_url.should eq "http://docs.sublimevideo.dev/beta/encode-videos-for-the-web"
+  end
+end
+
+feature "/beta/faq" do
+  it "is viewable" do
+    visit '/beta/faq'
+    current_url.should eq "http://docs.sublimevideo.dev/beta/faq"
+  end
+end
+
+feature "/beta/javascript-api" do
+  it "is viewable" do
+    visit '/beta/javascript-api'
+    current_url.should eq "http://docs.sublimevideo.dev/beta/javascript-api/usage"
+  end
+end
+
+feature "/beta/lightbox" do
+  it "is viewable" do
+    visit '/beta/lightbox'
+    current_url.should eq "http://docs.sublimevideo.dev/beta/lightbox"
+  end
+end
+
+feature "/beta/quickstart-guide" do
+  it "is viewable" do
+    visit '/beta/quickstart-guide'
+    current_url.should eq "http://docs.sublimevideo.dev/beta/quickstart-guide"
+  end
+end
+
+feature "/beta/supported-browsers-and-platforms" do
+  it "is viewable" do
+    visit '/beta/supported-browsers-and-platforms'
+    current_url.should eq "http://docs.sublimevideo.dev/beta/supported-browsers-and-platforms"
+  end
+end
+
+feature "/beta/troubleshooting" do
+  it "is viewable" do
+    visit '/beta/troubleshooting'
+    current_url.should eq "http://docs.sublimevideo.dev/beta/troubleshooting"
+  end
+end
+
+feature "/beta/releases" do
+  it "is viewable" do
+    visit '/beta/releases'
+    current_url.should eq "http://docs.sublimevideo.dev/beta/releases"
+  end
+end
+
+feature "/beta/write-proper-video-elements" do
+  it "is viewable" do
+    visit '/beta/write-proper-video-elements'
+    current_url.should eq "http://docs.sublimevideo.dev/beta/write-proper-video-elements"
   end
 end

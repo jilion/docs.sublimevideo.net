@@ -1,5 +1,5 @@
 guard :livereload, host: 'docs.sublimevideo.dev' do
-  watch(%r{app/views/.+\.(erb|haml|slim)})
+  watch(%r{app/views/([^\.])*\.html\.haml})
   watch(%r{app/helpers/.+\.rb})
   watch(%r{public/.+\.(css|js|html)})
   watch(%r{config/locales/.+\.yml})
@@ -13,10 +13,8 @@ guard :pow do
   watch('.rvmrc')
   watch('Gemfile')
   watch('Gemfile.lock')
-  watch('config/application.rb')
-  watch('config/environment.rb')
-  watch(%r{^config/environments/.*\.rb$})
-  watch(%r{^config/initializers/.*\.rb$})
+  watch(%r{^config/([^\.])*\.rb$})
+  watch(%r{^config/([^\.])*\.yml$})
 end
 
 guard :rspec, bundler: false, cli: "--color -f progress" do
