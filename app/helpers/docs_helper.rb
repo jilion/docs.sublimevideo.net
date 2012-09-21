@@ -6,18 +6,7 @@ module DocsHelper
   def display_menu
     html = ''
     Navigation.tree(params[:version]).each do |section, items|
-      html += content_tag :ul do
-        content_tag :li do
-          content_tag :ul, class: 'pages' do
-            content_tag :li, class: 'title' do
-              content_tag(:h3, section) +
-              items.inject('') do |h, (permalink, title)|
-                h += li_with_page_link(permalink, title)
-              end.html_safe
-            end
-          end
-        end
-      end
+      html += content_tag(:h3, link_to(section, '#'), class: 'accordion') + content_tag(:ul, submenu(items), class: 'pages')
     end
     raw html
   end
@@ -37,6 +26,16 @@ module DocsHelper
       html += render "pages/#{params[:version]}/#{page}/#{permalink}"
     end
     raw html.html_safe
+  end
+
+  def submenu(items)
+    items.inject('') do |h, (permalink, title)|
+      if title.is_a?(Hash)
+        h += content_tag(:li, content_tag(:h4, permalink) + content_tag(:ul, submenu(title)))
+      else
+        h += li_with_page_link(permalink, title)
+      end
+    end.html_safe
   end
 
   def li_with_page_link(page, title)

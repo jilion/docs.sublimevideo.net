@@ -21,7 +21,7 @@ DocsSublimeVideo::Application.routes.draw do
 
   get '(/:version)/search' => 'search#index', as: 'search', version: /beta/, defaults: { version: 'stable' }
   resources :releases, only: :index
-  get '(/:version)/*page' => 'pages#show', as: 'page', constraints: DocsPages, version: /beta/, defaults: { version: 'stable' }, format: false
+  get '(/:version)/*page' => 'pages#show', as: 'page', constraints: DocsPages, version: /stable|beta/, defaults: { version: 'stable' }, format: false
 
   root to: redirect('/quickstart-guide')
 end

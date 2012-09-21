@@ -41,6 +41,11 @@ feature 'redirect legacy routes' do
     visit '/put-video-in-a-floating-lightbox'
     current_url.should eq "http://docs.sublimevideo.dev/lightbox"
   end
+
+  it "redirect /faq to /player-faq" do
+    visit '/faq'
+    current_url.should eq "http://docs.sublimevideo.dev/player-faq"
+  end
 end
 
 feature "root redirect to /quickstart-guide" do
@@ -57,10 +62,17 @@ feature "encode-videos-for-the-web" do
   end
 end
 
-feature "faq" do
+feature "player-faq" do
   it "is viewable" do
-    visit '/faq'
-    current_url.should eq "http://docs.sublimevideo.dev/faq"
+    visit '/player-faq'
+    current_url.should eq "http://docs.sublimevideo.dev/player-faq"
+  end
+end
+
+feature "service-faq" do
+  it "is viewable" do
+    visit '/service-faq'
+    current_url.should eq "http://docs.sublimevideo.dev/service-faq"
   end
 end
 
@@ -120,10 +132,17 @@ feature "/beta/encode-videos-for-the-web" do
   end
 end
 
-feature "/beta/faq" do
+feature "/beta/player-faq" do
   it "is viewable" do
-    visit '/beta/faq'
-    current_url.should eq "http://docs.sublimevideo.dev/beta/faq"
+    visit '/beta/player-faq'
+    current_url.should eq "http://docs.sublimevideo.dev/beta/player-faq"
+  end
+end
+
+feature "/beta/service-faq" do
+  it "is viewable" do
+    visit '/beta/service-faq'
+    current_url.should eq "http://docs.sublimevideo.dev/beta/service-faq"
   end
 end
 
