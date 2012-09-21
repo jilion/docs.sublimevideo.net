@@ -44,4 +44,10 @@ module DocsHelper
     end
   end
 
+  def jsfiddle_embed(token, options = {})
+    options = { height: 300, panes: 'result,html' }.merge(options)
+
+    "<iframe style='width: 100%; height: #{options[:height]}px' src='http://jsfiddle.net/sublimevideo/#{token}/embedded/#{options[:panes]}' allowfullscreen webkitallowfullscreen mozallowfullscreen frameborder='0'></iframe>"
+  end
+
 end

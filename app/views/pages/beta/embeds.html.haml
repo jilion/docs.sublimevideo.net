@@ -18,7 +18,7 @@
     <script type="text/javascript" src="http://cdn.sublimevideo.net/js/YOUR_TOKEN.js"></script>
   </head>
   <body>
-    <video style="display:none" class="sublime sv_iframe_embed" poster="poster.jpg" preload="none">
+    <video style="display:none" class="sublime" poster="poster.jpg" preload="none">
       <source src="http://yoursite.com/video.mp4" />
       <source src="http://yoursite.com/video.webm" />
     </video>
@@ -29,11 +29,14 @@
   *Line 5.* Replace _YOUR_TOKEN_ with your actual site's token (you can find it in the _#{link_to "My Sites", my_url('sites')}_ page after clicking the "embed code" button).
 
   *Line 8.*
-
-  * %(red)Add the _sv_iframe_embed_ @class@ to your @<video>@ element and *omit its @width@ and @height@ attributes*.%
+  * You don't have to specify the @width@ and @height@ attributes, the player will automatically fill the entire iframe.
   * @style="display:none"@ is optional, but we recommend it to prevent UI flickering when the iframe is first loaded.
 
   Host this file on a domain that is registered on #{link_to "MySublimeVideo", my_url('sites')}. For instance, if your registered domain is _yourdomain.com_, you could save this page at _http://yourdomain.com/embeds/video1.html_.
+
+  After you've created the @<iframe>@ content and hosted the page on your server, you'll be able to use our #{link_to "Video Code Generator", my_url('video-code-generator')} to generate the embeddable code.
+
+  If you want to manually create your @<iframe>@ elements yourself or simply better understand the code, please read on.
 
   h3(#embed-code). "The embed code":#embed-code
 

@@ -3,22 +3,33 @@
 %h2= @page_title
 
 :textile
+  h3. Syntax
 
-  h3. Usage
+  Settings can be set in 3 different ways.
 
-  Settings can be set via a @data-@ attribute on the @<video>@ element, for instance:
+  h4. Via @data-@_@attribute-name@_ attributes
 
-  @<video data-autoresize="fit" data-initial-overlay="none" ...>@
+  Each setting can be set via a @data-@ attribute on the @<video>@ element.
 
-  or grouped in a single data-settings attribute as a CSS-like formatted string:
+  For instance:
 
-  @<video data-settings="autoresize: fit; initial-overlay: none;" ...>@
+  bc(language-markup). <video data-autoresize="fit" data-initial-overlay="none" ...>
+
+  h4. Via the @data-settings@ attribute
+
+  If you have multiple settings to set, it's often more elegant to group them in a single @data-settings@ attribute (as a CSS-like formatted string).
+
+  For instance:
+
+  bc(language-markup). <video data-settings="autoresize: fit; initial-overlay: none;" ...>
+
+  h4. Via JavaScript
 
   Settings can also be set with the JavaScript API via a key-value object, in this case the "dash-separated" properties needs to be written as "camelCase", similarly to what happens with CSS properties set via JavaScript.
 
   h3. Video Settings
 
-  These settings must be applied on the @<video>@ element.
+  These settings must be set on the @<video>@ element.
 
   h4. General
 
@@ -36,48 +47,47 @@
   %tr
     %td
       %strong initial-overlay
-    %td <code>default</code>, <code>none</code>
+    %td <code>default</code><br /><code>none</code>
     %td <code>default</code>
-    %td Allows to disable the initial overlay effect.
+    %td Allows to disable the initial overlay effect.<br />View <a href="custom-start-view">demo</a>.
   %tr.alt
     %td
       %strong initial-overlay-color
-    %td <code>word</code>, <code>#hex</code>, <code>rgb</code>
+    %td <code>literal</code><br /><code>#hexadecimal</code><br /><code>rgb</code>
     %td <code>default</code>
-    %td Allows to customize the initial overlay color.
+    %td Allows to customize the initial overlay color.<br />View <a href="custom-start-view">demo</a>.
   %tr
     %td
       %strong autoresize
-    %td <code>none</code>, <code>fill</code>, <code>fit</code>
+    %td <code>none</code><br /><code>fill</code><br /><code>fit</code>
     %td <code>none</code>
-    %td Allows to automatically resize the video when its parent container is resized. See the <a href="autoresize">autoresize</a> page.
+    %td Allows to automatically resize the video when its parent container is resized.<br />View <a href="responsive-layout">demo</a>.
   %tr.alt
     %td
       %strong force-flash
-    %td <code>false</code>, <code>true</code>
+    %td <code>false</code><br /><code>true</code>
     %td <code>false</code>
     %td Allows to force the usage of Flash for the video decoding instead of the native browser decoding.
   %tr
     %td
       %strong badge-position
-    %td <code>right</code>, <code>left</code>
+    %td <code>right</code><br /><code>left</code>
     %td <code>right</code>
     %td Allows to choose where the SublimeVideo logo should be placed.
   %tr.alt
     %td
       %strong controls
-    %td <code>default</code>, <code>none</code>, <code>sticky</code>
+    %td <code>default</code><br /><code>none</code><br /><code>sticky</code>
     %td <code>default</code>
     %td Allows to completely hide the controls or to always display them.
   %tr
     %td
       %strong stop-on-end
-    %td <code>false</code>, <code>true</code>
+    %td <code>false</code><br /><code>true</code>
     %td <code>false</code>
-    %td Allows to display the start view when a video playback ends.
+    %td Allows to display the start view when a video playback ends.<br />View <a href="back-to-initial-state-on-end">demo</a>.
 
 :textile
-
   h4. Native @<video>@-equivalent
 
 %table#supported_browsers
@@ -94,19 +104,20 @@
   %tr
     %td
       %strong autoplay
-    %td <code>false</code>, <code>true</code>
+    %td <code>false</code><br /><code>true</code>
     %td <code>false</code>
-    %td Allows to autoplay the video once it's ready to start.
+    %td Allows to autoplay the video upon page load.<br />View <a href="autoplay">demo</a>.
   %tr.alt
     %td
       %strong loop
-    %td <code>false</code>, <code>true</code>
+    %td <code>false</code><br /><code>true</code>
     %td <code>false</code>
-    %td Allows to loop the video once its playback ends.
+    %td Allows to loop the video once its playback ends.<br />View <a href="loop">demo</a>.
 
 :textile
-
   h4. Stats-related settings
+
+  Please see the "Optimize &lt;video&gt; elements for stats":optimize-for-stats page for more information.
 
 %table#supported_browsers
   %colgroup
@@ -122,15 +133,15 @@
   %tr
     %td
       %strong data-name
-    %td <code>any string</code>
+    %td any string
+    %td N/A
     %td
-    %td See the <a href="optimize-for-stats">Optimize &lt;video&gt; elements for stats</a> page.
   %tr.alt
     %td
       %strong data-uid
-    %td <code>any string</code>
+    %td any string
+    %td N/A
     %td
-    %td See the <a href="optimize-for-stats">Optimize &lt;video&gt; elements for stats</a> page.
   -#%tr
   -#  %td
   -#    %strong data-vid
@@ -139,10 +150,9 @@
   -#  %td
 
 :textile
+  h3. Lightbox Settings
 
-  h3. Lightbox Settings (applied on &lt;a&gt; elements)
-
-  These settings must be applied on the @<a>@ element that triggers the lightbox opening. Please see the "Lightbox add-on":lightbox page for more information.
+  These settings must be set on the @<a>@ element that triggers the lightbox opening. Please see the "Lightbox add-on":lightbox page for more information.
 
 %table#supported_browsers
   %colgroup
@@ -158,48 +168,52 @@
   %tr
     %td
       %strong autoplay
-    %td <code>true</code>, <code>false</code>
+    %td <code>true</code><br /><code>false</code>
     %td <code>true</code>
     %td Allows to autoplay the video once the lightbox opens.
   %tr.alt
     %td
       %strong overlay-color
-    %td <code>word</code>, <code>#hex</code>, <code>rgb</code>
+    %td <code>literal</code><br /><code>#hexadecimal</code><br /><code>rgb</code>
     %td <code>black</code>
-    %td Allows to customize the lightbox overlay color. See the <a href="addons/lightbox">Lightbox add-on</a> page.
+    %td Allows to customize the lightbox overlay color.
   %tr
     %td
       %strong overlay-opacity
-    %td <code>a float between 0.1 and 1.0</code>
+    %td a float between 0.1 and 1.0
     %td <code>0.7</code>
-    %td Allows to customize the lightbox overlay opacity. See the <a href="addons/lightbox">Lightbox add-on</a> page.
+    %td Allows to customize the lightbox overlay opacity.
   %tr
     %td
       %strong close-button
-    %td <code>default</code>, <code>none</code>
+    %td <code>default</code><br /><code>none</code>
     %td <code>default</code>
     %td Allows to completely hide the lightbox close button.
   %tr.alt
     %td
       %strong close-button-position
-    %td <code>left</code>, <code>right</code>
+    %td <code>left</code><br /><code>right</code>
     %td <code>left</code>
     %td Allows to choose where the lightbox close button should be placed.
-  %tr.alt
-    %td
-      %strong controls
-    %td <code>default</code>, <code>none</code>, <code>sticky</code>
-    %td <code>default</code>
-    %td Allows to completely hide the controls or to always display them.
-  %tr
-    %td
-      %strong stop-on-end
-    %td <code>false</code>, <code>true</code>
-    %td <code>false</code>
-    %td Allows to display the start view when a video playback ends.
 
 :textile
-
   h3(#demo). "Demo":#demo
 
-  You can see this feature in action "on this page":http://test.sublimevideo.net/autoplay.
+  h4. General
+
+  * "initial-overlay & initial-overlay-color":custom-start-view
+  * "autoresize":autoresize
+  * "stop-on-end":stop-on-end
+
+  h4. Native @<video>@-equivalent
+
+  * "autoplay":autoplay
+  * "loop":loop
+
+  h4. Stats-related settings
+
+  * "data-name & data-uid":optimize-for-stats
+
+  h4. Lightbox Settings
+
+  * "autoplay, overlay-color, overlay-opacity, close-button, close-button-position":lightbox

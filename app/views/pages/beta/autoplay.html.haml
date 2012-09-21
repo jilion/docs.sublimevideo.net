@@ -3,8 +3,28 @@
 %h2= @page_title
 
 :textile
-  Playing a video on page load is possible using the "@autoplay@ setting":player-settings. _Please note this currently doesn't work on iOS devices._
+  You can use the following "player setting":player-settings (_please note this currently doesn't work on iOS devices_):
+
+%table#supported_browsers
+  %colgroup
+    %col
+    %col.alt
+    %col
+    %col.alt
+  %tr.alt
+    %th Name
+    %th Values
+    %th Default
+    %th Notes
+  %tr
+    %td
+      %strong autoplay
+    %td <code>false</code><br /><code>true</code>
+    %td <code>false</code>
+    %td Allows to autoplay the video upon page load.
+
+:textile
 
   h3(#demo). "Demo":#demo
 
-  <iframe style="width: 100%; height: 300px" src="http://jsfiddle.net/sublimevideo/FfwbC/embedded/result,html" allowfullscreen frameborder="0"></iframe>
+  #{jsfiddle_embed('FfwbC', height: 300)}

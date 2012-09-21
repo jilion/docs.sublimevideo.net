@@ -5,40 +5,68 @@
 :textile
   The default initial play button ensures compatibility across all browsers (down to IE6). We strongly discourage you from modifying it using CSS.
 
-  h3. Customize the initial overlay
+  h3. Customize or disable the initial overlay
 
-  h4. Disable the initial overlay
+  You can use the following "player settings":player-settings:
 
-  You can use the @initial-overlay@ "player settings":player-settings.
+%table#supported_browsers
+  %colgroup
+    %col
+    %col.alt
+    %col
+    %col.alt
+  %tr.alt
+    %th Name
+    %th Values
+    %th Default
+    %th Description & Notes
+  %tr
+    %td
+      %strong initial-overlay
+    %td <code>default</code><br /><code>none</code>
+    %td <code>default</code>
+    %td Allows to disable the initial overlay effect.
+  %tr.alt
+    %td
+      %strong initial-overlay-color
+    %td <code>literal</code><br /><code>#hexadecimal</code><br /><code>rgb</code>
+    %td <code>default</code>
+    %td Allows to customize the initial overlay color.
 
-  Values: <span class="param">@true@</span> | <span class="param">@none@</span>
+-#h4. Disable the initial overlay
+-#
+-#You can use the @initial-overlay@ "player settings":player-settings.
+-#
+-#Values: <span class="param">@true@</span> | <span class="param">@none@</span>
+-#
+-#Default: <span class="param">@true@</span>
+-#
+-#Examples: @data-settings='initial-overlay: none'@
+-#
+-#h4. Change the initial overlay color
+-#
+-#You can use the @initial-overlay-color@ "player settings":player-settings.
+-#
+-#Values:
+-#* <span class="param">literal</span>: <span class="param">@blue@</span>, <span class="param">@red@</span> etc...
+-#* <span class="param">hexadecimal</span>: <span class="param">@#fff@</span>, <span class="param">@#996633@</span> etc...
+-#* <span class="param">rgb</span>: <span class="param">@rgb(255, 122, 25)@</span> etc...
+-#
+-#Default: <span class="param">@black@</span>
+-#
+-#Example: @data-settings='initial-overlay-color: rgb(255, 122, 25)'@
 
-  Default: <span class="param">@true@</span>
+:textile
 
-  Examples: @data-settings='initial-overlay: none'@
-
-  h4. Change the initial overlay color
-
-  You can use the @initial-overlay-color@ "player settings":player-settings.
-
-  Values:
-  * <span class="param">literal</span>: <span class="param">@blue@</span>, <span class="param">@red@</span> etc...
-  * <span class="param">hexadecimal</span>: <span class="param">@#fff@</span>, <span class="param">@#996633@</span> etc...
-  * <span class="param">rgb</span>: <span class="param">@rgb(255, 122, 25)@</span> etc...
-
-  Default: <span class="param">@black@</span>
-
-  Example: @data-settings='initial-overlay-color: rgb(255, 122, 25)'@
-
-  <iframe style="width: 100%; height: 600px" src="http://jsfiddle.net/sublimevideo/JpjXu/embedded/result,html" allowfullscreen frameborder="0"></iframe>
+  #{jsfiddle_embed('JpjXu', height: 600)}
 
   h3. Use a custom start view
 
-  You can also use your own custom start viewusing our "JavaScript API":/javascript-api to start the video playback as soon as the user clicks on your new custom view.
+  You can also use your own custom start view using our "JavaScript API":/javascript-api to start the video playback as soon as the user clicks on your new custom view.
 
-  In the example below we'll use a simple @<div>@ placeholder as the custom start view.
+  In the example below we're using a simple @<div>@ placeholder as the custom start view.
 
-  <iframe style="width: 100%; height: 300px" src="http://jsfiddle.net/sublimevideo/xM6Fv/embedded/result,html,js" allowfullscreen frameborder="0"></iframe>
+  #{jsfiddle_embed('xM6Fv', panes: 'result,html,js')}
 
   *Note:*
 
