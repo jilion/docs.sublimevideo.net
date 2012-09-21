@@ -1,6 +1,6 @@
 %nav
   .search_form
-    %form{ action: "#{"/#{params[:version]}" if params[:version]}/search", method: 'get' }
+    %form{ action: "#{"/#{params[:version]}" if params[:version] != 'stable'}/search", method: 'get' }
       = label_tag "q", "" do
         %span= "Search"
       = text_field_tag :q, '', value: params[:q], placeholder: "Search", autocomplete: :off, class: "search"
