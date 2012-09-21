@@ -6,7 +6,7 @@
   %ul.search_results
     - @results['results'].each do |doc|
       %li
-        = link_to "#{Navigation.section_for_page(doc['docid'])}: #{doc['title']}", doc['docid']
+        = link_to doc['title'], doc['docid']
 - else
   %p= raw "Your search did not match any documents. Please provide a keyword, for instance #{link_to "“encoding”", search_path(q: 'encoding')} or #{link_to "“ssl”", search_path(q: 'ssl')}."
 
