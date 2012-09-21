@@ -3,7 +3,7 @@
 %h2= @page_title
 
 :textile
-  h3. Syntax
+  h3(#syntax). "Syntax":#syntax
 
   Settings can be set in 3 different ways.
 
@@ -27,7 +27,7 @@
 
   Settings can also be set with the JavaScript API via a key-value object, in this case the "dash-separated" properties needs to be written as "camelCase", similarly to what happens with CSS properties set via JavaScript.
 
-  h3. Video Settings
+  h3(#video-settings). "Video Settings":#video-settings
 
   These settings must be set on the @<video>@ element.
 
@@ -150,7 +150,7 @@
   -#  %td
 
 :textile
-  h3. Lightbox Settings
+  h3(#lightbox-settings). "Lightbox Settings":#lightbox-settings
 
   These settings must be set on the @<a>@ element that triggers the lightbox opening. Please see the "Lightbox add-on":lightbox page for more information.
 
@@ -195,25 +195,3 @@
     %td <code>left</code><br /><code>right</code>
     %td <code>left</code>
     %td Allows to choose where the lightbox close button should be placed.
-
-:textile
-  h3(#demo). "Demo":#demo
-
-  h4. General
-
-  * "initial-overlay & initial-overlay-color":custom-start-view
-  * "autoresize":autoresize
-  * "stop-on-end":stop-on-end
-
-  h4. Native @<video>@-equivalent
-
-  * "autoplay":autoplay
-  * "loop":loop
-
-  h4. Stats-related settings
-
-  * "data-name & data-uid":optimize-for-stats
-
-  h4. Lightbox Settings
-
-  * "autoplay, overlay-color, overlay-opacity, close-button, close-button-position":lightbox
