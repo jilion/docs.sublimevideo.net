@@ -1,12 +1,3 @@
-guard :livereload, host: 'docs.sublimevideo.dev' do
-  watch(%r{app/views/([^\.])*\.html\.haml})
-  watch(%r{app/helpers/.+\.rb})
-  watch(%r{public/.+\.(css|js|html)})
-  watch(%r{config/locales/.+\.yml})
-  # Rails Assets Pipeline
-  watch(%r{(app|vendor)/assets/\w+/(.+\.(css|js|html)).*})  { |m| "/assets/#{m[2]}" }
-end
-
 guard :pow do
   watch('.powrc')
   watch('.powenv')
@@ -15,6 +6,15 @@ guard :pow do
   watch('Gemfile.lock')
   watch(%r{^config/([^\.])*\.rb$})
   watch(%r{^config/([^\.])*\.yml$})
+end
+
+guard :livereload, host: 'docs.sublimevideo.dev' do
+  watch(%r{app/views/([^\.])*\.html\.haml})
+  watch(%r{app/helpers/.+\.rb})
+  watch(%r{public/.+\.(css|js|html)})
+  watch(%r{config/locales/.+\.yml})
+  # Rails Assets Pipeline
+  watch(%r{(app|vendor)/assets/\w+/(.+\.(css|js|html)).*})  { |m| "/assets/#{m[2]}" }
 end
 
 guard :rspec, bundler: false, cli: "--color -f progress" do

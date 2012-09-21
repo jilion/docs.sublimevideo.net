@@ -1,4 +1,5 @@
 require 'navigation'
+require 'complex_page'
 
 module DocsHelper
 
@@ -19,6 +20,23 @@ module DocsHelper
       end
     end
     raw html
+  end
+
+  def display_complex_page_index(page)
+    html = ''
+    ComplexPage.tree(page).each do |permalink, title|
+      html += content_tag(:li, link_to(title.html_safe, "##{permalink}"))
+    end
+    raw content_tag :ul, html.html_safe
+  end
+
+  def display_complex_page_list(page)
+    html = ''
+    ComplexPage.tree(page).each do |permalink, title|
+      html += content_tag(:h3, link_to(title.html_safe, "##{permalink}", id: permalink))
+      html += render "pages/#{params[:version]}/#{page}/#{permalink}"
+    end
+    raw html.html_safe
   end
 
   def li_with_page_link(page, title)

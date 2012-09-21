@@ -1,0 +1,31 @@
+:textile
+  The most common cause of this problem is a MIME types (a.k.a Content-types) misconfiguration in your web server. While most web servers are already configured to serve _.mp4_ files with the proper MIME type, they are often not configured to properly serve _.ogv_ and _.webm_ files.
+
+  Here is how MIME types should be configured in your web server:
+
+  table(simple).
+  |_. File extension|_. MIME type|
+  |.mp4, m4v|video/mp4|
+  |.ogv|video/ogg|
+  |.webm|video/webm|
+
+  h4. Check your MIME types
+
+  You can use our #{link_to "Video Code Generator", my_url('video-code-generator')} to check if your video assets are served with the correct MIME type. If the generator reports MIME Type errors (#{link_to('see an example', asset_path('video-code-generator/incorrect_mime_types.png'), class: 'sublime lightbox')}), the following sections will help you correct this issue.
+
+  h4. Configure MIME types for videos served by Apache
+
+  You can use an @AddType@ directive in your site-wide @httpd.conf@ or in an @.htaccess@ file in the directory where you store your video files.
+
+  bc(language-unknown). AddType video/mp4 .mp4 .m4v
+  AddType video/webm .webm
+  AddType video/ogg .ogv
+
+  Please read "this article":http://diveintohtml5.info/video.html#video-mime-types for more information.
+
+  h4. Configure MIME types for videos served by Amazon S3
+
+  If your are using Amazon S3 to host Ogg and WebM videos, you might want to check that the proper MIME types are set when uploading the video files.
+  For MP4 videos this shouldn't be necessary (as the proper MIME type is already set by default).
+
+  Please read "this thread":https://getsatisfaction.com/sublimevideo/topics/cannot_get_amazon_s3_video_hosting_to_work in our Community forum for more information.
