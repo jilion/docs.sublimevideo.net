@@ -28,6 +28,14 @@ module DocsHelper
     raw html.html_safe
   end
 
+  def section_and_page_title_from_permalink(version, permalink)
+    if section = Navigation.section_from_permalink(version, permalink)
+      "#{section[0]}: " + (section.size == 2 ? "#{section[1]} > " : '') + Navigation.page_title_from_permalink(version, permalink)
+    else
+      ''
+    end
+  end
+
   def submenu(items)
     items.inject('') do |h, (permalink, title)|
       if title.is_a?(Hash)

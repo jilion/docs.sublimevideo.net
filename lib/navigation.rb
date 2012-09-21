@@ -2,10 +2,6 @@ require 'yaml'
 module Navigation
 
   class << self
-    def section_and_page_title_from_permalink(version, permalink)
-      "#{section_from_permalink(version, permalink)} #{page_title_from_permalink(version, permalink)}"
-    end
-
     def section_from_permalink(version, permalink)
       section = nil
 
@@ -18,18 +14,14 @@ module Navigation
             end
           else
             if plink == permalink
-              section = sec
+              section = [sec]
               break
             end
           end
         end
       end
 
-      if section
-        section.is_a?(Array) ? "#{section[0]}: #{section[1]} >" : "#{section}:"
-      else
-        ''
-      end
+      section
     end
 
     def page_title_from_permalink(version, permalink)

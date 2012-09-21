@@ -14,6 +14,22 @@ describe Navigation do
 
   before { described_class.unmemoize_all }
 
+  describe '.section_from_permalink' do
+    context 'stable' do
+      before { described_class.should_receive(:tree).with('stable') { stable_tree } }
+
+      it { described_class.section_from_permalink('stable', 'quickstart-guide').should eq ['Getting Started'] }
+      it { described_class.section_from_permalink('stable', 'foo-bar').should eq nil }
+    end
+
+    context 'beta' do
+      before { described_class.should_receive(:tree).with('beta') { beta_tree } }
+
+      it { described_class.section_from_permalink('beta', 'quickstart-guide').should eq ['Getting Started 2'] }
+      it { described_class.section_from_permalink('beta', 'real-time-stats/overview').should eq ['Add-ons', 'Real-time stats'] }
+    end
+  end
+
   describe '.page_title_from_permalink' do
     context 'page dont exist' do
       it 'fallbacks to humanize (with dashes replaced by spaces)' do
@@ -57,22 +73,6 @@ describe Navigation do
       described_class.should_receive(:tree).with('beta') { beta_tree }
 
       described_class.pages('beta').should == { "quickstart-guide"=>"Quickstart Guide 2", "lightbox"=>"Floating lightbox 2", "Real-time stats"=>{"real-time-stats/overview"=>"Overview","real-time-stats/usage"=>"Usage"} }
-    end
-  end
-
-  describe '.section_for_page' do
-    context 'stable' do
-      before { described_class.should_receive(:tree).with('stable') { stable_tree } }
-
-      it { described_class.section_for_page('stable', 'quickstart-guide').should eq 'Getting Started' }
-      it { described_class.section_for_page('stable', 'foo-bar').should eq '' }
-    end
-
-    context 'beta' do
-      before { described_class.should_receive(:tree).with('beta') { beta_tree } }
-
-      it { described_class.section_for_page('beta', 'quickstart-guide').should eq 'Getting Started 2' }
-      it { described_class.section_for_page('beta', 'real-time-stats/overview').should eq 'Add-ons: Real-time stats >' }
     end
   end
 

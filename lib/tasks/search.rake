@@ -1,9 +1,13 @@
-require 'navigation'
+# require 'navigation'
 
 namespace :search do
 
   desc "Index all document for full-text search"
   task index: :environment do
+    class SearchHelper
+      include DocsHelper
+    end
+    search_helper = SearchHelper.new
 
     %w[stable beta].each do |version|
       documents  = []
@@ -19,8 +23,8 @@ namespace :search do
           File.new(page).read
         end
 
-        puts "Adding #{permalink} => #{Navigation.section_and_page_title_from_permalink(version, permalink)}"
-        documents << { docid: permalink, fields: { text: text, title: "#{Navigation.section_and_page_title_from_permalink(version, permalink)}" } }
+        puts "Adding #{permalink} => #{search_helper.section_and_page_title_from_permalink(version, permalink)}"
+        documents << { docid: permalink, fields: { text: text, title: "#{search_helper.section_and_page_title_from_permalink(version, permalink)}" } }
       end
 
       Search.delete_index(version)
