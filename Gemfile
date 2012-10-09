@@ -3,10 +3,10 @@ source 'https://gems.gemfury.com/8dezqz7z7HWea9vtaFwg' # thibaud@jilion.com acco
 
 ruby '1.9.3'
 
-gem 'bundler', '~> 1.2.0.rc.2'
+gem 'bundler', '~> 1.2.0'
 
 gem 'rails',               '3.2.8'
-gem 'sublimevideo_layout', '1.2.5' # hosted on gemfury
+gem 'sublimevideo_layout', '1.3.5' # hosted on gemfury
 
 # Views
 gem 'haml'
