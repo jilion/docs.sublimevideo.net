@@ -1,5 +1,6 @@
-'test-sublimevideo-on-local-domains': "Can I test SublimeVideo on <em>localhost</em> or another development domain?"
-'buy-plan-per-subdomains': "I have multiple subdomains of my main domain, should I create a separate site for each one of them?"
-'buy-plan-for-staging-domain': "I have staging domains, should I create a separate site for each of these?"
-'buy-plan-for-alias-domain': "I have different domains displaying or pointing to the same content, should I create a separate site for each of these?"
-'encoding-and-hosting': "Do you provide encoding and hosting for my video files?"
+stable:
+  'test-sublimevideo-on-local-domains': "Can I test SublimeVideo on <em>localhost</em> or another development domain?"
+  'subdomains': "I have multiple subdomains of my main domain, should I create a separate site for each of them?"
+  'staging-domains': "I have staging domains, should I create a separate site for each of them?"
+  'alias-domains': "I have different domains leading to the same content, should I create a separate site for each of them?"
+  'encoding-and-hosting': "Do you provide encoding and hosting for my video files?"

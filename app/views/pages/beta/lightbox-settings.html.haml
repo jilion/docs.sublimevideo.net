@@ -1,0 +1,49 @@
+- @page_title = "Lightbox settings"
+
+%h2= @page_title
+
+:textile
+  These settings must be set on the @<a>@ element that triggers the lightbox opening. Please see the "Lightbox add-on":addons/lightbox page for more information.
+
+%table#supported_browsers
+  %colgroup
+    %col
+    %col.alt
+    %col
+    %col.alt
+  %tr.alt
+    %th Name
+    %th Values
+    %th Default
+    %th Description & Notes
+  %tr
+    %td
+      %strong autoplay
+    %td <code>true</code><br /><code>false</code>
+    %td <code>true</code>
+    %td.notes Automatically plays the video once the lightbox opens.
+  %tr.alt
+    %td
+      %strong overlay-color
+    %td <code>literal</code><br /><code>#hexadecimal</code><br /><code>rgb</code>
+    %td <code>#000</code>
+    %td.notes Customizes the lightbox overlay color.
+  %tr
+    %td
+      %strong overlay-opacity
+    %td
+      %small <code>0.1 ≤ opacity ≤ 1.0</code>
+    %td <code>0.7</code>
+    %td.notes Customizes the lightbox overlay opacity.
+  %tr.alt
+    %td
+      %strong close-button
+    %td <code>none</code><br /><code>autohide</code><br /><code>sticky</code>
+    %td <code>autohide</code>
+    %td.notes Allows you to choose between: hiding the lightbox close button, permanently displaying it or displaying it only upon mousover (default).
+  %tr
+    %td
+      %strong close-button-position
+    %td <code>left</code><br /><code>right</code>
+    %td <code>left</code>
+    %td.notes Defines where the lightbox close button should be placed.

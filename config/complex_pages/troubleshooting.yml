@@ -1,6 +1,14 @@
-'videos-dont-start-playing': "Videos don't start playing"
-'videos-dont-play-on-the-iphone-or-other-mobile-devices': "Videos don't play on the iPhone or other mobile devices"
-'videos-dont-play-until-fully-preloaded': "Videos don't play until they are fully preloaded (in Flash mode)"
-'old-browsers-compatibility': "I'm getting JavaScript errors and videos don't start"
-'no-play-button-on-ie9': "Videos only show the poster frame and no play button in Internet Explorer 9"
-'not-properly-registered': "I'm seeing the message “SublimeVideo Player is not properly registered for this site”, why?"
+stable:
+  'videos-wont-play': "Videos won't play"
+  'videos-wont-play-on-iphone-or-other-mobile-devices': "Videos won't play on iPhone or other mobile devices"
+  'videos-wont-play-until-fully-preloaded': "Videos won't play until they are fully preloaded (in Flash mode)"
+  'old-browsers-compatibility': "I'm getting JavaScript errors and videos won't start"
+  'no-play-button-on-ie9': "Videos only show the poster frame and no play button in Internet Explorer 9"
+  'not-properly-registered': "Why am I seeing the message “SublimeVideo Player is not properly registered for this site”?"
+
+beta:
+  'videos-wont-play': "Videos won't play"
+  'videos-wont-play-on-iphone-or-other-mobile-devices': "Videos won't play on iPhone or other mobile devices"
+  'videos-wont-play-until-fully-preloaded': "Videos won't play until they are fully preloaded (in Flash mode)"
+  'no-play-button-on-ie9': "Videos only show the poster frame and no play button in Internet Explorer 9"
+  'not-properly-registered': "Why am I seeing the message “SublimeVideo Player is not properly registered for this site”?"

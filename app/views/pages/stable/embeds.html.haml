@@ -5,7 +5,7 @@
 :textile
   SublimeVideo embeds allow your audience to easily share your videos by embedding them into their own sites or elsewhere on the web.
 
-  In order for this to work, you need to create an HTML page for every video you'd like to be able to embed, and you need to host this page on one of your registered domains on #{link_to "MySublimeVideo", my_url('sites')}.
+  In order for this to work, you need to create an HTML page for every video you would like to make available for embedding. You need to host this page on one of your registered domains on #{link_to "MySublimeVideo", my_url('sites')}.
 
   The final snippet of code that your audience will share is an @<iframe>@ element pointing to that HTML page (a.k.a the _&lt;iframe&gt; content_).
 
@@ -15,10 +15,10 @@
   <html>
   <head>
     <title></title>
-    <script type="text/javascript" src="http://cdn.sublimevideo.net/js/YOUR_TOKEN.js"></script>
+    <script type="text/javascript" src="//cdn.sublimevideo.net/js/YOUR_TOKEN.js"></script>
   </head>
   <body>
-    <video style="display:none" class="sublime sv_iframe_embed" poster="poster.jpg" preload="none">
+    <video style="display:none" class="sublime" poster="poster.jpg" preload="none">
       <source src="http://yoursite.com/video.mp4" />
       <source src="http://yoursite.com/video.webm" />
     </video>
@@ -26,14 +26,17 @@
 
   *Important information:*
 
-  *Line 5.* Replace _YOUR_TOKEN_ with your actual site's token (you can find it in the _#{link_to "My Sites", my_url('sites')}_ page after clicking the "embed code" button).
+  *Line 5.* Replace _"YOUR_TOKEN"_ with your actual site's token (you can find it in the _#{link_to "My Sites", my_url('sites')}_ page alongside your site's domain.
 
   *Line 8.*
-
-  * %(red)Add the _sv_iframe_embed_ @class@ to your @<video>@ element and *omit its @width@ and @height@ attributes*.%
-  * @style="display:none"@ is optional, but we recommend it to prevent UI flickering when the iframe is first loaded.
+  * You don't have to specify the @width@ and @height@ attributes, the player will automatically fill the entire iframe.
+  * @style="display:none"@ is optional, but we recommend it to prevent UI flickering upon iframe's initial load.
 
   Host this file on a domain that is registered on #{link_to "MySublimeVideo", my_url('sites')}. For instance, if your registered domain is _yourdomain.com_, you could save this page at _http://yourdomain.com/embeds/video1.html_.
+
+  After you've created the @<iframe>@ content and hosted the page on your server, you'll be able to use our #{link_to "Video Code Generator", my_url('video-code-generator')} to generate the embeddable code.
+
+  If you want to manually create your @<iframe>@ elements yourself or simply better understand the code, please read on.
 
   h3(#embed-code). "The embed code":#embed-code
 

@@ -48,7 +48,7 @@
   * <span class="param">@handler@</span> (@Function@) - The function to call when the event occurs.
 
   Use this method to be notified when a video is started.
-  Please note this is not called every time the video starts playing after a pause event (it's called once when the user clicks on the initial play button).
+  Please note this is not called every time the video starts playing after a pause event (it's called only once when the user clicks on the initial play button).
 
   **The Handler**
 
@@ -68,7 +68,7 @@
     });
   });
 
-  You can see a real example on our #{link_to "features page", layout_url('features')} where we use "(c)@sublimevideo.onStart@":#onStart to update the label showing the current mode of the player (HTML5 or Flash). We only do this for the first video in the demo, but there are different videos on that page. In order to target the first video we use the *_videoObject_* parameter passed to the handler function.
+  You can see a real example on our #{link_to "features page", layout_url('features')} where we use "(c)@sublimevideo.onStart@":#onStart to update the label showing the current mode of the player (HTML5 or Flash). In order to target the first video of the page, amongst all the ones present, we pass the *_videoObject_* parameter to the handler function.
 
   Here is the code we use in the demo page to detect when the @<video>@ with the _single_video_ @id@ has started:
 

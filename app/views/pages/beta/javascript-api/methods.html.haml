@@ -12,7 +12,7 @@
 
   h3(#load). "@sublimevideo.load()@":#load
 
-  SublimeVideo Player and the @sublimevideo@ API object are automatically loaded on page load if there is at least one @<video>@ element in the DOM. If you have no videos initially on the page (and you plan for instance to add them dynamically later with JavaScript) you can use this method to force loading the player and the @sublimevideo@ API object.
+  SublimeVideo Player and the @sublimevideo@ API object are automatically loaded upon page load if there is at least one @<video>@ element in the DOM. If you have no videos initially on the page (and you plan for instance to add them dynamically later with JavaScript) you can use this method to force loading the player and the @sublimevideo@ API object.
 
 
   h3(#pause). "@sublimevideo.pause()@":#pause
@@ -25,7 +25,7 @@
   * <span class="param">@video@</span> (@DOM Element@ | @String@) - The @<video>@ DOM element to play, or its @id@. Set it to @null@ (or omit this parameter) if you want to resume playback of a paused video. Default is @null@.
 
   <span class="param">@video@</span> must refer to a "prepared" video (if your video is not prepared, you might want to use "(c)@sublimevideo.prepareAndPlay@":#prepareAndPlay instead).
-  If <span class="param">@video@</span> is not @null@ and a video is currently playing, the playing video is stopped before <span class="param">@video@</span>'s playback starts.
+  If <span class="param">@video@</span> is not @null@ and a video is currently playing, the playing video is paused before the <span class="param">@video@</span> playback starts.
 
   This method also works with "lightboxed videos":/lightbox.
 

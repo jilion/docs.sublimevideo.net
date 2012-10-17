@@ -17,7 +17,7 @@
 
   h4. Via the @data-settings@ attribute
 
-  If you have multiple settings to set, it's often more elegant to group them in a single @data-settings@ attribute (as a CSS-like formatted string).
+  If you have multiple settings to specify, it's often more elegant to group them in a single @data-settings@ attribute (as a CSS-like formatted string).
 
   For instance:
 
@@ -25,11 +25,11 @@
 
   h4. Via JavaScript
 
-  Settings can also be set with the JavaScript API via a key-value object, in this case the "dash-separated" properties needs to be written as "camelCase", similarly to what happens with CSS properties set via JavaScript.
+  Settings can also be specified with the JavaScript API via a key-value object, in this case the "dash-separated" properties need to be written as "lowerCamelCase", as you might proceed with CSS properties set via JavaScript.
 
-  h3(#video-settings). "Video Settings":#video-settings
+  h3(#settings). "Settings":#settings
 
-  These settings must be set on the @<video>@ element.
+  These settings can be set on the @<video>@ element.
 
   h4. General
 
@@ -47,72 +47,83 @@
   %tr
     %td
       %strong initial-overlay
-    %td <code>default</code><br /><code>none</code>
-    %td <code>default</code>
-    %td Allows to disable the initial overlay effect.<br />View <a href="custom-start-view">demo</a>.
+    %td <code>none</code><br /><code>autofade</code>
+    %td <code>autofade</code>
+    %td.notes Allows you to choose between: hiding the initial overlay effect or displaying it (default).<br />View <a href="custom-start-view">demo</a>.
+  -#%tr.alt
+  -#  %td
+  -#    %strong initial-overlay-color
+  -#  %td <code>literal</code><br /><code>#hexadecimal</code><br /><code>rgb</code>
+  -#  %td <code>#000</code>
+  -#  %td Customizes the initial overlay color.<br />View <a href="custom-start-view">demo</a>.
   %tr.alt
-    %td
-      %strong initial-overlay-color
-    %td <code>literal</code><br /><code>#hexadecimal</code><br /><code>rgb</code>
-    %td <code>default</code>
-    %td Allows to customize the initial overlay color.<br />View <a href="custom-start-view">demo</a>.
-  %tr
     %td
       %strong autoresize
     %td <code>none</code><br /><code>fill</code><br /><code>fit</code>
     %td <code>none</code>
-    %td Allows to automatically resize the video when its parent container is resized.<br />View <a href="responsive-layout">demo</a>.
-  %tr.alt
+    %td.notes Resizes the video when its parent container is resized.<br />View <a href="responsive-layout">demo</a>.
+  %tr
     %td
       %strong force-flash
-    %td <code>false</code><br /><code>true</code>
+    %td <code>true</code><br /><code>false</code>
     %td <code>false</code>
-    %td Allows to force the usage of Flash for the video decoding instead of the native browser decoding.
+    %td.notes Enforces the usage of Flash for the video decoding instead of the native browser decoding.
+  %tr.alt
+    %td
+      %strong force-fullwindow
+    %td <code>true</code><br /><code>false</code>
+    %td <code>false</code>
+    %td.notes Uses full-window instead of full-screen.
   %tr
     %td
-      %strong badge-position
-    %td <code>right</code><br /><code>left</code>
-    %td <code>right</code>
-    %td Allows to choose where the SublimeVideo logo should be placed.
+      %strong enable-fullmode
+    %td <code>true</code><br /><code>false</code>
+    %td <code>true</code>
+    %td.notes Whether to display the full-window/full-screen button or not.
   %tr.alt
+    %td
+      %strong enable-volume
+    %td <code>true</code><br /><code>false</code>
+    %td <code>true</code>
+    %td.notes Whether to display the volume button or not.
+  %tr
     %td
       %strong controls
-    %td <code>default</code><br /><code>none</code><br /><code>sticky</code>
-    %td <code>default</code>
-    %td Allows to completely hide the controls or to always display them.
-  %tr
-    %td
-      %strong stop-on-end
-    %td <code>false</code><br /><code>true</code>
-    %td <code>false</code>
-    %td Allows to display the start view when a video playback ends.<br />View <a href="back-to-initial-state-on-end">demo</a>.
-
-:textile
-  h4. Native @<video>@-equivalent
-
-%table#supported_browsers
-  %colgroup
-    %col
-    %col.alt
-    %col
-    %col.alt
+    %td <code>none</code><br /><code>autohide</code><br /><code>sticky</code>
+    %td <code>autohide</code>
+    %td.notes Allows you to choose between: hiding the controls, permanently displaying them or displaying them only upon mousover (default).
   %tr.alt
-    %th Name
-    %th Values
-    %th Default
-    %th Notes
-  %tr
     %td
       %strong autoplay
-    %td <code>false</code><br /><code>true</code>
+    %td <code>true</code><br /><code>false</code>
     %td <code>false</code>
-    %td Allows to autoplay the video upon page load.<br />View <a href="autoplay">demo</a>.
-  %tr.alt
+    %td.notes Automatically plays the video upon page load.<br />View <a href="autoplay">demo</a>.
+  %tr
     %td
       %strong loop
-    %td <code>false</code><br /><code>true</code>
+    %td <code>true</code><br /><code>false</code>
     %td <code>false</code>
-    %td Allows to loop the video once its playback ends.<br />View <a href="loop">demo</a>.
+    %td.notes Loops the video once its playback ends.<br />View <a href="loop">demo</a>.
+  %tr.alt
+    %td
+      %strong stop-on-end
+    %td <code>true</code><br /><code>false</code>
+    %td <code>false</code>
+    %td.notes Displays the start view when a video playback ends.<br />View <a href="back-to-initial-state-on-end">demo</a>.
+  %tr
+    %td
+      %strong sv-logo
+    %td <code>none</code><br /><code>autohide</code>
+    %td <code>autohide</code>
+    %td.notes
+      %strong Available with the "SublimeVideo logo" add-on.
+      Allows you to choose between: hiding the SublimeVideo logo or displaying it only upon mousover (default).
+  %tr.alt
+    %td
+      %strong sv-logo-position
+    %td <code>bottom-right</code><br /><code>bottom-left</code>
+    %td <code>bottom-right</code>
+    %td.notes Defines where the SublimeVideo logo should be placed.
 
 :textile
   h4. Stats-related settings
@@ -129,69 +140,22 @@
     %th Name
     %th Values
     %th Default
-    %th Notes
+    %th Description & Notes
   %tr
     %td
       %strong data-name
     %td any string
     %td N/A
-    %td
+    %td.notes
   %tr.alt
     %td
       %strong data-uid
     %td any string
     %td N/A
-    %td
+    %td.notes
   -#%tr
   -#  %td
   -#    %strong data-vid
   -#  %td
   -#  %td <code>[SV_HOSTED_VIDEO_TOKEN]</code>
   -#  %td
-
-:textile
-  h3(#lightbox-settings). "Lightbox Settings":#lightbox-settings
-
-  These settings must be set on the @<a>@ element that triggers the lightbox opening. Please see the "Lightbox add-on":lightbox page for more information.
-
-%table#supported_browsers
-  %colgroup
-    %col
-    %col.alt
-    %col
-    %col.alt
-  %tr.alt
-    %th Name
-    %th Values
-    %th Default
-    %th Description & Notes
-  %tr
-    %td
-      %strong autoplay
-    %td <code>true</code><br /><code>false</code>
-    %td <code>true</code>
-    %td Allows to autoplay the video once the lightbox opens.
-  %tr.alt
-    %td
-      %strong overlay-color
-    %td <code>literal</code><br /><code>#hexadecimal</code><br /><code>rgb</code>
-    %td <code>black</code>
-    %td Allows to customize the lightbox overlay color.
-  %tr
-    %td
-      %strong overlay-opacity
-    %td a float between 0.1 and 1.0
-    %td <code>0.7</code>
-    %td Allows to customize the lightbox overlay opacity.
-  %tr
-    %td
-      %strong close-button
-    %td <code>default</code><br /><code>none</code>
-    %td <code>default</code>
-    %td Allows to completely hide the lightbox close button.
-  %tr.alt
-    %td
-      %strong close-button-position
-    %td <code>left</code><br /><code>right</code>
-    %td <code>left</code>
-    %td Allows to choose where the lightbox close button should be placed.

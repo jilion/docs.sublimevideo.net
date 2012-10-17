@@ -6,14 +6,18 @@ module DocsHelper
   def display_menu
     html = ''
     Navigation.tree(params[:version]).each do |section, items|
-      html += content_tag(:h3, link_to(section, '#'), class: 'accordion') + content_tag(:ul, submenu(items), class: 'pages')
+      if params[:version] != 'stable'
+        html += content_tag(:h3, link_to(section, '#'), class: 'accordion') + content_tag(:ul, submenu(items), class: ['pages', params[:version]])
+      else
+        html += content_tag(:h3, section) + content_tag(:ul, submenu(items), class: ['pages', params[:version]])
+      end
     end
     raw html
   end
 
   def display_complex_page_index(page)
     html = ''
-    ComplexPage.tree(page).each do |permalink, title|
+    ComplexPage.tree(params[:version], page).each do |permalink, title|
       html += content_tag(:li, link_to(title.html_safe, "##{permalink}"))
     end
     raw content_tag :ul, html.html_safe
@@ -21,9 +25,9 @@ module DocsHelper
 
   def display_complex_page_list(page)
     html = ''
-    ComplexPage.tree(page).each do |permalink, title|
+    ComplexPage.tree(params[:version], page).each do |permalink, title|
       html += content_tag(:h3, link_to(title.html_safe, "##{permalink}", id: permalink))
-      html += render "pages/#{params[:version]}/#{page}/#{permalink}"
+      html += render page_for(params[:version], [page, permalink], partial: true)
     end
     raw html.html_safe
   end
@@ -53,7 +57,7 @@ module DocsHelper
   end
 
   def jsfiddle_embed(token, options = {})
-    options = { height: 300, panes: 'result,html' }.merge(options)
+    options.reverse_merge!(height: 300, panes: 'result,html')
 
     "<iframe style='width: 100%; height: #{options[:height]}px' src='http://jsfiddle.net/sublimevideo/#{token}/embedded/#{options[:panes]}' allowfullscreen webkitallowfullscreen mozallowfullscreen frameborder='0'></iframe>"
   end

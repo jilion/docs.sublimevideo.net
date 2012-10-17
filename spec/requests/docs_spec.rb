@@ -37,6 +37,11 @@ feature 'redirect legacy routes' do
     current_url.should eq "http://docs.sublimevideo.dev/back-to-initial-state-on-end"
   end
 
+  it "redirect /ssl to /player-faq#use-sublimevideo-in-ssl-site" do
+    visit '/ssl'
+    current_url.should eq "http://docs.sublimevideo.dev/player-faq"
+  end
+
   it "redirect /put-video-in-a-floating-lightbox to /lightbox" do
     visit '/put-video-in-a-floating-lightbox'
     current_url.should eq "http://docs.sublimevideo.dev/lightbox"

@@ -7,7 +7,7 @@
 
   h3. Customize or disable the initial overlay
 
-  You can use the following "player settings":player-settings:
+  You can use the following "player setting":player-settings:
 
 %table#supported_browsers
   %colgroup
@@ -23,46 +23,17 @@
   %tr
     %td
       %strong initial-overlay
-    %td <code>default</code><br /><code>none</code>
-    %td <code>default</code>
-    %td Allows to disable the initial overlay effect.
-  %tr.alt
-    %td
-      %strong initial-overlay-color
-    %td <code>literal</code><br /><code>#hexadecimal</code><br /><code>rgb</code>
-    %td <code>default</code>
-    %td Allows to customize the initial overlay color.
-
--#h4. Disable the initial overlay
--#
--#You can use the @initial-overlay@ "player settings":player-settings.
--#
--#Values: <span class="param">@true@</span> | <span class="param">@none@</span>
--#
--#Default: <span class="param">@true@</span>
--#
--#Examples: @data-settings='initial-overlay: none'@
--#
--#h4. Change the initial overlay color
--#
--#You can use the @initial-overlay-color@ "player settings":player-settings.
--#
--#Values:
--#* <span class="param">literal</span>: <span class="param">@blue@</span>, <span class="param">@red@</span> etc...
--#* <span class="param">hexadecimal</span>: <span class="param">@#fff@</span>, <span class="param">@#996633@</span> etc...
--#* <span class="param">rgb</span>: <span class="param">@rgb(255, 122, 25)@</span> etc...
--#
--#Default: <span class="param">@black@</span>
--#
--#Example: @data-settings='initial-overlay-color: rgb(255, 122, 25)'@
+    %td <code>none</code><br /><code>autofade</code>
+    %td <code>autofade</code>
+    %td.notes Allows you to choose between: hiding the initial overlay effect or displaying it (default).
 
 :textile
 
-  #{jsfiddle_embed('JpjXu', height: 600)}
+  #{jsfiddle_embed('JpjXu', height: 400)}
 
   h3. Use a custom start view
 
-  You can also use your own custom start view using our "JavaScript API":/javascript-api to start the video playback as soon as the user clicks on your new custom view.
+  You can also use your own custom start view using our "JavaScript API":javascript-api to start the video playback as soon as the user clicks on your new custom view.
 
   In the example below we're using a simple @<div>@ placeholder as the custom start view.
 
@@ -71,5 +42,5 @@
   *Note:*
 
   * Don't add the _sublime_ @class@ to the @<video>@ element since the video will be prepared through the JS API.
-  * Make sure that you embed the jQuery library (you can find the latest version "here":http://code.google.com/apis/libraries/devguide.html#jquery) in your page!
+  * Make sure you embed the jQuery library (you can find the latest version "here":http://code.google.com/apis/libraries/devguide.html#jquery) in your page!
   * Put the JavaScript code in a @<script>@ element just before the @</body>@ tag, or in an external file.
