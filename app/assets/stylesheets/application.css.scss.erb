@@ -6,7 +6,7 @@
 @import "css3";
 
 body {
-  background:#ecf2f8 url(<%= asset_data_uri "back_texture.png" %>);
+  background:#ecf2f8 url(<%= asset_path "back_texture.png" %>);
 }
 
 .docs header, .docs header .shadow, .docs header .lights {
@@ -81,7 +81,7 @@ body {
   position:absolute;
   top:10px;
   left:9px;
-  background:url(<%= asset_data_uri "search_icon.png" %>) no-repeat;
+  background:url(<%= asset_path "search_icon.png" %>) no-repeat;
 }
 
 #content nav .search_form label span {display:none}
@@ -106,12 +106,12 @@ body {
 #content nav ul.pages li {
   padding:8px 0 8px 20px;
   line-height:15px;
-  background:url(<%= asset_data_uri "menu_bullet.png" %>) no-repeat 0 12px;
+  background:url(<%= asset_path "menu_bullet.png" %>) no-repeat 0 12px;
 }
 
 #content nav ul.pages li.active {
   font-weight:600;
-  background-image:url(<%= asset_data_uri "menu_bullet_active.png" %>);
+  background-image:url(<%= asset_path "menu_bullet_active.png" %>);
 }
 
 #content nav ul.pages li.active a {
@@ -236,7 +236,7 @@ body {
 
 .content_wrapper ul li {
   padding:3px 0 3px 16px;
-  background:url(<%= asset_data_uri 'bullet.png' %>) no-repeat 0 11px;
+  background:url(<%= asset_path 'bullet.png' %>) no-repeat 0 11px;
 }
 
 .content_wrapper ul.search_results li {
@@ -530,10 +530,10 @@ body {
 
 #supported_browsers td.html5.yes td.icon, #supported_browsers td.flash.yes td.icon {
   height:40px;
-  background:url(<%= asset_data_uri 'check_icon.png' %>) no-repeat center;
+  background:url(<%= asset_path 'check_icon.png' %>) no-repeat center;
 }
 
-#supported_browsers td.html5.yes.partial td.icon {background:url(<%= asset_data_uri 'warning_icon.png' %>) no-repeat center;}
+#supported_browsers td.html5.yes.partial td.icon {background:url(<%= asset_path 'warning_icon.png' %>) no-repeat center;}
 
 #supported_browsers tr.labels td {
   width:30px;
@@ -586,7 +586,7 @@ body {
   position:absolute;
   top:0;
   left:0;
-  background:url(<%= asset_data_uri 'demo/zoom_icon.png' %>) no-repeat bottom right;
+  background:url(<%= asset_path 'demo/zoom_icon.png' %>) no-repeat bottom right;
   opacity:0.3;
   -o-transition:opacity 0.25s;
   -moz-transition:opacity 0.25s;

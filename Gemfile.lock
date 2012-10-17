@@ -225,7 +225,7 @@ GEM
       hike (~> 1.2)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sublimevideo_layout (1.3.5)
+    sublimevideo_layout (1.4.0)
       coffee-rails (~> 3.2.0)
       haml
       jquery-rails (~> 2.1.1)
@@ -281,7 +281,7 @@ DEPENDENCIES
   sass-rails (~> 3.2.5)
   shoulda-matchers
   silent-postgres
-  sublimevideo_layout (= 1.3.5)
+  sublimevideo_layout (= 1.4.0)
   terminal-notifier-guard
   thin
   uglifier
