@@ -4,23 +4,23 @@ module Search
 
     class << self
 
-      def search(version, *args)
-        index(version).search(*args)
+      def search(stage, *args)
+        index(stage).search(*args)
       end
 
-      def add_documents(version, documents)
-        puts "Indexing #{documents.size} documents in index 'idx:#{version}'..."
-        index(version).batch_insert(documents)
+      def add_documents(stage, documents)
+        puts "Indexing #{documents.size} documents in index 'idx:#{stage}'..."
+        index(stage).batch_insert(documents)
       end
 
-      def add_function(version, num, fn)
-        puts "Adding function ##{num}: #{fn} to index 'idx:#{version}"
-        index(version).functions(num, fn).add
+      def add_function(stage, num, fn)
+        puts "Adding function ##{num}: #{fn} to index 'idx:#{stage}"
+        index(stage).functions(num, fn).add
       end
 
-      def delete_index(version)
-        puts "Deleting 'idx:#{version}' index..."
-        index(version).delete
+      def delete_index(stage)
+        puts "Deleting 'idx:#{stage}' index..."
+        index(stage).delete
         @index = nil
       end
 
@@ -30,16 +30,16 @@ module Search
         @client ||= IndexTank::Client.new(ENV['INDEXDEN_URL'])
       end
 
-      def index(version = 'stable')
+      def index(stage = 'stable')
         @index ||= {}
-        @index[version] ||= begin
-          idx = client.indexes("idx:#{version}")
+        @index[stage] ||= begin
+          idx = client.indexes("idx:#{stage}")
 
           unless idx.exists?
-            puts "Creating 'idx:#{version}' index..."
+            puts "Creating 'idx:#{stage}' index..."
             idx.add public_search: false
             sleep 0.5 while !idx.running?
-            puts "'idx:#{version}' index created!"
+            puts "'idx:#{stage}' index created!"
           end
 
           idx

@@ -5,11 +5,11 @@ module DocsHelper
 
   def display_menu
     html = ''
-    Navigation.tree(params[:version]).each do |section, items|
-      if params[:version] != 'stable'
-        html += content_tag(:h3, link_to(section, '#'), class: 'accordion') + content_tag(:ul, submenu(items), class: ['pages', params[:version]])
+    Navigation.tree(params[:stage]).each do |section, items|
+      if params[:stage] != 'stable'
+        html += content_tag(:h3, link_to(section, '#'), class: 'accordion') + content_tag(:ul, submenu(items), class: ['pages', params[:stage]])
       else
-        html += content_tag(:h3, section) + content_tag(:ul, submenu(items), class: ['pages', params[:version]])
+        html += content_tag(:h3, section) + content_tag(:ul, submenu(items), class: ['pages', params[:stage]])
       end
     end
     raw html
@@ -17,7 +17,7 @@ module DocsHelper
 
   def display_complex_page_index(page)
     html = ''
-    ComplexPage.tree(params[:version], page).each do |permalink, title|
+    ComplexPage.tree(params[:stage], page).each do |permalink, title|
       html += content_tag(:li, link_to(title.html_safe, "##{permalink}"))
     end
     raw content_tag :ul, html.html_safe
@@ -25,16 +25,16 @@ module DocsHelper
 
   def display_complex_page_list(page)
     html = ''
-    ComplexPage.tree(params[:version], page).each do |permalink, title|
+    ComplexPage.tree(params[:stage], page).each do |permalink, title|
       html += content_tag(:h3, link_to(title.html_safe, "##{permalink}", id: permalink))
-      html += render page_for(params[:version], [page, permalink], partial: true)
+      html += render page_for(params[:stage], [page, permalink], partial: true)
     end
     raw html.html_safe
   end
 
-  def section_and_page_title_from_permalink(version, permalink)
-    if section = Navigation.section_from_permalink(version, permalink)
-      "#{section[0]}: " + (section.size == 2 ? "#{section[1]} > " : '') + Navigation.page_title_from_permalink(version, permalink)
+  def section_and_page_title_from_permalink(stage, permalink)
+    if section = Navigation.section_from_permalink(stage, permalink)
+      "#{section[0]}: " + (section.size == 2 ? "#{section[1]} > " : '') + Navigation.page_title_from_permalink(stage, permalink)
     else
       ''
     end
@@ -52,7 +52,7 @@ module DocsHelper
 
   def li_with_page_link(page, title)
     content_tag :li, class: (page == params[:page] ? 'active' : nil) do
-      link_to(title, "#{params[:version] != 'stable' ? "/#{params[:version]}" : ''}/#{page}")
+      link_to(title, "#{params[:stage] != 'stable' ? "/#{params[:stage]}" : ''}/#{page}")
     end
   end
 

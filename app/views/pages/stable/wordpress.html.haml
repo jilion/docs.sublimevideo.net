@@ -105,11 +105,11 @@
 
   h4. Statistics-related attributes
 
-  The following attributes are useful if you're using the #{link_to "SublimeVideo Real-Time Statistics", params[:version] == 'stable' ? 'real-time-stats' : 'addons/real-time-stats/overview'}.
+  The following attributes are useful if you're using the #{link_to "SublimeVideo Real-Time Statistics", stage?('stable') ? 'real-time-stats' : 'addons/real-time-stats/overview'}.
 
   Usage: @data_uid="unique_id"@ and @data_name="A nice name here"@
 
-  @data_uid@ maps directly to the @data-uid@ attribute while @data_name@ maps to the @data-name@ attribute. To learn more about the @data-uid@ and @data-name@ attributes, please consult our #{link_to "Optimize <video> elements for stats", params[:version] == 'stable' ? 'optimize-for-stats' : 'addons/real-time-stats/optimize-for-stats'} page.
+  @data_uid@ maps directly to the @data-uid@ attribute while @data_name@ maps to the @data-name@ attribute. To learn more about the @data-uid@ and @data-name@ attributes, please consult our #{link_to "Optimize <video> elements for stats", stage?('stable') ? 'optimize-for-stats' : 'addons/real-time-stats/optimize-for-stats'} page.
 
   h4. Autoplay
 
@@ -183,7 +183,7 @@
 
   * Fixed issue: SSL certificate verification.
   * Fixed issue: Custom port was preventing the plugin from working properly.
-  * Added support for the @data_uid@ and @data_name@ attributes (mapping to @data-uid@ and @data-name@ HTML attribute). #{link_to "See details", params[:version] == 'stable' ? 'optimize-for-stats' : 'addons/real-time-stats/optimize-for-stats'}.
+  * Added support for the @data_uid@ and @data_name@ attributes (mapping to @data-uid@ and @data-name@ HTML attribute). #{link_to "See details", stage?('stable') ? 'optimize-for-stats' : 'addons/real-time-stats/optimize-for-stats'}.
   * Added support for HD sources. "See details":hd-switching.
 
   h4. 1.1.0

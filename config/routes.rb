@@ -14,16 +14,17 @@ DocsSublimeVideo::Application.routes.draw do
   get '/put-video-in-a-floating-lightbox' => redirect('/lightbox')
   get '/returning-to-the-initial-state-once-video-playback-ends' => redirect('/back-to-initial-state-on-end')
   get '/ssl' => redirect('/player-faq#use-sublimevideo-in-ssl-site')
-  get '(/:version)/faq' => redirect { |params, req| "#{"/#{params[:version]}" if params[:version]}/player-faq" }
+  get '(/:stage)/faq' => redirect { |params, req| "#{"/#{params[:stage]}" if params[:stage]}/player-faq" }
 
   # Shortcut redirect
-  %w[javascript-api js-api].each { |path| get "(/:version)/#{path}" => redirect { |params, req| "#{"/#{params[:version]}" if params[:version]}/javascript-api/usage" } }
-  %w[customizing-the-initial-play-button custom-play-button].each { |path| get "(/:version)/#{path}" => redirect { |params, req| "#{"/#{params[:version]}" if params[:version]}/custom-start-view" } }
+  %w[javascript-api js-api].each { |path| get "(/:stage)/#{path}" => redirect { |params, req| "#{"/#{params[:stage]}" if params[:stage]}/javascript-api/usage" } }
+  %w[customizing-the-initial-play-button custom-play-button].each { |path| get "(/:stage)/#{path}" => redirect { |params, req| "#{"/#{params[:stage]}" if params[:stage]}/custom-start-view" } }
 
-  get '(/:version)/search' => 'search#index', as: 'search', version: /beta/, defaults: { version: 'stable' }
+  get '(/:stage)/search' => 'search#index', as: 'search', stage: /beta/, defaults: { stage: 'stable' }
   # resources :releases, only: :index
-  get '(/:version)/releases' => 'releases#index', version: /stable|beta/, defaults: { version: 'stable' }
-  get '(/:version)/*page' => 'pages#show', as: 'page', constraints: DocsPages, version: /stable|beta/, defaults: { version: 'stable' }, format: false
+  get '(/:stage)/releases' => 'releases#index', stage: /stable|beta/, defaults: { stage: 'stable' }
+  get '(/:stage)/*page' => 'pages#show', as: 'page', constraints: DocsPages, stage: /stable|beta/, defaults: { stage: 'stable' }, format: false
 
+  get '/beta', to: redirect('/beta/quickstart-guide')
   root to: redirect('/quickstart-guide')
 end
