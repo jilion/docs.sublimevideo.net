@@ -5,7 +5,10 @@ module ControllerHelpers
 
     def set_stage_cookie
       cookies[:stage] ||= 'stable'
-      cookies[:stage] = params[:stage] if params[:stage]
+      if params[:new_stage]
+        cookies[:stage] = params[:new_stage]
+        redirect_to root_path and return
+      end
     end
 
   end

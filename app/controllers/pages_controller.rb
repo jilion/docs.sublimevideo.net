@@ -1,10 +1,15 @@
 class PagesController < ApplicationController
   caches_page :show
+  before_filter :redirect_from_root
 
   def show
     @body_class = params[:page]
 
     render page_for(params[:stage], params[:page]) if fresh_required?
+  end
+
+  def redirect_from_root
+    redirect_to page_path(stage: current_stage, page: 'quickstart-guide') and return unless params[:page]
   end
 
   private
