@@ -23,3 +23,5 @@ vendor/bundler
 !public/assets/*.gz
 .env
 config/env.yml
+*.sublime-project
+!.sublime-project
