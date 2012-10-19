@@ -15,7 +15,6 @@ stable:
     'back-to-initial-state-on-end': 'Back to initial state on end'
     'embeds': 'Embeds'
     'optimize-for-stats': 'Optimize <video> for stats'
-    'ssl': 'SSL Serving'
     'google-analytics-integration': 'Google Analytics integration'
   'Javascript API':
     'javascript-api/usage': 'Usage'
@@ -42,7 +41,6 @@ beta:
     'encode-videos-for-the-web': 'Video encoding'
     'create-poster-frame': 'Create poster frame'
     'player-settings': 'Player settings'
-    'lightbox-settings': 'Lightbox settings'
     'site-settings': 'Site settings'
     'troubleshooting': 'Troubleshooting'
     'player-faq': 'Player FAQ'
