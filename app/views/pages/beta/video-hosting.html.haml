@@ -1,0 +1,78 @@
+-#= content_for :javascript, sublimevideo_include_tag(request.ssl?, :docs).html_safe
+= content_for :javascript, javascript_include_tag('http://cdn.sublimevideo.net/js/12665678-alpha.js')
+- @page_title = "Video hosting"
+
+%h2= @page_title
+
+:textile
+  For the moment we focus exclusively on providing the best HTML5 Video Player and we give you the freedom to use SublimeVideo player with your preferred encoding and hosting solution. Amongst the available options, SublimeVideo Player provides a full integration with YouTube and works perfectly with "Vimeo Pro":http://vimeo.com/pro.
+
+  h3. YouTube integration
+
+  Integrate a YouTube video with SublimeVideo is very easy. You need to set the "youtube-id" "player setting":player-settings to the ID of the YouTube video you would like to play using SublimeVideo.
+
+  To find the ID of a YouTube video, follow the following steps:
+
+  1. Open the video page;
+  2. Look in the address bar for a "v=YOUTUBE_ID" parameter;
+  3. Copy/paste the _YOUTUBE_ID_ and set it in your @<video>@ element as follow:
+
+  bc(language-markup). <video class="sublime" data-settings="youtube-id: YOUTUBE_ID" poster="video-poster.jpg" width="640" height="360" preload="none"></video>
+
+  *Note:* Don't set any @<source>@ elements.
+
+  h4(#youtube-demo). "Demo":#youtube-demo
+
+  The following player is using a YouTube video.
+
+<div class="video_wrap"><video class="sublime" poster="https://secure-b.vimeocdn.com/ts/358/030/358030879_960.jpg" width="640" height="360" data-settings="youtube-id: t34S1HW82KU" preload="none"></video></div>
+
+:textile
+  h3. Use SublimeVideo with Vimeo Pro
+
+  h4(#step-1). "1 - Upload your video":#step-1
+
+  Upload your video(s) on the _#{link_to 'Upload a video', 'https://vimeo.com/upload', onclick: 'window.open(this); return false'}_ page.
+
+  Note: During the upload you can already fill a few information for your video. Once the upload is done, simply click the big _"DONE! GO TO VIDEO"_ button.
+
+  h4(#step-2). "2 - Edit your video settings":#step-2
+
+  #{link_to(image_tag('video-hosting/vimeo_step_2.1.png', class: 'screenshot', width: 100, style: 'float:left; margin:20px 20px 0 0'), '#vimeo_step_2_1', class: 'sublime lightbox')}
+
+  On the _Video Settings / Basic Info_ page, you can choose a video thumbnail (it will be useful for the "Step 4":#step-4).
+
+  Then, click the _Privacy_ tab. On this page you can choose to not show your video on vimeo.com and restrict the domains on which the video can be embedded.
+
+  h4(#step-3). "3 - Grab direct links to the media files":#step-3
+
+  #{link_to(image_tag('video-hosting/vimeo_step_3.1.png', class: 'screenshot', width: 100, style: 'float:left; margin:20px 20px 0 0'), '#vimeo_step_3_1', class: 'sublime lightbox')}
+
+  Click the _Video File_ tab. On this page you can get the actual video files URLs. Simply copy/paste the _Standard Def_ and _High Def_ URLs and put them in our #{link_to "Video Code Generator", my_url('video-code-generator'), onclick: 'window.open(this); return false'} (or create one @<source>@ element for each of the URLs if you're creating your @video@ manually).
+
+  div(spacer). &nbsp;
+
+  h4(#step-4). "4 - Grab the poster frame from Vimeo (optional)":#step-4
+
+
+  Vimeo doesn't give you any direct link to the poster frame image but you can still grab it with the following trick:
+
+  1. Visit your video page on Vimeo;
+  2. Click the _#{link_to 'Switch to HTML5 Player', '#vimeo_step_4_1', class: 'sublime'}_ link located below the video decription;
+  3. Right-click and choose "Inspect Element";
+  4. Copy the value that's in the _#{link_to raw('<code>data-thumb</code>'), '#vimeo_step_4_2', class: 'sublime'}_ attribute;
+  5. Paste the URL in the "Poster frame" field of our #{link_to "Video Code Generator", my_url('video-code-generator'), onclick: 'window.open(this); return false'} (or put it directly in the "poster" attribute of your @video@ element if you're creating your @video@ manually).
+
+  h4(#vimeo-demo). "Demo":#vimeo-demo
+
+  The following video is using files hosted on Vimeo.
+
+<div class="video_wrap"><video class="sublime" poster="https://secure-b.vimeocdn.com/ts/358/030/358030879_960.jpg" width="640" height="360" data-name="Midnight Sun (from Vimeo)" data-uid="2f6b7096" preload="none">
+<source src="http://player.vimeo.com/external/51920681.sd.mp4?s=117259e431f97030b1150ddb5ce5858a" />
+<source src="http://player.vimeo.com/external/51920681.hd.mp4?s=70273279a571e027c54032e70db61253" data-quality="hd" />
+</video></div>
+
+= image_tag('video-hosting/vimeo_step_2.1.png', title: 'Video Settings / Privacy', id: 'vimeo_step_2_1', style: 'display:none')
+= image_tag('video-hosting/vimeo_step_3.1.png', title: 'Grab direct links to the media files', id: 'vimeo_step_3_1', style: 'display:none')
+= image_tag('video-hosting/vimeo_step_4.1.png', title: 'Grab the poster frame from Vimeo, step 1', id: 'vimeo_step_4_1', style: 'display:none')
+= image_tag('video-hosting/vimeo_step_4.2.png', title: 'Grab the poster frame from Vimeo, step 2', id: 'vimeo_step_4_2', style: 'display:none')
