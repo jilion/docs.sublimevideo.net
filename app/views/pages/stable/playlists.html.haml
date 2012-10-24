@@ -9,9 +9,9 @@
 
   h4. HTML Code
 
-  This example only has two videos, but you can use any number of videos in your own page. Just repeat the _video_wrap_ @<div>@ (and their respective @<li>@ elements) and keep the same @id@ logic for the @<video>@ and the @<li>@ elements: _video3_ / _thumbnail_video3_, _video4_ / _thumbnail_video4_, _videoN_ / _thumbnail_videoN_ and so on.
+  This example only has four videos, but you can use any number of videos in your own page. Just repeat the _video_wrap_ @<div>@ (and their respective @<li>@ elements) and keep the same @id@ logic for the @<video>@ and the @<li>@ elements: _video5_ / _thumbnail_video5_, _video6_ / _thumbnail_video6_, _videoN_ / _thumbnail_videoN_ and so on.
 
-  <pre data-line=3><code class="language-markup"> <div id="playlist1" class="playlist">
+  <pre data-line=3><code class="language-markup"><div id="playlist1" class="playlist">
     <div class="video_wrap">
       <video id="video1" class="sublime" poster="posterframe1.jpg" width="640" height="360" preload="none">
         <source src="video1.mp4" />
@@ -24,16 +24,42 @@
         <source src="video2.webm" />
       </video>
     </div>
+    <div class="video_wrap">
+      <video id="video3" poster="posterframe3.jpg" width="640" height="360" preload="none">
+        <source src="video3.mp4" />
+        <source src="video3.webm" />
+      </video>
+    </div>
+    <div class="video_wrap">
+      <video id="video4" poster="posterframe4.jpg" width="640" height="360" preload="none">
+        <source src="video4.mp4" />
+        <source src="video4.webm" />
+      </video>
+    </div>
 
-    <ul>
+    <ul class="thumbs">
       <li id="thumbnail_video1">
         <a href="">
-          <img alt="Thumbnail 1" src="thumbnail1.jpg" width="178" height="76" />
+          <img alt="Thumbnail 1" src="thumbnail1.jpg" width="144" height="81" />
+          <span class="play" />
         </a>
       </li>
       <li id="thumbnail_video2">
         <a href="">
-          <img alt="Thumbnail 2" src="thumbnail2.jpg" width="178" height="76" />
+          <img alt="Thumbnail 2" src="thumbnail2.jpg" width="144" height="81" />
+          <span class="play" />
+        </a>
+      </li>
+      <li id="thumbnail_video3">
+        <a href="">
+          <img alt="Thumbnail 3" src="thumbnail3.jpg" width="144" height="81" />
+          <span class="play" />
+        </a>
+      </li>
+      <li id="thumbnail_video4">
+        <a href="">
+          <img alt="Thumbnail 4" src="thumbnail4.jpg" width="144" height="81" />
+          <span class="play" />
         </a>
       </li>
     </ul>
@@ -43,35 +69,162 @@
 
   h4. CSS Code
 
-  These CSS rules hide the non-active @<video>@ elements (lines 5-9) and show the active ones (lines 10-12). They also add a simple _hover_ effect to the thumbnail @<li>@ elements (lines 20-27) and set a different style on the currently active thumbnail (lines 15-17).
+  strong. Thumbnails below the video
 
-  <pre data-line=5-9,10-12,15-17,20-27><code class="language-css"> /*
-  * You probably want to set the same width and height
-  * that you have set to your <video> elements.
-  */
+  The following CSS rules hide the non-active @<video>@ elements (lines 6 and show the active ones (lines 15). They also add a simple _hover_ effect to the thumbnail @<li>@ elements (lines 67) and set a different style on the currently active thumbnail (lines 39 & 71).
+
+  <pre data-line=6,15,39,67,71><code class="language-css">/* Thumbnails below the video */
+
   .playlist .video_wrap {
     width:640px;
     height:360px;
     display:none;
+    background:#fff;
+    padding:1px;
+    -moz-box-shadow:rgba(0,23,60,0.5) 0 4px 17px;
+    -webkit-box-shadow:rgba(0,23,60,0.5) 0 4px 17px;
+    box-shadow:rgba(0,23,60,0.5) 0 4px 17px;
   }
+
   .playlist .video_wrap.active {
     display:block;
   }
 
-  /* This will make distinguishable the currently selected thumbnail */
-  .playlist li.active {
-    background:#000;
+  .playlist ul.thumbs {
+    list-style-type:none;
+    width:800px;
+    overflow:hidden;
+    margin:20px auto;
   }
 
-  /* This will create a simple hover effect */
-  .playlist li img {
-    opacity:.7;
-    filter:alpha(opacity=70);
+  .playlist li {
+    float:left;
+    display:block;
+    width:144px;
+    height:81px;
+    margin:0 19px 19px 0;
+    background:#000;
+    border:1px solid #000;
+    -moz-box-shadow:rgba(0,23,60,0.5) 0 2px 10px;
+    -webkit-box-shadow:rgba(0,23,60,0.5) 0 2px 10px;
+    box-shadow:rgba(0,23,60,0.5) 0 2px 10px;
   }
-  .playlist li a:hover img, .playlist li.active img {
-    opacity:1;
-    filter:alpha(opacity=100);
-  }</code></pre>
+
+  .playlist li.active {
+    border-color:#fff;
+  }
+
+  .playlist li a {
+    display:block;
+    position:relative;
+  }
+
+  .playlist li a span.play {
+    display:block;
+    width:144px;
+    height:81px;
+    /* you can find the play icon here: http://f.cl.ly/items/3M0u0p0i0k1l3S0v2b1G/playlist_play_icon.png */
+    background:url('playlist_play_icon.png') no-repeat center;
+    background-color:rgba(0,0,0,0.6);
+    position:absolute;
+    top:0;
+    left:0;
+    -moz-box-shadow:inset rgba(255,255,255,0.3) 0 1px 0;
+    -webkit-box-shadow:inset rgba(255,255,255,0.3) 0 1px 0;
+    box-shadow:inset rgba(255,255,255,0.3) 0 1px 0;
+    -o-transition:background-color,0.25s,linear;
+    -moz-transition:background-color,0.25s,linear;
+    -webkit-transition:background-color,0.25s,linear;
+    transition:background-color,0.25s,linear;
+  }
+
+  .playlist li a:hover span.play {
+    background-color:rgba(0,0,0,0);
+  }
+
+  .playlist li.active a span.play {
+    background:none;
+  }
+  </code></pre>
+
+  &nbsp;
+
+  strong. Thumbnails on the right of the video
+
+  The following CSS rules hide the non-active @<video>@ elements (lines 6 and show the active ones (lines 16). They also add a simple _hover_ effect to the thumbnail @<li>@ elements (lines 66) and set a different style on the currently active thumbnail (lines 38 & 70).
+
+  <pre data-line=6,16,38,66,70><code class="language-css">/* Thumbnails on the right of the video */
+
+  .playlist .video_wrap {
+    width:640px;
+    height:360px;
+    display:none;
+    float:left;
+    background:#fff;
+    padding:1px;
+    -moz-box-shadow:rgba(0,23,60,0.5) 0 4px 17px;
+    -webkit-box-shadow:rgba(0,23,60,0.5) 0 4px 17px;
+    box-shadow:rgba(0,23,60,0.5) 0 4px 17px;
+  }
+
+  .playlist .video_wrap.active {
+    display:block;
+  }
+
+  .playlist ul.thumbs {
+    list-style-type:none;
+    width:158px;
+    float:left;
+  }
+
+  .playlist li {
+    display:block;
+    width:144px;
+    height:81px;
+    margin:0 0 10px 12px;
+    background:#000;
+    border:1px solid #000;
+    -moz-box-shadow:rgba(0,23,60,0.5) 0 2px 10px;
+    -webkit-box-shadow:rgba(0,23,60,0.5) 0 2px 10px;
+    box-shadow:rgba(0,23,60,0.5) 0 2px 10px;
+  }
+
+  .playlist li.active {
+    border-color:#fff;
+  }
+
+  .playlist li a {
+    display:block;
+    position:relative;
+  }
+
+  .playlist li a span.play {
+    display:block;
+    width:144px;
+    height:81px;
+    /* you can find the play icon here: http://f.cl.ly/items/3M0u0p0i0k1l3S0v2b1G/playlist_play_icon.png */
+    background:url('playlist_play_icon.png') no-repeat center;
+    background-color:rgba(0,0,0,0.6);
+    position:absolute;
+    top:0;
+    left:0;
+    -moz-box-shadow:inset rgba(255,255,255,0.3) 0 1px 0;
+    -webkit-box-shadow:inset rgba(255,255,255,0.3) 0 1px 0;
+    box-shadow:inset rgba(255,255,255,0.3) 0 1px 0;
+    -o-transition:background-color,0.25s,linear;
+    -moz-transition:background-color,0.25s,linear;
+    -webkit-transition:background-color,0.25s,linear;
+    transition:background-color,0.25s,linear;
+  }
+
+  .playlist li a:hover span.play {
+    background-color:rgba(0,0,0,0);
+  }
+
+  .playlist li.active a span.play {
+    background:none;
+  }
+  </code></pre>
 
   h4. JavaScript Code
 
@@ -79,13 +232,15 @@
 
   Put the following code in a @<script>@ element just before the @</body>@ tag, or in an external file.
 
-  * "jQuery Version":https://gist.github.com/1120644#file_sublimevideo_playlists_jquery.js
-  * "Prototype Version":https://gist.github.com/1120644#file_sublimevideo_playlists_prototype.js
+  * "jQuery Version":https://gist.github.com/3945807#file_playlist_jquery.js
+  * "Prototype Version":https://gist.github.com/3945807#file_playlist_prototype.js
 
   *Note:* In the future, we plan to include a built-in playlist function that will make this feature even easier to implement, without the need to know any JavaScript.
 
   h3(#demo). "Demo":#demo
 
-  You can see this feature in action "on this page":http://test.sublimevideo.net/playlists.
+  * "Playlist with thumbnails on the right of the video":http://test.sublimevideo.net/playlists
+  * "Playlist with thumbnails below the video":http://test.sublimevideo.net/playlists-thumbs-below
+
 
   If you want to use several playlists in your page, please check out "this page":http://test.sublimevideo.net/multiple_playlists.
