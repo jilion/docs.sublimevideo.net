@@ -1,5 +1,5 @@
 = content_for :javascript do
-  = sublimevideo_include_tag(request.ssl?, :docs).html_safe
+  = sublimevideo_docs_include_tag
   :javascript
     jQuery(document).ready(function(){sublimevideo.load();});
 
