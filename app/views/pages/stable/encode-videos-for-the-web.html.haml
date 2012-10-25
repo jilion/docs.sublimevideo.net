@@ -16,11 +16,52 @@
   <small>(See our "supported platforms":/supported-browsers-and-platforms page for more details about this)</small>
 
   As you can see, there is no single video format that works in all HTML5 browsers. If you want your video to be visualized in the maximum number of HTML5 browsers without the use of Flash, you need to encode your video in multiple formats, as explained below.
-  However, if you really just want to encode your video in one format and still be sure it'll be visible in all browsers, you can encode it in MP4/H.264 and SublimeVideo will automatically switch to Flash mode when needed (i.e. on HTML5 browsers that cannot decode H.264 natively, and on legacy browsers that do not support HTML5 at all).
+  However, if you really just want to encode your video in one format and still be sure it'll be visible in all browsers, you can encode it in H.264 and SublimeVideo will automatically switch to Flash mode when needed (i.e. on HTML5 browsers that cannot decode H.264 natively, and on legacy browsers that do not support HTML5 at all).
 
-  To learn more about encoding video for the web, please consult the following guides from Mark Pilgrim's _Dive into HTML5_ book:
-  * "Encoding H.264 Video":http://diveintohtml5.info/video.html#handbrake-gui
-  * "Encoding Ogg Video":http://diveintohtml5.info/video.html#firefogg
-  * "Encoding WebM Video":http://diveintohtml5.info/video.html#webm-cli
+  %(red)*Important note:*%
 
   Once you're finished encoding your videos and ready to upload them to your web server, please remember to double-check that the "MIME types are properly configured":/troubleshooting#videos-wont-play in the server, especially if you’re uploading Ogg and WebM videos.
+
+  h3. Encoding MP4 / H.264 videos
+
+  We recommend using "HandBrake":http://handbrake.fr to encode your H.264 videos. For further instructions, please refer to Mark Pilgrim's _Dive into HTML5_ guide: "Encoding H.264 Video With HandBrake":http://diveintohtml5.info/video.html#handbrake-gui
+
+  h3. Encoding WebM / VP8 videos
+
+  We recommend using "FFmpeg":http://ffmpeg.org to encode your WebM videos.
+
+  h4. Installing FFmpeg
+
+  * Windows and Linux: Download the installer from the "FFmpeg Download page":http://ffmpeg.org/download.html.
+  * Mac OSX: We strongly recommend using "Homebrew":http://mxcl.github.com/homebrew (or you can also download the installer from the "FFmpeg Download page":http://ffmpeg.org/download.html).
+
+  h4. Using FFmpeg
+
+  Following are the @ffmpeg@ command lines we advise you to use.
+
+  *Encode a video to 640x360 (360p) with a 2-pass encoding*
+
+  bc(language-shell). ffmpeg -i path/to/orignal.mov -s 640x360 -vpre libvpx-360p -b 600k \
+    -pass 1 -an -f webm -y path/to/encoded_360p.webm
+  ffmpeg -i path/to/orignal.mov -s 640x360 -vpre libvpx-360p -b 600k \
+    -pass 2 -acodec libvorbis -ab 100k -f webm -y path/to/encoded_360p.webm
+
+  *Encode a video to 1280x720 (720p) with a 2-pass encoding*
+
+  bc(language-shell). ffmpeg -i path/to/orignal.mov -s 1280x720 -vpre libvpx-720p -b 1800k \
+    -pass 1 -an -f webm -y path/to/encoded_720p.webm
+  ffmpeg -i path/to/orignal.mov -s 1280x720 -vpre libvpx-720p -b 1800k \
+    -pass 2 -acodec libvorbis -ab 100k -f webm -y path/to/encoded_720p.webm
+
+  Note:
+
+  * Replace _path/to/orignal.mov_ with the actual path to your original .mov file.
+  * Replace  _path/to/encoded_360p.webm_ and _path/to/encoded_720p.webm_ with the actual paths to the .webm files you want to create.
+
+  h4. Additional resources
+
+  For further instructions, please refer to Mark Pilgrim’s Dive into HTML5 guide: "Encoding WebM Video With FFmpeg":http://diveintohtml5.info/video.html#webm-cli
+
+  h3. Encoding Ogg / Theora videos
+
+  Guide from Mark Pilgrim's _Dive into HTML5_ book: "Encoding Ogg Video With Firefogg":http://diveintohtml5.info/video.html#firefogg
