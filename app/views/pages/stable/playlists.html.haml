@@ -11,9 +11,9 @@
 
   This example only has four videos, but you can use any number of videos in your own page. Just repeat the _video_wrap_ @<div>@ (and their respective @<li>@ elements) and keep the same @id@ logic for the @<video>@ and the @<li>@ elements: _video5_ / _thumbnail_video5_, _video6_ / _thumbnail_video6_, _videoN_ / _thumbnail_videoN_ and so on.
 
-  <pre data-line=3><code class="language-markup"><div id="playlist1" class="playlist">
+  bc(language-markup). <div id="playlist1" class="sv_playlist">
     <div class="video_wrap">
-      <video id="video1" class="sublime" poster="posterframe1.jpg" width="640" height="360" preload="none">
+      <video id="video1" poster="posterframe1.jpg" width="640" height="360" preload="none">
         <source src="video1.mp4" />
         <source src="video1.webm" />
       </video>
@@ -36,7 +36,6 @@
         <source src="video4.webm" />
       </video>
     </div>
-
     <ul class="thumbs">
       <li id="thumbnail_video1">
         <a href="">
@@ -63,19 +62,21 @@
         </a>
       </li>
     </ul>
-  </div></code></pre>
+  </div>
 
-  *Note:* Add the _sublime_ @class@ to the first @<video>@ element (line 3) only, since the other @<video>@ elements are initially hidden and prepared through the JS API.
+  *Note:* Don't set the _sublime_ @class@ to any of the @<video>@ elements, they will all be prepared through the JS API.
 
   h4. CSS Code
 
   strong. Thumbnails below the video
 
-  The following CSS rules hide the non-active @<video>@ elements (lines 6 and show the active ones (lines 15). They also add a simple _hover_ effect to the thumbnail @<li>@ elements (lines 67) and set a different style on the currently active thumbnail (lines 39 & 71).
+  The following CSS rules hide the non-active @<video>@ elements (lines 8 and show the active ones (lines 17). They also add a simple _hover_ effect to the thumbnail @<li>@ elements (lines 69) and set a different style on the currently active thumbnail (lines 41 & 73).
 
-  <pre data-line=6,15,39,67,71><code class="language-css">/* Thumbnails below the video */
+  <pre data-line=8,17,41,69,73><code class="language-css">/* Thumbnails below the video */
 
-  .playlist .video_wrap {
+  img {border:none;}
+
+  .sv_playlist .video_wrap {
     width:640px;
     height:360px;
     display:none;
@@ -86,18 +87,18 @@
     box-shadow:rgba(0,23,60,0.5) 0 4px 17px;
   }
 
-  .playlist .video_wrap.active {
+  .sv_playlist .video_wrap.active {
     display:block;
   }
 
-  .playlist ul.thumbs {
+  .sv_playlist ul.thumbs {
     list-style-type:none;
     width:800px;
     overflow:hidden;
     margin:20px auto;
   }
 
-  .playlist li {
+  .sv_playlist li {
     float:left;
     display:block;
     width:144px;
@@ -110,16 +111,16 @@
     box-shadow:rgba(0,23,60,0.5) 0 2px 10px;
   }
 
-  .playlist li.active {
+  .sv_playlist li.active {
     border-color:#fff;
   }
 
-  .playlist li a {
+  .sv_playlist li a {
     display:block;
     position:relative;
   }
 
-  .playlist li a span.play {
+  .sv_playlist li a span.play {
     display:block;
     width:144px;
     height:81px;
@@ -138,11 +139,11 @@
     transition:background-color,0.25s,linear;
   }
 
-  .playlist li a:hover span.play {
+  .sv_playlist li a:hover span.play {
     background-color:rgba(0,0,0,0);
   }
 
-  .playlist li.active a span.play {
+  .sv_playlist li.active a span.play {
     background:none;
   }
   </code></pre>
@@ -151,11 +152,13 @@
 
   strong. Thumbnails on the right of the video
 
-  The following CSS rules hide the non-active @<video>@ elements (lines 6 and show the active ones (lines 16). They also add a simple _hover_ effect to the thumbnail @<li>@ elements (lines 66) and set a different style on the currently active thumbnail (lines 38 & 70).
+  The following CSS rules hide the non-active @<video>@ elements (lines 8 and show the active ones (lines 18). They also add a simple _hover_ effect to the thumbnail @<li>@ elements (lines 68) and set a different style on the currently active thumbnail (lines 40 & 72).
 
-  <pre data-line=6,16,38,66,70><code class="language-css">/* Thumbnails on the right of the video */
+  <pre data-line=8,18,40,68,72><code class="language-css">/* Thumbnails on the right of the video */
 
-  .playlist .video_wrap {
+  img {border:none;}
+
+  .sv_playlist .video_wrap {
     width:640px;
     height:360px;
     display:none;
@@ -167,17 +170,17 @@
     box-shadow:rgba(0,23,60,0.5) 0 4px 17px;
   }
 
-  .playlist .video_wrap.active {
+  .sv_playlist .video_wrap.active {
     display:block;
   }
 
-  .playlist ul.thumbs {
+  .sv_playlist ul.thumbs {
     list-style-type:none;
     width:158px;
     float:left;
   }
 
-  .playlist li {
+  .sv_playlist li {
     display:block;
     width:144px;
     height:81px;
@@ -189,16 +192,16 @@
     box-shadow:rgba(0,23,60,0.5) 0 2px 10px;
   }
 
-  .playlist li.active {
+  .sv_playlist li.active {
     border-color:#fff;
   }
 
-  .playlist li a {
+  .sv_playlist li a {
     display:block;
     position:relative;
   }
 
-  .playlist li a span.play {
+  .sv_playlist li a span.play {
     display:block;
     width:144px;
     height:81px;
@@ -217,11 +220,11 @@
     transition:background-color,0.25s,linear;
   }
 
-  .playlist li a:hover span.play {
+  .sv_playlist li a:hover span.play {
     background-color:rgba(0,0,0,0);
   }
 
-  .playlist li.active a span.play {
+  .sv_playlist li.active a span.play {
     background:none;
   }
   </code></pre>
