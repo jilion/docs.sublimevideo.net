@@ -35,6 +35,7 @@ stable:
     'releases': 'Release Notes'
 beta:
   'Getting Started':
+    'whats-new': "What's new?"
     'quickstart-guide': 'Quickstart Guide'
     'write-proper-video-elements': 'Write <video> elements'
     'video-code-generator': 'Video code generator'
