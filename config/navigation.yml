@@ -48,7 +48,7 @@ beta:
     'player-faq': 'Player FAQ'
     'service-faq': 'Service FAQ'
   'Add-ons':
-    'addons/sv-logo': 'SublimeVideo logo'
+    'addons/logo': 'Logo'
     'addons/lightbox': 'Lightbox'
     'Real-Time Statistics':
       'addons/real-time-stats/overview': 'Overview'
@@ -59,9 +59,8 @@ beta:
     'playlists': 'Playlists'
     'custom-start-view': 'Custom start view'
     'autoplay': 'Autoplay a video'
-    'loop': 'Loop a video'
+    'custom-behavior-on-end': 'Custom behavior on end'
     'responsive-layout': 'Responsive layout'
-    'back-to-initial-state-on-end': 'Back to initial state on end'
     'embeds': 'Embeds'
     'google-analytics-integration': 'Google Analytics integration'
   'Javascript API':
