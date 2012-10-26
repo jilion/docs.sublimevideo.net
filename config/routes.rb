@@ -25,6 +25,6 @@ DocsSublimeVideo::Application.routes.draw do
   get '(/:stage)/releases' => 'releases#index', stage: /stable|beta/, defaults: { stage: 'stable' }
   get '(/:stage)/*page' => 'pages#show', as: 'page', constraints: DocsPages, stage: /stable|beta/, defaults: { stage: 'stable' }, format: false
 
-  get '/beta', to: redirect('/beta/quickstart-guide')
+  get '/beta', to: redirect('/beta/whats-new')
   root to: 'pages#redirect_from_root'
 end

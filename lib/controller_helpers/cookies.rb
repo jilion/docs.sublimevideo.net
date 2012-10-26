@@ -7,7 +7,7 @@ module ControllerHelpers
       cookies[:stage] ||= 'stable'
       if params[:new_stage]
         cookies[:stage] = params[:new_stage]
-        redirect_to root_path and return
+        redirect_to root_path(stage: params[:new_stage]) and return
       end
     end
 
