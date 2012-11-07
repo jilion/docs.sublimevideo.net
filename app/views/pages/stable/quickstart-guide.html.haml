@@ -12,9 +12,10 @@
   * You can share the same player across all your subdomains via the "wildcard option":/site-settings#wildcard.
   * You can share the same player across domains that are displaying or leading to the *same content* as your main domain via the "staging and alias domains option":/site-settings#staging-and-alias-domains.
 
-  h3(#step-2). "Step 2: Embed the player's code":#step-2
+  h3(#step-2). "Step 2: Embed the player's loader code":#step-2
 
-  Copy the SublimeVideo Player code for #{link_to "your site", my_url('sites')} and paste it into the page where you plan to add your video(s). It's a single line of code (line 5) that will load the player you've created in the previous step. To ensure compatibility with old browsers that do not support HTML5, *we highly recommend you paste this line inside the @<head>@ tag[^"1":#fn-1^]*:
+  Copy the SublimeVideo Player's loader code for your site (by clicking the "Loader Code" button in the #{link_to "My sites", my_url('sites')} page) and paste it into the page where you plan to add your video(s). It's a single line of code (line 5) that will load the player you've created in the previous step.
+  To ensure compatibility with old browsers that do not support HTML5, *we highly recommend you paste this line inside the @<head>@ tag[^"1":#fn-1^]*:
 
   <pre data-line=5><code class="language-markup"><!DOCTYPE html>
   <html>
@@ -27,7 +28,10 @@
     </body>
   </html></code></pre>
 
-  Note: If you have multiple videos on the same page, you only need to add this line once.
+  *Notes:*
+
+  * *Make sure to replace _YOUR_TOKEN_ with your actual site's token (you can find it in the _#{link_to "My sites", my_url('sites')}_ page alongside your site's domain).*
+  * If you have multiple videos on the same page, you only need to add this line once.
 
   h3(#step-3). "Step 3: Add videos":#step-3
 

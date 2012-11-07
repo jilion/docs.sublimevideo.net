@@ -2,7 +2,7 @@
   This alert is triggered when a site tries to use a player code that contains a token associated to another site. You can verify that the proper token is used on each of your sites. They appear near the site names on the #{link_to "My Sites", my_url('sites')} page.
 
   This alert will also be displayed if:
-  * You have copy-pasted an example player code from a documentation page and forgotten to replace the _"YOUR_TOKEN"_ by the proper site's token.
+  * You have copy-pasted an example player code from a documentation page and forgotten to replace the _YOUR_TOKEN_ by the proper site's token (you can find it in the _#{link_to "My sites", my_url('sites')}_ page alongside your site's domain).
   * You are using the player on a development domain that is not specified in the "_Development domains_":/site-settings#dev_domains field.
   * You are using the player on a production site, but you didn't provide any "_Main_":/site-settings#main_domain, "Staging or alias":/site-settings#staging-and-alias-domains domain.
   * You are using the player on a subdomain of your _Main, Staging or alias domain_, but you didn't enable the "Wildcard option":/site-settings#wildcard.
