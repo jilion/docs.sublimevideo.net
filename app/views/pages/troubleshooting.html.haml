@@ -51,8 +51,8 @@
 
   h3(#old-browsers-compatibility). "I'm getting JavaScript errors and videos don't start":#old-browsers-compatibility
 
-  If you see JavaScript errors like @Object does not support this property or method@ or @'ob' is null or not an object@, it's likely that you've put your embed code _after_ a @<video>@ element in your page.
-  To ensure compatibility with old browsers (mostly IE < 9) that do not support HTML5, *we highly recommend you put your embed code inside the @<head>@ tag*. If you want to put it elsewhere, please make sure it's before any @<video>@ element.
+  If you see JavaScript errors like @Object does not support this property or method@ or @'ob' is null or not an object@, it's likely that you've put your loader code _after_ a @<video>@ element in your page.
+  To ensure compatibility with old browsers (mostly IE < 9) that do not support HTML5, *we highly recommend you put your loader code inside the @<head>@ tag*. If you want to put it elsewhere, please make sure it's before any @<video>@ element.
 
   h3(#no-play-button-on-ie9). "Videos only show the poster frame and no play button in Internet Explorer 9":#no-play-button-on-ie9
 
@@ -64,16 +64,18 @@
   <html>
     <head>
       <title>My website</title>
-      <script src="http://cdn.sublimevideo.net/js/YOUR_TOKEN.js" type="text/javascript"></script>
+      <script src="//cdn.sublimevideo.net/js/YOUR_TOKEN.js" type="text/javascript"></script>
     </head>
     <body>
       <!-- Content of your website -->
     </body>
   </html>
 
+  *Make sure to replace _YOUR_TOKEN_ with your actual site's token (you can find it in the _#{link_to "My sites", my_url('sites')}_ page after clicking the "Loader Code" button).*
+
   h3(#not-properly-registered). "I'm seeing the message “SublimeVideo Player is not properly registered for this site”, why?":#not-properly-registered
 
-  The alert is displayed if you have multiple sites registered on #{link_to "MySublimeVideo", my_url('sites')} and are using another site’s SublimeVideo Player embed code in the site receiving the error message. Please check that the embed code you are using on your site is the same as the one displayed when you click the 'Embed Code' button for that site on #{link_to "MySublimeVideo", my_url('sites')}.
+  The alert is displayed if you have multiple sites registered on #{link_to "MySublimeVideo", my_url('sites')} and are using another site’s SublimeVideo Player loader code in the site receiving the error message. Please check that the loader code you are using on your site is the same as the one displayed when you click the 'Embed Code' button for that site on #{link_to "MySublimeVideo", my_url('sites')}.
 
   This alert is also displayed if:
   * You are using the player on a development domain that is not specified in the "_Development domains_":/site-settings#dev_domains field.

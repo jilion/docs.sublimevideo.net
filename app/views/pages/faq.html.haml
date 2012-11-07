@@ -22,7 +22,11 @@
 
   h3(#use-sublimevideo-in-ssl-site). "My site is secured with SSL (https://), how can I use SublimeVideo in it?":#use-sublimevideo-in-ssl-site
 
-  SublimeVideo can be served via SSL for secure pages, this requires you to change your embed code. "Learn more":/ssl.
+  In order to use SublimeVideo on both secure (https://) and non-secure (http://) pages, simply use the following scheme-less loader code:
+
+  bc(language-markup). <script src="//cdn.sublimevideo.net/js/YOUR_TOKEN.js" type="text/javascript"></script>
+
+  *Make sure to replace _YOUR_TOKEN_ with your actual site's token (you can find it in the _#{link_to "My sites", my_url('sites')}_ page after clicking the "Loader Code" button).*
 
   <br />
 
