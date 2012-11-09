@@ -1,33 +1,10 @@
 = content_for :javascript, sublimevideo_docs_include_tag
-- @page_title = "Video hosting"
+- @page_title = "Use SublimeVideo with Vimeo Pro"
 
 %h2= @page_title
 
 :textile
-  For the moment we focus exclusively on providing the best HTML5 Video Player and we give you the freedom to use SublimeVideo player with your preferred encoding and hosting solution. Amongst the available options, SublimeVideo Player provides a full integration with YouTube and works perfectly with "Vimeo Pro":http://vimeo.com/pro.
-
-  h3. YouTube integration
-
-  Integrate a YouTube video with SublimeVideo is very easy. You need to set the "youtube-id" "player setting":player-settings to the ID of the YouTube video you would like to play using SublimeVideo.
-
-  To find the ID of a YouTube video, follow the following steps:
-
-  1. Open the video page;
-  2. Look in the address bar for a "v=YOUTUBE_ID" parameter;
-  3. Copy/paste the _YOUTUBE_ID_ and set it in your @<video>@ element as follow:
-
-  bc(language-markup). <video class="sublime" data-settings="youtube-id: YOUTUBE_ID" poster="video-poster.jpg" width="640" height="360" preload="none"></video>
-
-  *Note:* Don't set any @<source>@ elements.
-
-  h4(#youtube-demo). "Demo":#youtube-demo
-
-  The following player is using a YouTube video.
-
-<div class="video_wrap"><video class="sublime" poster="https://secure-b.vimeocdn.com/ts/358/030/358030879_960.jpg" width="640" height="360" data-settings="youtube-id: t34S1HW82KU" preload="none"></video></div>
-
-:textile
-  h3. Use SublimeVideo with Vimeo Pro
+  Integrate a "Vimeo Pro":http://vimeo.com/pro video with SublimeVideo is very easy.
 
   h4(#step-1). "1 - Upload your video":#step-1
 

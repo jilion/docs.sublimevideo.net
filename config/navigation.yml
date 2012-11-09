@@ -39,7 +39,6 @@ beta:
     'quickstart-guide': 'Quickstart Guide'
     'write-proper-video-elements': 'Write <video> elements'
     'video-code-generator': 'Video code generator'
-    'video-hosting': 'Video hosting'
     'encode-videos-for-the-web': 'Video encoding'
     'create-poster-frame': 'Create poster frame'
     'player-settings': 'Player settings'
@@ -48,12 +47,15 @@ beta:
     'player-faq': 'Player FAQ'
     'service-faq': 'Service FAQ'
   'Add-ons':
-    'addons/logo': 'Logo'
+    'addons/on-video-logo': 'On Video Logo'
     'addons/lightbox': 'Lightbox'
     'Real-Time Statistics':
       'addons/real-time-stats/overview': 'Overview'
       'addons/real-time-stats/optimize-for-stats': 'Optimize <video> for stats'
   'Integration':
+    'Video Hosting':
+      'video-hosting/youtube': 'YouTube'
+      'video-hosting/vimeo-pro': 'Vimeo Pro'
     'wordpress': 'WordPress plugin'
     'hd-switching': 'HD switching'
     'playlists': 'Playlists'
