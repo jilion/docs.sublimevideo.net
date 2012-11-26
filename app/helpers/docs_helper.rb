@@ -16,7 +16,8 @@ module DocsHelper
     html = ''
     Navigation.tree(params[:stage]).each do |section, items|
       if params[:stage] != 'stable'
-        html += content_tag(:h3, link_to(section, '#'), class: 'accordion') + content_tag(:ul, submenu(items), class: ['pages', params[:stage]])
+        # html += content_tag(:h3, link_to(section, '#'), class: 'accordion') + content_tag(:ul, submenu(items), class: ['pages', params[:stage]])
+        html += content_tag(:h3, section, class: 'accordion') + content_tag(:ul, submenu(items), class: ['pages', params[:stage]])
       else
         html += content_tag(:h3, section) + content_tag(:ul, submenu(items), class: ['pages', params[:stage]])
       end
