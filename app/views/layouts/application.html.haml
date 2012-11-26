@@ -6,11 +6,16 @@
   #stages{ class: params[:stage] }
     .s_wrap
       - if params[:stage] == 'beta'
-        %strong You’re reading the SublimeVideo Beta Documentation:
-        = link_to 'Switch to the Stable documentation', root_path + '?new_stage=stable'
+        You’re reading the
+        %strong>= ' Beta Documentation'
+        = '.'
+        = link_to('View the Stable documentation', root_path + '?new_stage=stable') + '.'
       - else
-        %strong You’re reading the SublimeVideo Stable Documentation:
-        = link_to 'Switch to the New Beta documentation', root_path + '?new_stage=beta'
+        You’re reading the Stable Documentation.
+        = link_to(root_path + '?new_stage=beta') do
+          Check out the
+          %strong>= ' new Beta documentation'
+          = '.'
   = render('layouts/header')
 
 = content_for :content_menu, render('layouts/menu')
