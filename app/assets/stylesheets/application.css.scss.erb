@@ -489,11 +489,11 @@ body {
   box-shadow:inset rgba(255,255,255,0.5) 0 1px 0;
 }
 
-#supported_browsers {
+.supported_browsers {
   margin:20px 0;
 }
 
-#supported_browsers, #supported_browsers table {
+.supported_browsers, .supported_browsers table {
   width:100%;
   border-collapse:collapse;
 }
@@ -502,12 +502,11 @@ table.data_settings {
   font-size:11px;
 }
 
-
-#supported_browsers tr.alt {
+.supported_browsers tr.alt {
   background:rgba(0,0,0,0.02);
 }
 
-#supported_browsers th, #supported_browsers td {
+.supported_browsers th, .supported_browsers td {
   padding:4px;
   border:1px solid #8a9ab2;
   -moz-box-shadow:inset rgba(255,255,255,0.5) 0 1px 0;
@@ -515,7 +514,7 @@ table.data_settings {
   box-shadow:inset rgba(255,255,255,0.5) 0 1px 0;
 }
 
-#supported_browsers th {
+.supported_browsers th {
   color:#1c263b;
   font-weight:600;
   border-color:#51637d;
@@ -526,78 +525,100 @@ table.data_settings {
   box-shadow:inset rgba(255,255,255,0.3) 0 1px 0;
 }
 
-#supported_browsers table th, #supported_browsers table td {
+.supported_browsers table th, .supported_browsers table td {
   border:none;
 }
 
-#supported_browsers .platform {text-align:center;border-bottom:none;}
-#supported_browsers tr.last .platform {border-bottom:1px solid #8a9ab2;}
-#supported_browsers .platform.empty {
+.supported_browsers .platform {text-align:center;border-bottom:none;}
+.supported_browsers tr.last .platform {border-bottom:1px solid #8a9ab2;}
+.supported_browsers .platform.empty {
   border-bottom:none;
   border-top:none;
   -moz-box-shadow:none;
   -webkit-box-shadow:none;
   box-shadow:none;
 }
-#supported_browsers .browser {
+.supported_browsers .browser, .supported_browsers.mobile .platform {
   font-size:13px;
   text-align:center;
 }
 
-#supported_browsers .html5, #supported_browsers .flash {
+.supported_browsers .html5, .supported_browsers .flash {
   padding:0;
   text-align:center;
   font-size:12px;
   text-transform:uppercase;
 }
 
-#supported_browsers .html5 th, #supported_browsers .flash th {
+.supported_browsers .html5 th, .supported_browsers .flash th {
   text-transform:none;
 }
 
-#supported_browsers .html5 span, #supported_browsers .flash span {
+.supported_browsers .html5 span, .supported_browsers .flash span {
   display:none;
 }
 
-#supported_browsers td.html5.yes, #supported_browsers td.flash.yes {
+.supported_browsers td.html5.yes, .supported_browsers td.flash.yes {
   background:#cff1d1;
   color:#006a06;
-  width:90px;
 }
 
-#supported_browsers td.html5.yes.partial {
+// REMY
+.supported_browsers.desktop td.html5.yes, .supported_browsers.desktop td.flash.yes {
+  width:380px;
+}
+
+.supported_browsers.mobile td.html5.yes, .supported_browsers.mobile td.flash.yes {
+  width:160px;
+}
+
+.supported_browsers.detailed td.html5.yes, .supported_browsers td.flash.yes {
+  width:90px;
+}
+// REMY
+
+.supported_browsers td.html5.yes.partial {
   background:#f1ebcf;
   color:#6a4800;
 }
 
-#supported_browsers td.html5.yes td.icon, #supported_browsers td.flash.yes td.icon {
+// .supported_browsers td.html5.yes td.icon, .supported_browsers td.flash.yes td.icon { // REMY
+.supported_browsers td.html5.yes.icon, .supported_browsers td.flash.yes.icon {
   height:40px;
-  background:url(<%= asset_path 'check_icon.png' %>) no-repeat center;
+  // background:url(<%= asset_path 'check_icon.png' %>) no-repeat center; // REMY
+  background:#cff1d1 url(<%= asset_path 'check_icon.png' %>) no-repeat center; // REMY
 }
 
-#supported_browsers td.html5.yes.partial td.icon {background:url(<%= asset_path 'warning_icon.png' %>) no-repeat center;}
+.supported_browsers td.html5.yes.partial td.icon {background:url(<%= asset_path 'warning_icon.png' %>) no-repeat center;}
 
-#supported_browsers tr.labels td {
+// REMY
+.supported_browsers tr.labels td {
+  width:100px;
+  border-left:1px solid #77aa78;
+}
+// REMY
+
+.supported_browsers.detailed tr.labels td {
   width:30px;
   border:1px solid #77aa78;
   border-bottom:none;
 }
 
-#supported_browsers tr.labels td:first-child {
+.supported_browsers tr.labels td:first-child {
   border-left:none;
 }
 
-#supported_browsers td.html5.no, #supported_browsers td.flash.no {
+.supported_browsers td.html5.no, .supported_browsers td.flash.no {
   background:#f1cfcf;
 }
 
-#supported_browsers td.notes {
+.supported_browsers td.notes {
   width:190px;
   font-size:12px;
   line-height:14px;
 }
 
-#supported_browsers strong {
+.supported_browsers strong {
   color:#1c263b;
   font-weight:600;
 }
