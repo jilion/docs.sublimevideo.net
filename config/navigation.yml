@@ -51,11 +51,11 @@ beta:
     'service-faq': 'Service FAQ'
   'Add-ons':
     'addons/on-video-logo': 'On Video Logo'
-    'addons/lightbox': 'Lightbox'
     'Real-Time Statistics':
       'addons/real-time-stats/overview': 'Overview'
       'addons/real-time-stats/optimize-for-stats': 'Optimize <video> for stats'
   'Integration':
+    'lightbox': 'Lightbox'
     'Video Hosting':
       'video-hosting/youtube': 'YouTube'
       'video-hosting/vimeo-pro': 'Vimeo Pro'

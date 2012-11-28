@@ -25,26 +25,7 @@
 
   <div class="breakline"></div>
 
--#h3(#initial-overlay). "@initial-overlay@":#initial-overlay
--#
--#Shorthand setting that allows you to define all the Initial Overlay settings in a single declaration. Omitted settings are set to their default value.
--#
--#*Allowed values:*
--#* _@initial-overlay-visibility [initial-overlay-color]@_ – Values must be separated by a whitespace.
--#* @none@ – No initial overlay.
--#
--#*Note:*
--#* Default is set to @autofade black@.
--#* _@initial-overlay-visibility@_ is mandatory unless you set @none@.
--#
--#*Example:*
--#
--#bc(language-markup). <video class='sublime' data-settings='initial-overlay:visible red'>
--#  <source src='video.mp4' />
--#  <source src='video.webm" />
--#</video>
 
-:textile
   h3(#initial-overlay-enable). "@initial-overlay-enable@":#initial-overlay-enable
 
   Allows you to enable or disable the initial overlay.
@@ -168,26 +149,6 @@
   </video>
 
 
--#h3(#fullmode). "@fullmode@":#fullmode
--#
--#Shorthand setting that allows you to define all the Fullmode settings in a single declaration. Omitted settings are set to their default value.
--#
--#*Allowed values:*
--#* _@fullmode-priority@_
--#* @none@ – Disable the fullmode control.
--#
--#*Note:*
--#* Default is set to @screen@.
--#* _@fullmode-priority@_ is mandatory unless you set @none@.
--#
--#*Example:*
--#
--#bc(language-markup). <video class='sublime' data-settings='fullmode:none'>
--#  <source src='video.mp4' />
--#  <source src='video.webm" />
--#</video>
-
-:textile
   h3(#fullmode-enable). "@fullmode-enable@":#fullmode-enable
 
   Allows you to enable or disable the fullmode feature.
@@ -261,6 +222,46 @@
   </video>
 
   *Note:* This setting is used in your "Statistics dashboard":/beta/real-time-stats.
+
+
+-#h3(#initial-overlay). "@initial-overlay@":#initial-overlay
+-#
+-#Shorthand setting that allows you to define all the Initial Overlay settings in a single declaration. Omitted settings are set to their default value.
+-#
+-#*Allowed values:*
+-#* _@initial-overlay-visibility [initial-overlay-color]@_ – Values must be separated by a whitespace.
+-#* @none@ – No initial overlay.
+-#
+-#*Note:*
+-#* Default is set to @autofade black@.
+-#* _@initial-overlay-visibility@_ is mandatory unless you set @none@.
+-#
+-#*Example:*
+-#
+-#bc(language-markup). <video class='sublime' data-settings='initial-overlay:visible red'>
+-#  <source src='video.mp4' />
+-#  <source src='video.webm" />
+-#</video>
+
+
+-#h3(#fullmode). "@fullmode@":#fullmode
+-#
+-#Shorthand setting that allows you to define all the Fullmode settings in a single declaration. Omitted settings are set to their default value.
+-#
+-#*Allowed values:*
+-#* _@fullmode-priority@_
+-#* @none@ – Disable the fullmode control.
+-#
+-#*Note:*
+-#* Default is set to @screen@.
+-#* _@fullmode-priority@_ is mandatory unless you set @none@.
+-#
+-#*Example:*
+-#
+-#bc(language-markup). <video class='sublime' data-settings='fullmode:none'>
+-#  <source src='video.mp4' />
+-#  <source src='video.webm" />
+-#</video>
 
 
 -#%table#supported_browsers
