@@ -7,15 +7,15 @@
     .s_wrap
       - if params[:stage] == 'beta'
         You’re reading the
-        %strong>= ' Beta Documentation'
+        %strong>= ' New SublimeVideo (beta) documentation'
         = '.'
         = link_to('View the Stable documentation', root_path + '?new_stage=stable') + '.'
       - else
-        You’re reading the Stable Documentation.
+        You’re reading the Stable documentation.
+        We recommend that you check out the
         = link_to(root_path + '?new_stage=beta') do
-          Check out the
-          %strong>= ' new Beta documentation'
-          = '.'
+          %strong>= 'New SublimeVideo (beta) documentation'
+        = ' instead.'
   = render('layouts/header')
 
 = content_for :content_menu, render('layouts/menu')
