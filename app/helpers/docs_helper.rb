@@ -6,9 +6,9 @@ module DocsHelper
   def sublimevideo_docs_include_tag
     case params[:stage]
     when 'beta'
-      javascript_include_tag('http://cdn.sublimevideo.net/js/12665678-alpha.js')
+      sublimevideo_loader_tag(:docs, host: 'cdn.sublimevideo-staging.net', stage: 'alpha').html_safe
     else
-      sublimevideo_include_tag(false, :docs).html_safe
+      sublimevideo_loader_tag(:docs).html_safe
     end
   end
 

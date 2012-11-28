@@ -1,32 +1,34 @@
-= content_for :javascript, javascript_include_tag('http://cdn.sublimevideo.net/js/12665678-alpha.js')
+= content_for :javascript, sublimevideo_docs_include_tag
 
 - @page_title = "Integration in a responsive layout"
 
 %h2= @page_title
 
 :textile
-  You can use the following "player setting":player-setting:
+  SublimeVideo now comes with an integrated resizing feature so you only have to set one setting on your @<video>@ element and SublimeVideo takes care of the rest.
 
-%table#supported_browsers
-  %colgroup
-    %col
-    %col.alt
-    %col
-    %col.alt
-  %tr.alt
-    %th Name
-    %th Values
-    %th Default
-    %th Description & Notes
-  %tr
-    %td
-      %strong autoresize
-    %td <code>none</code><br /><code>fill</code><br /><code>fit</code>
-    %td <code>none</code>
-    %td.notes Resizes the video when its parent container is resized.
+  To specify the autoresize behavior you'd like to use for your @<video>@, use the following "player setting":player-setting.
 
-:textile
-  h4. Demo, @autoresize: none@
+  h3(#autoresize). "@autoresize@":#autoresize
+
+  Resizes the video when its parent container is resized.
+
+  *Allowed values:*
+  * @none@ – _(Default)_ The player is not resized automatically.
+  * @fill@ – Fill the player's parent and stretch the player if necessary (resulting in letter/pillar-boxed video).
+  * @fit@ – Fit the player's to its parent without stretching the player itself (its size will always match the video's aspect-ratio and never shows black bars).
+
+  *Example:*
+
+  bc(language-markup). <video class='sublime' data-settings='autoresize:fill'>
+    ...
+  </video>
+
+  *Note:* If you set this setting to @fill@ or @fit@, you can omit the @width@ and @height@ attributes in your @<video>@.
+
+  h4. Demo for @autoresize: none@
+
+  The player is not resized automatically.
 
   bc(language-markup). <video class='sublime' data-settings='autoresize: none' poster='http://media.jilion.com/vcg/ms_800.jpg' width='432' height='243' preload='none'>
     <source src='http://media.jilion.com/videos/demo/midnight_sun_sv1_2_360p.mp4' />
@@ -42,7 +44,9 @@
 </video>​</div>
 :textile
 
-  h4. Demo, @autoresize: fill@
+  h4. Demo for @autoresize: fill@
+
+  Fill the player's parent and stretch the player if necessary (resulting in letter/pillar-boxed video).
 
   bc(language-markup). <video class='sublime' data-settings='autoresize: fill' poster='http://media.jilion.com/vcg/ms_800.jpg' width='432' height='243' preload='none'>
     <source src='http://media.jilion.com/videos/demo/midnight_sun_sv1_2_360p.mp4' />
@@ -58,7 +62,9 @@
 </video>​</div>
 :textile
 
-  h4. Demo, @autoresize: fit@
+  h4. Demo for @autoresize: fit@
+
+  Fit the player's to its parent without stretching the player itself (its size will always match the video's aspect-ratio and never shows black bars).
 
   bc(language-markup). <video class='sublime' data-settings='autoresize: fit' poster='http://media.jilion.com/vcg/ms_800.jpg' width='432' height='243' preload='none'>
     <source src='http://media.jilion.com/videos/demo/midnight_sun_sv1_2_360p.mp4' />
