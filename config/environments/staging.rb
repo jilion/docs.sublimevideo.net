@@ -5,6 +5,9 @@ DocsSublimeVideo::Application.configure do
     [u, p] == ['jilion', ENV['PRIVATE_CODE']]
   end
 
+  # One-line logs
+  config.lograge.enabled = true
+
   # The production environment is meant for finished, "live" apps.
   # Code is not reloaded between requests
   config.cache_classes = true
