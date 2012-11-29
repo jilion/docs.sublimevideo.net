@@ -5,7 +5,8 @@ class ReleasesController < ApplicationController
     params[:page] = 'releases' # for trigger the menu 'active' class
     @releases = Release.all.reverse
 
-    respond_with(@releases) # if stale?(@releases.first, public: true)
+    expires_in 5.minutes, public: true
+    respond_with(@releases) if stale?(@releases.first, public: true)
   end
 
 end
