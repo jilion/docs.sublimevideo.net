@@ -4,9 +4,9 @@ class PagesController < ApplicationController
     @body_class = params[:page]
 
     expires_in 5.minutes, public: true
-    fresh_when etag: page_file.path, last_modified: page_file.mtime, public: true
-
-    render "pages/#{params[:page]}"
+    if stale?(etag: page_file.path, last_modified: page_file.mtime, public: true)
+      render "pages/#{params[:page]}"
+    end
   end
 
   private
