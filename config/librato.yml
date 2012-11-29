@@ -3,12 +3,12 @@ development:
   token: 0132b3ecae47457b8c8d34b796a3af02abbe9fa528265cddfb650439c3049e25
   source: docs.sublimevideo.dev
 
-production:
-  user: <%= ENV['LIBRATO_METRICS_USER'] %>
-  token: <%= ENV['LIBRATO_METRICS_TOKEN'] %>
-  source: docs.sublimevideo.net
-
 staging:
   user: <%= ENV['LIBRATO_METRICS_USER'] %>
   token: <%= ENV['LIBRATO_METRICS_TOKEN'] %>
   source: docs.sublimevideo-staging.net
+
+production:
+  user: <%= ENV['LIBRATO_METRICS_USER'] %>
+  token: <%= ENV['LIBRATO_METRICS_TOKEN'] %>
+  source: docs.sublimevideo.net
