@@ -34,9 +34,6 @@ DocsSublimeVideo::Application.configure do
   # See everything in the log (default is :info)
   # config.log_level = :debug
 
-  # Silence Heroku plugins injection deprecations warning http://stackoverflow.com/questions/9027403/rails-2-3-style-plugins-and-deprecation-warnings-running-task-in-heroku
-  config.active_support.deprecation = :silence
-
   # Heroku logs config
   config.action_controller.logger = Logger.new(STDOUT)
 
