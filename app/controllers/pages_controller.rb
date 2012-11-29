@@ -12,7 +12,8 @@ class PagesController < ApplicationController
   private
 
   def page_file
-    @page_file ||= File.new(Rails.root.join("app/views/pages/#{params[:page]}.html.haml"))
+    @page_files ||= {}
+    @page_files[params[:page]] ||= File.new(Rails.root.join("app/views/pages/#{params[:page]}.html.haml"))
   end
 
 end
