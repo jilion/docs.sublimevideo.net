@@ -1,10 +1,8 @@
 class PagesController < ApplicationController
-  caches_page :show
 
   def show
     @body_class = params[:page]
-
-    render "pages/#{params[:page]}" if fresh_required?
+    render "pages/#{params[:page]}"
   end
 
   private
