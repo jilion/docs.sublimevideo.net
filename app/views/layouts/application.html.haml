@@ -1,6 +1,8 @@
 - @page_title_prefix = "SublimeVideo Documentation"
 
-= content_for :javascript, javascript_include_tag('application')
+= content_for :javascript do
+ = sublimevideo_loader_tag(:docs).html_safe
+ = javascript_include_tag('application')
 
 = content_for :header, render('layouts/header')
 
