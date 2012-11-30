@@ -1,8 +1,10 @@
-- @page_title = "Supported browsers and platforms"
+- @page_title = "Supported browsers and devices"
 
 %h2= @page_title
 
 %h3 Desktop
+%br
+All desktop browsers below have full SublimeVideo design and features support.
 
 %table.supported_browsers.desktop
   %colgroup
@@ -10,7 +12,7 @@
     %col.alt
   %tr.alt
     %th.browser Browser
-    %th.formats Supported formats
+    %th.formats Supported video formats
   %tr
     %td.browser Internet Explorer 6-8
     %td.flash.yes
@@ -54,7 +56,7 @@
         %tr.labels
           %td{ colspan: 3 }= "MP4"
 
-* requires the Flash plugin installed
+* requires Flash plugin installed
 
 %h3 Mobile
 
@@ -75,43 +77,43 @@
     %td.browser{ rowspan: 3 } Stock Android browser, Dolphin and others
     %td.os 1.x, 2.x
     %td.html5.yes MP4
-    %td.empty
+    %td.features.empty
   %tr
     -#%td.platform.empty
     -#%td.browser.empty
     %td.os 3, 4.0
     %td.html5.yes MP4
-    %td.html5.yes.partial
+    %td.features.html5.yes.partial partial
   %tr
     -#%td.platform.empty
     -#%td.browser.empty
     %td.os 4.1+
     %td.html5.yes MP4
-    %td.html5.yes
+    %td.features.html5.yes full
   %tr
     -#%td.platform.empty
     %td.browser Chrome
     %td.os 4+
     %td.html5.yes MP4
-    %td.html5.yes
+    %td.features.html5.yes full
   %tr
     -#%td.platform.empty
     %td.browser{ rowspan: 3 } Firefox
     %td.os 2.x
     %td.html5.yes WebM
-    %td.empty
+    %td.features.empty
   %tr
     -#%td.platform.empty
     -#%td.browser.empty
     %td.os 3.x
     %td.html5.yes WebM
-    %td.html5.yes.partial
+    %td.features.html5.yes.partial partial
   %tr
     -#%td.platform.empty
     -#%td.browser.empty
     %td.os 4+
     %td.html5.yes WebM
-    %td.html5.yes
+    %td.features.html5.yes full
   %tr.alt
     %td.platform Kindle Fire
     %td.browser Silk
@@ -120,67 +122,67 @@
       %table.formats
         %tr.labels
           %td MP4
-    %td.html5.yes.partial
+    %td.features.html5.yes.partial partial
   %tr
     %td.platform{ rowspan: 5 } iOS
     %td.browser{ rowspan: 2 } iPhone
     %td.os < 4
     %td.html5.yes MP4
-    %td.empty
+    %td.features.empty
   %tr
     -#%td.platform.empty
     -#%td.browser.empty
     %td.os 4+
     %td.html5.yes MP4
-    %td.html5.yes.partial
+    %td.features.html5.yes.partial partial
   %tr
     -#%td.platform.empty
     %td.browser{ rowspan: 2 } iPad
     %td.os < 4
     %td.html5.yes MP4
-    %td.empty
+    %td.features.empty
   %tr
     -#%td.platform.empty
     -#%td.browser.empty
     %td.os 4
     %td.html5.yes MP4
-    %td.html5.yes.partial
+    %td.features.html5.yes.partial partial
   %tr
     -#%td.platform.empty
     %td.browser.empty
     %td.os 5+
     %td.html5.yes MP4
-    %td.html5.yes
+    %td.features.html5.yes full
   %tr.alt
     %td.platform{ rowspan: 2 } Windows Phone
     %td.browser{ rowspan: 2 } Windows Phone's IE
     %td.os < 7.5
     %td.html5.yes MP4
-    %td.empty
+    %td.features.empty
   %tr
     -#%td.platform.empty
     -#%td.browser.empty
     %td.os 7.5+
     %td.html5.yes MP4
-    %td.html5.yes.partial
+    %td.features.html5.yes.partial partial
   %tr
     %td.platform Windows RT
     %td.browser Tablets
     %td.os 8+
     %td.html5.yes MP4
-    %td.html5.yes
+    %td.features.html5.yes full
   %tr.alt
     %td.platform BlackBerry
     %td.browser BlackBerry browser
     %td.os
     %td.html5.yes MP4
-    %td.empty
+    %td.features.empty
   %tr.last
     %td.platform Other mobiles
     %td.browser
     %td.os
     %td.html5.yes MP4
-    %td.empty
+    %td.features.empty
 
 
   -#%tr.alt

@@ -15,6 +15,7 @@ DocsSublimeVideo::Application.routes.draw do
   get '/returning-to-the-initial-state-once-video-playback-ends' => redirect('/back-to-initial-state-on-end')
   get '/ssl' => redirect('/player-faq#use-sublimevideo-in-ssl-site')
   get '/video-code-generator' => redirect('/video-publishing-assistant')
+  get '/supported-browsers-and-platforms' => redirect('/supported-platforms')
   get '(/:stage)/faq' => redirect { |params, req| "#{"/#{params[:stage]}" if params[:stage]}/player-faq" }
 
   # Shortcut redirect

@@ -31,7 +31,7 @@ stable:
     'player-faq': 'Player FAQ'
     'service-faq': 'Service FAQ'
     'troubleshooting': 'Troubleshooting'
-    'supported-browsers-and-platforms': 'Supported platforms'
+    'supported-platforms': 'Supported platforms'
     'releases': 'Release Notes'
 beta:
   'Getting Started':
@@ -73,5 +73,5 @@ beta:
     'javascript-api/methods': 'Methods'
     'javascript-api/listeners': 'Listeners'
   'Other':
-    'supported-browsers-and-platforms': 'Supported platforms'
+    'supported-platforms': 'Supported platforms'
     'releases': 'Release Notes'
