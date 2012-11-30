@@ -529,16 +529,16 @@ table.data_settings {
   border:none;
 }
 
-.supported_browsers .platform {text-align:center;border-bottom:none;}
-.supported_browsers tr.last .platform {border-bottom:1px solid #8a9ab2;}
-.supported_browsers .platform.empty {
+.supported_browsers .platform, .supported_browsers.mobile .browser {text-align:center;border-bottom:none;}
+.supported_browsers tr.last .platform, .supported_browsers tr.last .browser {border-bottom:1px solid #8a9ab2;}
+.supported_browsers .platform.empty, .supported_browsers .browser.empty {
   border-bottom:none;
   border-top:none;
   -moz-box-shadow:none;
   -webkit-box-shadow:none;
   box-shadow:none;
 }
-.supported_browsers .browser, .supported_browsers.mobile .platform {
+.supported_browsers .browser, .supported_browsers.mobile .platform, .supported_browsers .os {
   font-size:13px;
   text-align:center;
 }
@@ -564,12 +564,16 @@ table.data_settings {
 }
 
 // REMY
+.supported_browsers.mobile td.platform {
+  width:120px;
+}
+
 .supported_browsers.desktop td.html5.yes, .supported_browsers.desktop td.flash.yes {
   width:380px;
 }
 
-.supported_browsers.mobile td.html5.yes, .supported_browsers.mobile td.flash.yes {
-  width:160px;
+.supported_browsers.mobile td.browser, .supported_browsers.mobile td.html5.yes, .supported_browsers.mobile td.flash.yes {
+  width:130px;
 }
 
 .supported_browsers.detailed td.html5.yes, .supported_browsers td.flash.yes {
