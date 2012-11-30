@@ -1,0 +1,34 @@
+- @page_title = "Using the player settings"
+
+%h2= @page_title
+
+:textile
+  Player settings can be set in 3 different ways.
+
+  h4. Via @data-@_@setting-name@_ attributes
+
+  Each setting can be set via a @data-@ attribute on the @<video>@ element.
+
+  For instance:
+
+  bc(language-markup). <video data-autoresize="fit" data-on-end="stop" ...>
+
+  h4. Via the @data-settings@ attribute
+
+  If you have multiple settings to specify, you can also group them in a single @data-settings@ attribute, as a CSS-like formatted string.
+
+  For instance:
+
+  bc(language-markup). <video data-settings="autoresize: fit; on-end: stop;" ...>
+
+  h3(#video-and-lightbox-settings). "Video and Lightbox settings":#video-and-lightbox-settings
+
+  h4. "Standard settings":/player-settings/standard-settings
+
+  "(c)@initial-overlay-enable@":standard-settings#initial-overlay-enable "(c)@initial-overlay-visibility@":standard-settings#initial-overlay-visibility "(c)@initial-overlay-color@":standard-settings#initial-overlay-color
+  "(c)@fullmode-enable@":standard-settings#fullmode-enable "(c)@fullmode-priority@":standard-settings#fullmode-priority
+  "(c)@on-end@":standard-settings#on-end
+
+  h4. "Lightbox settings":/player-settings/lightbox-settings
+
+  "(c)@onEnd@":/javascript-api/listeners#onEnd "(c)@onStart@":/javascript-api/listeners#onStart "(c)@ready@":/javascript-api/listeners#ready

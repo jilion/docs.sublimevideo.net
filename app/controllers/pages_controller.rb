@@ -9,7 +9,9 @@ class PagesController < ApplicationController
   end
 
   def redirect_from_root
-    redirect_to page_path(stage: current_stage, page: (params[:stage] == 'beta' ? 'whats-new' : 'quickstart-guide')) and return unless params[:page]
+    unless params[:page]
+      redirect_to page_path(stage: current_stage, page: 'quickstart-guide') and return
+    end
   end
 
   private

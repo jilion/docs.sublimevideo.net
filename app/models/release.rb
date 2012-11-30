@@ -5,7 +5,8 @@ class Release
     @datetime, @content = attrs[:datetime], attrs[:content]
   end
 
-  def self.all(path = Rails.root.join('app/views/releases'))
+  def self.all(stage = 'stable')
+    path = Rails.root.join('app', 'views', 'releases', stage)
     path.entries.inject([]) do |releases, file_path|
       if matches = file_path.to_s.match(/([0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9]{2}:[0-9]{2})\.textile/)
         releases << new(

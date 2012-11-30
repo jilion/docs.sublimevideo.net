@@ -4,7 +4,7 @@ class ReleasesController < ApplicationController
 
   def index
     params[:page] = 'releases' # for trigger the menu 'active' class
-    @releases = Release.all.reverse
+    @releases = Release.all(params[:stage]).reverse
 
     respond_with(@releases) if stale?(@releases.first, public: true)
   end

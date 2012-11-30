@@ -2,7 +2,7 @@ module ControllerHelpers
   module Stages
 
     def current_stage
-      cookies[:stage] || 'stable'
+      cookies[:stage] || 'beta'
     end
 
     def stage?(stage_name)

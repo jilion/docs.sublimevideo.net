@@ -1,0 +1,165 @@
+- @page_title = "Player settings: Lightbox settings"
+
+%h2= @page_title
+
+:textile
+  It's easy to customize your "Lightbox":/beta/lightbox with the following "player settings":usage (be sure to set these settings on the @<a>@, not on the @<video>@):
+
+  h4. Player behavior setting
+
+  "(c)@on-open@":#on-open
+
+  h4. Display settings
+
+  "(c)@overlay-color@":#overlay-color "(c)@overlay-opacity@":#overlay-opacity
+
+  h4. Close button settings
+
+  "(c)@close-button-enable@":#close-button-enable "(c)@close-button-visibility@":#close-button-visibility "(c)@close-button-position@":#close-button-position
+
+  See also "Using the player settings":usage and "Standard settings":standard-settings.
+
+  <div class="breakline"></div>
+
+
+  h3(#on-open). "@on-open@":#on-open
+
+  Allows you to define the player's behavior once the lightbox opens.
+
+  *Allowed values:*
+  * @nothing@ – Does nothing (the play button must be clicked in order for the video to start).
+  * @play@ – _(Default)_ The video playback starts automatically.
+
+  *Example:*
+
+  bc(language-markup). <a class='sublime' href='#video1' data-settings='on-open:nothing'>
+
+  See a "demo":#demo.
+
+
+  h3(#overlay-color). "@overlay-color@":#overlay-color
+
+  Allows you to choose the lightbox overlay color.
+
+  *Allowed values:*
+  * _@literal@_ – e.g. @red@, @green@
+  * _@#hexadecimal@_ – e.g. @#fff@ or @#dd0066@
+  * _@rgb@_ – e.g. @rgb(255, 100, 0)@
+
+  *Note:*
+  * Default is set to @black@.
+
+  *Example:*
+
+  bc(language-markup). <a class='sublime' href='#video1' data-settings='overlay-color:red'>
+
+  See a "demo":#demo.
+
+
+  h3(#overlay-opacity). "@overlay-opacity@":#overlay-opacity
+
+  Allows you to choose the lightbox overlay opacity.
+
+  *Allowed values:*
+  * _@a float between 0.1 and 1.0@_ – e.g. @0.25@, @0.8@
+
+  *Note:*
+  * Default is set to @0.7@.
+
+  *Example:*
+
+  bc(language-markup). <a class='sublime' href='#video1' data-settings='overlay-opacity:0.25'>
+
+  See a "demo":#demo.
+
+
+  h3(#close-button-enable). "@close-button-enable@":#close-button-enable
+
+  Allows you to enable or disable the lightbox close button.
+
+  *Allowed values:*
+  * @true@ – _(Default)_ Shows the close button.
+  * @false@ – Doesn't show the close button.
+
+  *Example:*
+
+  bc(language-markup). <a class='sublime' href='#video1' data-settings='close-button-enable:false'>
+
+  See a "demo":#demo.
+
+
+  h3(#close-button-visibility). "@close-button-visibility@":#close-button-visibility
+
+  Allows you to choose how the initial overlay is displayed.
+
+  *Allowed values:*
+  * @autohide@ – _(Default)_ The close button appears on mousover.
+  * @visible@ – The close button is always visible.
+
+  *Example:*
+
+  bc(language-markup). <a class='sublime' href='#video1' data-settings='close-button-visibility:visible'>
+
+  See a "demo":#demo.
+
+
+  h3(#close-button-position). "@close-button-position@":#close-button-position
+
+  Allows you to choose the position of the lightbox close button.
+
+  *Allowed values:*
+  * @left@ – _(Default)_ The close button is positioned at the top-left corner.
+  * @right@ – The close button is positioned at the top-right corner.
+
+  *Example:*
+
+  bc(language-markup). <a class='sublime' href='#video1' data-settings='close-button-position:right'>
+
+  See a "demo":#demo.
+
+  h4(#demo). "Demo":#demo
+
+  #{jsfiddle_embed('G9748', height: 500)}
+​
+-#%table#supported_browsers
+-#  %colgroup
+-#    %col
+-#    %col.alt
+-#    %col
+-#    %col.alt
+-#  %tr.alt
+-#    %th Name
+-#    %th Values
+-#    %th Default
+-#    %th Description & Notes
+-#  %tr
+-#    %td
+-#      %strong on-open
+-#    %td <code>nothing</code><br /><code>play</code>
+-#    %td <code>play</code>
+-#    %td.notes Allows you to choose between: doing nothing, or playing the video once the lightbox opens.
+-#  -#%tr.alt
+-#  -#  %td
+-#  -#    %strong overlay-color
+-#  -#  %td <code>literal</code><br /><code>#hexadecimal</code><br /><code>rgb</code>
+-#  -#  %td <code>#000</code>
+-#  -#  %td.notes Customizes the lightbox overlay color.
+-#  %tr
+-#    %td
+-#      %strong overlay-opacity
+-#    %td
+-#      %small <code>0.1 ≤ opacity ≤ 1.0</code>
+-#    %td <code>0.7</code>
+-#    %td.notes Customizes the lightbox overlay opacity.
+-#  %tr.alt
+-#    %td
+-#      %strong close-button
+-#    %td <code>hidden</code><br /><code>autohide</code><br /><code>visible</code>
+-#    %td <code>autohide</code>
+-#    %td.notes Allows you to choose between: hiding the lightbox close button, displaying it only upon mousover, or permanently displaying it.
+-#  %tr
+-#    %td
+-#      %strong close-button-position
+-#    %td <code>left</code><br /><code>right</code>
+-#    %td <code>left</code>
+-#    %td.notes Defines where the lightbox close button should be placed.

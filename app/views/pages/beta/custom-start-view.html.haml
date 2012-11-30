@@ -3,31 +3,58 @@
 %h2= @page_title
 
 :textile
-  The default initial play button ensures compatibility across all browsers (down to IE6). We strongly discourage you from modifying it using CSS.
+  The default start view ensures compatibility across all browsers (down to IE6). We strongly discourage you from modifying it using CSS.
 
   h3. Customize or disable the initial overlay
 
   You can use the following "player setting":player-settings:
 
-%table#supported_browsers
-  %colgroup
-    %col
-    %col.alt
-    %col
-    %col.alt
-  %tr.alt
-    %th Name
-    %th Values
-    %th Default
-    %th Description & Notes
-  %tr
-    %td
-      %strong initial-overlay
-    %td <code>none</code><br /><code>autofade</code>
-    %td <code>autofade</code>
-    %td.notes Allows you to choose between: hiding the initial overlay effect or displaying it (default).
+  h4(#initial-overlay-enable). "@initial-overlay-enable@":#initial-overlay-enable
 
-:textile
+  Allows you to enable or disable the initial overlay.
+
+  *Allowed values:*
+  * @true@ – _(Default)_ Show the initial overlay.
+  * @false@ – Disable the initial overlay.
+
+  *Example:*
+
+  bc(language-markup). <video class='sublime' data-settings='initial-overlay-enable:false'>
+    ...
+  </video>
+
+  h4(#initial-overlay-visibility). "@initial-overlay-visibility@":#initial-overlay-visibility
+
+  Allows you to choose how the initial overlay is displayed.
+
+  *Allowed values:*
+  * @autofade@ – _(Default)_ The initial overlay autofade on mousover.
+  * @visible@ – The initial overlay is always visible and doesn't fade-out on mouseover.
+
+  *Example:*
+
+  bc(language-markup). <video class='sublime' data-settings='initial-overlay-visibility:visible'>
+    ...
+  </video>
+
+  h4(#initial-overlay-color). "@initial-overlay-color@":#initial-overlay-color
+
+  Allows you to choose the initial overlay color.
+
+  *Allowed values:*
+  * @literal@ – e.g. @red@, @green@
+  * @#hexadecimal@ – e.g. @#fff@ or @#dd0066@
+  * @rgb@ – e.g. @rgb(255, 100, 0)@
+
+  *Note:*
+  * Default is set to @black@.
+
+  *Example:*
+
+  bc(language-markup). <video class='sublime' data-settings='initial-overlay-color:red'>
+    ...
+  </video>
+
   h4. Demo
 
   #{jsfiddle_embed('JpjXu', height: 350)}

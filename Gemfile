@@ -3,32 +3,33 @@ source 'https://gems.gemfury.com/8dezqz7z7HWea9vtaFwg' # thibaud@jilion.com acco
 
 ruby '1.9.3'
 
-gem 'bundler', '~> 1.2.0'
+gem 'bundler'
 
-gem 'rails',               '3.2.8'
-gem 'sublimevideo_layout', '1.4.1' # hosted on gemfury
+gem 'rails',               '3.2.9'
+gem 'sublime_video_layout' # hosted on gemfury
 
 # Views
 gem 'haml'
-gem 'RedCloth', '~> 4.2.9'
+gem 'RedCloth'
 
 # Internals
-gem 'mongoid',   '~> 3.0.5'
-gem 'dalli',     '~> 2.1.0'
-gem 'indextank', '~> 1.0.12'
-gem 'airbrake',  '~> 3.1.2'
+gem 'mongoid'
+gem 'dalli'
+gem 'indextank'
+gem 'airbrake'
+gem 'yajl-ruby', require: 'yajl'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'asset_sync'
-  gem 'sass-rails',   '~> 3.2.5'
-  gem 'coffee-rails', '~> 3.2.2'
+  gem 'sass-rails'
+  gem 'coffee-rails'
   gem 'uglifier'
 end
 
 group :production do
-  gem 'rack-google-analytics', '~> 0.11'
+  gem 'rack-google-analytics'
 end
 
 group :staging, :production do
