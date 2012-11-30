@@ -73,106 +73,120 @@
     %col
     %col.alt
   %tr.alt
-    %th.platform Mobile platform (browser or device)
+    %th.platform Mobile platform
+    %th.browser Browser or device
     %th.os OS version
     %th.formats Video playback support
     %th.features SublimeVideo design & features support
   %tr
-    %td.platform Android (“Stock” Browser, Dolphin and other)
-    %td.browser 1.x, 2.x
+    %td.platform{ rowspan: 7 } Android
+    %td.browser{ rowspan: 3 } Stock Android browser, Dolphin and others
+    %td.os 1.x, 2.x
     %td.html5.yes MP4
     %td.empty
-  %tr.alt
-    %td.platform.empty
-    %td.browser 3, 4.0
+  %tr
+    -#%td.platform.empty
+    -#%td.browser.empty
+    %td.os 3, 4.0
     %td.html5.yes MP4
     %td.html5.yes.partial
   %tr
-    %td.platform.empty
-    %td.browser 4.1+
+    -#%td.platform.empty
+    -#%td.browser.empty
+    %td.os 4.1+
     %td.html5.yes MP4
-    %td.html5.yes.icon
-      %span= "Yes"
-  %tr.alt
-    %td.platform Android (Chrome)
-    %td.browser 4+
-    %td.html5.yes MP4
-    %td.html5.yes.icon
-      %span= "Yes"
+    %td.html5.yes
   %tr
-    %td.platform Android (Firefox)
-    %td.browser 2.x
+    -#%td.platform.empty
+    %td.browser Chrome
+    %td.os 4+
+    %td.html5.yes MP4
+    %td.html5.yes
+  %tr
+    -#%td.platform.empty
+    %td.browser{ rowspan: 3 } Firefox
+    %td.os 2.x
     %td.html5.yes WebM
     %td.empty
-  %tr.alt
-    %td.platform.empty
-    %td.browser 3.x
+  %tr
+    -#%td.platform.empty
+    -#%td.browser.empty
+    %td.os 3.x
     %td.html5.yes WebM
     %td.html5.yes.partial
   %tr
-    %td.platform.empty
-    %td.browser 4+
+    -#%td.platform.empty
+    -#%td.browser.empty
+    %td.os 4+
     %td.html5.yes WebM
-    %td.html5.yes.icon
-      %span= "Yes"
+    %td.html5.yes
   %tr.alt
-    %td.platform Kindle Fire (Silk)
-    %td.browser 1G, HD
+    %td.platform Kindle Fire
+    %td.browser Silk
+    %td.os 1G, HD
     %td.html5.yes
       %table.formats
         %tr.labels
           %td MP4
     %td.html5.yes.partial
   %tr
-    %td.platform iOS (iPhone)
-    %td.browser < 4
+    %td.platform{ rowspan: 5 } iOS
+    %td.browser{ rowspan: 2 } iPhone
+    %td.os < 4
     %td.html5.yes MP4
     %td.empty
-  %tr.alt
-    %td.platform.empty
-    %td.browser 4+
+  %tr
+    -#%td.platform.empty
+    -#%td.browser.empty
+    %td.os 4+
     %td.html5.yes MP4
     %td.html5.yes.partial
   %tr
-    %td.platform iOS (iPad)
-    %td.browser < 4
+    -#%td.platform.empty
+    %td.browser{ rowspan: 2 } iPad
+    %td.os < 4
     %td.html5.yes MP4
     %td.empty
-  %tr.alt
-    %td.platform.empty
-    %td.browser 4
+  %tr
+    -#%td.platform.empty
+    -#%td.browser.empty
+    %td.os 4
     %td.html5.yes MP4
     %td.html5.yes.partial
   %tr
-    %td.platform.empty
-    %td.browser 5+
+    -#%td.platform.empty
+    %td.browser.empty
+    %td.os 5+
     %td.html5.yes MP4
-    %td.html5.yes.icon
-      %span= "Yes"
-  %tr
-    %td.platform Windows Phone
-    %td.browser < 7.5
+    %td.html5.yes
+  %tr.alt
+    %td.platform{ rowspan: 2 } Windows Phone
+    %td.browser{ rowspan: 2 } Windows Phone's IE
+    %td.os < 7.5
     %td.html5.yes MP4
     %td.empty
-  %tr.alt
-    %td.platform.empty
-    %td.browser 7.5+
+  %tr
+    -#%td.platform.empty
+    -#%td.browser.empty
+    %td.os 7.5+
     %td.html5.yes MP4
     %td.html5.yes.partial
   %tr
-    %td.platform Windows RT (Tablets)
-    %td.browser 8+
+    %td.platform Windows RT
+    %td.browser Tablets
+    %td.os 8+
     %td.html5.yes MP4
-    %td.html5.yes.icon
-      %span= "Yes"
+    %td.html5.yes
   %tr.alt
     %td.platform BlackBerry
-    %td.browser
+    %td.browser BlackBerry browser
+    %td.os
     %td.html5.yes MP4
     %td.empty
   %tr.last
-    %td.platform Other Mobile
+    %td.platform Other mobiles
     %td.browser
+    %td.os
     %td.html5.yes MP4
     %td.empty
 
