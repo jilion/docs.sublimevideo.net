@@ -12,6 +12,7 @@ gem 'sublime_video_layout', '~> 1.1' # hosted on gemfury
 gem 'haml'
 gem 'RedCloth'
 gem 'turbolinks', '0.5.1'
+gem 'google-analytics-turbolinks'
 
 # Internals
 gem 'mongoid'
