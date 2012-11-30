@@ -24,7 +24,7 @@
 
   #{link_to(image_tag('video-hosting/vimeo_step_3.1.png', class: 'screenshot', width: 100, style: 'float:left; margin:20px 20px 0 0'), '#vimeo_step_3_1', class: 'sublime lightbox')}
 
-  Click the _Video File_ tab. On this page you can get the actual video files URLs. Simply copy/paste the _Standard Def_ and _High Def_ URLs and put them in our #{link_to "Video Code Generator", my_url('video-code-generator'), onclick: 'window.open(this); return false'} (or create one @<source>@ element for each of the URLs if you're creating your @video@ manually).
+  Click the _Video File_ tab. On this page you can get the actual video files URLs. Simply copy/paste the _Standard Def_ and _High Def_ URLs and put them in our #{link_to "Video Publishing Assistant", my_url('publish-video'), onclick: 'window.open(this); return false'} (or create one @<source>@ element for each of the URLs if you're creating your @video@ manually).
 
   div(spacer). &nbsp;
 
@@ -37,7 +37,7 @@
   2. Click the _#{link_to 'Switch to HTML5 Player', '#vimeo_step_4_1', class: 'sublime'}_ link located below the video decription;
   3. Right-click and choose "Inspect Element";
   4. Copy the value that's in the _#{link_to raw('<code>data-thumb</code>'), '#vimeo_step_4_2', class: 'sublime'}_ attribute;
-  5. Paste the URL in the "Poster frame" field of our #{link_to "Video Code Generator", my_url('video-code-generator'), onclick: 'window.open(this); return false'} (or put it directly in the "poster" attribute of your @video@ element if you're creating your @video@ manually).
+  5. Paste the URL in the "Poster frame" field of our #{link_to "Video Publishing Assistant", my_url('publish-video'), onclick: 'window.open(this); return false'} (or put it directly in the "poster" attribute of your @video@ element if you're creating your @video@ manually).
 
   h4(#vimeo-demo). "Demo":#vimeo-demo
 

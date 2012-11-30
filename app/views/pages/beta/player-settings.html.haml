@@ -5,7 +5,7 @@
 :textile
   h3(#syntax). "Syntax":#syntax
 
-  Settings can be set in 3 different ways.
+  Settings can be set in 2 different ways.
 
   h4. Via @data-@_@attribute-name@_ attributes
 
@@ -15,17 +15,13 @@
 
   bc(language-markup). <video data-autoresize="fit" data-initial-overlay="none" ...>
 
-  h4. Via the @data-settings@ attribute
+  h4. Grouped in a single @data-settings@ attribute
 
-  If you have multiple settings to specify, it's often more elegant to group them in a single @data-settings@ attribute (as a CSS-like formatted string).
+  If you have multiple settings to specify, you can also group them in a single @data-settings@ attribute, as a CSS-like formatted string.
 
   For instance:
 
   bc(language-markup). <video data-settings="autoresize: fit; initial-overlay: none;" ...>
-
-  h4. Via JavaScript
-
-  Settings can also be specified with the JavaScript API via a key-value object, in this case the "dash-separated" properties need to be written as "lowerCamelCase", as you might proceed with CSS properties set via JavaScript.
 
   h3(#settings). "Settings":#settings
 
