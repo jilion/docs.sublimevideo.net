@@ -6,7 +6,7 @@ ruby '1.9.3'
 gem 'bundler'
 
 gem 'rails',               '3.2.9'
-gem 'sublime_video_layout' # hosted on gemfury
+gem 'sublime_video_layout', '~> 2.0' # hosted on gemfury
 
 # Views
 gem 'haml'
