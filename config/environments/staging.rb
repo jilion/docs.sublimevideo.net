@@ -5,6 +5,9 @@ DocsSublimeVideo::Application.configure do
   end
   config.middleware.insert_before Rack::Lock, Rack::SslEnforcer, except_hosts: 'docs.sublimevideo-staging.net', strict: true
 
+  # One-line logs
+  config.lograge.enabled = true
+
   # The production environment is meant for finished, "live" apps.
   # Code is not reloaded between requests
   config.cache_classes = true

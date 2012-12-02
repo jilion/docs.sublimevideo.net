@@ -11,13 +11,17 @@ gem 'sublime_video_layout', '~> 2.0' # hosted on gemfury
 # Views
 gem 'haml'
 gem 'RedCloth'
+gem 'turbolinks', '0.5.1'
+gem 'google-analytics-turbolinks'
 
 # Internals
 gem 'mongoid'
 gem 'dalli'
 gem 'indextank'
 gem 'airbrake'
-gem 'yajl-ruby', require: 'yajl'
+gem 'oj' # fastest json
+gem 'librato-rails'
+gem 'lograge'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -52,16 +56,12 @@ group :test do
 end
 
 group :tools do
-  gem 'heroku'
-  gem 'foreman'
   gem 'powder'
   gem 'pry'
 
   # Guard
   gem 'terminal-notifier-guard'
-  platforms :ruby do
-    gem 'coolline'
-  end
+  gem 'rb-fsevent'
 
   gem 'guard-pow'
   gem 'guard-livereload'

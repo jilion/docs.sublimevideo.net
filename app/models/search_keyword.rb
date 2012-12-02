@@ -10,6 +10,7 @@ class SearchKeyword
   validates :k, presence: true, uniqueness: true
 
   def self.increment(keyword)
+    Librato.increment 'docs.search'
     sk = create(k: keyword) unless sk = where(k: keyword).first
     sk.inc(:c, 1)
   end

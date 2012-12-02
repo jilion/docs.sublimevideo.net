@@ -1,11 +1,13 @@
 class PagesController < ApplicationController
-  caches_page :show
   before_filter :redirect_from_root
 
   def show
     @body_class = params[:page]
 
-    render page_for(params[:stage], params[:page]) if fresh_required?
+    expires_in 5.minutes, public: true
+    if stale?(etag: page_file.path, last_modified: page_file.mtime, public: true)
+      render page_for(params[:stage], params[:page])
+    end
   end
 
   def redirect_from_root
@@ -16,16 +18,9 @@ class PagesController < ApplicationController
 
   private
 
-  def fresh_required?
-    Rails.env.development? || Rails.env.test? || stale?(etag: page_sha1, last_modified: page_file.mtime, public: true)
-  end
-
-  def page_sha1
-    Digest::SHA1.file(page_file).to_s
-  end
-
   def page_file
-    @page_file ||= File.new(Rails.root.join("app/views/#{page_for(params[:stage], params[:page])}.html.haml"))
+    @page_files ||= {}
+    @page_files[params[:page]] ||= File.new(Rails.root.join("app/views/#{page_for(params[:stage], params[:page])}.html.haml"))
   end
 
   def page_for(stage, page, options = {})

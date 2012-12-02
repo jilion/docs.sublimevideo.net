@@ -3,6 +3,9 @@ DocsSublimeVideo::Application.configure do
   config.middleware.insert_before Rack::Cache, Rack::GoogleAnalytics, tracker: 'UA-10280941-8'
   config.middleware.insert_before Rack::Cache, Rack::SslEnforcer, except_hosts: 'docs.sublimevideo.net', strict: true
 
+  # One-line logs
+  config.lograge.enabled = true
+
   # Code is not reloaded between requests
   config.cache_classes = true
 
