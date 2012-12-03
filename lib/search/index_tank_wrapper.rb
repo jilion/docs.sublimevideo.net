@@ -12,7 +12,7 @@ module Search
         end
       rescue Timeout::Error => ex
         Airbrake.notify(ex) if Rails.env.production? || Rails.env.staging?
-        []
+        nil
       end
 
       def add_documents(documents)
