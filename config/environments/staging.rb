@@ -1,6 +1,6 @@
 DocsSublimeVideo::Application.configure do
   # Settings specified here will take precedence over those in config/environment.rb
-  config.middleware.insert_after Rack::Cache, Rack::Auth::Basic, "Staging" do |u, p|
+  config.middleware.insert_before Rack::Cache, Rack::Auth::Basic, "Staging" do |u, p|
     [u, p] == ['jilion', ENV['PRIVATE_CODE']]
   end
   config.middleware.insert_before Rack::Cache, Rack::SslEnforcer, except_hosts: 'docs.sublimevideo-staging.net', strict: true
@@ -14,7 +14,7 @@ DocsSublimeVideo::Application.configure do
 
   # Full error reports are disabled and caching is turned on
   config.consider_all_requests_local       = false
-  config.action_controller.perform_caching = false
+  config.action_controller.perform_caching = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
   config.serve_static_assets = false
