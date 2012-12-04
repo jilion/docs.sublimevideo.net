@@ -1,11 +1,18 @@
 # coding: utf-8
+require 'timeout'
+
 module Search
   module IndexTankWrapper
 
     class << self
 
       def search(stage, *args)
-        index(stage).search(*args)
+        Timeout.timeout(20) do
+          index(stage).search(*args)
+        end
+      rescue Timeout::Error => ex
+        Airbrake.notify(ex) if Rails.env.production? || Rails.env.staging?
+        nil
       end
 
       def add_documents(stage, documents)

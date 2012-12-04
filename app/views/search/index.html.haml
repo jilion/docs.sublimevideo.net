@@ -1,13 +1,13 @@
-- @page_title = @results ? "Search results for “#{@query}”" : "No keyword provided"
+- @page_title = @query ? "Search results for “#{@query}”" : "No keyword provided"
 
 %h2= @page_title
 
 - if @results
   %ul.search_results
-    - @results['results'].each do |doc|
+    - @results.each do |doc|
       %li
         = link_to doc['title'], doc['docid']
 - else
-  %p= raw "Your search did not match any documents. Please provide a keyword, for instance #{link_to "“encoding”", search_path(q: 'encoding')} or #{link_to "“ssl”", search_path(q: 'ssl')}."
+  %p= raw "Your search did not match any documents. Please provide another keyword, for instance #{link_to "“encoding”", search_path(q: 'encoding')} or #{link_to "“ssl”", search_path(q: 'ssl')}."
 
 %p= raw "If you couldn't find what you're looking for, please visit our #{link_to "Help page", layout_url('help')}."
