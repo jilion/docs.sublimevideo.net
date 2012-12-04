@@ -50,7 +50,7 @@ beta:
     'player-faq': 'Player FAQ'
     'service-faq': 'Service FAQ'
   'Add-ons':
-    'addons/on-video-logo': 'On Video Logo'
+    #'addons/on-video-logo': 'On-Video Logo'
     'Real-Time Statistics':
       'addons/real-time-stats/overview': 'Overview'
       'addons/real-time-stats/optimize-for-stats': 'Optimize <video> for stats'
@@ -58,6 +58,7 @@ beta:
     'youtube': 'YouTube'
     'vimeo-pro': 'Vimeo Pro'
   'Integration':
+    'keyboard': 'Keyboard control'
     'lightbox': 'Lightbox'
     'wordpress': 'WordPress plugin'
     'hd-switching': 'HD switching'
