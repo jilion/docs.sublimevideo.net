@@ -2,11 +2,11 @@ module ControllerHelpers
   module Stages
 
     def current_stage
-      cookies[:stage] || 'beta'
+      params[:stage] || 'beta'
     end
 
     def stage?(stage_name)
-      cookies[:stage] == stage_name
+      current_stage == stage_name
     end
 
     def self.included(base)

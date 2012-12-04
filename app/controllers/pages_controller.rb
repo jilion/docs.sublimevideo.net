@@ -12,7 +12,7 @@ class PagesController < ApplicationController
 
   def redirect_from_root
     unless params[:page]
-      redirect_to page_path(stage: current_stage, page: 'quickstart-guide') and return
+      redirect_to page_path(stage: cookies[:stage] || 'beta', page: 'quickstart-guide') and return
     end
   end
 
