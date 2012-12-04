@@ -7,7 +7,7 @@ module Search
     class << self
 
       def search(*args)
-        Timeout.timeout(10) do
+        Timeout.timeout(20) do
           index.search(*args)
         end
       rescue Timeout::Error => ex
