@@ -12,51 +12,51 @@ All desktop browsers below have full SublimeVideo design and features support.
     %col.alt
   %tr.alt
     %th.browser Browser
-    %th.formats Supported video formats
+    %th.formats{ colspan: 3 } Supported video formats
   %tr
-    %td.browser Internet Explorer 6-8
-    %td.flash.yes
-      %table.formats
-        %tr.labels
-          %td{ colspan: 3 }= "MP4*"
+    %td.browser 
+      = image_tag "supported/ie_8.png", size: "64x64", alt: "Internet Explorer 6-8"
+      %br
+      Internet Explorer 6-8
+    %td.flash.yes{ colspan: 3 }= "MP4*"
   %tr.alt
-    %td.browser Internet Explorer 9+
-    %td.html5.yes
-      %table.formats
-        %tr.labels
-          %td{ colspan: 3 }= "MP4"
+    %td.browser
+      = image_tag "supported/ie_9.png", size: "64x64", alt: "Internet Explorer 6-8"
+      %br
+      Internet Explorer 9+
+    %td.html5.yes{ colspan: 3 }= "MP4"
   %tr
-    %td.browser Firefox 3.6+
-    %td.html5.yes
-      %table.formats
-        %tr.labels
-          %td= "MP4*"
-          %td= "WebM (4+)"
-          %td= "Ogg"
+    %td.browser
+      = image_tag "supported/firefox.png", size: "64x64", alt: "Firefox"
+      %br
+      Firefox 3.6+
+    %td.html5.yes= "MP4*"
+    %td.html5.yes= "WebM (4+)"
+    %td.html5.yes= "Ogg"
   %tr.alt
-    %td.browser Chrome 3+
-    %td.html5.yes
-      %table.formats
-        %tr.labels
-          %td= "MP4"
-          %td= "WebM (6+)"
-          %td= "Ogg"
+    %td.browser
+      = image_tag "supported/chrome.png", size: "64x64", alt: "Chrome"
+      %br
+      Chrome 3+
+    %td.html5.yes= "MP4"
+    %td.html5.yes= "WebM (6+)"
+    %td.html5.yes= "Ogg"
   %tr
-    %td.browser Opera 10.5+
-    %td.html5.yes
-      %table.formats
-        %tr.labels
-          %td= "MP4*"
-          %td= "WebM (10.6+)"
-          %td= "Ogg"
+    %td.browser
+      = image_tag "supported/opera.png", size: "64x64", alt: "Opera"
+      %br
+      Opera 10.5+
+    %td.html5.yes= "MP4*"
+    %td.html5.yes= "WebM (10.6+)"
+    %td.html5.yes= "Ogg"
   %tr.alt
-    %td.browser Safari 4+
-    %td.html5.yes
-      %table.formats
-        %tr.labels
-          %td{ colspan: 3 }= "MP4"
+    %td.browser
+      = image_tag "supported/safari.png", size: "64x64", alt: "Safari"
+      %br
+      Safari 4+
+    %td.html5.yes{ colspan: 3 }= "MP4"
 
-* requires Flash plugin installed
+%small * requires Flash plugin installed
 
 %h3 Mobile
 
@@ -73,7 +73,10 @@ All desktop browsers below have full SublimeVideo design and features support.
     %th.formats Video playback support
     %th.features SublimeVideo design & features support
   %tr
-    %td.platform{ rowspan: 7 } Android
+    %td.platform{ rowspan: 7 } 
+      = image_tag "supported/android.png", size: "64x64", alt: "Android"
+      %br
+      Android
     %td.browser{ rowspan: 3 } Stock Android browser, Dolphin and others
     %td.os 1.x, 2.x
     %td.html5.yes MP4
@@ -83,19 +86,19 @@ All desktop browsers below have full SublimeVideo design and features support.
     -#%td.browser.empty
     %td.os 3, 4.0
     %td.html5.yes MP4
-    %td.features.html5.yes.partial partial
+    %td.features.html5.yes.Partial Partial
   %tr
     -#%td.platform.empty
     -#%td.browser.empty
     %td.os 4.1+
     %td.html5.yes MP4
-    %td.features.html5.yes full
+    %td.features.html5.yes Full
   %tr
     -#%td.platform.empty
     %td.browser Chrome
     %td.os 4+
     %td.html5.yes MP4
-    %td.features.html5.yes full
+    %td.features.html5.yes Full
   %tr
     -#%td.platform.empty
     %td.browser{ rowspan: 3 } Firefox
@@ -107,24 +110,27 @@ All desktop browsers below have full SublimeVideo design and features support.
     -#%td.browser.empty
     %td.os 3.x
     %td.html5.yes WebM
-    %td.features.html5.yes.partial partial
+    %td.features.html5.yes.Partial Partial
   %tr
     -#%td.platform.empty
     -#%td.browser.empty
     %td.os 4+
     %td.html5.yes WebM
-    %td.features.html5.yes full
+    %td.features.html5.yes Full
   %tr.alt
-    %td.platform Kindle Fire
+    %td.platform 
+      = image_tag "supported/kindle_fire.png", size: "90x59", alt: "Kindle Fire"
+      %br
+      Kindle Fire
     %td.browser Silk
     %td.os 1G, HD
-    %td.html5.yes
-      %table.formats
-        %tr.labels
-          %td MP4
-    %td.features.html5.yes.partial partial
+    %td.html5.yes MP4
+    %td.features.html5.yes.Partial Partial
   %tr
-    %td.platform{ rowspan: 5 } iOS
+    %td.platform{ rowspan: 5 } 
+      = image_tag "supported/ios.png", size: "64x64", alt: "iOS"
+      %br
+      iOS
     %td.browser{ rowspan: 2 } iPhone
     %td.os < 4
     %td.html5.yes MP4
@@ -134,7 +140,7 @@ All desktop browsers below have full SublimeVideo design and features support.
     -#%td.browser.empty
     %td.os 4+
     %td.html5.yes MP4
-    %td.features.html5.yes.partial partial
+    %td.features.html5.yes.Partial Partial
   %tr
     -#%td.platform.empty
     %td.browser{ rowspan: 2 } iPad
@@ -146,15 +152,18 @@ All desktop browsers below have full SublimeVideo design and features support.
     -#%td.browser.empty
     %td.os 4
     %td.html5.yes MP4
-    %td.features.html5.yes.partial partial
+    %td.features.html5.yes.Partial Partial
   %tr
     -#%td.platform.empty
     %td.browser.empty
     %td.os 5+
     %td.html5.yes MP4
-    %td.features.html5.yes full
+    %td.features.html5.yes Full
   %tr.alt
-    %td.platform{ rowspan: 2 } Windows Phone
+    %td.platform{ rowspan: 2 } 
+      = image_tag "supported/windows_phone.png", size: "126x39", alt: "Windows Phone"
+      %br
+      Windows Phone
     %td.browser{ rowspan: 2 } Windows Phone's IE
     %td.os < 7.5
     %td.html5.yes MP4
@@ -164,15 +173,21 @@ All desktop browsers below have full SublimeVideo design and features support.
     -#%td.browser.empty
     %td.os 7.5+
     %td.html5.yes MP4
-    %td.features.html5.yes.partial partial
+    %td.features.html5.yes.Partial Partial
   %tr
-    %td.platform Windows RT
+    %td.platform 
+      = image_tag "supported/windows.png", size: "40x40", alt: "Windows RT"
+      %br
+      Windows RT
     %td.browser Tablets
     %td.os 8+
     %td.html5.yes MP4
-    %td.features.html5.yes full
+    %td.features.html5.yes Full
   %tr.alt
-    %td.platform BlackBerry
+    %td.platform
+      = image_tag "supported/blackberry.png", size: "105x42", alt: "BlackBerry"
+      %br
+      BlackBerry
     %td.browser BlackBerry browser
     %td.os
     %td.html5.yes MP4

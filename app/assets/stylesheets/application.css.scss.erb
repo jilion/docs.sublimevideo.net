@@ -539,6 +539,7 @@ table.data_settings {
   -webkit-box-shadow:none;
   box-shadow:none;
 }
+
 .supported_browsers .browser, .supported_browsers.mobile .platform, .supported_browsers .os {
   font-size:13px;
   text-align:center;
@@ -564,49 +565,51 @@ table.data_settings {
   color:#006a06;
 }
 
-// REMY
-.supported_browsers.mobile td.platform {
-  width:120px;
+/* BETA */
+
+.beta .supported_browsers td.browser {
+  width:400px;
+  padding:15px 4px;
 }
 
-.supported_browsers.desktop td.html5.yes, .supported_browsers.desktop td.flash.yes {
-  width:380px;
+.beta .supported_browsers.mobile td.platform {
+  width:160px;
+  padding:10px 4px;
 }
 
-.supported_browsers.mobile td.browser, .supported_browsers.mobile td.html5.yes, .supported_browsers.mobile td.flash.yes {
+.beta .supported_browsers.desktop td.html5.yes, .beta .supported_browsers.desktop td.flash.yes {
+  width:140px;
+}
+
+.beta .supported_browsers.mobile td.browser, .beta .supported_browsers.mobile td.html5.yes, .beta .supported_browsers.mobile td.flash.yes {
   width:130px;
 }
 
-.supported_browsers.detailed td.html5.yes, .supported_browsers td.flash.yes {
+.beta .supported_browsers.detailed td.html5.yes, .beta .supported_browsers td.flash.yes {
   width:90px;
 }
-// REMY
 
 .supported_browsers td.html5.yes.partial {
   background:#f1ebcf;
-  color:#6a4800;
+  color:#bda669;
 }
 
-// .supported_browsers td.html5.yes td.icon, .supported_browsers td.flash.yes td.icon { // REMY
-.supported_browsers td.html5.yes.icon, .supported_browsers td.flash.yes.icon {
+.stable .supported_browsers td.html5.yes td.icon, .stable .supported_browsers td.flash.yes td.icon {
   height:40px;
-  // background:url(<%= asset_path 'check_icon.png' %>) no-repeat center; // REMY
-  background:#cff1d1 url(<%= asset_path 'check_icon.png' %>) no-repeat center; // REMY
+  background:#cff1d1 url(<%= asset_path 'check_icon.png' %>) no-repeat center; 
 }
 
-.supported_browsers td.html5.yes.partial td.icon {background:url(<%= asset_path 'warning_icon.png' %>) no-repeat center;}
+.stable .supported_browsers td.html5.yes.partial td.icon {background:url(<%= asset_path 'warning_icon.png' %>) no-repeat center;}
 
-// REMY
-.supported_browsers tr.labels td {
-  width:100px;
-  border-left:1px solid #77aa78;
-}
-// REMY
-
-.supported_browsers.detailed tr.labels td {
+.stable .supported_browsers tr.labels td {
   width:30px;
   border:1px solid #77aa78;
   border-bottom:none;
+}
+ 
+.beta .supported_browsers tr.labels td {
+  width:100px;
+  border-left:1px solid #77aa78;
 }
 
 .supported_browsers tr.labels td:first-child {
