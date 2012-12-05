@@ -7,9 +7,10 @@
 
   h4(#step-1). "1 - Upload your video":#step-1
 
-  Upload your video(s) on the _#{link_to 'Upload a video', 'https://vimeo.com/upload', onclick: 'window.open(this); return false'}_ page.
+  Upload your video(s) on the _#{link_to 'Upload a video', 'https://vimeo.com/upload', onclick: 'window.open(this); return false'}_ page. Once the upload is done, simply click the big _"DONE! GO TO VIDEO"_ button.
 
-  Note: During the upload you can already fill a few information for your video. Once the upload is done, simply click the big _"DONE! GO TO VIDEO"_ button.
+  *Note:* During the upload you can already fill some information for your video.
+
 
   h4(#step-2). "2 - Edit your video settings":#step-2
 
@@ -19,16 +20,17 @@
 
   Then, click the _Privacy_ tab. On this page you can choose to not show your video on vimeo.com and restrict the domains on which the video can be embedded.
 
+
   h4(#step-3). "3 - Grab direct links to the media files":#step-3
 
   #{link_to(image_tag('video-hosting/vimeo_step_3.1.png', class: 'screenshot', width: 100, style: 'float:left; margin:20px 20px 0 0'), '#vimeo_step_3_1', class: 'sublime lightbox')}
 
-  Click the _Video File_ tab. On this page you can get the actual video files URLs. Simply copy/paste the _Standard Def_ and _High Def_ URLs and put them in our #{link_to "Video Publishing Assistant", my_url('publish-video'), onclick: 'window.open(this); return false'} (or create one @<source>@ element for each of the URLs if you're creating your @video@ manually).
+  Click the _Video File_ tab. On this page you can get the actual video files URLs. Simply copy/paste the _Standard Def_ and _High Def_ URLs and put them in our #{link_to "Video Publishing Assistant", my_url('publish-video'), onclick: 'window.open(this); return false'} (or create one @<source>@ element for each of the URLs if you're creating your @<video>@ elements manually).
 
   div(spacer). &nbsp;
 
-  h4(#step-4). "4 - Grab the poster frame from Vimeo (optional)":#step-4
 
+  h4(#step-4). (Optional)" 4 - Grab the poster frame from Vimeo":#step-4
 
   Vimeo doesn't give you any direct link to the poster frame image but you can still grab it with the following trick:
 
@@ -40,9 +42,9 @@
 
   h4(#vimeo-demo). "Demo":#vimeo-demo
 
-  The following video is using files hosted on Vimeo.
+  The following video, hosted on Vimeo Pro, plays inside the SublimeVideo Classic Player.
 
-<div class="video_wrap"><video class="sublime" poster="https://secure-b.vimeocdn.com/ts/358/030/358030879_960.jpg" width="640" height="360" data-name="Midnight Sun (from Vimeo)" data-uid="2f6b7096" preload="none">
+<div class="video_wrap"><video class="sublime" poster="https://secure-b.vimeocdn.com/ts/358/030/358030879_960.jpg" width="640" height="360" preload="none" data-uid="2f6b7096" data-name="Midnight Sun (from Vimeo)">
 <source src="http://player.vimeo.com/external/51920681.sd.mp4?s=117259e431f97030b1150ddb5ce5858a" />
 <source src="http://player.vimeo.com/external/51920681.hd.mp4?s=70273279a571e027c54032e70db61253" data-quality="hd" />
 </video></div>

@@ -3,20 +3,22 @@
 %h2= @page_title
 
 :textile
-  Integrate a YouTube video with SublimeVideo is very easy. You need to set the "youtube-id" "player setting":player-settings to the ID of the YouTube video you would like to play using SublimeVideo.
+  Integrate a YouTube video with SublimeVideo is very easy. You need to set the @youtube-id@ "player setting":player-settings to the ID of the YouTube video you would like to play using SublimeVideo.
 
   To find the ID of a YouTube video, follow the following steps:
 
   1. Open the video page;
   2. Look in the address bar for a "v=YOUTUBE_ID" parameter;
-  3. Copy/paste the _YOUTUBE_ID_ and set it in your @<video>@ element as follow:
+  3. Copy/paste the _YOUTUBE_ID_ and use it in our #{link_to "Video Publishing Assistant", my_url('publish-video'), onclick: 'window.open(this); return false'}. If you create your @<video>@ elements manually, set it as follow:
 
-  bc(language-markup). <video class="sublime" data-settings="youtube-id: YOUTUBE_ID" poster="video-poster.jpg" width="640" height="360" preload="none"></video>
+  bc(language-markup). <video class="sublime" data-youtube-id="YOUTUBE_ID" width="640" height="360" preload="none"></video>
 
-  *Note:* Don't set any @<source>@ elements.
+  *Note:*
+  * Don't set any @<source>@ elements.
+  * Set the @width@ and @height@ attributes to the correct values depending on your video.
 
   h4(#youtube-demo). "Demo":#youtube-demo
 
-  The following player is using a YouTube video.
+  The following video, hosted on YouTube, plays inside the SublimeVideo Classic Player.
 
 <div class="video_wrap"><video class="sublime" width="640" height="360" data-youtube-id="rAq2rNEru8A" preload="none"></video></div>
