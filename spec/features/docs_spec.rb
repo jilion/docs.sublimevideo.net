@@ -51,12 +51,17 @@ feature 'redirect legacy routes' do
     visit '/faq'
     current_url.should eq "http://docs.sublimevideo.dev/player-faq"
   end
+
+  it "redirect /supported-browsers-and-platforms to /supported-platforms" do
+    visit '/supported-browsers-and-platforms'
+    current_url.should eq "http://docs.sublimevideo.dev/supported-platforms"
+  end
 end
 
-feature "root redirect to /quickstart-guide" do
+feature "root redirect to /beta/quickstart-guide" do
   it "redirect" do
     visit '/'
-    current_url.should eq "http://docs.sublimevideo.dev/quickstart-guide"
+    current_url.should eq "http://docs.sublimevideo.dev/beta/quickstart-guide"
   end
 end
 
@@ -102,10 +107,10 @@ feature "quickstart-guide" do
   end
 end
 
-feature "supported-browsers-and-platforms" do
+feature "supported-platforms" do
   it "is viewable" do
-    visit '/supported-browsers-and-platforms'
-    current_url.should eq "http://docs.sublimevideo.dev/supported-browsers-and-platforms"
+    visit '/supported-platforms'
+    current_url.should eq "http://docs.sublimevideo.dev/supported-platforms"
   end
 end
 
@@ -172,10 +177,10 @@ feature "/beta/quickstart-guide" do
   end
 end
 
-feature "/beta/supported-browsers-and-platforms" do
+feature "/beta/supported-platforms" do
   it "is viewable" do
-    visit '/beta/supported-browsers-and-platforms'
-    current_url.should eq "http://docs.sublimevideo.dev/beta/supported-browsers-and-platforms"
+    visit '/beta/supported-platforms'
+    current_url.should eq "http://docs.sublimevideo.dev/beta/supported-platforms"
   end
 end
 
