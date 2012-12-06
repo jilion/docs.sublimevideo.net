@@ -32,31 +32,40 @@
 
   h4. Installing FFmpeg
 
-  * Windows and Linux: Download the installer from the "FFmpeg Download page":http://ffmpeg.org/download.html.
-  * Mac OSX: We strongly recommend using "Homebrew":http://mxcl.github.com/homebrew (or you can also download the installer from the "FFmpeg Download page":http://ffmpeg.org/download.html).
+  *Windows and Linux*
+
+  Download the installer from the "FFmpeg Download page":http://ffmpeg.org/download.html.
+
+  *Mac OSX*
+
+  We recommend installing using "Homebrew":http://mxcl.github.com/homebrew with the following command line:
+
+  bc(language-shell). brew install ffmpeg --with-libvpx --with-libvorbis
+
+  Please note that if you already installed FFmpeg with another command line, you will first need to run @brew uninstall ffmpeg@.
 
   h4. Using FFmpeg
 
-  Following are the @ffmpeg@ command lines we advise you to use.
+  The following are the @ffmpeg@ command lines we recommend you use.
 
-  *Encode a video to 640x360 (360p) with a 2-pass encoding*
+  *Encode a 640x360 (360p) video with a 2-pass encoding*
 
-  bc(language-shell). ffmpeg -i path/to/orignal.mov -s 640x360 -vpre libvpx-360p -b 600k \
-    -pass 1 -an -f webm -y path/to/encoded_360p.webm
-  ffmpeg -i path/to/orignal.mov -s 640x360 -vpre libvpx-360p -b 600k \
-    -pass 2 -acodec libvorbis -ab 100k -f webm -y path/to/encoded_360p.webm
+  bc(language-shell). ffmpeg -i source.mp4 -pass 1 -codec:v libvpx -b:v 650k -codec:a libvorbis \
+    -b:a 100k -s 640x360 -f webm -y /dev/null
+  ffmpeg -i source.mp4 -pass 2 -codec:v libvpx -b:v 650k -codec:a libvorbis \
+    -b:a 100k -s 640x360 -y output.webm
 
-  *Encode a video to 1280x720 (720p) with a 2-pass encoding*
+  *Encode a 1280x720 (720p) video with a 2-pass encoding*
 
-  bc(language-shell). ffmpeg -i path/to/orignal.mov -s 1280x720 -vpre libvpx-720p -b 1800k \
-    -pass 1 -an -f webm -y path/to/encoded_720p.webm
-  ffmpeg -i path/to/orignal.mov -s 1280x720 -vpre libvpx-720p -b 1800k \
-    -pass 2 -acodec libvorbis -ab 100k -f webm -y path/to/encoded_720p.webm
+  bc(language-shell). ffmpeg -i source.mp4 -pass 1 -codec:v libvpx -b:v 2000k -codec:a libvorbis \
+    -b:a 100k -s 1280x720 -f webm -y /dev/null
+  ffmpeg -i source.mp4 -pass 2 -codec:v libvpx -b:v 2000k -codec:a libvorbis \
+    -b:a 100k -s 1280x720 -y output.webm
 
   Note:
 
-  * Replace _path/to/orignal.mov_ with the actual path to your original .mov file.
-  * Replace  _path/to/encoded_360p.webm_ and _path/to/encoded_720p.webm_ with the actual paths to the .webm files you want to create.
+  * Replace _source.mp4_ with the actual path to your original .mov file.
+  * Replace  _output.webm_ with the actual paths to the .webm files you want to create.
 
   h4. Additional resources
 
