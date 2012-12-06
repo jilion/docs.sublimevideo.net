@@ -18,7 +18,7 @@
   # Activate the plugin through the 'Plugins' menu item in your WordPress admin area.
   # Go to the SublimeVideo plugin settings page and authorize the plugin to access some of your SublimeVideo data. You will be redirected to the SublimeVideo site to complete the authorization process.
   # Once the authorization is complete, you will see your SublimeVideo sites listed in a drop-down menu in the plugin settings page; you'll have to choose the one matching the domain of your WordPress site. If you only have one site registered in your SublimeVideo account, it will be selected automatically.
-  # In the plugin settings page you can also set the default width for all the videos you will embed.
+  # In the plugin settings page you can also set the default width for all the videos you will embed and choose whether you want to use the stable version of the player or the beta version.
   # Go to the post editor, you should see the new #{image_tag('wordpress/sv_toolbar_icon.png', class: 'icon', title: 'SV')} button next to the media icons (image, video, audio, etc) – the plugin's installation is now complete. If you don't see it, please refer to the "Troubleshooting":#troubleshooting section below.
 
   h3(#usage). "Usage":#usage
@@ -79,69 +79,77 @@
 
   h4. Poster frame
 
-  Usage: @poster="http://yoursite.com/your_video_image.jpg"@
+  *Usage:* @poster="http://yoursite.com/your_video_image.jpg"@
 
   We recommend using a poster frame with dimensions proportional to the @width@ x @height@ attributes present in the shortcode.
 
   h4. Sources
 
-  Usage: @src1="http://yoursite.com/video.mp4" src2="http://yoursite.com/video.webm"@
+  *Usage:* @src1="http://yoursite.com/video.mp4" src2="http://yoursite.com/video.webm"@
 
   You can add as many sources as you want with the @srcN@ attribute (as long as @N@ is an integer). Sources are ordered by their @N@ (i.e. @src1@ before @src2@, @src2@ before @src3@ etc...).
 
   h4. HD sources
 
-  Usage: @src1="http://yoursite.com/video.mp4" src2="(hd)http://yoursite.com/video_hd.mp4" src3="http://yoursite.com/video.webm" src4="(hd)http://yoursite.com/video_hd.webm"@
+  *Usage:* @src1="http://yoursite.com/video.mp4" src2="(hd)http://yoursite.com/video_hd.mp4" src3="http://yoursite.com/video.webm" src4="(hd)http://yoursite.com/video_hd.webm"@
 
   You can define a source to be HD by adding @(hd)@ just before the URL. In the example above, "http://yoursite.com/video_hd.mp4" would be the HD version of "http://yoursite.com/video.mp4" and "http://yoursite.com/video_hd.webm" would be the HD version of "http://yoursite.com/video.webm". Learn more about "HD Switching":hd-switching.
 
-  h4. Preload
+  h4. Player settings (compatible with the Beta player only)
 
-  Usage: @preload="none|metadata|auto"@ (defaults to "none")
+  *Usage:* @settings="initial-overlay-enable:false; volume-enable:false"@
 
-  Setting @preload@ to "none" will save you bandwidth by preventing preloading (buffering) of the video upon page load.
+  You can set any "Player settings":/beta/player-settings through this attribute.
 
-  h4. Statistics-related attributes
+  To learn more about the settings you can set, please consult the "Player settings":/beta/player-settings page.
 
-  The following attributes are useful if you're using the #{link_to "SublimeVideo Real-Time Statistics", stage?('stable') ? 'real-time-stats' : 'addons/real-time-stats/overview'}.
+  h4. Video metadata settings
 
-  Usage: @data_uid="unique_id"@ and @data_name="A nice name here"@
+  *Usage:* @uid="unique_id"@ and @name="A nice name here"@
 
-  @data_uid@ maps directly to the @data-uid@ attribute while @data_name@ maps to the @data-name@ attribute. To learn more about the @data-uid@ and @data-name@ attributes, please consult our #{link_to "Optimize <video> elements for stats", stage?('stable') ? 'optimize-for-stats' : 'addons/real-time-stats/optimize-for-stats'} page.
+  You can set the @data-uid@ and @data-name@ "Player settings":/beta/player-settings through these attributes.
+
+  To learn more about the @data-uid@ and @data-name@ attributes, please consult our #{link_to "Optimize <video> elements for stats", stage?('stable') ? 'optimize-for-stats' : 'addons/real-time-stats/optimize-for-stats'} page.
 
   h4. Autoplay
 
-  Automatically plays the video upon page load.
+  *Usage:* @autoplay@ (without value)
 
-  Usage: @autoplay@ (without value)
+  Automatically plays the video upon page load.
 
   Please note that only the first video with the @autoplay@ attribute will actually autoplay upon page load. SublimeVideo currently doesn't allow multiple videos to play simultaneously.
 
   h4. Loop
 
-  Loops the video once its playback ends.
+  *Usage:* @loop@ (without value)
 
-  Usage: @loop@ (without value)
+  Loops the video once its playback ends.
 
   h4. DOM id
 
-  Allows you to set a DOM id for your @<video>@.
+  *Usage:* @id="a_unique_id"@
 
-  Usage: @id="a_unique_id"@
+  Allows you to set a DOM id for your @<video>@.
 
   h4. CSS classes
 
-  Allows you to set CSS classes for your @<video>@.
+  *Usage:* @class="sublime another_class"@
 
-  Usage: @class="sublime another_class"@
+  Allows you to set CSS classes for your @<video>@.
 
   Be sure to add the _sublime_ @class@ manually if you use this shortcode attribute.
 
   h4. CSS style
 
+  *Usage:* @style="display:none;"@
+
   Allows you to set CSS inline style for your @<video>@.
 
-  Usage: @style="display:none;"@
+  h4. Preload
+
+  *Usage:* @preload="none|metadata|auto"@ (defaults to "none")
+
+  Setting @preload@ to "none" will save you bandwidth by preventing preloading (buffering) of the video upon page load.
 
   h3(#troubleshooting). "Troubleshooting":#troubleshooting
 
@@ -150,6 +158,11 @@
   It's probably because your WordPress site's domain is not properly registered in your #{link_to "SublimeVideo", my_url('sites')} account. You may find other possible reasons for this problem in the "Troubleshooting":/troubleshooting#not-properly-registered page.
 
   h3(#changelog). "Changelog":#changelog
+
+  h4. 1.5.0
+
+  * Added support for the #{link_to "new SublimeVideo player", layout_url('sublime-video-player')} (in Beta) is powered by #{link_to "SublimeVideo Horizon", layout_url('horizon-framework')}.
+  * Added support for the @uid@, @name@ and @settings@ attributes (mapping to @data-uid@, @data-name@ and @data-settings@ HTML attribute). See the "Player settings":/beta/player-settings to learn more about these attributes.
 
   h4. 1.4.1
 

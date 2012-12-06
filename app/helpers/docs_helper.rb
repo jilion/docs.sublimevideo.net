@@ -6,9 +6,9 @@ module DocsHelper
   def sublimevideo_docs_include_tag
     case params[:stage]
     when 'beta'
-      sublimevideo_loader_tag(:docs, host: "cdn.sublimevideo#{Rails.env.production? ? '' : '-staging'}.net", stage: 'beta').html_safe
+      sublimevideo_loader_tag(:www, host: "cdn.sublimevideo#{Rails.env.production? ? '' : '-staging'}.net", stage: 'beta').html_safe
     else
-      sublimevideo_loader_tag(:docs).html_safe
+      sublimevideo_loader_tag(:www).html_safe
     end
   end
 
