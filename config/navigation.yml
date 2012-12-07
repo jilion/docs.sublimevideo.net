@@ -36,7 +36,7 @@ stable:
 beta:
   'Getting Started':
     'quickstart-guide': 'Quickstart Guide'
-    'whats-new': "What's new?"
+    'whats-new': "What's new in Beta?"
     'write-proper-video-elements': 'Write <video> elements'
     'video-publishing-assistant': 'Video publishing assistant'
     'encode-videos-for-the-web': 'Video encoding'
@@ -57,22 +57,23 @@ beta:
   'Hosting Integration':
     'youtube': 'YouTube'
     'vimeo-pro': 'Vimeo Pro'
-  'Integration':
-    'keyboard': 'Keyboard control'
-    'lightbox': 'Lightbox'
+  'CMS Integration':
     'wordpress': 'WordPress plugin'
-    'hd-switching': 'HD switching'
+  'Integration':
+    'lightbox': 'Lightbox'
     'playlists': 'Playlists'
-    'custom-start-view': 'Custom start view'
-    'autoplay': 'Autoplay a video'
-    'custom-behavior-on-end': 'Custom behavior on end'
     'responsive-layout': 'Responsive layout'
-    'embeds': 'Embeds'
+    'hd-switching': 'HD switching'
+    'custom-start-view': 'Custom start view'
     'google-analytics-integration': 'Google Analytics integration'
+    'embeds': 'Embeds'
+    # 'autoplay': 'Autoplay a video'
+    # 'custom-behavior-on-end': 'Custom behavior on end'
   'Javascript API':
     'javascript-api/usage': 'Usage'
     'javascript-api/methods': 'Methods'
     'javascript-api/listeners': 'Listeners'
   'Other':
     'supported-platforms': 'Supported platforms'
+    'keyboard': 'Keyboard control'
     'releases': 'Release Notes'
