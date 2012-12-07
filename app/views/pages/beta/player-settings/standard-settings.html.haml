@@ -7,11 +7,11 @@
 
   h4. Start view settings
 
-  "(c)@initial-overlay-enable@":#initial-overlay-enable "(c)@initial-overlay-visibility@":#initial-overlay-visibility "(c)@initial-overlay-color@":#initial-overlay-color
+  "(c)@initial-overlay-enable@":#initial-overlay-enable "(c)@initial-overlay-visibility@":#initial-overlay-visibility
 
   h4. Player behavior settings
 
-  "(c)@autoresize@":#autoresize "(c)@on-end@":#on-end
+  "(c)@autoresize@":#autoresize "(c)@autoplay@":#autoplay "(c)@on-end@":#on-end
 
   h4. Controls settings
 
@@ -59,28 +59,26 @@
 
   See the "Custom start view":/beta/custom-start-view page for more information and live demos.
 
+-# h3(#initial-overlay-color). "@initial-overlay-color@":#initial-overlay-color
+-#
+-#
+-# *Allowed values:*
+-# * _@word@_ – e.g. @red@, @green@
+-# * _@#hexadecimal@_ – e.g. @#fff@ or @#dd0066@
+-# * _@rgb@_ – e.g. @rgb(255, 100, 0)@
+-#
+-# *Note:*
+-# * Default is set to @black@.
+-#
+-# *Example:*
+-#
+-# bc(language-markup). <video class='sublime' data-settings='initial-overlay-color:red'>
+-#   ...
+-# </video>
+-#
+-# See the "Custom start view":/beta/custom-start-view page for more information and live demos.
 
-  h3(#initial-overlay-color). "@initial-overlay-color@":#initial-overlay-color
-
-  Allows you to choose the initial overlay color.
-
-  *Allowed values:*
-  * _@literal@_ – e.g. @red@, @green@
-  * _@#hexadecimal@_ – e.g. @#fff@ or @#dd0066@
-  * _@rgb@_ – e.g. @rgb(255, 100, 0)@
-
-  *Note:*
-  * Default is set to @black@.
-
-  *Example:*
-
-  bc(language-markup). <video class='sublime' data-settings='initial-overlay-color:red'>
-    ...
-  </video>
-
-  See the "Custom start view":/beta/custom-start-view page for more information and live demos.
-
-
+:textile
   h3(#autoresize). "@autoresize@":#autoresize
 
   Resizes the video when its parent container is resized.
@@ -99,6 +97,23 @@
   *Note:* If you set this setting to @fill@ or @fit@, you can omit the @width@ and @height@ attributes in your @<video>@.
 
   See the "Responsive layout":/beta/responsive-layout page for more information and live demos.
+
+
+  h3(#autoplay). "@autoplay@":#autoplay
+
+  Allows you to autoplay the video upon page load.
+
+  *Allowed values:*
+  * @true@ – Autoplay the video upon page load.
+  * @false@ – _(Default)_ Don't autoplay the video upon page load.
+
+  *Example:*
+
+  bc(language-markup). <video class='sublime' data-settings='autoplay:true'>
+    ...
+  </video>
+
+  *Note:* We also support the "HTML5 specification":http://www.w3.org/TR/html5/media-elements.html#attr-media-autoplay so you can also set the @autoplay@ attribute direclty on the @<video>@ element.
 
 
   h3(#on-end). "@on-end@":#on-end
@@ -222,151 +237,3 @@
   </video>
 
   *Note:* This setting is used in your "Statistics dashboard":/beta/real-time-stats.
-
-
--#h3(#initial-overlay). "@initial-overlay@":#initial-overlay
--#
--#Shorthand setting that allows you to define all the Initial Overlay settings in a single declaration. Omitted settings are set to their default value.
--#
--#*Allowed values:*
--#* _@initial-overlay-visibility [initial-overlay-color]@_ – Values must be separated by a whitespace.
--#* @none@ – No initial overlay.
--#
--#*Note:*
--#* Default is set to @autofade black@.
--#* _@initial-overlay-visibility@_ is mandatory unless you set @none@.
--#
--#*Example:*
--#
--#bc(language-markup). <video class='sublime' data-settings='initial-overlay:visible red'>
--#  <source src='video.mp4' />
--#  <source src='video.webm" />
--#</video>
-
-
--#h3(#fullmode). "@fullmode@":#fullmode
--#
--#Shorthand setting that allows you to define all the Fullmode settings in a single declaration. Omitted settings are set to their default value.
--#
--#*Allowed values:*
--#* _@fullmode-priority@_
--#* @none@ – Disable the fullmode control.
--#
--#*Note:*
--#* Default is set to @screen@.
--#* _@fullmode-priority@_ is mandatory unless you set @none@.
--#
--#*Example:*
--#
--#bc(language-markup). <video class='sublime' data-settings='fullmode:none'>
--#  <source src='video.mp4' />
--#  <source src='video.webm" />
--#</video>
-
-
--#%table#supported_browsers
--#  %colgroup
--#    %col
--#    %col.alt
--#    %col
--#    %col.alt
--#  %tr.alt
--#    %th Name
--#    %th Values
--#    %th Default
--#    %th Description & Notes
--#  %tr
--#    %td
--#      %strong initial-overlay
--#    %td <code>hidden</code><br /><code>autofade</code>
--#    %td <code>autofade</code>
--#    %td.notes Allows you to choose between: hiding the initial overlay effect, or displaying it upon mousover.<br />View <a href="custom-start-view">demo</a>.
--#  %tr.alt
--#    %td
--#      %strong initial-overlay-color
--#    %td <code>literal</code><br /><code>#hexadecimal</code><br /><code>rgb</code>
--#    %td <code>#000</code>
--#    %td Customizes the initial overlay color.<br />View <a href="custom-start-view">demo</a>.
--#  %tr.alt
--#    %td
--#      %strong autoresize
--#    %td <code>none</code><br /><code>fill</code><br /><code>fit</code>
--#    %td <code>none</code>
--#    %td.notes Resizes the video when its parent container is resized.<br />View <a href="responsive-layout">demo</a>.
--#  %tr
--#    %td
--#      %strong force-flash
--#    %td <code>true</code><br /><code>false</code>
--#    %td <code>false</code>
--#    %td.notes Enforces the usage of Flash for the video decoding instead of the native browser decoding.
--#  %tr.alt
--#    %td
--#      %strong force-fullwindow
--#    %td <code>true</code><br /><code>false</code>
--#    %td <code>false</code>
--#    %td.notes Uses full-window instead of full-screen.
--#  %tr
--#    %td
--#      %strong enable-fullmode
--#    %td <code>true</code><br /><code>false</code>
--#    %td <code>true</code>
--#    %td.notes Whether to display the full-window/full-screen button or not.
--#  %tr.alt
--#    %td
--#      %strong enable-volume
--#    %td <code>true</code><br /><code>false</code>
--#    %td <code>true</code>
--#    %td.notes Whether to display the volume button or not.
--#  %tr
--#    %td
--#      %strong controls
--#    %td <code>hidden</code><br /><code>autohide</code><br /><code>visible</code>
--#    %td <code>autohide</code>
--#    %td.notes Allows you to choose between: hiding the controls, displaying them only upon mousover, or permanently displaying them.
--#  %tr.alt
--#    %td
--#      %strong autoplay
--#    %td <code>true</code><br /><code>false</code>
--#    %td <code>false</code>
--#    %td.notes Automatically plays the video upon page load. You can also set this setting directly on the <code>&lt;video&gt;</code> element without a value.<br />View <a href="autoplay">demo</a>.
--#  %tr
--#    %td
--#      %strong loop
--#    %td <code>true</code><br /><code>false</code>
--#    %td <code>false</code>
--#    %td.notes Loops the video once its playback ends. This is equivalent to <code>data-on-end="replay"</code>. You can also set this setting directly on the <code>&lt;video&gt;</code> element without a value.<br />View <a href="custom-behavior-on-end">demo</a>.
--#  %tr.alt
--#    %td
--#      %strong on-end
--#    %td <code>nothing</code><br /><code>replay</code><br /><code>stop</code>
--#    %td <code>nothing</code>
--#    %td.notes Allows you to choose between: doing nothing, replaying the video, or displaying the start view when a video playback ends.<br />View <a href="custom-behavior-on-end">demo</a>.
--#
--#:textile
--#  h4. Stats-related settings
--#
--#  Please see the "Optimize &lt;video&gt; elements for stats":optimize-for-stats page for more information.
--#
--#%table#supported_browsers
--#  %colgroup
--#    %col
--#    %col.alt
--#    %col
--#    %col.alt
--#  %tr.alt
--#    %th Name
--#    %th Values
--#    %th Default
--#    %th Description & Notes
--#  %tr
--#    %td
--#      %strong data-name
--#    %td any string
--#    %td N/A
--#    %td.notes
--#  %tr.alt
--#    %td
--#      %strong data-uid
--#    %td any string
--#    %td N/A
--#    %td.notes
