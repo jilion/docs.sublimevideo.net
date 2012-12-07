@@ -71,8 +71,9 @@ beta:
     'google-analytics-integration': 'Google Analytics integration'
   'Javascript API':
     'javascript-api/usage': 'Usage'
-    'javascript-api/methods': 'Methods'
-    'javascript-api/listeners': 'Listeners'
+    'javascript-api/application': 'Application'
+    'javascript-api/players': 'Players'
+    'javascript-api/lightboxes': 'Lightboxes'
   'Other':
     'supported-platforms': 'Supported platforms'
     'releases': 'Release Notes'

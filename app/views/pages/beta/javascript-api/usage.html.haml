@@ -3,22 +3,59 @@
 %h2= @page_title
 
 :textile
-  h3(#api-object). "API Object":#api-object
+  h3(#api-object). "Overview":#api-object
 
-  The SublimeVideo Player comes with an integrated JavaScript API. Once loaded, SublimeVideo Player instantiate a unique API object called @sublimevideo@. All calls to the API must be done through this object.
+  The SublimeVideo Player comes with an integrated JavaScript API. Once loaded, SublimeVideo Player instantiate a unique API object called @sublime@. All calls to the API must be done through this object.
 
-  *_Important information:_*
+  For performance puroposes, SublimeVideo Player and the @sublime@ API object are automatically loaded upon page load if there is at least one element with class @sublime@ in the DOM. If you have no videos initially on the page (and you plan for instance to add them dynamically later with JavaScript) you can use the "(c)@sublime.load@":/javascript-api/methods#load method to force loading the player and the sublimevideo API object.
 
-  * SublimeVideo Player and the @sublimevideo@ API object are automatically loaded upon page load if there is at least one @<video>@ element in the DOM. If you have no videos initially on the page (and you plan for instance to add them dynamically later with JavaScript) you can use the "(c)@sublimevideo.load@":/javascript-api/methods#load method to force loading the player and the @sublimevideo@ API object.
+  bc(language-javascript). // Manually invoke load if there are no elements
+  // with class sublime when the page is first loaded.
+  sublime.load()
 
-  * The @sublimevideo@ API object might not be immediately available when the DOM is loaded. You should avoid making calls to the SublimeVideo JavaScript API in your own DOM loaded/ready method (e.g. @DOMContentLoaded@, jQuery's @.ready()@ or Prototype's @dom:loaded@), but you should rather use our "(c)@sublimevideo.ready@":/javascript-api/listeners#ready listener.
+  Once SublimeVideo is loaded and the DOM elements with the class @sublime@ are prepared, the application invoke the method "(c)@sublime.ready@":/javascript-api/methods#ready. Inside this method you can now safely call all other API methods.
 
-  h3(#api-methods-and-listeners). "API Methods and Listeners":#api-methods-and-listeners
+  bc(language-javascript). sublime.ready(function(){
+    // calls sublime API methods here.
+  });
 
-  h4. "Methods":/javascript-api/methods
+  *_Notes_*
+  The SublimeVideo JavaScript API might not be immediately available when the DOM is loaded, hence you should avoid making API calls in your own DOM loaded/ready method (e.g. @DOMContentLoaded@, jQuery's @.ready()@ or Prototype's @dom:loaded@)
 
-  "(c)@load@":/javascript-api/methods#load "(c)@pause@":/javascript-api/methods#pause "(c)@play@":/javascript-api/methods#play "(c)@prepare@":/javascript-api/methods#prepare "(c)@prepareAndPlay@":/javascript-api/methods#prepareAndPlay "(c)@resize@":/javascript-api/methods#resize "(c)@stop@":/javascript-api/methods#stop "(c)@unprepare@":/javascript-api/methods#unprepare
+  h3(#retrieving-api-objects). "Retrieving API objects":#retrieving-api-objects
 
-  h4. "Listeners":/javascript-api/listeners
+  Every element that can be prepared by SublimeVideo (videos, lightboxes, etc) exposes its own set of APIs. For example, you access a player in the following ways
 
-  "(c)@onEnd@":/javascript-api/listeners#onEnd "(c)@onStart@":/javascript-api/listeners#onStart "(c)@ready@":/javascript-api/listeners#ready
+  bc(language-javascript). var player = sublime(elementOrId);
+  // or
+  var player = sublime.player(elementOrId);
+
+  and to access a lightbox
+
+  bc(language-javascript). var lightbox = sublime(elementOrId);
+  // or
+  var lightbox = sublime.lightbox(elementOrId);
+
+
+
+  h3(#api-methods-and-listeners). "APIs":#api-methods-and-listeners
+
+  h4. "Application":/javascript-api/methods
+
+  variables: "(c)@version@":/javascript-api/methods#load "(c)@env@":/javascript-api/methods#ready
+
+  methods: "(c)@load@":/javascript-api/methods#load "(c)@ready@":/javascript-api/methods#ready "(c)@sublime@":/javascript-api/methods#sublime
+
+  h4. "Players":/javascript-api/methods
+
+  methods: "(c)@play@":/javascript-api/methods#play "(c)@prepare@":/javascript-api/methods#prepare "(c)@prepareAndPlay@":/javascript-api/methods#prepareAndPlay "(c)@resize@":/javascript-api/methods#resize "(c)@stop@":/javascript-api/methods#stop "(c)@unprepare@":/javascript-api/methods#unprepare
+
+  events: "(c)@onEnd@":/javascript-api/listeners#onEnd "(c)@onStart@":/javascript-api/listeners#onStart "(c)@ready@":/javascript-api/listeners#ready
+
+  h4. "Lightboxes":/javascript-api/methods
+
+  methods: "(c)@open@":/javascript-api/methods#play "(c)@close@":/javascript-api/methods#prepare
+
+  events: "(c)@open@":/javascript-api/methods#play "(c)@close@":/javascript-api/methods#prepare
+
+
