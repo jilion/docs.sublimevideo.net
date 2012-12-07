@@ -1,1 +1,19 @@
-* <span class="label improved">improved</span> New SublimeVideo Player powered by SublimeVideo Horizon.
+* <span class="label new">new</span> "New SublimeVideo Player":http://sublimevideo.net/modular-player (in Beta) powered by the "SublimeVideo Horizon":http://sublimevideo.net/horizon-framework. This allows advanced designs that look awesome on any browser and device.
+* <span class="label new">new</span> "Easy YouTube integration":http://docs.sublimevideo.net/beta/youtube.
+* <span class="label new">new</span> Possibility to display "your custom logo":http://sublimevideo.net/modular-player#on_video_logo.
+* <span class="label new">new</span> "Two new _Flat_ & _Light_ designs":http://sublimevideo.net/modular-player#player_designs.
+* <span class="label new">new</span> "Keybord control":http://docs.sublimevideo.net/beta/keyboard.
+* <span class="label new">new</span> "Many new settings":http://docs.sublimevideo.net/beta/player-settings that allow you to customize your players look & behaviors.
+* <span class="label new">new</span> New error messages:
+  - No sources found.
+  - Flash not found.
+  - Flash version not supported.
+  - No Playable Sources.
+* <span class="label improved">improved</span> Better mobile devices support, especially "Android devices":http://docs.sublimevideo.net/beta/supported-platforms.
+* <span class="label improved">improved</span> The "lightbox":http://docs.sublimevideo.net/beta/player-settings/lightbox-settings has been greatly improved:
+  - Separation of the @<video>@ and its opening trigger(s) to make the lightbox usage more flexible and user-friendly.
+  - Possibility to customize the behavior of the video on lightbox opening.
+  - Possibility to customize the overlay opacity.
+  - Possibility to customize the visibility and position of the close button.
+  - The lightbox can now officially display images as well!
+* <span class="label improved">improved</span> The "Classic design":http://sublimevideo.net/modular-player#player_designs has been revamped.
