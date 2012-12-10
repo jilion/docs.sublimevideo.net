@@ -2,9 +2,9 @@
 
 %h2= @page_title
 
-- if @results
+- if @results && @results['results'].present?
   %ul.search_results
-    - @results.each do |doc|
+    - @results['results'].each do |doc|
       %li
         = link_to doc['title'], doc['docid']
 - else
