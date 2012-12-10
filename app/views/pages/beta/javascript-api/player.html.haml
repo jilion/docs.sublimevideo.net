@@ -3,7 +3,7 @@
 %h2= @page_title
 
 :textile
-  "(c)@play@":/beta/javascript-api/player#play  "(c)@pause@":/beta/javascript-api/player#pause "(c)@stop@":/beta/javascript-api/player#stop "(c)@setSize@":/beta/javascript-api/player#setSize "(c)@on@":/beta/javascript-api/player#on
+  "(c)@play@":/beta/javascript-api/player#play  "(c)@pause@":/beta/javascript-api/player#pause "(c)@stop@":/beta/javascript-api/player#stop "(c)@setSize@":/beta/javascript-api/player#setSize "(c)@videoId@":/beta/javascript-api/player#videoId "(c)@videoElement@":/beta/javascript-api/player#videoElement "(c)@on@":/beta/javascript-api/player#on
 
   See also "Using the JavaScript API":/beta/javascript-api/usage, "Application API":/beta/javascript-api/application and "Lightbox API":/beta/javascript-api/lightbox.
 
@@ -37,6 +37,12 @@
   h3(#videoId). "@player.videoId() ⇒ String@":#videoId
 
   Returns the @id@ of the DOM @<video>@ element, or @undefined@ if the video has no id.
+
+
+  h3(#videoElement). "@player.videoElement() ⇒ Element@":#videoElement
+
+  Returns the DOM @<video>@ element.
+
 
 
   h3(#setSize). "@player.setSize(width, [height])@":#setSize
