@@ -5,25 +5,26 @@
 :textile
   SublimeVideo now comes with an integrated resizing feature so you only have to set one setting on your @<video>@ element and SublimeVideo takes care of the rest.
 
-  To specify the autoresize behavior you'd like to use for your @<video>@, use the following "player setting":player-setting.
+  To specify the autoresize behavior you'd like to use for your @<video>@, please use the "@autoresize@ player setting":player-setting.
 
-  h3(#autoresize). "@autoresize@":#autoresize
+-# h3(#autoresize). "@autoresize@":#autoresize
 
-  Resizes the video when its parent container is resized.
+-# Resizes the video when its parent container is resized.
 
-  *Allowed values:*
-  * @none@ – _(Default)_ The player is not resized automatically.
-  * @fill@ – Fill the player's parent and stretch the player if necessary (resulting in letter/pillar-boxed video).
-  * @fit@ – Fit the player's to its parent without stretching the player itself (its size will always match the video's aspect-ratio and never shows black bars).
+-# *Allowed values:*
+-# * @none@ – _(Default)_ The player is not resized automatically.
+-# * @fill@ – Fill the player's parent and stretch the player if necessary (resulting in letter/pillar-boxed video).
+-# * @fit@ – Fit the player's to its parent without stretching the player itself (its size will always match the video's aspect-ratio and never shows black bars).
 
-  *Example:*
+-# *Example:*
 
-  bc(language-markup). <video class='sublime' data-settings='autoresize:fill'>
-    ...
-  </video>
+-# bc(language-markup). <video class='sublime' data-settings='autoresize:fill'>
+-#   ...
+-# </video>
 
-  *Note:* If you set this setting to @fill@ or @fit@, you can omit the @width@ and @height@ attributes in your @<video>@.
+-# *Note:* If you set this setting to @fill@ or @fit@, you can omit the @width@ and @height@ attributes in your @<video>@.
 
+:textile
   h4. Demo for @autoresize: none@
 
   The player is not resized automatically.

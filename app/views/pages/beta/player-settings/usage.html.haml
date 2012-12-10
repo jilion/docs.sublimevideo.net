@@ -1,0 +1,42 @@
+- @page_title = "Using the player settings"
+
+%h2= @page_title
+
+:textile
+  Player settings can be set in 3 different ways.
+
+  h4. Via @data-@_@setting-name@_ attributes
+
+  Each setting can be set via a @data-@ attribute on the @<video>@ element.
+
+  For instance:
+
+  bc(language-markup). <video data-autoresize="fit" data-on-end="stop" ...>
+
+  h4. Via the @data-settings@ attribute
+
+  If you have multiple settings to specify, you can also group them in a single @data-settings@ attribute, as a CSS-like formatted string.
+
+  For instance:
+
+  bc(language-markup). <video data-settings="autoresize: fit; on-end: stop;" ...>
+
+  h3(#video-and-lightbox-settings). "Video and Lightbox settings":#video-and-lightbox-settings
+
+  h4. "Standard settings":/player-settings/standard-settings
+
+  "(c)@initial-overlay-enable@":standard-settings#initial-overlay-enable "(c)@initial-overlay-visibility@":standard-settings#initial-overlay-visibility
+
+  "(c)@autoresize@":standard-settings#autoresize "(c)@on-end@":standard-settings#on-end
+
+  "(c)@controls-enable@":standard-settings#controls-enable "(c)@controls-visibility@":standard-settings#controls-visibility "(c)@fullmode-enable@":standard-settings#fullmode-enable "(c)@fullmode-priority@":standard-settings#fullmode-priority "(c)@volume-enable@":standard-settings#volume-enable
+
+  "(c)@name@":standard-settings#name "(c)@uid@":standard-settings#uid
+
+  h4. "Lightbox settings":/player-settings/lightbox-settings
+
+  "(c)@on-open@":lightbox-settings#on-open
+
+  "(c)@overlay-opacity@":lightbox-settings#overlay-opacity
+
+  "(c)@close-button-enable@":lightbox-settings#close-button-enable "(c)@close-button-visibility@":lightbox-settings#close-button-visibility "(c)@close-button-position@":lightbox-settings#close-button-position

@@ -1,42 +1,71 @@
 # coding: utf-8
 require 'spec_helper'
 
-feature 'redirect legacy routes' do
-  it "redirect /js-api to /javascript-api/usage" do
+feature 'redirect legacy javacript-api routes' do
+  it "redirects /js-api to /javascript-api/usage" do
     visit '/js-api'
     current_url.should eq "http://docs.sublimevideo.dev/javascript-api/usage"
   end
 
-  it "redirect /javacript-api to /javascript-api/usage" do
+  it "redirects /javacript-api to /javascript-api/usage" do
     visit '/javascript-api'
     current_url.should eq "http://docs.sublimevideo.dev/javascript-api/usage"
   end
+end
 
-  it "redirect /autoplay-video-upon-page-load to /autoplay" do
-    visit '/autoplay-video-upon-page-load'
-    current_url.should eq "http://docs.sublimevideo.dev/autoplay"
-  end
-
-  it "redirect /customizing-the-initial-play-button to /custom-start-view" do
+feature 'redirect legacy custom-start-view routes' do
+  it "redirects /customizing-the-initial-play-button to /custom-start-view" do
     visit '/customizing-the-initial-play-button'
     current_url.should eq "http://docs.sublimevideo.dev/custom-start-view"
   end
 
-  it "redirect /custom-play-button to /custom-play-button" do
+  it "redirects /custom-play-button to /custom-play-button" do
     visit '/custom-play-button'
     current_url.should eq "http://docs.sublimevideo.dev/custom-start-view"
+
+    visit '/beta/custom-play-button'
+    current_url.should eq "http://docs.sublimevideo.dev/beta/custom-start-view"
+  end
+end
+
+feature 'redirect legacy autoplay routes' do
+  it "redirects /autoplay-video-upon-page-load" do
+    visit '/autoplay-video-upon-page-load'
+    current_url.should eq "http://docs.sublimevideo.dev/autoplay"
   end
 
-  it "redirect /loop-a-video to /loop" do
+  it "routes /autoplay in stable" do
+    visit '/autoplay'
+    current_url.should eq "http://docs.sublimevideo.dev/autoplay"
+  end
+end
+
+feature 'redirect legacy loop routes' do
+  it "redirects /loop-a-video to /loop" do
     visit '/loop-a-video'
     current_url.should eq "http://docs.sublimevideo.dev/loop"
   end
 
-  it "redirect /returning-to-the-initial-state-once-video-playback-ends to /back-to-initial-state-on-end" do
+  it "routes /loop in stable" do
+    visit '/loop'
+    current_url.should eq "http://docs.sublimevideo.dev/loop"
+  end
+end
+
+feature 'redirect legacy back-to-initial-state-on-end routes' do
+  it "redirects /returning-to-the-initial-state-once-video-playback-ends to /back-to-initial-state-on-end" do
     visit '/returning-to-the-initial-state-once-video-playback-ends'
     current_url.should eq "http://docs.sublimevideo.dev/back-to-initial-state-on-end"
   end
 
+  it "routes /back-to-initial-state-on-end in stable" do
+    visit '/back-to-initial-state-on-end'
+    current_url.should eq "http://docs.sublimevideo.dev/back-to-initial-state-on-end"
+  end
+end
+
+
+feature 'redirect other legacy routes' do
   it "redirect /ssl to /player-faq#use-sublimevideo-in-ssl-site" do
     visit '/ssl'
     current_url.should eq "http://docs.sublimevideo.dev/player-faq"
@@ -50,6 +79,9 @@ feature 'redirect legacy routes' do
   it "redirect /faq to /player-faq" do
     visit '/faq'
     current_url.should eq "http://docs.sublimevideo.dev/player-faq"
+
+    visit '/beta/faq'
+    current_url.should eq "http://docs.sublimevideo.dev/beta/player-faq"
   end
 
   it "redirect /supported-browsers-and-platforms to /supported-platforms" do
