@@ -41,10 +41,10 @@ beta:
     'video-publishing-assistant': 'Video publishing assistant'
     'encode-videos-for-the-web': 'Video encoding'
     'create-poster-frame': 'Create poster frame'
-    'Player settings':
-      'player-settings/usage': 'Usage'
-      'player-settings/standard-settings': 'Standard settings'
-      'player-settings/lightbox-settings': 'Lightbox settings'
+    'Settings':
+      'settings/usage': 'Usage'
+      'settings/player-settings': 'Player settings'
+      'settings/lightbox-settings': 'Lightbox settings'
     'site-settings': 'Site settings'
     'troubleshooting': 'Troubleshooting'
     'player-faq': 'Player FAQ'
