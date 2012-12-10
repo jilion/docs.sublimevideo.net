@@ -38,17 +38,23 @@
 
   Registers and invokes the given callbacks every time that the corresponding events occur.
 
+  *Supported events*
+  * @contentready@ Fired when the lightbox's content has been prepared.
+  * @didopen@ Fired when the playback starts.
+  * @didclose@ Fired when the playback ends.
+
   **Example - listening a single event**
 
-  bc(language-javascript). lightbox.on('didOpen', function() {
+  bc(language-javascript). lightbox.on('didopen', function() {
     console.log('lightbox opened.');
   })
 
   **Example - listening more events**
 
   bc(language-javascript). lightbox.on({
-    didOpen:   function() { console.log('lightbox opened.') },
-    didClose:  function() { console.log('lightbox closed.') }
+    contentready: function() { console.log('content ready.') },
+    didopen:      function() { console.log('lightbox opened.') },
+    didclose:     function() { console.log('lightbox closed.') }
   })
 
 
