@@ -7,16 +7,16 @@
 
   The SublimeVideo Player comes with an integrated JavaScript API. Once loaded, SublimeVideo Player instantiates a unique API object called @sublime@. All calls to the API must be done through this object.
 
-  For performance puroposes, SublimeVideo Player and the @sublime@ API object are automatically loaded upon page load if there is at least an element with class @sublime@ in the DOM. If you have no videos (or lightboxes) initially on the page (and you plan for instance to add them dynamically later with JavaScript) you can use the "(c)@sublime.load@":/beta/javascript-api/methods#load method to force loading the player and the sublimevideo API object.
+  For performance puroposes, SublimeVideo Player and the @sublime@ API object are automatically loaded upon page load if there is at least an element with the _sublime_ @class@ in the DOM. If you have no videos (or lightboxes) initially on the page (and you plan for instance to add them dynamically later with JavaScript) you can use the "(c)@sublime.load@":/beta/javascript-api/methods#load method to force the loading of the player and the sublimevideo API object.
 
   bc(language-javascript). // Manually invoke load if there are no elements
-  // with class sublime when the page is first loaded.
+  // with the "sublime" class when the page is first loaded.
   sublime.load()
 
-  Once SublimeVideo is loaded and the DOM elements with the class @sublime@ are prepared, the application invokes the callbacks registered with "(c)@sublime.ready@":/beta/javascript-api/methods#ready. Inside these callbacks you can safely call all other API methods.
+  Once SublimeVideo is loaded and the DOM elements with the _sublime_ @class@ are prepared, the application invokes the callbacks registered with "(c)@sublime.ready@":/beta/javascript-api/methods#ready. Inside these callbacks you can safely call all other API methods.
 
   bc(language-javascript). sublime.ready(function(){
-    // safely calls sublime API methods.
+    // You can safely call the sublime API methods here.
   });
 
   *_Notes_*
@@ -24,23 +24,20 @@
 
   h3(#retrieving-api-objects). "Retrieving API objects":#retrieving-api-objects
 
-  Every element that can be prepared by SublimeVideo (videos, lightboxes, etc) exposes its own set of APIs. You can retrieve these object in the by calling
-  @sublime.<object_type>(elementOrId)@
+  Every element that can be prepared by SublimeVideo (videos, lightboxes, etc) exposes its own set of APIs. You can retrieve these object by calling @sublime.<object_type>(elementOrId)@.
 
-  For instance, to get the @player@ for the video with id @my_video_id@
+  For instance, to get the @player@ for the video with the _my_video_id_ @id@:
 
-  bc(language-javascript). var player = sublime.player(my_video_id);
+  bc(language-javascript). var player = sublime.player('my_video_id');
 
-  and to get the @lightbox@ for the link with id @my_lightbox_trigger_id@
+  and to get the @lightbox@ for the link with the _my_lightbox_trigger_id_ @id@:
 
-  bc(language-javascript). var lightbox = sublime.lightbox(my_lightbox_trigger_id);
+  bc(language-javascript). var lightbox = sublime.lightbox('my_lightbox_trigger_id');
 
-  As a shortcut, you can also retrive API objects by dropping the @<object_type>@ as follows
+  As a shortcut, you can also retrive API objects by dropping the @<object_type>@ as follow:
 
-  bc(language-javascript). var player   = sublime(my_video_id);
-  var lightbox = sublime(my_lightbox_trigger_id);
-
-
+  bc(language-javascript). var player   = sublime('my_video_id');
+  var lightbox = sublime('my_lightbox_trigger_id');
 
 
   h3(#api-methods-and-listeners). "APIs":#api-methods-and-listeners

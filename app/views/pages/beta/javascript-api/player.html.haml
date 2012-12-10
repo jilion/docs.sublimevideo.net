@@ -5,7 +5,7 @@
 :textile
   "(c)@play@":/beta/javascript-api/player#play  "(c)@pause@":/beta/javascript-api/player#pause "(c)@stop@":/beta/javascript-api/player#stop "(c)@setSize@":/beta/javascript-api/player#setSize "(c)@on@":/beta/javascript-api/player#on
 
-  See also "Using the JavaScript API":/beta/javascript-api/usage.
+  See also "Using the JavaScript API":/beta/javascript-api/usage, "Application API":/beta/javascript-api/application and "Lightbox API":/beta/javascript-api/lightbox.
 
   <div class="breakline"></div>
 
@@ -23,30 +23,20 @@
 
   Starts the playback. If the video is already playing, the call has no effect.
 
-  **Example**
-  * "Replay a video once its playback ends":/custom-behavior-on-end
-
-
 
   h3(#pause). "@player.pause()@":#pause
 
   Pauses the playback. If the video is already paused, the call has no effect.
 
 
-
   h3(#stop). "@player.stop()@":#stop
 
   Stops the playback and shows the initial play button. If the video is already stopped, the call has no effect.
-
-  **Example**
-  * "Return to the initial state once video playback ends":/custom-behavior-on-end
-
 
 
   h3(#videoId). "@player.videoId() ⇒ String@":#videoId
 
   Returns the @id@ of the DOM @<video>@ element, or @undefined@ if the video has no id.
-
 
 
   h3(#setSize). "@player.setSize(width, [height])@":#setSize
@@ -59,12 +49,10 @@
   If you want to scale the video proportionally, you need to compute the new size and then set both the <span class="param">@width@</span> and <span class="param">@height@</span> parameters.
 
   **Fluid width and responsive layouts**
-  You can use this method to make your videos scale along with your fluid width layout. In order to do this you have to listen to the browser's window @resize@ event, and then call this method when the event is fired. Please see "this page":http://test.sublimevideo.net/fluid for more details.
+  If you want to integrate SublimeVideo in your fluid width or responsive layout, you can simply take advantage of the "@autoresize@ player setting":/beta/settings/player-settings#autoresize.
 
   **Example**
-  * "Resize API method test page":http://test.sublimevideo.net/resize
-
-
+  * "Integration in a responsive layout":/beta/responsive-layout
 
 
   h3(#on). "@player.on(eventOrHash, [callback])@":#on
@@ -83,15 +71,11 @@
 
   bc(language-javascript). player.on('start', function() {
     console.log('playback started.');
-  })
+  });
 
   **Example - listening more events**
 
   bc(language-javascript). player.on({
     start: function() { console.log('playback started.') },
     end:   function() { console.log('playback ended.') }
-  })
-
-
-
-
+  });

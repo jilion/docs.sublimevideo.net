@@ -5,15 +5,14 @@
 :textile
   "(c)@load@":/beta/javascript-api/application#load "(c)@ready@":/beta/javascript-api/application#ready "(c)@prepare@":/beta/javascript-api/application#prepare "(c)@unprepare@":/beta/javascript-api/application#unprepare "(c)@player@":/beta/javascript-api/application#player "(c)@lightbox@":/beta/javascript-api/application#lightbox "(c)@version@":/beta/javascript-api/application#version "(c)@env@":/beta/javascript-api/application#env
 
-  See also "Using the JavaScript API":/beta/javascript-api/usage
+  See also "Using the JavaScript API":/beta/javascript-api/usage, "Player API":/beta/javascript-api/player and "Lightbox API":/beta/javascript-api/lightbox.
 
   <div class="breakline"></div>
 
 
   h3(#load). "@sublime.load()@":#load
 
-  SublimeVideo Player and the @sublime@ API object are automatically loaded upon page load if there is at least one element with class @sublime@ in the DOM. If you have no videos (or lightboxes) initially on the page (and you plan for instance to add them dynamically later with JavaScript) you can use this method to force loading the player and the @sublime@ API object.
-
+  SublimeVideo Player and the @sublime@ API object are automatically loaded upon page load if there is at least one element with _sublime_ @class@ in the DOM. If you have no videos (or lightboxes) initially on the page (and you plan for instance to add them dynamically later with JavaScript) you can use this method to force the loading of the player and the @sublime@ API object.
 
 
   h3(#ready). "@sublime.ready(callback)@":#ready
@@ -31,7 +30,6 @@
   bc(language-javascript). sublime.ready(function(){
     // Code to execute once the SublimeVideo JS API is ready!
   });
-
 
   <span class="red">
   *Warning* - The following methods are to be called once the application is loaded,
@@ -58,9 +56,7 @@
     // lightbox is now ready.
   });
 
-  See also "(c)@player API@":/beta/javascript-api/player and "(c)@lightbox API@":/beta/javascript-api/lightbox
-
-
+  See also the "(c)@player API@":/beta/javascript-api/player and the "(c)@lightbox API@":/beta/javascript-api/lightbox.
 
 
   h3(#unprepare). "@sublime.unprepare(elementOrId)@":#unprepare
@@ -91,7 +87,7 @@
 
   h3(#version). "@sublime.version ⇒ String@":#version
 
-  Returns a string ("(c)@semver@":http://semver.org compliant) representing the application version.
+  Returns a string ("(c)SemVer":http://semver.org compliant) representing the application version.
 
   h3(#env). "@sublime.env ⇒ String@":#env
 
