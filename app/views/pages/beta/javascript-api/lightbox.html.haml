@@ -1,0 +1,54 @@
+- @page_title = "Lightbox API"
+
+%h2= @page_title
+
+:textile
+  "(c)@open@":/beta/javascript-api/lightbox#open "(c)@close@":/beta/javascript-api/lightbox#close "(c)@on@":/beta/javascript-api/lightbox#on
+
+  See also "Using the JavaScript API":/beta/javascript-api/usage.
+
+  <div class="breakline"></div>
+
+  These APIs are to be called on @lightbox@ objects, you can retrieve them in the following way
+
+  bc(language-javascript). var lightbox = sublime.lightbox(elementOrId);
+
+  which is equivalent to
+
+  bc(language-javascript). var lightbox = sublime(elementOrId);
+
+
+
+  h3(#open). "@lightbox.open()@":#open
+
+  Opens the lightbox. If it's already opened, this call has no effect.
+
+  h3(#close). "@lightbox.close()@":#close
+
+  Closes the lightbox. If it's already closed, this call has no effect.
+
+
+
+
+  h3(#on). "@lightbox.on(eventOrHash, [callback])@":#on
+
+  * <span class="param">@eventOrHash@</span> (@String@ | @Object@) - A string representing the event name to listen, or an object where its keys are events and its values are callbacks.
+
+  * <span class="param">@callback@</span> (@Function@) - The function to call when the event occurs. Pass this parameter only if the first one is an event (@String@).
+
+  Registers and invokes the given callbacks every time that the corresponding events occur.
+
+  **Example - listening a single event**
+
+  bc(language-javascript). lightbox.on('didOpen', function() {
+    console.log('lightbox opened.');
+  })
+
+  **Example - listening more events**
+
+  bc(language-javascript). lightbox.on({
+    didOpen:   function() { console.log('lightbox opened.') },
+    didClose:  function() { console.log('lightbox closed.') }
+  })
+
+

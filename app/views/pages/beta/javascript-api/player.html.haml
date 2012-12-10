@@ -1,0 +1,97 @@
+- @page_title = "Player API"
+
+%h2= @page_title
+
+:textile
+  "(c)@play@":/beta/javascript-api/player#play  "(c)@pause@":/beta/javascript-api/player#pause "(c)@stop@":/beta/javascript-api/player#stop "(c)@setSize@":/beta/javascript-api/player#setSize "(c)@on@":/beta/javascript-api/player#on
+
+  See also "Using the JavaScript API":/beta/javascript-api/usage.
+
+  <div class="breakline"></div>
+
+  These APIs are to be called on @player@ objects, you can retrieve them in the following way
+
+  bc(language-javascript). var player = sublime.player(elementOrId);
+
+  which is equivalent to
+
+  bc(language-javascript). var player = sublime(elementOrId);
+
+
+
+  h3(#play). "@player.play()@":#play
+
+  Starts the playback. If the video is already playing, the call has no effect.
+
+  **Example**
+  * "Replay a video once its playback ends":/custom-behavior-on-end
+
+
+
+  h3(#pause). "@player.pause()@":#pause
+
+  Pauses the playback. If the video is already paused, the call has no effect.
+
+
+
+  h3(#stop). "@player.stop()@":#stop
+
+  Stops the playback and shows the initial play button. If the video is already stopped, the call has no effect.
+
+  **Example**
+  * "Return to the initial state once video playback ends":/custom-behavior-on-end
+
+
+
+  h3(#videoId). "@player.videoId() ⇒ String@":#videoId
+
+  Returns the @id@ of the DOM @<video>@ element, or @undefined@ if the video has no id.
+
+
+
+  h3(#setSize). "@player.setSize(width, [height])@":#setSize
+
+  * <span class="param">@width@</span> (@Number@) - An integer representing the number of pixels. Set it to @null@ if you want to modify only the height of the video.
+  * <span class="param">@height@</span> (@Number@) - An integer representing the number of pixels. Set it to @null@ (or omit this parameter) if you want to modify only the width of the video. Default is @null@.
+
+  Use this method to resize the width and/or height of a video (this works on any browser and device).
+
+  If you want to scale the video proportionally, you need to compute the new size and then set both the <span class="param">@width@</span> and <span class="param">@height@</span> parameters.
+
+  **Fluid width and responsive layouts**
+  You can use this method to make your videos scale along with your fluid width layout. In order to do this you have to listen to the browser's window @resize@ event, and then call this method when the event is fired. Please see "this page":http://test.sublimevideo.net/fluid for more details.
+
+  **Example**
+  * "Resize API method test page":http://test.sublimevideo.net/resize
+
+
+
+
+  h3(#on). "@player.on(eventOrHash, [callback])@":#on
+
+  * <span class="param">@eventOrHash@</span> (@String@ | @Object@) - A string representing the event name to listen, or an object where its keys are events and its values are callbacks.
+
+  * <span class="param">@callback@</span> (@Function@) - The function to call when the event occurs. Pass this parameter only if the first one is an event (@String@).
+
+  Registers and invokes the given callbacks every time that the corresponding events occur.
+
+  *Supported events*
+  * @start@ Fired when the playback starts.
+  * @end@   Fired when the playback ends.
+
+  **Example - listening a single event**
+
+  bc(language-javascript). player.on('start', function() {
+    console.log('playback started.');
+  })
+
+  **Example - listening more events**
+
+  bc(language-javascript). player.on({
+    start: function() { console.log('playback started.') },
+    end:   function() { console.log('playback ended.') }
+  })
+
+
+
+

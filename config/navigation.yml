@@ -72,8 +72,8 @@ beta:
   'Javascript API':
     'javascript-api/usage': 'Usage'
     'javascript-api/application': 'Application'
-    'javascript-api/players': 'Players'
-    'javascript-api/lightboxes': 'Lightboxes'
+    'javascript-api/player': 'Player'
+    'javascript-api/lightbox': 'Lightbox'
   'Other':
     'supported-platforms': 'Supported platforms'
     'releases': 'Release Notes'
