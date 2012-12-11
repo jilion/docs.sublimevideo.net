@@ -17,6 +17,10 @@
 
   "(c)@controls-enable@":#controls-enable "(c)@controls-visibility@":#controls-visibility "(c)@volume-enable@":#volume-enable
 
+  h4. Video source settings
+
+  "(c)@youtube-id@":#youtube-id
+
   h4. Video metadata settings
 
   "(c)@name@":#name "(c)@uid@":#uid
@@ -208,6 +212,22 @@
   </video>
 
 
+  h3(#youtube-id). "@youtube-id@":#youtube-id
+
+  Allows you to set the ID of a YouTube video to be played in SublimeVideo.
+
+  *Allowed values:*
+  * _@any YouTube ID@_
+
+  *Example:*
+
+  bc(language-markup). <video class='sublime' data-settings='youtube-id:rAq2rNEru8A'>
+    ...
+  </video>
+
+  *Note:* See the "Use SublimeVideo with YouTube videos":/beta/youtube page for more information.
+
+
   h3(#name). "@name@":#name
 
   Allows you to define a name for your video.
@@ -222,6 +242,7 @@
   </video>
 
   *Note:* This setting is used in your "Statistics dashboard":/beta/real-time-stats.
+
 
   h3(#uid). "@uid@":#uid
 
