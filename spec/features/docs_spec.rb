@@ -90,148 +90,119 @@ feature 'redirect other legacy routes' do
   end
 end
 
-feature "root redirect to /beta/quickstart-guide" do
-  it "redirect" do
+feature "shortcut redirects" do
+  it "redirects root to /beta/quickstart-guide" do
     visit '/'
     current_url.should eq "http://docs.sublimevideo.dev/beta/quickstart-guide"
   end
-end
 
-feature "encode-videos-for-the-web" do
-  it "is viewable" do
-    visit '/encode-videos-for-the-web'
-    current_url.should eq "http://docs.sublimevideo.dev/encode-videos-for-the-web"
-  end
-end
-
-feature "player-faq" do
-  it "is viewable" do
-    visit '/player-faq'
-    current_url.should eq "http://docs.sublimevideo.dev/player-faq"
-  end
-end
-
-feature "service-faq" do
-  it "is viewable" do
-    visit '/service-faq'
-    current_url.should eq "http://docs.sublimevideo.dev/service-faq"
-  end
-end
-
-feature "javascript-api" do
-  it "is viewable" do
+  it "redirects /javascript-api to /javascript-api/usage" do
     visit '/javascript-api'
     current_url.should eq "http://docs.sublimevideo.dev/javascript-api/usage"
   end
 end
 
-feature "lightbox" do
-  it "is viewable" do
-    visit '/lightbox'
-    current_url.should eq "http://docs.sublimevideo.dev/lightbox"
+feature "shortcut beta redirects" do
+  it "redirects /beta/settings to /settings/usage" do
+    visit '/beta/settings'
+    current_url.should eq "http://docs.sublimevideo.dev/beta/settings/usage"
   end
-end
 
-feature "quickstart-guide" do
-  it "is viewable" do
-    visit '/quickstart-guide'
-    current_url.should eq "http://docs.sublimevideo.dev/quickstart-guide"
-  end
-end
-
-feature "supported-platforms" do
-  it "is viewable" do
-    visit '/supported-platforms'
-    current_url.should eq "http://docs.sublimevideo.dev/supported-platforms"
-  end
-end
-
-feature "troubleshooting" do
-  it "is viewable" do
-    visit '/troubleshooting'
-    current_url.should eq "http://docs.sublimevideo.dev/troubleshooting"
-  end
-end
-
-feature "releases" do
-  it "is viewable" do
-    visit '/releases'
-    current_url.should eq "http://docs.sublimevideo.dev/releases"
-  end
-end
-
-feature "write-proper-video-elements" do
-  it "is viewable" do
-    visit '/write-proper-video-elements'
-    current_url.should eq "http://docs.sublimevideo.dev/write-proper-video-elements"
-  end
-end
-
-feature "/beta/encode-videos-for-the-web" do
-  it "is viewable" do
-    visit '/beta/encode-videos-for-the-web'
-    current_url.should eq "http://docs.sublimevideo.dev/beta/encode-videos-for-the-web"
-  end
-end
-
-feature "/beta/player-faq" do
-  it "is viewable" do
-    visit '/beta/player-faq'
-    current_url.should eq "http://docs.sublimevideo.dev/beta/player-faq"
-  end
-end
-
-feature "/beta/service-faq" do
-  it "is viewable" do
-    visit '/beta/service-faq'
-    current_url.should eq "http://docs.sublimevideo.dev/beta/service-faq"
-  end
-end
-
-feature "/beta/javascript-api" do
-  it "is viewable" do
+  it "redirects /beta/javascript-api to /beta/javascript-api/usage" do
     visit '/beta/javascript-api'
     current_url.should eq "http://docs.sublimevideo.dev/beta/javascript-api/usage"
   end
 end
 
-feature "/beta/lightbox" do
-  it "is viewable" do
+feature "viewable pages" do
+  it "renders encode-videos-for-the-web" do
+    visit '/encode-videos-for-the-web'
+    current_url.should eq "http://docs.sublimevideo.dev/encode-videos-for-the-web"
+  end
+
+  it "renders player-faq" do
+    visit '/player-faq'
+    current_url.should eq "http://docs.sublimevideo.dev/player-faq"
+  end
+
+  it "renders service-faq" do
+    visit '/service-faq'
+    current_url.should eq "http://docs.sublimevideo.dev/service-faq"
+  end
+
+  it "renders lightbox" do
+    visit '/lightbox'
+    current_url.should eq "http://docs.sublimevideo.dev/lightbox"
+  end
+
+  it "renders quickstart-guide" do
+    visit '/quickstart-guide'
+    current_url.should eq "http://docs.sublimevideo.dev/quickstart-guide"
+  end
+
+  it "renders supported-platforms" do
+    visit '/supported-platforms'
+    current_url.should eq "http://docs.sublimevideo.dev/supported-platforms"
+  end
+
+  it "renders troubleshooting" do
+    visit '/troubleshooting'
+    current_url.should eq "http://docs.sublimevideo.dev/troubleshooting"
+  end
+
+  it "renders releases" do
+    visit '/releases'
+    current_url.should eq "http://docs.sublimevideo.dev/releases"
+  end
+
+  it "renders write-proper-video-elements" do
+    visit '/write-proper-video-elements'
+    current_url.should eq "http://docs.sublimevideo.dev/write-proper-video-elements"
+  end
+end
+
+feature "viewable beta pages" do
+  it "renders beta/encode-videos-for-the-web" do
+    visit '/beta/encode-videos-for-the-web'
+    current_url.should eq "http://docs.sublimevideo.dev/beta/encode-videos-for-the-web"
+  end
+
+  it "renders beta/player-faq" do
+    visit '/beta/player-faq'
+    current_url.should eq "http://docs.sublimevideo.dev/beta/player-faq"
+  end
+
+  it "renders beta/service-faq" do
+    visit '/beta/service-faq'
+    current_url.should eq "http://docs.sublimevideo.dev/beta/service-faq"
+  end
+
+  it "renders beta/lightbox" do
     visit '/beta/lightbox'
     current_url.should eq "http://docs.sublimevideo.dev/beta/lightbox"
   end
-end
 
-feature "/beta/quickstart-guide" do
-  it "is viewable" do
+  it "renders beta/quickstart-guide" do
     visit '/beta/quickstart-guide'
     current_url.should eq "http://docs.sublimevideo.dev/beta/quickstart-guide"
   end
-end
 
-feature "/beta/supported-platforms" do
-  it "is viewable" do
+  it "renders beta/supported-platforms" do
     visit '/beta/supported-platforms'
     current_url.should eq "http://docs.sublimevideo.dev/beta/supported-platforms"
   end
-end
 
-feature "/beta/troubleshooting" do
-  it "is viewable" do
+  it "renders beta/troubleshooting" do
     visit '/beta/troubleshooting'
     current_url.should eq "http://docs.sublimevideo.dev/beta/troubleshooting"
   end
-end
 
-feature "/beta/releases" do
-  it "is viewable" do
+  it "renders beta/releases" do
     visit '/beta/releases'
     current_url.should eq "http://docs.sublimevideo.dev/beta/releases"
   end
-end
 
-feature "/beta/write-proper-video-elements" do
-  it "is viewable" do
+  it "renders beta/write-proper-video-elements" do
     visit '/beta/write-proper-video-elements'
     current_url.should eq "http://docs.sublimevideo.dev/beta/write-proper-video-elements"
   end
