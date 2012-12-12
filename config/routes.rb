@@ -23,9 +23,8 @@ DocsSublimeVideo::Application.routes.draw do
   %w[settings].each { |path| get "(/:stage)/#{path}" => redirect { |params, req| "#{"/#{params[:stage]}" if params[:stage]}/settings/usage" } }
   %w[customizing-the-initial-play-button custom-play-button].each { |path| get "(/:stage)/#{path}" => redirect { |params, req| "#{"/#{params[:stage]}" if params[:stage]}/custom-start-view" } }
 
-  get '(/:stage)/search' => 'search#index', as: 'search', stage: /beta/, defaults: { stage: 'stable' }
-  # resources :releases, only: :index
-  get '(/:stage)/releases' => 'releases#index', stage: /stable|beta/, defaults: { stage: 'stable' }
+  get '(/:stage)/search' => 'search#index', as: 'search', stage: /stable|beta/, defaults: { stage: 'stable' }
+  get '(/:stage)/releases' => 'releases#index', stage: /stable|beta/, defaults: { stage: 'stable' }, as: 'releases'
   get '(/:stage)/*page' => 'pages#show', as: 'page', constraints: DocsPages, stage: /stable|beta/, defaults: { stage: 'stable' }, format: false
 
   get '/beta', to: redirect('/beta/whats-new')
