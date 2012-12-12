@@ -9,7 +9,9 @@ namespace :search do
     end
     search_helper = SearchHelper.new
 
-    %w[stable beta].each do |stage|
+    stages = argv('stage', %w[stable beta])
+
+    Array(stages).each do |stage|
       documents  = []
       pages_glob = Rails.root.join('app', 'views', 'pages', stage, '**', '*.html.haml')
       Dir[pages_glob].each do |page|
@@ -33,4 +35,12 @@ namespace :search do
     end
   end
 
+end
+
+def argv(var_name, default = nil)
+  if var = ARGV.detect { |arg| arg =~ /(#{var_name}=)/i }
+    var.sub($1, '')
+  else
+    default
+  end
 end
