@@ -18,7 +18,7 @@ describe PagesController do
       %w[quickstart-guide].each do |page|
         it "responds with success to GET :show, on #{page} page" do
           get :show, stage: stage, page: page
-          response.should render_template("pages/stable/#{page}")
+          response.should render_template("pages/#{stage}/#{page}")
         end
       end
     end

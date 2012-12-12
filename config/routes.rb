@@ -20,7 +20,7 @@ DocsSublimeVideo::Application.routes.draw do
 
   # Shortcut redirect
   %w[javascript-api js-api].each { |path| get "(/:stage)/#{path}" => redirect { |params, req| "#{"/#{params[:stage]}" if params[:stage]}/javascript-api/usage" } }
-  %w[player-settings].each { |path| get "(/:stage)/#{path}" => redirect { |params, req| "#{"/#{params[:stage]}" if params[:stage]}/player-settings/usage" } }
+  %w[settings].each { |path| get "(/:stage)/#{path}" => redirect { |params, req| "#{"/#{params[:stage]}" if params[:stage]}/settings/usage" } }
   %w[customizing-the-initial-play-button custom-play-button].each { |path| get "(/:stage)/#{path}" => redirect { |params, req| "#{"/#{params[:stage]}" if params[:stage]}/custom-start-view" } }
 
   get '(/:stage)/search' => 'search#index', as: 'search', stage: /beta/, defaults: { stage: 'stable' }
