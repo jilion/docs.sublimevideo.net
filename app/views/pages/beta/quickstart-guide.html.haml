@@ -5,11 +5,20 @@
 :textile
   h3(#setup). "Setup your site with the Setup Assistant":#setup
 
-  Log into #{link_to "MySublimeVideo", my_url('sites')}, click on the "+ Add a site" button and follow the 5 steps of the Setup Assistant carrefully.
+  #{image_tag('setup_assistant.jpg', width: 640, class: 'screenshot', title: '"Setup assistant')}
 
-  h3(#players). "Manage your site":#players
+  Log into #{link_to "MySublimeVideo", my_url('sites')}, if you don't have registered any site yet you will land on the first step of our Setup Assistant. The Assistant will guide you through 4 easy steps (the 5th step is a summary) which can all be skipped by clicking the "Next" button.
 
-  #{image_tag('my_sites_actions_menu.png', width: 640, class: 'screenshot', title: 'Actions menu in the My Sites page')}
+-#h3(#add-a-site). "Add a new site":#add-a-site
+-#
+-##{image_tag('my_sites_add_a_site.jpg', width: 640, class: 'screenshot', title: '"+ Add a site" button in the My Sites page')}
+-#
+-#Log into #{link_to "MySublimeVideo", my_url('sites')} and click on the #{link_to "+ Add a site", my_url('assistant/new-site')} button if you're not already in the Setup Assistant and follow the 5 steps of the Setup Assistant carrefully.
+
+:textile
+  h3(#players). "Manage your sites":#players
+
+  #{image_tag('my_sites_actions_menu.jpg', width: 640, class: 'screenshot', title: 'Actions menu in the My Sites page')}
 
   On the #{link_to "My Sites", my_url('sites')} page, you can quickly access any of the following pages for any of your sites:
 
@@ -17,9 +26,9 @@
   * *Players:* Edit your existing players or create new ones.
   * *Publish video:* Use our "Video Publishing Assistant":video-publishing-assistant to generate proper @<video>@ elements. You can also access this page via the big blue "Publish Video" button
   * *Loader code:* Get the code that will embed SublimeVideo in your site.
-  * *Settings:* Manage your site' settings such as alias/staging/development domains, wildcard and path option.
+  * *Settings:* Manage your "site' settings":site-settings such as alias/staging/development domains, wildcard and path option.
   * *Invoices:* View all your site's invoices.
 
   h3(#whats-next). "What's next?":#whats-next
 
-  Learn how to use "the Lightbox feature":lightbox, play with our "JS API":javascript-api or "customize your player":/beta/settings (beta player only).
+  Learn how to display your video in a "Lightbox":lightbox, play with our "JS API":javascript-api or "customize your player":/beta/settings.

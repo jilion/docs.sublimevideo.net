@@ -3,6 +3,5 @@
 .gitconfig
 .rvmrc
 Guardfile
-test
 spec
 doc

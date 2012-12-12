@@ -7,53 +7,7 @@
 
   h3. Customize or disable the initial overlay
 
-  You can use the following "player setting":settings/player-settings:
-
-  h4(#initial-overlay-enable). "@initial-overlay-enable@":#initial-overlay-enable
-
-  Allows you to enable or disable the initial overlay.
-
-  *Allowed values:*
-  * @true@ – _(Default)_ Show the initial overlay.
-  * @false@ – Disable the initial overlay.
-
-  *Example:*
-
-  bc(language-markup). <video class='sublime' data-settings='initial-overlay-enable:false'>
-    ...
-  </video>
-
-  h4(#initial-overlay-visibility). "@initial-overlay-visibility@":#initial-overlay-visibility
-
-  Allows you to choose how the initial overlay is displayed.
-
-  *Allowed values:*
-  * @autofade@ – _(Default)_ The initial overlay autofade on mousover.
-  * @visible@ – The initial overlay is always visible and doesn't fade-out on mouseover.
-
-  *Example:*
-
-  bc(language-markup). <video class='sublime' data-settings='initial-overlay-visibility:visible'>
-    ...
-  </video>
-
-  h4(#initial-overlay-color). "@initial-overlay-color@":#initial-overlay-color
-
-  Allows you to choose the initial overlay color.
-
-  *Allowed values:*
-  * @word@ – e.g. @red@, @green@
-  * @#hexadecimal@ – e.g. @#fff@ or @#dd0066@
-  * @rgb@ – e.g. @rgb(255, 100, 0)@
-
-  *Note:*
-  * Default is set to @black@.
-
-  *Example:*
-
-  bc(language-markup). <video class='sublime' data-settings='initial-overlay-color:red'>
-    ...
-  </video>
+  To customize or disable the initial overlay, please use the "@initial-overlay-enable@ and @initial-overlay-visibility@ player settings":settings/player-settings#initial-overlay-enable.
 
   h4. Demo
 
@@ -67,7 +21,7 @@
 
   h4. Demo
 
-  #{jsfiddle_embed('xM6Fv', panes: 'result,html,js')}
+  #{jsfiddle_embed('xM6Fv', height: 350, panes: 'result,html,js')}
 
   *Note:*
 
