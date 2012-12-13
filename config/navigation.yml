@@ -42,20 +42,25 @@ beta:
   'Video Hosting':
     'youtube': 'YouTube'
     'vimeo-pro': 'Vimeo Pro'
-  'Add-ons':
+  'Built-in Features':
+    'lightbox': 'Lightbox'
+    'hd-switching': 'HD switching'
+    'keyboard': 'Keyboard control'
+    'responsive-layout': 'Responsive layout'
+  'Analytics':
+    # 'Add-ons':
     #'addons/on-video-logo': 'On-Video Logo'
-    'Real-Time Statistics':
-      'addons/real-time-stats/overview': 'Overview'
-      'addons/real-time-stats/optimize-for-stats': 'Optimize <video> for stats'
+    'addons/real-time-stats/overview': 'Real-Time Stats overview'
+    'addons/real-time-stats/optimize-for-stats': 'Optimize <video> for stats'
+    # 'Real-Time Statistics':
+    #   'addons/real-time-stats/overview': 'Overview'
+    #   'addons/real-time-stats/optimize-for-stats': 'Optimize <video> for stats'
   'Integration':
     'custom-start-view': 'Custom start view'
     'wordpress': 'WordPress plugin'
     'playlists': 'Playlists'
-    'responsive-layout': 'Responsive layout'
-    'lightbox': 'Lightbox'
     'video-publishing-assistant': 'Video publishing assistant'
     'google-analytics-integration': 'Google Analytics integration'
-    'hd-switching': 'HD switching'
     'embeds': 'Embeds'
     # 'autoplay': 'Autoplay a video'
     # 'custom-behavior-on-end': 'Custom behavior on end'
@@ -74,5 +79,4 @@ beta:
     'create-poster-frame': 'Create poster frame'
     'supported-platforms': 'Supported platforms'
     'site-settings': 'Site settings'
-    'keyboard': 'Keyboard control'
     'releases': 'Release Notes'
