@@ -3,12 +3,21 @@ require 'complex_page'
 
 module DocsHelper
 
+  def cdn_host
+    case Rails.env
+    when 'production'
+      'cdn.sublimevideo.net'
+    else
+      'cdn.sublimevideo-staging.net'
+    end
+  end
+
   def sublimevideo_docs_include_tag
     case params[:stage]
     when 'beta'
-      sublimevideo_loader_tag(:www, host: "cdn.sublimevideo#{Rails.env.production? ? '' : '-staging'}.net", stage: 'beta').html_safe
+      sublimevideo_loader_tag(:www, host: cdn_host, stage: 'beta').html_safe
     else
-      sublimevideo_loader_tag(:www).html_safe
+      sublimevideo_loader_tag(:www, host: cdn_host).html_safe
     end
   end
 
