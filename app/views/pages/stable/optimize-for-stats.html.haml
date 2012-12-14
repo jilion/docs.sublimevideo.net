@@ -3,17 +3,17 @@
 %h2= "Optimize <video> elements for stats"
 
 :textile
-  Our "real-time statistics":/real-time-stats feature offers a comprehensive picture of your site's video traffic for all #{link_to "Paid plans", custom_url('plans')}.
+  Our "real-time statistics":real-time-stats add-on offers a comprehensive picture of your site's video traffic.
 
   You can access the individual statistics page for each of your sites via the "View Stats" button on #{link_to "this page", my_url('sites')}.
 
-  By default, there is nothing to set up in order to start viewing your video statistics. However, if you think your @<source />@ elements might change in future or if you'd like to customize the name of the videos that are shown in your statistics page, you should read the following sections.
+  By default, there is nothing to set up in order to start viewing your video statistics. However, if you think your @<source />@ elements might change in the future or if you would like to customize the name of the videos that are shown in your statistics page, you should read the following sections.
 
   h3(#data-uid). "The _data-uid_ attribute":#data-uid
 
   If your video doesn't have a @data-uid@ and you modify its first @<source />@'s @src@ attribute, the video will appear as a new video on your statistics page (we use the first @<source />@ to track a video).
 
-  To avoid this, you can set a unique id to your @<video>@ element by adding a @data-uid@ attribute to it. Your video will then be identified by this unique id instead of by its first @<source />@. Here is an example:
+  To avoid this, you can set a unique id to your @<video>@ element by adding a @data-uid@ attribute to it. Your video will then be identified by this unique id instead of its first @<source />@. Here is an example:
 
   bc(language-markup). <video class="sublime" poster="some-great-landscapes.jpg" data-uid="landscape1">
     <source src="http://yoursite.com/some-great-landscapes.mp4" />
@@ -22,7 +22,11 @@
 
   Although this id can be any string, we recommend that you use small strings (between 4 and 20 characters, probably depending on the number of videos you have).
 
-  *Note that if you plan to use video statistics extensively, we recommend that you always set the @data-uid@ attribute to all of your @<video>@ elements.*
+  *Notes:*
+
+  * If you plan to use video statistics extensively, we recommend that you always set the @data-uid@ attribute to all of your @<video>@ elements.*
+  * The @data-uid@ setting respects the "Player settings syntax":/beta/settings/player-settings.
+
 
   h3(#data-name). "The _data-name_ attribute":#data-name
 
@@ -44,4 +48,7 @@
     <source src="http://yoursite.com/some-great-landscapes.webm" />
   </video>
 
-  *Note*: You can update the @data-name@ as often as you’d like. Such changes will be reflected in the statistics page in near real-time.
+  *Notes:*
+
+  * You can update the @data-name@ as often as you’d like. Such changes will be reflected in the statistics page in near real-time.
+  * The @data-name@ setting respects the "Player settings syntax":/beta/settings/player-settings.
