@@ -45,16 +45,11 @@ beta:
   'Built-in Features':
     'lightbox': 'Lightbox'
     'hd-switching': 'HD switching'
-    'keyboard': 'Keyboard control'
     'responsive-layout': 'Responsive layout'
+    'keyboard': 'Keyboard control'
   'Analytics':
-    # 'Add-ons':
-    #'addons/on-video-logo': 'On-Video Logo'
-    'addons/real-time-stats/overview': 'Real-Time Stats overview'
-    'addons/real-time-stats/optimize-for-stats': 'Optimize <video> for stats'
-    # 'Real-Time Statistics':
-    #   'addons/real-time-stats/overview': 'Overview'
-    #   'addons/real-time-stats/optimize-for-stats': 'Optimize <video> for stats'
+    'real-time-stats': 'Universal Real-Time Statistics'
+    'optimize-for-stats': 'Optimize <video> for stats'
   'Integration':
     'custom-start-view': 'Custom start view'
     'wordpress': 'WordPress plugin'
