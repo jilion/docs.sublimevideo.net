@@ -13,6 +13,10 @@
 
   "(c)@autoresize@":#autoresize "(c)@autoplay@":#autoplay "(c)@on-end@":#on-end "(c)@fullmode-enable@":#fullmode-enable "(c)@fullmode-priority@":#fullmode-priority
 
+  h4. Display settings
+
+  "(c)@player-kit@":#player-kit
+
   h4. Controls settings
 
   "(c)@controls-enable@":#controls-enable "(c)@controls-visibility@":#controls-visibility "(c)@volume-enable@":#volume-enable
@@ -193,6 +197,20 @@
   *Example:*
 
   bc(language-markup). <video class='sublime' data-settings='fullmode-priority:window'>
+    ...
+  </video>
+
+
+  h3(#player-kit). "@player-kit@":#player-kit
+
+  Allows you to set a different player than your default player.
+
+  *Allowed values:*
+  * @player id@ – You can find your player's id in the _"Players"_ page of your site.
+
+  *Example:*
+
+  bc(language-markup). <video class='sublime' data-settings='player-kit:2'>
     ...
   </video>
 
