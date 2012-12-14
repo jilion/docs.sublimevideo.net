@@ -35,7 +35,7 @@ stable:
 beta:
   'Getting Started':
     'quickstart-guide': 'Quickstart Guide'
-    'whats-new': "What's new in Beta?"
+    # 'whats-new': "What's new in Beta?"
     'troubleshooting': 'Troubleshooting'
     'player-faq': 'Player FAQ'
     'service-faq': 'Service FAQ'
@@ -74,4 +74,4 @@ beta:
     'create-poster-frame': 'Create poster frame'
     'supported-platforms': 'Supported platforms'
     'site-settings': 'Site settings'
-    'releases': 'Release Notes'
+    # 'releases': 'Release Notes'
