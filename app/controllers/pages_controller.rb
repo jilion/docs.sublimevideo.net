@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_filter :redirect_from_root
+  before_filter :redirect_from_root_if_no_page, only: [:show]
 
   def show
     @body_class = params[:page]
@@ -11,12 +11,16 @@ class PagesController < ApplicationController
   end
 
   def redirect_from_root
-    unless params[:page]
-      redirect_to page_path(stage: cookies[:stage] || 'beta', page: 'quickstart-guide') and return
-    end
+    redirect_to page_path(stage: cookies[:stage] || 'beta', page: 'quickstart-guide') and return
   end
 
   private
+
+  def redirect_from_root_if_no_page
+    unless page_for(params[:stage], params[:page])
+      redirect_from_root
+    end
+  end
 
   def page_file
     @page_files ||= {}
