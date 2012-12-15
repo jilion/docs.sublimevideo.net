@@ -1,2 +1,2 @@
-//= require sublimevideo
-//= require prism-line-highlight
+#= require sublimevideo
+#= require prism-line-highlight
