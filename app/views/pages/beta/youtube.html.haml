@@ -3,11 +3,11 @@
 %h2= @page_title
 
 :textile
-  Integrate a YouTube video with SublimeVideo is very easy. Simply follow these 3 easy steps:
+  Integrating a YouTube video with SublimeVideo is very easy:
 
-  1. Open the video page;
-  2. Look in the address bar for a "v=YOUTUBE_ID" parameter;
-  3. Copy the _YOUTUBE_ID_ and paste it in our #{link_to "Video Publishing Assistant", my_url('publish-video'), onclick: 'window.open(this); return false'} (in the "Video sources" section) or if you "create your @<video>@ element manually":write-proper-video-elements#manually-configuring-video, set it as follow:
+  *Just copy and paste the YouTube video URL into the Video Publishing Assistant (in the “Video sources” section).*
+
+  Alternatively, if you're writing your @<video>@ element manually, you need to get the YouTube video ID (see the "v" parameter “v=YOUTUBE_ID” in the URL) and set it as follow:
 
   bc(language-markup). <video class="sublime" data-youtube-id="YOUTUBE_ID" width="640" height="360" preload="none"></video>
 
