@@ -25,5 +25,3 @@ vendor/bundler
 config/env.yml
 *.sublime-project
 !.sublime-project
-.rbenv-version
-.ruby-version
