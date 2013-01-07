@@ -20,7 +20,7 @@ gem 'dalli'
 gem 'indextank'
 gem 'airbrake'
 gem 'oj' # fastest json
-gem 'librato-rails'
+gem 'librato-rails', github: 'librato/librato-rails', branch: 'feature/rack_first'
 gem 'lograge'
 
 # Gems used only for assets and not required

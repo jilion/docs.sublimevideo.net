@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/librato/librato-rails.git
+  revision: 82a95ae54f2ed990135a7b655293107384da2796
+  branch: feature/rack_first
+  specs:
+    librato-rails (0.8.1)
+      librato-metrics (~> 1.0.2)
+      rails (>= 3.0)
+
 GEM
   remote: https://rubygems.org/
   remote: https://gems.gemfury.com/8dezqz7z7HWea9vtaFwg/
@@ -117,13 +126,10 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.7.6)
-    librato-metrics (0.7.5)
+    librato-metrics (1.0.2)
       aggregate (~> 0.2.2)
       faraday (~> 0.7)
       multi_json
-    librato-rails (0.8.0)
-      librato-metrics (~> 0.7.4)
-      rails (>= 3.0)
     libwebsocket (0.1.7.1)
       addressable
       websocket
@@ -276,7 +282,7 @@ DEPENDENCIES
   guard-rspec
   haml
   indextank
-  librato-rails
+  librato-rails!
   lograge
   mongoid
   newrelic_rpm
