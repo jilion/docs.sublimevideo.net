@@ -46,7 +46,7 @@
 
   bc(language-javascript). sublime('my_lightbox_trigger_id').on('didopen', function(lightbox) {
     console.log('lightbox opened.');
-  })
+  });
 
   **Example - listening more events**
 
@@ -54,14 +54,14 @@
     contentready: function(lightbox, player) { console.log('content ready.') },
     didopen:      function(lightbox) { console.log('lightbox opened.') },
     didclose:     function(lightbox) { console.log('lightbox closed.') }
-  })
+  });
 
 
   h3(#events). Events
 
   Below are all the events supported by the lightbox. You listen to these events via the "(c)@lightbox.on@":/beta/javascript-api/lightbox#on method.
 
-  bc(language-javascript). sublime('my_lightbox_trigger_id').on('<event_name>', my_callback_function)
+  bc(language-javascript). sublime('my_lightbox_trigger_id').on('<event_name>', my_callback_function);
 
   h3(#event-contentready). "@contentready@":#event-contentready
 
