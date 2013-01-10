@@ -13,7 +13,7 @@
 
   h3(#methods). Methods
 
-  These APIs are to be called on @player@ objects, you can retrieve them in the following way
+  These API methods are to be called on a @player@ object, which you can retrieve in the following way
 
   bc(language-javascript). var player = sublime.player(elementOrId);
 
@@ -21,33 +21,25 @@
 
   bc(language-javascript). var player = sublime(elementOrId);
 
-
-
   h3(#play). "@player.play()@":#play
 
   Starts the playback. If the video is already playing, the call has no effect.
-
 
   h3(#pause). "@player.pause()@":#pause
 
   Pauses the playback. If the video is already paused, the call has no effect.
 
-
   h3(#stop). "@player.stop()@":#stop
 
   Stops the playback and shows the initial play button. If the video is already stopped, the call has no effect.
-
 
   h3(#videoId). "@player.videoId() ⇒ String@":#videoId
 
   Returns the @id@ of the DOM @<video>@ element, or @undefined@ if the video has no id.
 
-
   h3(#videoElement). "@player.videoElement() ⇒ Element@":#videoElement
 
   Returns the DOM @<video>@ element.
-
-
 
   h3(#setSize). "@player.setSize(width, [height])@":#setSize
 
@@ -58,12 +50,13 @@
 
   If you want to scale the video proportionally, you need to compute the new size and then set both the <span class="param">@width@</span> and <span class="param">@height@</span> parameters.
 
+  This method has no effect if the player is in fullmode (fullscreen or fullwindow).
+
   **Fluid width and responsive layouts**
   If you want to integrate SublimeVideo in your fluid width or responsive layout, you can simply take advantage of the "@autoresize@ player setting":/beta/settings/player-settings#autoresize.
 
   **Example**
   * "Integration in a responsive layout":/beta/responsive-layout
-
 
   h3(#on). "@player.on(eventOrHash, [callback])@":#on
 
@@ -88,8 +81,7 @@
 
   h3(#events). Events
 
-  These are the events supported by the player. You listen to these events by registering
-  via the method "(c)@player.on@":/beta/javascript-api/player#on
+  Below are all the events supported by the player. You listen to these events via the "(c)@player.on@":/beta/javascript-api/player#on method.
 
   h3(#event-start). "@start@":#event-start
 
@@ -102,7 +94,6 @@
   h3(#event-play). "@play@":#event-play
 
   Fired when the playback resumes. The first @play@ event is always preceded by a @start@ event, otherwise it will always be preceded by a @pause@ event.
-  .
 
   *Callback parameters*
 
