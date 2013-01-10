@@ -9,5 +9,11 @@
 #releases
   - @releases.each do |release|
     - id = release.datetime.strftime("%Y-%m-%d-%H-%M")
-    %h4{ id: id }= link_to l(release.datetime, format: :long), "##{id}"
+    %h4{ id: id }
+      - if stage?('beta')
+        = link_to "##{id}" do
+          %span{ style: 'background: yellow' }= release.version
+          = l(release.datetime, format: :long_without_time)
+      - else
+        = link_to l(release.datetime, format: :long), "##{id}"
     = release.content

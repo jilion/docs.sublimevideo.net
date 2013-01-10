@@ -1,19 +1,26 @@
-class Release
-  attr_accessor :datetime, :content
-
-  def initialize(attrs)
-    @datetime, @content = attrs[:datetime], attrs[:content]
-  end
+Release = Struct.new(:version, :datetime, :content) do
 
   def self.all(stage = 'stable')
     path = Rails.root.join('app', 'views', 'releases', stage)
     path.entries.inject([]) do |releases, file_path|
-      if matches = file_path.to_s.match(/([0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9]{2}:[0-9]{2})\.textile/)
-        releases << new(
-          datetime: DateTime.parse(matches[0]),
-          content: RedCloth.new(File.new(path.join(file_path)).read).to_html.html_safe
-        )
-      end
+      case stage
+      when 'stable'
+        if matches = file_path.to_s.match(/([0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9]{2}:[0-9]{2})\.textile/)
+          releases << new(
+            nil,
+            DateTime.parse(matches[1]),
+            RedCloth.new(File.new(path.join(file_path)).read).to_html.html_safe
+          )
+        end
+      when 'beta'
+        if matches = file_path.to_s.match(/([0-9]{4}-[0-9]{2}-[0-9]{2})-([0-9]{2})([0-9]{2})-([a-z0-9\-\.]+)\.textile/)
+            releases << new(
+              matches[4],
+              DateTime.parse("#{matches[1]}-#{matches[2]}:#{matches[3]}"),
+              RedCloth.new(File.new(path.join(file_path)).read).to_html.html_safe
+            )
+          end
+        end
       releases
     end.sort_by { |r| r.datetime }
   end
