@@ -3,11 +3,17 @@
 %h2= @page_title
 
 :textile
+  *Methods*
   "(c)@open@":/beta/javascript-api/lightbox#open "(c)@close@":/beta/javascript-api/lightbox#close "(c)@on@":/beta/javascript-api/lightbox#on
+
+  *Events*
+  "(c)@contentready@":/beta/javascript-api/lightbox#event-contentready "(c)@didopen@":/beta/javascript-api/lightbox#event-didopen "(c)@didclose@":/beta/javascript-api/lightbox#event-didclose
+
 
   See also "Using the JavaScript API":/beta/javascript-api/usage, "Application API":/beta/javascript-api/application and "Player API":/beta/javascript-api/player.
 
-  <div class="breakline"></div>
+
+  h3(#methods). Methods
 
   These APIs are to be called on @lightbox@ objects, you can retrieve them in the following way
 
@@ -38,23 +44,58 @@
 
   Registers and invokes the given callbacks every time that the corresponding events occur.
 
-  *Supported events*
-  * @contentready@ Fired when the lightbox's content has been prepared.
-  * @didopen@ Fired when the playback starts.
-  * @didclose@ Fired when the playback ends.
-
   **Example - listening a single event**
 
-  bc(language-javascript). lightbox.on('didopen', function() {
+  bc(language-javascript). sublime('my_lightbox_trigger_id').on('didopen', function(lightbox) {
     console.log('lightbox opened.');
   })
 
   **Example - listening more events**
 
-  bc(language-javascript). lightbox.on({
-    contentready: function() { console.log('content ready.') },
-    didopen:      function() { console.log('lightbox opened.') },
-    didclose:     function() { console.log('lightbox closed.') }
+  bc(language-javascript). sublime('my_lightbox_trigger_id').on({
+    contentready: function(lightbox, player) { console.log('content ready.') },
+    didopen:      function(lightbox) { console.log('lightbox opened.') },
+    didclose:     function(lightbox) { console.log('lightbox closed.') }
   })
+
+
+
+
+  h3(#events). Events
+
+  These are the events supported by the lightbox. You listen to these events by registering
+  via the method "(c)@lightbox.on@":/beta/javascript-api/lightbox#on
+
+  bc(language-javascript). sublime('my_lightbox_trigger_id').on('<event_name>', my_callback_function)
+
+  h3(#event-contentready). "@contentready@":#event-contentready
+
+  Fired when the lightbox's content has been prepared.
+
+  *callback parameters*
+
+  * <span class="param">@lightbox@</span> (@Object@) - The lightbox api object.
+  * <span class="param">@content@</span> (@Object@) - The content api object, which in most cases will be the player.
+
+  h3(#event-didopen). "@didopen@":#event-didopen
+
+  Fired when the playback starts.
+
+  *Callback parameters*
+
+  * <span class="param">@lightbox@</span> (@Object@) - The lightbox api object.
+
+
+  h3(#event-didclose). "@didclose@":#event-didclose
+
+  Fired when the playback ends.
+
+  *Callback parameters*
+
+  * <span class="param">@lightbox@</span> (@Object@) - The lightbox api object.
+
+
+
+
 
 

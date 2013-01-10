@@ -3,11 +3,15 @@
 %h2= @page_title
 
 :textile
+  *Methods*
   "(c)@play@":/beta/javascript-api/player#play  "(c)@pause@":/beta/javascript-api/player#pause "(c)@stop@":/beta/javascript-api/player#stop "(c)@setSize@":/beta/javascript-api/player#setSize "(c)@videoId@":/beta/javascript-api/player#videoId "(c)@videoElement@":/beta/javascript-api/player#videoElement "(c)@on@":/beta/javascript-api/player#on
+
+  *Events*
+  "(c)@start@":/beta/javascript-api/player#event-start "(c)@play@":/beta/javascript-api/player#event-play "(c)@pause@":/beta/javascript-api/player#event-pause "(c)@end@":/beta/javascript-api/player#event-end "(c)@stop@":/beta/javascript-api/player#event-stop
 
   See also "Using the JavaScript API":/beta/javascript-api/usage, "Application API":/beta/javascript-api/application and "Lightbox API":/beta/javascript-api/lightbox.
 
-  <div class="breakline"></div>
+  h3(#methods). Methods
 
   These APIs are to be called on @player@ objects, you can retrieve them in the following way
 
@@ -69,11 +73,6 @@
 
   Registers and invokes the given callbacks every time that the corresponding events occur.
 
-  *Supported events*
-  * @start@ Fired when the playback starts (Note that this event is not fired every time the video resumes the playback but just the first time the video starts playing).
-
-  * @end@   Fired when the playback ends.
-
   **Example - listening a single event**
 
   bc(language-javascript). player.on('start', function() {
@@ -86,3 +85,56 @@
     start: function() { console.log('playback started.') },
     end:   function() { console.log('playback ended.') }
   });
+
+  h3(#events). Events
+
+  These are the events supported by the player. You listen to these events by registering
+  via the method "(c)@player.on@":/beta/javascript-api/player#on
+
+  h3(#event-start). "@start@":#event-start
+
+  Fired when the playback starts. This event is not fired every time the video resumes the playback but just the first time the video starts playing.
+
+  *Callback parameters*
+
+  * <span class="param">@player@</span> (@Object@) - The player api object.
+
+  h3(#event-play). "@play@":#event-play
+
+  Fired when the playback resumes. The first @play@ event is always preceded by a @start@ event, otherwise it will always be preceded by a @pause@ event.
+  .
+
+  *Callback parameters*
+
+  * <span class="param">@player@</span> (@Object@) - The player api object.
+
+
+  h3(#event-pause). "@pause@":#event-pause
+
+  Fired when the playback pauses.
+
+  *Callback parameters*
+
+  * <span class="param">@player@</span> (@Object@) - The player api object.
+
+
+  h3(#event-end). "@end@":#event-end
+
+  Fired when the playback ends. This event is always preceded by a @pause@ event.
+
+  *Callback parameters*
+
+  * <span class="param">@player@</span> (@Object@) - The player api object.
+
+
+  h3(#event-stop). "@stop@":#event-stop
+
+  Fired when the playback stops.
+
+  *Callback parameters*
+
+  * <span class="param">@player@</span> (@Object@) - The player api object.
+
+
+
+
