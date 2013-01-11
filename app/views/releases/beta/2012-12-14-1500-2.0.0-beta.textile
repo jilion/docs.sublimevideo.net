@@ -1,15 +1,17 @@
-* <span class="label new">new</span> "New SublimeVideo Player":http://sublimevideo.net/modular-player (in beta) powered by the "SublimeVideo Horizon":http://sublimevideo.net/horizon-framework.
+* <span class="label new">new</span> Rewritten from the ground up using our new "SublimeVideo Horizon":http://sublimevideo.net/horizon-framework framework.
+* <span class="label new">new</span> Runs with no feature or design degradation even on "tablets and the latest smartphones":http://docs.sublimevideo.dev/beta/supported-platforms#mobile.
+* <span class="label new">new</span> Vector-based rendering of every control and UI element.
 * <span class="label new">new</span> Seamless "YouTube integration":http://sublimevideo.net/youtube.
-* <span class="label new">new</span> Possibility to display "your logo on video":http://sublimevideo.net/modular-player#on_video_logo.
-* <span class="label new">new</span> "Two new player designs":http://sublimevideo.net/modular-player#player_designs _Light_ and _Flat_.
+* <span class="label new">new</span> Display "your logo on video":http://sublimevideo.net/modular-player#on_video_logo.
+* <span class="label new">new</span> "Two new player designs":http://sublimevideo.net/modular-player#player_designs _Light_ and <em>Flat</em>.  Our <a href="http://sublimevideo.net/modular-player#player_designs">Classic design</a> has also been revamped.
 * <span class="label new">new</span> "Keybord control":http://docs.sublimevideo.net/beta/keyboard.
-* <span class="label new">new</span> Advanced "responsive layout support":http://sublimevideo.net/modular-player#responsive
+* <span class="label new">new</span> Advanced "responsive layout support":http://sublimevideo.net/modular-player#responsive.
 * <span class="label new">new</span> "Several new options and settings":http://docs.sublimevideo.net/beta/settings/player-settings to customize your player's look and behavior.
-* <span class="label improved">improved</span> Better mobile devices support, especially "Android devices":http://docs.sublimevideo.net/beta/supported-platforms.
-* <span class="label improved">improved</span> The "lightbox":http://docs.sublimevideo.net/beta/settings/lightbox-settings has been greatly improved:
-  - Separation of the @<video>@ and its opening trigger(s) to make the lightbox usage more flexible and user-friendly.
-  - Possibility to customize the behavior of the video on lightbox opening.
-  - Possibility to customize the overlay opacity.
-  - Possibility to customize the visibility and position of the close button.
-  - The lightbox can now display images as well!
-* <span class="label improved">improved</span> The "Classic design":http://sublimevideo.net/modular-player#player_designs has been revamped.
+* <span class="label improved">improved</span> Broader "mobile devices support":http://docs.sublimevideo.net/beta/supported-platforms#mobile, especially a much improved support for the Android, Kindle Fire and Windows Phone platforms.
+* <span class="label improved">improved</span> The "lightbox":http://docs.sublimevideo.net/beta/settings/lightbox has been greatly improved:
+** Separation of the player element (@<video>@) and its opening trigger(s) (@<a>@) to make the lightbox usage more flexible and user-friendly, allowing for instance two different triggers in the page to open the same player.
+** Lightbox stays always centered when the browser window is resized and its size is automatically adjusted if the window becomes smaller than the lightbox itself.
+** Possibility to customize the behavior of the video when the lightbox is opened.
+** Possibility to customize the overlay opacity.
+** Possibility to customize the visibility and position of the close button.
+** The lightbox can now display images as well!
