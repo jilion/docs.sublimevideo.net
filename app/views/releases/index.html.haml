@@ -1,5 +1,4 @@
 - feed_name = stage?('beta') ? 'sublimevideo-releases-beta' : 'sublimevideo-releases'
-= content_for :header, auto_discovery_link_tag(:atom, "http://feeds.feedburner.com/#{feed_name}")
 - @page_title = "#{'Beta ' if stage?('beta')}Player Release Notes"
 
 %h2= @page_title
