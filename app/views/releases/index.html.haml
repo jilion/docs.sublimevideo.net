@@ -4,7 +4,7 @@
 
 %h2= @page_title
 
-%p= raw "Follow SublimeVideo release notes in your feed reader: #{link_to "Subscribe to the feed", "http://feeds.feedburner.com/#{feed_name}", title: "Atom feed"}."
+-# %p= raw "Follow SublimeVideo release notes in your feed reader: #{link_to "Subscribe to the feed", "http://feeds.feedburner.com/#{feed_name}", title: "Atom feed"}."
 
 #releases
   - @releases.each do |release|
@@ -12,8 +12,8 @@
     %h4{ id: id }
       - if stage?('beta')
         = link_to "##{id}" do
-          %span{ style: 'background: yellow' }= release.version
           = l(release.datetime, format: :long_without_time)
+          %span.version= release.version
       - else
         = link_to l(release.datetime, format: :long), "##{id}"
     = release.content
