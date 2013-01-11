@@ -21,25 +21,31 @@
 
   bc(language-javascript). var player = sublime(elementOrId);
 
+
   h3(#play). "@player.play()@":#play
 
-  Starts the playback. If the video is already playing, the call has no effect.
+  Plays the video. If the video is already playing, the call has no effect.
+
 
   h3(#pause). "@player.pause()@":#pause
 
-  Pauses the playback. If the video is already paused, the call has no effect.
+  Pauses the video. If the video is already paused, the call has no effect.
+
 
   h3(#stop). "@player.stop()@":#stop
 
-  Stops the playback and shows the initial play button. If the video is already stopped, the call has no effect.
+  Stops the video and shows the initial play button. If the video is already stopped, the call has no effect.
+
 
   h3(#videoId). "@player.videoId() ⇒ String@":#videoId
 
   Returns the @id@ of the DOM @<video>@ element, or @undefined@ if the video has no id.
 
+
   h3(#videoElement). "@player.videoElement() ⇒ Element@":#videoElement
 
   Returns the DOM @<video>@ element.
+
 
   h3(#setSize). "@player.setSize(width, [height])@":#setSize
 
@@ -57,6 +63,7 @@
 
   **Example**
   * "Integration in a responsive layout":/beta/responsive-layout
+
 
   h3(#on). "@player.on(eventOrHash, [callback])@":#on
 
@@ -83,17 +90,19 @@
 
   Below are all the events supported by the player. You listen to these events via the "(c)@player.on@":/beta/javascript-api/player#on method.
 
+
   h3(#event-start). "@start@":#event-start
 
-  Fired when the playback starts. This event is not fired every time the video resumes the playback but just the first time the video starts playing.
+  Fired when the video is started (either by clicking on the initial play button or by calling the "(c)@player.play@":/beta/javascript-api/player#play method). This event is not fired every time the video is resumed after pause, but just the first time the video is started.
 
   *Callback parameters*
 
   * <span class="param">@player@</span> (@Object@) - The player API object.
 
+
   h3(#event-play). "@play@":#event-play
 
-  Fired when the playback resumes. The first @play@ event is always preceded by a @start@ event, otherwise it will always be preceded by a @pause@ event.
+  Fired when the video is started and everytime the video is resumed after pause. The first @play@ event is always preceded by a @start@ event, otherwise it will always be preceded by a @pause@ event.
 
   *Callback parameters*
 
