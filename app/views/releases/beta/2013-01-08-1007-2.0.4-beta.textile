@@ -1,3 +1,3 @@
-* <span class="label fixed">fixed</span> issue that was blocking keydown events on inputs and textareas placed over the player.
-* <span class="label fixed">fixed</span> Firefox and Youtube issues that in some cases were preventing videos from playing.
-* <span class="label fixed">fixed</span> issue that was distorting the SVG rendering in modern browsers.
+* <span class="label fixed">fixed</span> Issue that was blocking keydown events on inputs and textareas placed over the player.
+* <span class="label fixed">fixed</span> Firefox and YouTube issues that in some cases were preventing videos from playing.
+* <span class="label fixed">fixed</span> Issue that was distorting the SVG rendering in modern browsers.

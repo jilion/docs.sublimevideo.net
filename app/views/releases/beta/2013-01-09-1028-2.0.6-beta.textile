@@ -1,1 +1,1 @@
-* <span class="label fixed">fixed</span> various minor issues.
+* <span class="label fixed">fixed</span> Various minor issues.
