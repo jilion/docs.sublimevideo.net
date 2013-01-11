@@ -35,7 +35,6 @@ stable:
 beta:
   'Getting Started':
     'quickstart-guide': 'Quickstart Guide'
-    # 'whats-new': "What's new in Beta?"
     'troubleshooting': 'Troubleshooting'
     'player-faq': 'Player FAQ'
     'service-faq': 'Service FAQ'
