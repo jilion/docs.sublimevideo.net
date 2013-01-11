@@ -1,0 +1,4 @@
+* <span class="label fix">fix</span> issue regarding flash videos and relative source paths.
+* <span class="label fix">fix</span> SVG issue on sites containing the base's href attribute.
+* <span class="label fix">fix</span> issue that was causing the time labels to display the wrong time on video longer than an hour.
+* <span class="label fix">fix</span> issue that was wrongly positioning the player into the webpage.

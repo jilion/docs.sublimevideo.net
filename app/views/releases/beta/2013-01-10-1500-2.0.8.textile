@@ -1,0 +1,6 @@
+* <span class="label improved">improved</span> Better compatibility with existing CSS (box-shadow property).
+* <span class="label improved">improved</span> Type attribute parsing of video sources.
+* <span class="label improved">improved</span> Support of not-needed-anymore code to make the video responsive.
+* <span class="label fix">fix</span> issue that was flashing the play button just before playing the video.
+* <span class="label fix">fix</span> issue that was worngly configuring the onEnd flag set via the SublimeVideo member area.
+* <span class="label fix">fix</span> issue that was preventing the lighbox (with the old syntax) from opening.
