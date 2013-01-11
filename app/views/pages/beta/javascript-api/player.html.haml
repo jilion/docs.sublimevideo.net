@@ -68,15 +68,15 @@
 
   **Example - listening a single event**
 
-  bc(language-javascript). player.on('start', function() {
+  bc(language-javascript). sublime.player('my_player_id').on('start', function(player) {
     console.log('playback started.');
   });
 
   **Example - listening more events**
 
-  bc(language-javascript). player.on({
-    start: function() { console.log('playback started.') },
-    end:   function() { console.log('playback ended.') }
+  bc(language-javascript). sublime.player('my_player_id').on({
+    start: function(player) { console.log('playback started.') },
+    end:   function(player) { console.log('playback ended.') }
   });
 
   h3(#events). Events
@@ -89,7 +89,7 @@
 
   *Callback parameters*
 
-  * <span class="param">@player@</span> (@Object@) - The player api object.
+  * <span class="param">@player@</span> (@Object@) - The player API object.
 
   h3(#event-play). "@play@":#event-play
 
@@ -97,7 +97,7 @@
 
   *Callback parameters*
 
-  * <span class="param">@player@</span> (@Object@) - The player api object.
+  * <span class="param">@player@</span> (@Object@) - The player API object.
 
 
   h3(#event-pause). "@pause@":#event-pause
@@ -106,7 +106,7 @@
 
   *Callback parameters*
 
-  * <span class="param">@player@</span> (@Object@) - The player api object.
+  * <span class="param">@player@</span> (@Object@) - The player API object.
 
 
   h3(#event-end). "@end@":#event-end
@@ -115,7 +115,7 @@
 
   *Callback parameters*
 
-  * <span class="param">@player@</span> (@Object@) - The player api object.
+  * <span class="param">@player@</span> (@Object@) - The player API object.
 
 
   h3(#event-stop). "@stop@":#event-stop
@@ -124,8 +124,4 @@
 
   *Callback parameters*
 
-  * <span class="param">@player@</span> (@Object@) - The player api object.
-
-
-
-
+  * <span class="param">@player@</span> (@Object@) - The player API object.
