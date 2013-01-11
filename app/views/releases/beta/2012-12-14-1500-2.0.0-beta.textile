@@ -6,7 +6,14 @@
 * <span class="label new">new</span> "Two new player designs":http://sublimevideo.net/modular-player#player_designs _Light_ and <em>Flat</em>.  Our <a href="http://sublimevideo.net/modular-player#player_designs">Classic design</a> has also been revamped.
 * <span class="label new">new</span> "Keybord control":http://docs.sublimevideo.net/beta/keyboard.
 * <span class="label new">new</span> Advanced "responsive layout support":http://sublimevideo.net/modular-player#responsive.
-* <span class="label new">new</span> "Several new options and settings":http://docs.sublimevideo.net/beta/settings/player-settings to customize your player's look and behavior.
+* <span class="label new">new</span> "Several new options and settings":http://docs.sublimevideo.net/beta/settings/player-settings to customize your player's look and behavior, including:
+** Option to enable/disable fullscreen.
+** Option to enable/disable volume control.
+** Option to force fullwindow instead of fullscreen.
+** Option to hide controls bar completely or make it always visible.
+** Option to customize the behavior at the end of the video (nothing, replay, stop).
+** Option to customize the initial video overlay visibility.
+* <span class="label new">new</span> In-player alert messages system.
 * <span class="label improved">improved</span> Broader "mobile devices support":http://docs.sublimevideo.net/beta/supported-platforms#mobile, especially a much improved support for the Android, Kindle Fire and Windows Phone platforms.
 * <span class="label improved">improved</span> The "lightbox":http://docs.sublimevideo.net/beta/settings/lightbox has been greatly improved:
 ** Separation of the player element (@<video>@) and its opening trigger(s) (@<a>@) to make the lightbox usage more flexible and user-friendly, allowing for instance two different triggers in the page to open the same player.

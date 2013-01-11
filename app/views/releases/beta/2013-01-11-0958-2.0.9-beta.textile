@@ -1,3 +1,3 @@
-* <span class="label fixed">fixed</span> lightbox issue with images.
-* <span class="label fixed">fixed</span> issue that was preventing YouTube videos from playing the second time on iOS.
-* <span class="label fixed">fixed</span> start view issue with Youtube videos.
+* <span class="label fixed">fixed</span> Lightbox issue with images.
+* <span class="label fixed">fixed</span> Issue that was preventing YouTube videos from playing the second time on iOS.
+* <span class="label fixed">fixed</span> Start view issue with YouTube videos.
