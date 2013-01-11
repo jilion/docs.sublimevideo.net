@@ -1,10 +1,11 @@
 - feed_name = stage?('beta') ? 'sublimevideo-releases-beta' : 'sublimevideo-releases'
 = content_for :header, auto_discovery_link_tag(:atom, "http://feeds.feedburner.com/#{feed_name}")
-- @page_title = "#{'Beta ' if stage?('beta')}Release Notes"
+- @page_title = "#{'Beta ' if stage?('beta')}Player Release Notes"
 
 %h2= @page_title
 
--# %p= raw "Follow SublimeVideo release notes in your feed reader: #{link_to "Subscribe to the feed", "http://feeds.feedburner.com/#{feed_name}", title: "Atom feed"}."
+- if stage?('stable')
+  %p= raw "Don't miss the #{link_to "release notes for the new Player (in beta)", "http://docs.sublimevideo.net/beta/releases" } powered by SublimeVideo Horizon."
 
 #releases
   - @releases.each do |release|
