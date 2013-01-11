@@ -1,2 +1,0 @@
-* <span class="label new">new</span> Added play, pause and stop player events to the player API.
-* <span class="label fix">fix</span> issue that was, sometimes, blocking the video playback after a seek.

@@ -1,1 +1,0 @@
-* <span class="label fix">fix</span> issue that, sometimes, was preventing videos from starting in IE10.

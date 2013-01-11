@@ -1,1 +1,0 @@
-* <span class="label fix">fix</span> issue that was preventing YouTube videos from starting.

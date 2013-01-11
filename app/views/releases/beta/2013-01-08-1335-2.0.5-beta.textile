@@ -1,0 +1,2 @@
+* <span class="label improved">improved</span> autoresize behavior to handle css borders on parent.
+* <span class="label fixed">fixed</span> SVG rendering issue.
