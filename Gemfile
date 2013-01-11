@@ -5,7 +5,7 @@ ruby '1.9.3'
 
 gem 'bundler'
 
-gem 'rails',               '3.2.11'
+gem 'rails',                '3.2.11'
 gem 'sublime_video_layout', '~> 2.0' # hosted on gemfury
 
 # Views
@@ -16,7 +16,6 @@ gem 'RedCloth'
 
 # Internals
 gem 'mongoid'
-gem 'dalli'
 gem 'indextank'
 gem 'airbrake'
 gem 'oj' # fastest json
@@ -38,13 +37,13 @@ end
 
 group :staging, :production do
   gem 'thin'
+  gem 'dalli'
   gem 'rack-cache'
   gem 'rack-ssl-enforcer'
   gem 'newrelic_rpm'
 end
 
 group :development, :test do
-  gem 'rspec-rails'
   gem 'rack-livereload'
   gem 'rack-nocache'
   gem 'quiet_assets'
@@ -52,8 +51,11 @@ group :development, :test do
 end
 
 group :test do
+  gem 'rspec-core'
+  gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'capybara'
+  gem 'database_cleaner'
 end
 
 group :tools do
