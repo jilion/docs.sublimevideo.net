@@ -1,5 +1,3 @@
-# require 'navigation'
-
 namespace :search do
 
   desc "Index all document for full-text search"
@@ -25,8 +23,11 @@ namespace :search do
           File.new(page).read
         end
 
-        puts "Adding #{permalink} => #{search_helper.section_and_page_title_from_permalink(stage, permalink)}"
-        documents << { docid: permalink, fields: { text: text, title: "#{search_helper.section_and_page_title_from_permalink(stage, permalink)}" } }
+        page_title_from_permalink = search_helper.section_and_page_title_from_permalink(stage, permalink)
+        unless page_title_from_permalink == ''
+          puts "Adding #{permalink} => #{search_helper.section_and_page_title_from_permalink(stage, permalink)}"
+          documents << { docid: permalink, fields: { text: text, title: "#{search_helper.section_and_page_title_from_permalink(stage, permalink)}" } }
+        end
       end
 
       Search.delete_index(stage)
