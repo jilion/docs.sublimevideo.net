@@ -1,7 +1,7 @@
 # Thanks to http://michaeldwan.com/writings/customize-your-heroku-deployment.html
 
 # List of environments and their heroku git remotes
-ENVIRONMENTS = %w[staging production]
+ENVIRONMENTS = [:staging, :production]
 
 namespace :deploy do
   ENVIRONMENTS.each do |env|
