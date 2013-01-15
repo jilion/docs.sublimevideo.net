@@ -84,6 +84,22 @@ feature 'redirect other legacy routes' do
     current_url.should eq "http://docs.sublimevideo.dev/beta/player-faq"
   end
 
+  it "redirect /real-time-stats to /addons/stats" do
+    visit '/real-time-stats'
+    current_url.should eq "http://docs.sublimevideo.dev/addons/stats"
+
+    visit '/beta/real-time-stats'
+    current_url.should eq "http://docs.sublimevideo.dev/beta/addons/stats"
+  end
+
+  it "redirect /optimize-for-stats to /addons/stats" do
+    visit '/optimize-for-stats'
+    current_url.should eq "http://docs.sublimevideo.dev/addons/stats"
+
+    visit '/beta/optimize-for-stats'
+    current_url.should eq "http://docs.sublimevideo.dev/beta/addons/stats"
+  end
+
   it "redirect /supported-browsers-and-platforms to /supported-platforms" do
     visit '/supported-browsers-and-platforms'
     current_url.should eq "http://docs.sublimevideo.dev/supported-platforms"

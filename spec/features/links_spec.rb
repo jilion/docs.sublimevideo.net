@@ -28,7 +28,7 @@ def current_url_match(href)
   if href =~ %r{\A/}
     current_url.should eq "http://docs.sublimevideo.dev#{route_with_redirect(href)}"
   else
-    current_url.should eq href
+    current_url.should eq href.sub(/#.+/, '')
   end
 end
 
