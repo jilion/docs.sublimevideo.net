@@ -1,0 +1,4 @@
+* <span class="label improved">improved</span> Compatibility with existing CSS (max-width and text properties).
+* <span class="label improved">improved</span> Touch handling on mobile devices (touchcancel).
+* <span class="label fixed">fixed</span> Issue with YouTube videos that was causing the HD button to show up despite the lack of HD source.
+* <span class="label fixed">fixed</span> Layout issue after exiting fullscreen on Safari.
