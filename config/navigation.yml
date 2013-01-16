@@ -14,7 +14,6 @@ stable:
     'responsive-layout': 'Responsive layout'
     'back-to-initial-state-on-end': 'Back to initial state on end'
     'embeds': 'Embeds'
-    'optimize-for-stats': 'Optimize <video> for stats'
     'google-analytics-integration': 'Google Analytics integration'
   'Javascript API':
     'javascript-api/usage': 'Usage'
@@ -24,7 +23,7 @@ stable:
     'video-publishing-assistant': 'Video publishing assistant'
     'wordpress': 'WordPress plugin'
   'Service':
-    'real-time-stats': 'Real-Time Statistics'
+    'addons/stats': 'Real-Time Statistics'
     'site-settings': 'Site settings'
   'Other':
     'player-faq': 'Player FAQ'
@@ -46,9 +45,9 @@ beta:
     'hd-switching': 'HD switching'
     'responsive-layout': 'Responsive layout'
     'keyboard': 'Keyboard control'
-  'Analytics':
-    'real-time-stats': 'Universal Real-Time Statistics'
-    'optimize-for-stats': 'Optimize <video> for stats'
+  'Add-Ons':
+    'addons/stats': 'Real-Time Statistics'
+    'addons/on-video-logo': 'On-Video Logo'
   'Integration':
     'custom-start-view': 'Custom start view'
     'wordpress': 'WordPress plugin'
@@ -56,8 +55,6 @@ beta:
     'video-publishing-assistant': 'Video publishing assistant'
     'google-analytics-integration': 'Google Analytics integration'
     'embeds': 'Embeds'
-    # 'autoplay': 'Autoplay a video'
-    # 'custom-behavior-on-end': 'Custom behavior on end'
   'Settings':
     'settings/usage': 'Usage'
     'settings/player-settings': 'Player settings'

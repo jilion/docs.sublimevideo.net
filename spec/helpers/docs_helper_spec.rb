@@ -11,10 +11,10 @@ describe DocsHelper do
     end
 
     it 'formats well with a complex section' do
-      Navigation.should_receive(:section_from_permalink).with('beta', 'real-time-stats/overview') { ['Add-ons', 'Real-time stats'] }
-      Navigation.should_receive(:page_title_from_permalink).with('beta', 'real-time-stats/overview') { 'Overview' }
+      Navigation.should_receive(:section_from_permalink).with('beta', 'addons/real-time-stats/overview') { ['Add-ons', 'Real-time stats'] }
+      Navigation.should_receive(:page_title_from_permalink).with('beta', 'addons/real-time-stats/overview') { 'Overview' }
 
-      helper.section_and_page_title_from_permalink('beta', 'real-time-stats/overview').should eq 'Add-ons: Real-time stats > Overview'
+      helper.section_and_page_title_from_permalink('beta', 'addons/real-time-stats/overview').should eq 'Add-ons: Real-time stats > Overview'
     end
 
     it 'returns an empty string if section cannot be found' do

@@ -16,12 +16,14 @@ DocsSublimeVideo::Application.routes.draw do
   get '/ssl' => redirect('/player-faq#use-sublimevideo-in-ssl-site')
   get '/video-code-generator' => redirect('/video-publishing-assistant')
   get '/supported-browsers-and-platforms' => redirect('/supported-platforms')
-  get '(/:stage)/faq' => redirect { |params, req| "#{"/#{params[:stage]}" if params[:stage]}/player-faq" }
+  get '(/:stage)/faq' => redirect { |params, req| "#{"/#{params[:stage]}" if params[:stage]}/player-faq" }, stage: /stable|beta/
+  get '(/:stage)/real-time-stats' => redirect { |params, req| "#{"/#{params[:stage]}" if params[:stage]}/addons/stats" }, stage: /stable|beta/
+  get '(/:stage)/optimize-for-stats' => redirect { |params, req| "#{"/#{params[:stage]}" if params[:stage]}/addons/stats#optimize-for-stats" }, stage: /stable|beta/
 
   # Shortcut redirect
-  %w[javascript-api js-api].each { |path| get "(/:stage)/#{path}" => redirect { |params, req| "#{"/#{params[:stage]}" if params[:stage]}/javascript-api/usage" } }
-  %w[settings].each { |path| get "(/:stage)/#{path}" => redirect { |params, req| "#{"/#{params[:stage]}" if params[:stage]}/settings/usage" } }
-  %w[customizing-the-initial-play-button custom-play-button].each { |path| get "(/:stage)/#{path}" => redirect { |params, req| "#{"/#{params[:stage]}" if params[:stage]}/custom-start-view" } }
+  %w[javascript-api js-api].each { |path| get "(/:stage)/#{path}" => redirect { |params, req| "#{"/#{params[:stage]}" if params[:stage]}/javascript-api/usage" }, stage: /stable|beta/ }
+  %w[settings].each { |path| get "(/:stage)/#{path}" => redirect { |params, req| "#{"/#{params[:stage]}" if params[:stage]}/settings/usage" }, stage: /stable|beta/ }
+  %w[customizing-the-initial-play-button custom-play-button].each { |path| get "(/:stage)/#{path}" => redirect { |params, req| "#{"/#{params[:stage]}" if params[:stage]}/custom-start-view" }, stage: /stable|beta/ }
 
   get '(/:stage)/search' => 'search#index', as: 'search', stage: /stable|beta/, defaults: { stage: 'stable' }
   get '(/:stage)/releases' => 'releases#index', stage: /stable|beta/, defaults: { stage: 'stable' }, as: 'releases'

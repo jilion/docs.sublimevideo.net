@@ -1,37 +1,14 @@
-- @page_title = "Integration in a responsive layout"
-
-%h2= @page_title
-
 :textile
+  h2. #{title('Integration in a responsive layout')}
+
   SublimeVideo now comes with an integrated resizing feature so you only have to set one setting on your @<video>@ element and SublimeVideo takes care of the rest.
 
   There are two ways to resize the video: @fit@ and @fill@.
 
   With @fit@, the player will fit its parent without altering its aspect ratio. While with @fill@, the player will completely fill its parent, adjusting its aspect ratio when necessary.
 
-  Check out the "fit demo":http://test.sublimevideo.net/autoresize-fit and "fill demo":http://test.sublimevideo.net/autoresize-fill to better understand how they work.
-
   To specify the autoresize behavior you'd like to use for your @<video>@, please use the "@autoresize@ player setting":settings/player-settings#autoresize.
 
+  h3(#demo). "Demos":#demo
 
--# h3(#autoresize). "@autoresize@":#autoresize
-
--# Resizes the video when its parent container is resized.
-
--# *Allowed values:*
--# * @none@ – _(Default)_ The player is not resized automatically.
--# * @fill@ – Fill the player's parent and stretch the player if necessary (resulting in letter/pillar-boxed video).
--# * @fit@ – Fit the player's to its parent without stretching the player itself (its size will always match the video's aspect-ratio and never shows black bars).
-
--# *Example:*
-
--# bc(language-markup). <video class='sublime' data-settings='autoresize:fill'>
--#   ...
--# </video>
-
--# *Note:* If you set this setting to @fill@ or @fit@, you can omit the @width@ and @height@ attributes in your @<video>@.
-
--#:textile
--#  h4. Demos
--#
--#  TODO
+  Check out the "fit demo":http://test.sublimevideo.net/autoresize-fit and "fill demo":http://test.sublimevideo.net/autoresize-fill to better understand how they work.

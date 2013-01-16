@@ -12,6 +12,10 @@ module DocsHelper
     end
   end
 
+  def title(title)
+    @page_title = title
+  end
+
   def display_menu
     html = ''
     Navigation.tree(params[:stage]).each do |section, items|

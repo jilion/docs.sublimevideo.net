@@ -1,17 +1,15 @@
-- @page_title = "Customize the start view"
-
-%h2= @page_title
-
 :textile
+  h2. #{title('Customize the start view')}
+
   The default start view ensures compatibility across all browsers (down to IE6). We strongly discourage you from modifying it using CSS.
 
   h3. Customize or disable the initial overlay
 
   To customize or disable the initial overlay, please use the "@initial-overlay-enable@ and @initial-overlay-visibility@ player settings":settings/player-settings#initial-overlay-enable.
 
-  h4. Demo
+  h4(#demo-1). "Demo":#demo-1
 
-  #{jsfiddle_embed('JpjXu', height: 350)}
+  #{jsfiddle_embed('JpjXu', height: 390)}
 
   h3. Use a custom start view
 
@@ -19,7 +17,7 @@
 
   In the example below we're using a simple @<div>@ placeholder as the custom start view.
 
-  h4. Demo
+  h4(#demo-2). "Demo":#demo-2
 
   #{jsfiddle_embed('xM6Fv', height: 350, panes: 'result,html,js')}
 
