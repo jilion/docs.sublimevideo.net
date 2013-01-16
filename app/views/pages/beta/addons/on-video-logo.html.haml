@@ -3,18 +3,18 @@
 :textile
   h2. #{title('On-Video Logo')}
 
-  This add-on allows you to set several settings for the logo displayed on top of your video (either the SublimeVideo logo or your own):
+  This add-on allows you to set several settings for the logo displayed on video (either the SublimeVideo logo or your own):
 
   * Choose the logo visibility behavior (auto-hide or always visible).
-  * * Choose the logo position (in one of the player's corners).
-  * * Use your own logo.
-  * * Specify the address to which redirect a user that clicks on the on-video logo.
+  * Choose the logo position (in one of the player's corners). ***
+  * Upload an image to use as your own logo. ***
+  * Specify the URL to which redirect a user that clicks on the logo. ***
 
   *&nbsp;: Only available with the _#{link_to "Your logo", my_url('addons?h=logo-custom')}_ add-on.
 
-  All these settings can be configured via your site's "Players" page on #{link_to "MySublimeVideo", my_url('sites')} but can also be overriden per-video with the settings described below.
+  All these settings can be configured via your site's "Players" page on #{link_to "MySublimeVideo", my_url('sites')} but can also be overridden on per video basis with the settings described below.
 
-  *Important:* When uploading you own logo, please make sure to double the size of the image (@2x) to allow optimal rendering on Retina® displays.
+  *Important:* When uploading you own logo, please make sure to double the size of the image (@2x) to allow optimal rendering on Retina displays.
 
   h3. Settings
 
@@ -87,7 +87,7 @@
 
   h3. @logo-link-url@
 
-  Defines the URL to open once a visitor clicks your custom logo.
+  Defines the URL to open when a visitor clicks your custom logo.
 
   *Allowed values:* Any valid URL.
 
@@ -98,6 +98,6 @@
     <source src='video.webm' />
   </video>
 
-  h3(#demo). "Demo":#demo
-
-  #{jsfiddle_embed('vHFsy', height: 350)}
+-# h3(#demo). "Demo":#demo
+-#
+-# #{jsfiddle_embed('vHFsy', height: 350)}
