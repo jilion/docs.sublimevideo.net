@@ -23,6 +23,8 @@
 
   Use "(c)@sublime.ready@":#ready to be notified when the @sublime@ API object is actually available or if you want to make calls to our JavaScript API as soon as possible after the page is loaded.
 
+  Please note that if you have @<video>@ elements with the _sublime_ @class@ in the DOM, the @sublime.ready@ callback will be called *after* those elements have been prepared. If you do not add the _sublime_ @class@ to your @<video>@ elements, you'll have to prepare them manually using the "(c)@sublime.prepare@":#prepare method called inside the @sublime.ready@ block.
+
   **Example**
 
   bc(language-javascript). sublime.ready(function(){
@@ -30,7 +32,7 @@
   });
 
   <span class="red">
-  *Warning* - The following methods are to be called once the application is loaded,
+  *Important* - All the following methods are to be called once the application is loaded,
   preferably inside the @sublime.ready@ block.
   </span>
 
