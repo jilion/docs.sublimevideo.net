@@ -1,0 +1,1 @@
+* <span class="label improved">improved</span> Avoid hiding scrollbars when lightbox opens.
