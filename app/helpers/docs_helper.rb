@@ -38,12 +38,13 @@ module DocsHelper
   end
 
   def display_complex_page_list(page)
-    html = ''
+    html = []
     ComplexPage.tree(params[:stage], page).each do |permalink, title|
-      html += content_tag(:h3, link_to(title.html_safe, "##{permalink}", id: permalink))
-      html += render page_for(params[:stage], [page, permalink], partial: true)
+      html << content_tag(:h3, link_to(title.html_safe, "##{permalink}", id: permalink))
+      html << "\n\n#{File.new(Rails.root.join(page_realpath(params[:stage], [page, permalink], partial: true))).read}"
     end
-    raw html.html_safe
+
+    render_erb(html.join(''))
   end
 
   def section_and_page_title_from_permalink(stage, permalink)
@@ -73,7 +74,17 @@ module DocsHelper
   def jsfiddle_embed(token, options = {})
     options.reverse_merge!(height: 300, panes: 'result,html')
 
-    "<iframe style='width: 100%; height: #{options[:height]}px' src='http://jsfiddle.net/sublimevideo/#{token}/embedded/#{options[:panes]}' allowfullscreen webkitallowfullscreen mozallowfullscreen frameborder='0'></iframe>"
+    "<iframe style='width: 100%; height: #{options[:height]}px' src='//jsfiddle.net/sublimevideo/#{token}/embedded/#{options[:panes]}' allowfullscreen webkitallowfullscreen mozallowfullscreen frameborder='0'></iframe>".html_safe
+  end
+
+  private
+
+  def render_erb(text)
+    ::ActionView::Template.new(text, 'inline template', erb_handler, locales: []).render(self, {})
+  end
+
+  def erb_handler
+    @@erb_handler ||= ::ActionView::Template.registered_template_handler(:erb)
   end
 
 end

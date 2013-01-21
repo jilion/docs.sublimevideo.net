@@ -1,9 +1,6 @@
 class DocsPages
   def self.matches?(request)
-    pages = Dir.glob('app/views/pages/**/*.html.haml').map { |p|
-      p.match(%r{app/views/pages/(stable|beta)/(.*)\.html\.haml})[2]
-    }
-    pages.include?(request.params["page"])
+    Dir.glob("app/views/pages/{stable,beta}/#{request.params["page"]}.html.{haml,textile}").any?
   end
 end
 

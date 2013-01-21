@@ -1,0 +1,1 @@
+No, you can add your staging domain to the _staging domains_ field. "Learn more":site-settings#staging-domains.

@@ -1,0 +1,101 @@
+h2. <%= title('On-Video Logo') %>
+
+This add-on allows you to set several settings for the logo displayed on video (either the SublimeVideo logo or your own):
+
+* Choose the logo visibility behavior (auto-hide or always visible).
+* Choose the logo position (in one of the player's corners). ***
+* Upload an image to use as your own logo. ***
+* Specify the URL to which redirect a user that clicks on the logo. ***
+
+*&nbsp;: Only available with the _<%= link_to "Your logo", my_url('addons?h=logo-custom') %>_ add-on.
+
+All these settings can be configured via your site's "Players" page on <%= link_to "MySublimeVideo", my_url('sites') %> but can also be overridden on per video basis with the settings described below.
+
+*Important:* When uploading you own logo, please make sure to double the size of the image (@2x) to allow optimal rendering on Retina displays.
+
+h3(#settings). "Settings":#settings
+
+<span class="red">Please note that all the settings described here can be set via the "Players" page on <%= link_to "MySublimeVideo", my_url('sites') %>.
+</span>
+
+If you need to override a player default settings for a specific video, you can do it with the following "settings":/beta/settings/usage.
+
+
+h3(#logo-enable). "@logo-enable@":#logo-enable
+
+Allows you to enable or disable the on-video logo.
+
+*Allowed values:*
+* @true@ – _(Default)_ Display the on-video logo.
+* @false@ – Hide the on-video logo.
+
+*Example:*
+
+bc(language-markup). <video class='sublime' data-logo-enable='false'>
+  <source src='video.mp4' />
+  <source src='video.webm' />
+</video>
+
+
+h3(#logo-type). "@logo-type@":#logo-type
+
+Allows you to choose which logo to display: the SublimeVideo logo or your own logo.
+
+*Allowed values:*
+* @sv@ – _(Default)_ Display the SublimeVideo logo.
+* @custom@ – Display your custom logo.
+
+*Example:*
+
+bc(language-markup). <video class='sublime' data-logo-type='custom'>
+  <source src='video.mp4' />
+  <source src='video.webm' />
+</video>
+
+
+h3(#logo-visibility). "@logo-visibility@":#logo-visibility
+
+Allows you to choose how to display the logo: at the beginning of the video only or during the whole video playback.
+
+*Allowed values:*
+* @autohide@ – _(Default)_ Display the logo at the beginning of the video only.
+* @visible@ – Display the logo during the whole video playback.
+
+*Example:*
+
+bc(language-markup). <video class='sublime' data-logo-visibility='visible'>
+  <source src='video.mp4' />
+  <source src='video.webm' />
+</video>
+
+
+h3(#logo-position). "@logo-position@":#logo-position
+
+Defines where the on-video logo should be placed.
+
+*Allowed values:*
+* @top-left@ – Display the logo in the top-left corner.
+* @top-right@ – Display the logo in the top-right corner.
+* @bottom-left@ – Display the logo in the bottom-left corner.
+* @bottom-right@ – _(Default)_ Display the logo in the bottom-right corner.
+
+*Example:*
+
+bc(language-markup). <video class='sublime' data-logo-position='top-left'>
+  <source src='video.mp4' />
+  <source src='video.webm' />
+</video>
+
+
+h3(#logo-link-url). "@logo-link-url@":#logo-link-url
+
+Defines the URL to open when a visitor clicks your custom logo.
+
+*Allowed values:* Any valid URL.
+
+*Example:*
+
+bc(language-markup). <video class='sublime' data-logo-link-url='http://yourdomain.com'>
+  <source src='video.mp4' />
+  <source src='video.webm' />
+</video>

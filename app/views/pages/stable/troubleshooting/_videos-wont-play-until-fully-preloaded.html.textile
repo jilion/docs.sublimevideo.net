@@ -1,0 +1,1 @@
+It is probably an encoding issue with your MP4 videos. Try to re-encode them using the free application "Handbrake":http://handbrake.fr, and be sure to check the "*Web optimized*" option which allows the video to play (in Flash mode) even if it is not fully preloaded. Read more about "H.264 video encoding":/encode-videos-for-the-web.

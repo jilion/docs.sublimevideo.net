@@ -1,0 +1,30 @@
+h2. <%= title('Lightbox') %>
+
+The Lightbox feature displays your videos but also your images in a floating player. The Lightbox-opening trigger is a simple @<a>@ element, and you can have multiple @<a>@ that open the same video or image in a lightbox.
+
+While it is possible to integrate SublimeVideo with other lightbox libraries (you'll need to use our "JavaScript API":/javascript-api for this), we highly recommend using SublimeVideo's Lightbox feature to get the easiest and best possible lightbox integration for your videos.
+
+h3(#step-1). "Step 1: Create a &lt;video&gt; element":#step-1
+
+bc(language-markup). <video id="video1" style="display:none" width="640" height="360" poster="video-poster.jpg" preload="none">
+  <source src="http://yoursite.com/video.mp4" />
+  <source src="http://yoursite.com/video.webm" />
+</video>
+
+* Don't add the _sublime_ @class@ to the @<video>@.
+* The @<video>@ element needs to be initially hidden (with @style="display:none"@ in the code above).
+
+h3(#step-2). "Step 2: Create an &lt;a&gt; element":#step-2
+
+bc(language-markup). <a class="sublime" href="#video1">Play the video with the ID "video1"</a>
+
+* The @href@ value must corresponds to the @id@ of the @<video>@ element created in "Step 1":#step-1.
+* Add the _sublime_ @class@ to the @<a>@.
+
+h3(#lightbox-settings). "Lightbox settings":#lightbox-settings
+
+Please see the "Lightbox settings":/beta/settings/lightbox-settings page.
+
+h3(#demo). "Demo":#demo
+
+<%= jsfiddle_embed('G9748', height: 500) %>

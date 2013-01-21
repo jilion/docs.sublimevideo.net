@@ -1,0 +1,135 @@
+h2. <%= title('Player API') %>
+
+*Methods*
+
+"(c)@play@":/beta/javascript-api/player#play "(c)@pause@":/beta/javascript-api/player#pause "(c)@stop@":/beta/javascript-api/player#stop "(c)@setSize@":/beta/javascript-api/player#setSize "(c)@videoId@":/beta/javascript-api/player#videoId "(c)@videoElement@":/beta/javascript-api/player#videoElement "(c)@on@":/beta/javascript-api/player#on
+
+*Events*
+
+"(c)@start@":/beta/javascript-api/player#event-start "(c)@play@":/beta/javascript-api/player#event-play "(c)@pause@":/beta/javascript-api/player#event-pause "(c)@end@":/beta/javascript-api/player#event-end "(c)@stop@":/beta/javascript-api/player#event-stop
+
+See also "Using the JavaScript API":/beta/javascript-api/usage, "Application API":/beta/javascript-api/application and "Lightbox API":/beta/javascript-api/lightbox.
+
+h3(#methods). Methods
+
+These API methods are to be called on a @player@ object, which you can retrieve in the following way
+
+bc(language-javascript). var player = sublime.player(elementOrId);
+
+which is equivalent to
+
+bc(language-javascript). var player = sublime(elementOrId);
+
+
+h3(#play). "@player.play()@":#play
+
+Plays the video. If the video is already playing, the call has no effect.
+
+
+h3(#pause). "@player.pause()@":#pause
+
+Pauses the video. If the video is already paused, the call has no effect.
+
+
+h3(#stop). "@player.stop()@":#stop
+
+Stops the video and shows the initial play button. If the video is already stopped, the call has no effect.
+
+
+h3(#videoId). "@player.videoId() ⇒ String@":#videoId
+
+Returns the @id@ of the DOM @<video>@ element, or @undefined@ if the video has no id.
+
+
+h3(#videoElement). "@player.videoElement() ⇒ Element@":#videoElement
+
+Returns the DOM @<video>@ element.
+
+
+h3(#setSize). "@player.setSize(width, [height])@":#setSize
+
+* <span class="param">@width@</span> (@Number@) - An integer representing the number of pixels. Set it to @null@ if you want to modify only the height of the video.
+* <span class="param">@height@</span> (@Number@) - An integer representing the number of pixels. Set it to @null@ (or omit this parameter) if you want to modify only the width of the video. Default is @null@.
+
+Use this method to resize the width and/or height of a video (this works on any browser and device).
+
+If you want to scale the video proportionally, you need to compute the new size and then set both the <span class="param">@width@</span> and <span class="param">@height@</span> parameters.
+
+This method has no effect if the player is in fullmode (fullscreen or fullwindow).
+
+**Fluid width and responsive layouts**
+If you want to integrate SublimeVideo in your fluid width or responsive layout, you can simply take advantage of the "@autoresize@ player setting":/beta/settings/player-settings#autoresize.
+
+**Example**
+* "Integration in a responsive layout":/beta/responsive-layout
+
+
+h3(#on). "@player.on(eventOrHash, [callback])@":#on
+
+* <span class="param">@eventOrHash@</span> (@String@ | @Object@) - A string representing the event name to listen, or an object where its keys are events and its values are callbacks.
+
+* <span class="param">@callback@</span> (@Function@) - The function to call when the event occurs. Pass this parameter only if the first one is an event (@String@).
+
+Registers and invokes the given callbacks every time that the corresponding events occur.
+
+**Example - listening a single event**
+
+bc(language-javascript). sublime.player('my_player_id').on('start', function(player) {
+  console.log('playback started.');
+});
+
+**Example - listening more events**
+
+bc(language-javascript). sublime.player('my_player_id').on({
+  start: function(player) { console.log('playback started.') },
+  end:   function(player) { console.log('playback ended.') }
+});
+
+h3(#events). Events
+
+Below are all the events supported by the player. You listen to these events via the "(c)@player.on@":/beta/javascript-api/player#on method.
+
+
+h3(#event-start). "@start@":#event-start
+
+Fired when the video is started (either by clicking on the initial play button or by calling the "(c)@player.play@":/beta/javascript-api/player#play method). This event is not fired every time the video is resumed after pause, but just the first time the video is started.
+
+*Callback parameters*
+
+* <span class="param">@player@</span> (@Object@) - The player API object.
+
+
+h3(#event-play). "@play@":#event-play
+
+Fired when the video is started and everytime the video is resumed after pause. The first @play@ event is always preceded by a @start@ event, otherwise it will always be preceded by a @pause@ event.
+
+*Callback parameters*
+
+* <span class="param">@player@</span> (@Object@) - The player API object.
+
+
+h3(#event-pause). "@pause@":#event-pause
+
+Fired when the playback pauses.
+
+*Callback parameters*
+
+* <span class="param">@player@</span> (@Object@) - The player API object.
+
+
+h3(#event-end). "@end@":#event-end
+
+Fired when the playback ends. This event is always preceded by a @pause@ event.
+
+*Callback parameters*
+
+* <span class="param">@player@</span> (@Object@) - The player API object.
+
+
+h3(#event-stop). "@stop@":#event-stop
+
+Fired when the playback stops.
+
+*Callback parameters*
+
+* <span class="param">@player@</span> (@Object@) - The player API object.

@@ -1,0 +1,102 @@
+h2. <%= title('Lightbox settings') %>
+
+<span class="red">Please note that most of the settings described in this page can be set via the "Video Publishing Assistant":/beta/video-publishing-assistant and via the "Players" page on <%= link_to "MySublimeVideo", my_url('sites') %>.
+</span>
+
+These settings can be set on the @<a>@ element that triggers the "Lightbox":/beta/lightbox to customize its aspect and behavior. Please note that, if you are using our "(c)JavaScript API":/beta/javascript-api/usage to prepare your lightboxes, these settings must be set @before@ preparing them.
+
+h4. Lightbox behavior settings
+
+"(c)@on-open@":#on-open
+
+h4. Display settings
+
+"(c)@overlay-opacity@":#overlay-opacity
+
+h4. Close button settings
+
+"(c)@close-button-enable@":#close-button-enable "(c)@close-button-visibility@":#close-button-visibility "(c)@close-button-position@":#close-button-position
+
+See also "Using the data settings":usage and "Player settings":player-settings.
+
+<div class="breakline"></div>
+
+
+h3(#on-open). "@on-open@":#on-open
+
+Allows you to define the player's behavior once the lightbox opens.
+
+*Allowed values:*
+* @nothing@ – Does nothing (the play button must be clicked in order for the video to start).
+* @play@ – _(Default)_ The video playback starts automatically.
+
+*Example:*
+
+bc(language-markup). <a class='sublime' href='#video1' data-settings='on-open:nothing'>
+
+See a "demo":#demo.
+
+h3(#overlay-opacity). "@overlay-opacity@":#overlay-opacity
+
+Allows you to choose the lightbox overlay opacity.
+
+*Allowed values:*
+* _@a float between 0.1 and 1.0@_ – e.g. @0.25@, @0.8@
+
+*Note:*
+* Default is set to @0.7@.
+
+*Example:*
+
+bc(language-markup). <a class='sublime' href='#video1' data-settings='overlay-opacity:0.25'>
+
+See a "demo":#demo.
+
+
+h3(#close-button-enable). "@close-button-enable@":#close-button-enable
+
+Allows you to enable or disable the lightbox close button.
+
+*Allowed values:*
+* @true@ – _(Default)_ Shows the close button.
+* @false@ – Doesn't show the close button.
+
+*Example:*
+
+bc(language-markup). <a class='sublime' href='#video1' data-settings='close-button-enable:false'>
+
+See a "demo":#demo.
+
+
+h3(#close-button-visibility). "@close-button-visibility@":#close-button-visibility
+
+Allows you to choose how the initial overlay is displayed.
+
+*Allowed values:*
+* @autohide@ – _(Default)_ The close button appears on mousover.
+* @visible@ – The close button is always visible.
+
+*Example:*
+
+bc(language-markup). <a class='sublime' href='#video1' data-settings='close-button-visibility:visible'>
+
+See a "demo":#demo.
+
+
+h3(#close-button-position). "@close-button-position@":#close-button-position
+
+Allows you to choose the position of the lightbox close button.
+
+*Allowed values:*
+* @left@ – _(Default)_ The close button is positioned at the top-left corner.
+* @right@ – The close button is positioned at the top-right corner.
+
+*Example:*
+
+bc(language-markup). <a class='sublime' href='#video1' data-settings='close-button-position:right'>
+
+See a "demo":#demo.
+
+h3(#demo). "Demo":#demo
+
+<%= jsfiddle_embed('G9748', height: 500) %>

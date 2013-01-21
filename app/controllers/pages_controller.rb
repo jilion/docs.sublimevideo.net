@@ -24,23 +24,30 @@ class PagesController < ApplicationController
 
   def page_file
     @page_files ||= {}
-    @page_files[params[:page]] ||= File.new(Rails.root.join("app/views/#{page_for(params[:stage], params[:page])}.html.haml"))
+    @page_files[params[:page]] ||= File.new(page_expanded_path(params[:stage], params[:page]))
   end
 
-  def page_for(stage, page, options = {})
-    options.reverse_merge(partial: false)
-    page = Array.wrap(page).join('/')
-    filename = page.dup
-    filename.sub!(/([^\/]+)(\/)/, '\1\2_') if options[:partial]
-
-    if File.exists?(Rails.root.join("app/views/pages/#{stage}/#{filename}.html.haml"))
-      "pages/#{stage}/#{page}"
-    elsif stage != 'stable'
-      page_for('stable', page, options)
-    else
-      raise ActionController::RoutingError.new("#{stage}/#{page} couldn't be found.")
-    end
+  def page_for(*args)
+    page_realpath(*args).sub(%r{^.+/views/}, '').sub(%r{/_}, '/')
   end
   helper_method :page_for
+
+  def page_realpath(stage, page_parts, options = {})
+    options.reverse_merge!(partial: false)
+
+    filename = Array.wrap(page_parts).join('/')
+    filename.sub!(/([^\/]+)(\/)/, '\1\2_') if options[:partial]
+
+    page_expanded_path(stage, filename).to_s
+  end
+  helper_method :page_realpath
+
+  def page_expanded_path(stage, filename)
+    if f = Dir.glob("app/views/pages/{#{stage},stable}/#{filename}.html.{haml,textile}").try(:first)
+      return f
+    else
+      raise ActionController::RoutingError.new("#{stage}/#{filename} couldn't be found.")
+    end
+  end
 
 end

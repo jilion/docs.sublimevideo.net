@@ -1,0 +1,1 @@
+Sure. By default SublimeVideo always works on _localhost_ and _127.0.0.1_. If you want to use a more specific development domain, please edit your "site settings":site-settings.

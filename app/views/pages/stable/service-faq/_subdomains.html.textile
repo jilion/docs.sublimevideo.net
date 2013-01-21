@@ -1,0 +1,1 @@
+You don't have to. You may share the same player across all your subdomains via the "wildcard option":site-settings#wildcard.

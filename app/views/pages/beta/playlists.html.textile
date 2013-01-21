@@ -1,0 +1,22 @@
+h2. <%= title('Playlists') %>
+
+The example presented here allows your visitors to select which video to play by clicking on any of the thumbnails in the playlist. The selected video will be shown in the player; once the video finishes playing, the next one will automatically play.
+
+h3(#demo). "Demo":#demo
+
+<%= jsfiddle_embed('6nJkY', height: 355, panes: 'result,html,js,css') %>
+
+*Notes:*
+
+* In this example, we are making extensive use of our "JavaScript API":javascript-api.
+* Make sure you embed the jQuery library in your page! You can find the latest version "here":http://code.google.com/apis/libraries/devguide.html#jquery.
+* Put the JavaScript code in a @<script>@ element just before the @</body>@ tag, or in an external file.
+* Put the CSS code in a @<style>@ element in the @<head>@ tag, or in an external file.
+* Please make sure to adapt the CSS code to your site's own design as well as uploading the "playlist_play_icon.png":http://f.cl.ly/items/3M0u0p0i0k1l3S0v2b1G/playlist_play_icon.png image to your own server.
+* In the future, we plan to include a built-in playlist function that will make this feature even easier to implement, without the need to know any JavaScript.
+
+h3(#responsive). Responsive playlist
+
+If you designed your site to be responsive/fluid and want to add a playlist, you will have to start by adding the "autoresize":/beta/responsive-layout attribute to your @<video>@ elements, and update the playlist's CSS to get the design you want.
+
+Check out a "demo of a responsive playlist":http://test.sublimevideo.net/playlists-autoresize (with thumbnails at the bottom of the video).

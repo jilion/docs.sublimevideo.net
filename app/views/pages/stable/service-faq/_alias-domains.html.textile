@@ -1,0 +1,1 @@
+You don't have to. You may add these domains to the _alias domains_ field. "Learn more":site-settings#alias-domains.
