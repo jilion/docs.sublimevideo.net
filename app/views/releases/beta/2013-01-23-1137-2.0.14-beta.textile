@@ -1,4 +1,4 @@
-* <span class="label fixed">fixed</span> Issue when closing the lightbox.
+* <span class="label fixed">fixed</span> Issue causing a JS error to be fired when closing the lightbox.
 * <span class="label fixed">fixed</span> IE6-8 rendering issue.
 
 
