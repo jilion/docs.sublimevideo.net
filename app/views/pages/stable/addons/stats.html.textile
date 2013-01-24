@@ -43,7 +43,7 @@ You can also see a list of all the videos you may have on a site, complete with 
 
 <%= link_to(image_tag('real-time-stats/most_played_videos.jpg', width: 640, class: 'screenshot', title: 'Most played videos'), asset_path('real-time-stats/most_played_videos.jpg'), class: 'sublime lightbox') %>
 
-Please note it is **highly recommended** that you set at least a @data-uid@ for each of your @<video>@. "Read more":optimize-for-stats.
+Please note it is **highly recommended** that you set at least a @data-uid@ for each of your @<video>@. "Read more":#optimize-for-stats.
 
 h3(#browser-device-html5-flash-stats). "Browser, Device & HTML5 / Flash Statistics":#browser-device-html5-flash-stats
 

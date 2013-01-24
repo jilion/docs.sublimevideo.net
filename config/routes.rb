@@ -16,6 +16,7 @@ DocsSublimeVideo::Application.routes.draw do
   get '(/:stage)/faq' => redirect { |params, req| "#{"/#{params[:stage]}" if params[:stage]}/player-faq" }, stage: /stable|beta/
   get '(/:stage)/real-time-stats' => redirect { |params, req| "#{"/#{params[:stage]}" if params[:stage]}/addons/stats" }, stage: /stable|beta/
   get '(/:stage)/optimize-for-stats' => redirect { |params, req| "#{"/#{params[:stage]}" if params[:stage]}/addons/stats#optimize-for-stats" }, stage: /stable|beta/
+  get '(/:stage)/addons/optimize-for-stats' => redirect { |params, req| "#{"/#{params[:stage]}" if params[:stage]}/addons/stats#optimize-for-stats" }, stage: /stable|beta/
 
   # Shortcut redirect
   %w[javascript-api js-api].each { |path| get "(/:stage)/#{path}" => redirect { |params, req| "#{"/#{params[:stage]}" if params[:stage]}/javascript-api/usage" }, stage: /stable|beta/ }
