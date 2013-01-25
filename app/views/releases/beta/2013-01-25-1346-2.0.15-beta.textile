@@ -1,0 +1,7 @@
+* <span class="label improved">improved</span> Updated our _Flat_ and _Light_ designs to omit the Lightbox close button in order we can better fit the UI of some upcoming add-ons.
+* <span class="label improved">improved</span> The on-video logos (both the SublimeVideo logo and your own logo) placed at the bottom-right corner are now automatically displayed on the bottom-left corner to avoid overlapping with the YouTube logo.
+* <span class="label fixed">fixed</span> Issue that was preventing the controls from hiding after 5s on touch devices.
+* <span class="label fixed">fixed</span> Issue with keyboard control and YouTube videos on Safari.
+* <span class="label fixed">fixed</span> Progress bar rendering issue on _Classic_ design.
+* <span class="label fixed">fixed</span> Issue with the @sublime.unprepare@ method.
+* <span class="label fixed">fixed</span> Issue that was preventing the poster frame from loading on IE < 9.
