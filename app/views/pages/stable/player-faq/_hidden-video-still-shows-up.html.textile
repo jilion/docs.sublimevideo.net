@@ -1,1 +1,1 @@
-If your @<video>@ element is hidden (@display:none@) and you don't want it to be shown on page load, simply remove the _sublime_ @class@ from your @<video>@ element. To show the video, use the JavaScript API "(c)@sublime.prepare@":javascript-api/application#prepare method.
+If your @<video>@ element is hidden (@display:none@) and you don't want it to be shown on page load, simply remove the _sublime_ @class@ from your @<video>@ element. To show the video, use the JavaScript API "(c)@sublime.prepare@":/beta/javascript-api/application#prepare method.
