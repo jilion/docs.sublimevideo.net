@@ -1,0 +1,5 @@
+* <span class="label improved">improved</span> @load@ method always returns @undefined@.
+* <span class="label fixed">fixed</span> Issue with dynamic sources that was preventing the video from playing.
+* <span class="label fixed">fixed</span> Youtube loading issue when API was already loaded by third party.
+* <span class="label fixed">fixed</span> Issue that was causing the @video@ to be moved to the wrong position after unpreparing the player.
+* <span class="label fixed">fixed</span> Loading issue when SublimeVideo was injected after that the page was loaded.
