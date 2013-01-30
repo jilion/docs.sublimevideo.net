@@ -8,13 +8,13 @@ This add-on provides social sharing feature to your player. It displays a sharin
 * Pinterest
 * Plain link sharing
 
-#{image_tag('', class: 'screenshot', title: 'Sharing button')}
-_The main sharing button._ [show the corner of the player with the sharing button?]
+<%= image_tag('sharing/sharing_button.png', class: 'screenshot', title: 'Sharing button') %>
+_The main sharing button._
 
-#{image_tag('', class: 'screenshot', title: 'Sharing pane')}
+<%= image_tag('sharing/sharing_pane.png', class: 'screenshot', title: 'Sharing pane') %>
 _The sharing pane complete with social sharing and link field._
 
-Like most of our add-ons, you can set up its default options that should apply to all of your videos from your site's "Players" page on <%= link_to "MySublimeVideo", my_url('sites') %>. But you can also set more options and override the default ones on per video basis via the "Video Publishing Assistant":video-publishing-assistant, or manually, using the "data-settings":/beta/settings/usage attribute directly on the @<video>@ elements.
+Like most of our add-ons, you can set up its default options that should apply to all of your videos from your site's "Players" page on <%= link_to "MySublimeVideo", my_url('sites') %>. But you can also set more options and override the default ones on a per video basis via the "Video Publishing Assistant":/beta/video-publishing-assistant, or manually, using the "data-settings":/beta/settings/usage attribute directly on the @<video>@ elements.
 
 
 h3(#sharing_url). "Properly linking to a video":#sharing_url

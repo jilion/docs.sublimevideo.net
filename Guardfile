@@ -9,7 +9,7 @@ guard :pow do
 end
 
 guard :livereload, host: 'docs.sublimevideo.dev' do
-  watch(%r{app/views/([^\.])*\.html\.haml})
+  watch(%r{app/views/([^\.])*\.html})
   watch(%r{app/helpers/.+\.rb})
   watch(%r{public/.+\.(css|js|html)})
   watch(%r{config/locales/.+\.yml})
