@@ -16,8 +16,34 @@ _The sharing pane complete with social sharing and link field._
 
 Like most of our add-ons, you can set up its default options that should apply to all of your videos from your site's "Players" page on <%= link_to "MySublimeVideo", my_url('sites') %>. But you can also set more options and override the default ones on a per video basis via the "Video Publishing Assistant":/beta/video-publishing-assistant, or manually, using the "data-settings":/beta/settings/usage attribute directly on the @<video>@ elements.
 
-
 h3(#sharing_url). "Properly linking to a video":#sharing_url
+
+In general you have one video in the page which is visible at the top part of your page, so you can simply use the url of the page as the sharing url. But in the following cases, it's not enough to use only the page url:
+
+# if you have multiple videos in the same page
+# if your video is somewhere at the bottom of your page
+# if your video is shown through a lightbox
+# if your video is loaded via AJAX or in a playlist
+
+For 1. and 2. you can simply append a unique @#hashtag@ (see _myvideo1_ in the sample code below) to the page url in order to have an anchor link that will scroll the page where the video is located. 
+
+bc(language-markup). <a id="myvideo1"></a> <!-- Place this anchor link just before your video element -->
+<video class='sublime' data-sharing-url='http://mysite.com/#myvideo1'>
+  <source src='video.mp4' />
+  <source src='video.webm' />
+</video>
+
+For 3. and 4. you will have to add some JavaScript in order to display the right video. The following JavaScript code gets the @#hashtag@ from the page url and passes it to a method of your choice which will be used to show the proper video.
+
+bc(language-javascript). var hashtag = "#myvideo1";
+if (document.location.hash == hashtag) {
+  showTheVideo(hashtag);
+}
+function showTheVideo(hashtag) {
+  // Display your video.
+}
+
+You may want to refer to our "JavaScript API":/javascript-api to adapt this code to your existing setup.
 
 h3(#settings). "Settings":#settings
 
