@@ -219,3 +219,5 @@ h3(#open_graph). "About Open Graph":#open_graph
 We offer options to pre-compose the sharing message (title, description and image). Depending on the social sharing service, this info might be extracted from the "Open Graph":http://ogp.me markup that you have in the @<head>@ of your page.
 
 Please read "sharing-text":#sharing-text, "sharing-image":#sharing-image, and "sharing-title":#sharing-title for more details.
+
+We also recommend to use "this page":https://developers.facebook.com/tools/debug to validate the Open Graph markup in your page.
