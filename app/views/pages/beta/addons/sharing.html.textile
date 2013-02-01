@@ -25,7 +25,7 @@ In general you have one video in the page which is visible at the top part of yo
 # if your video is shown through a lightbox
 # if your video is loaded via AJAX or in a playlist
 
-For 1. and 2. you can simply append a unique @#hashtag@ (see _myvideo1_ in the sample code below) to the page url in order to have an anchor link that will scroll the page where the video is located. 
+For 1. and 2. you can simply append a unique @#hashtag@ (see _myvideo1_ in the sample code below) to the page url in order to have an anchor link that will scroll the page where the video is located.
 
 bc(language-markup). <a id="myvideo1"></a> <!-- Place this anchor link just before your video element -->
 <video class='sublime' data-sharing-url='http://mysite.com/#myvideo1'>
@@ -71,8 +71,8 @@ h3(#sharing-enable). "@sharing-enable@":#sharing-enable
 Allows you to enable or disable the sharing features. Please note that a sharing URL must be provided, otherwise the sharing button won't appear (see "sharing-url":#sharing-url).
 
 *Allowed values:*
-* @true@ – _(Default)_ Display the sharing button.
-* @false@ – Hide the sharing button.
+* @true@ – _(Default)_ Enable sharing features.
+* @false@ – Disable sharing features.
 
 *Example:*
 
