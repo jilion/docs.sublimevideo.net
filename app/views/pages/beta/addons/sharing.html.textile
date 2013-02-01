@@ -183,6 +183,20 @@ bc(language-markup). <video class='sublime' data-sharing-twitter-text='Twitter u
   ...
 </video>
 
+h3(#sharing-twitter-via). "@sharing-twitter-via@":#sharing-twitter-via
+
+Allow you to specify a username to associate with the Tweet.
+
+*Allowed values:*
+* _@any string@_ - Twitter username.
+
+*Example:*
+
+bc(language-markup). <video class='sublime' data-sharing-twitter-via='jilion'>
+  ...
+</video>
+
+
 
 h3(#sharing-image). "@sharing-image@":#sharing-image
 
