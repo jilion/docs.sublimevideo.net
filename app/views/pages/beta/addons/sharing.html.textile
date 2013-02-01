@@ -30,7 +30,7 @@ table(supported_browsers desktop).
 |        Sharing URL                             | X                          | X                                       |         |
 (alt). | Sharing message text                    | X                          |                                         |         |
 |        Sharing message title                   |                            | X                                       | Currently used for Facebook sharing. |
-(alt). | Sharing message image                   | X*                         | X                                       | Currently used for Facebook and Pinterest sharing. |
+(alt). | Sharing message image                   | X                          | X                                       | Currently used for Facebook and Pinterest sharing. |
 |        Twitter sharing text                    |                            | X                                       | Specific sharing message for Twitter limited to 140 chars. |
 
 
@@ -100,7 +100,6 @@ bc(language-markup). <video class='sublime' data-sharing-icon='alt'>
   ...
 </video>
 
-
 h3(#sharing-buttons). "@sharing-buttons@":#sharing-buttons
 
 Defines the social network buttons to be shown in the sharing pane. Add a _space_ (" ") between social network names to specify multiple values. The buttons will appear in the same order as they were listed.
@@ -148,7 +147,7 @@ bc(language-markup). <video class='sublime' data-sharing-url='http://yourdomain.
 
 h3(#sharing-title). "@sharing-title@":#sharing-title
 
-Defines the title to be shared. This setting will only be used for social networks that let you share a title and a text (currently used for Facebook).
+Defines the title to be shared. This setting will only be used for social networks that let you provide both a title and a text as your sharing message (currently only used for Facebook).
 
 *Allowed values:*
 * _@any string@_
@@ -161,7 +160,7 @@ bc(language-markup). <video class='sublime' data-sharing-title='Check out this v
 
 h3(#sharing-text). "@sharing-text@":#sharing-text
 
-Defines the main text to be shared (Used for Facebook, Twtter and Pinterest).
+Defines the main text to be shared (Used for Facebook, Twtter and Pinterest). If your message is longer than 140 character, remember to provide shorter and specific version for Twitter via the "sharing-twitter-text":#sharing-twitter-text setting. If you omit this setting, Facebook will extract this info from the @og:description@ metadata.
 
 *Allowed values:*
 * _@any string@_
@@ -198,16 +197,14 @@ bc(language-markup). <video class='sublime' data-sharing-twitter-via='jilion'>
   ...
 </video>
 
-
-
 h3(#sharing-image). "@sharing-image@":#sharing-image
 
 Defines the image to be shared (currently supported by Facebook and Pinterest).
 
 *Allowed values:*
-* @auto@ - Depending on the social network, the image will be taken from "Open Graph":#open_graph, the _img_ elements on the page or the _video_ poster.
+* @auto@ - Depending on the social network, the image will be taken from "Open Graph":#open_graph, the _img_ elements in the page or the _video_ poster.
 ** Facebook will first check Open Graph tags in your page and will fallback to the DOM when necessary.
-** Pinterest will use the _video_ poster frame.
+** Pinterest will use the @<video>@ poster frame.
 
 * @poster@ - The @video@ poster frame will be used as image.
 * _@any valid url@_ - custom image.
@@ -220,4 +217,6 @@ bc(language-markup). <video class='sublime' data-sharing-image='poster'>
 
 h3(#open_graph). "About Open Graph":#open_graph
 
-h3(#demo). "Demo":#demo
+We offer options to pre-compose the sharing message (title, description and image). Depending on the social sharing service, this info might be extracted from the "Open Graph":http://ogp.me markup that you have in the @<head>@ of your page.
+
+Please read "sharing-text":#sharing-text, "sharing-image":#sharing-image, and "sharing-title":#sharing-title, for more details.
