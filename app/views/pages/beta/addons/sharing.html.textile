@@ -19,7 +19,7 @@ _Simpler sharing pane with just Twitter and Facebook in our "Flat":http://sublim
 
 h3. How to configure the different options
 
-Like most of our add-ons, you can set up its default options that should apply to all of your videos from your site's "Players" page on <%= link_to "MySublimeVideo", my_url('sites') %>. But you can also set more options and override the default ones on a per video basis via the "Video Publishing Assistant":/beta/video-publishing-assistant, or manually, using the "data-settings":/beta/settings/usage attribute directly on the @<video>@ elements.
+Like most of our add-ons, you can set up its default options that should apply to all of your videos from your site's Player editor page on <%= link_to "MySublimeVideo", my_url('sites') %>. But you can also set more options and override the default ones on a per video basis via the "Video Publishing Assistant":/beta/video-publishing-assistant, or manually, using the "data-settings":/beta/settings/usage attribute directly on the @<video>@ elements.
 
 The table below gives you an overview of all the sharing options available and from where you can actually set them up.
 
@@ -34,10 +34,169 @@ table(supported_browsers desktop).
 |        Twitter sharing text                    |                            | X                                       | Specific sharing message for Twitter limited to 140 chars. |
 
 
-
 h3(#sharing_url). "Properly linking to a video":#sharing_url
 
+In general you have one video in the page which is visible at the top part of your page, so you can simply use the url of the page as the sharing url. But in the following cases, it's not enough to use only the page url:
+
+# if you have multiple videos in the same page
+# if your video is somewhere at the bottom of your page
+# if your video is shown through a lightbox
+# if your video is loaded via AJAX or in a playlist
+
+For 1. and 2. you can simply append a unique @#hashtag@ (see _myvideo1_ in the sample code below) to the page url in order to have an anchor link that will scroll the page where the video is located.
+
+bc(language-markup). <a id="myvideo1"></a> <!-- Place this anchor link just before your video element -->
+<video class='sublime' data-sharing-url='http://mysite.com/#myvideo1'>
+  <source src='video.mp4' />
+  <source src='video.webm' />
+</video>
+
+For 3. and 4. you will have to add some JavaScript in order to display the right video. The following JavaScript code gets the @#hashtag@ from the page url and passes it to a method of your choice which will be used to show the proper video.
+
+bc(language-javascript). var hashtag = "#myvideo1";
+if (document.location.hash == hashtag) {
+  showTheVideo(hashtag);
+}
+function showTheVideo(hashtag) {
+  // Display your video.
+}
+
+You may want to refer to our "JavaScript API":/javascript-api to adapt this code to your existing setup.
+
 h3(#settings). "Settings":#settings
+
+
+<span class="red">Please note that all the settings described here can be set via the "Players" page on <%= link_to "MySublimeVideo", my_url('sites') %>.
+</span>
+
+If you need to override a player default settings for a specific video, you can do it with the following settings.
+
+h3(#sharing-enable). "@sharing-enable@":#sharing-enable
+
+Allows you to enable or disable the sharing features. Please note that a sharing URL must be provided, otherwise the sharing button won't appear (see "sharing-url":#sharing-url).
+
+*Allowed values:*
+* @true@ – _(Default)_ Display the sharing button.
+* @false@ – Hide the sharing button.
+
+*Example:*
+
+bc(language-markup). <video class='sublime' data-sharing-enable='false'>
+  ...
+</video>
+
+h3(#sharing-icon). "@sharing-icon@":#sharing-icon
+
+Defines the icon to be displayed inside the main sharing button.
+
+*Allowed values:*
+* @default@ – _(Default)_ Default sharing icon.
+* @alt@ – Alternative icon.
+
+*Example:*
+
+bc(language-markup). <video class='sublime' data-sharing-icon='alt'>
+  ...
+</video>
+
+
+h3(#sharing-buttons). "@sharing-buttons@":#sharing-buttons
+
+Defines the social network buttons to be shown in the sharing pane. Insert a _space_ (" ") between social network names to specify multiple values. The buttons will appear in the same order as they were listed.
+
+*Supported social networks:*
+* @twitter@
+* @facebook@
+* @google+@
+* @pinterest@
+
+*Example:*
+
+bc(language-markup). <video class='sublime' data-sharing-buttons='pinterest google+'>
+  ...
+</video>
+
+h3(#sharing-link-enable). "@sharing-link-enable@":#sharing-link-enable
+
+Allows you to show or hide the link input field in the sharing pane.
+
+*Allowed values:*
+* @true@ – _(Default)_ Display the input field.
+* @false@ – Hide the input field.
+
+*Example:*
+
+bc(language-markup). <video class='sublime' data-sharing-link-enable='false'>
+  ...
+</video>
+
+h3(#sharing-url). "@sharing-url@":#sharing-url
+
+Defines the URL to be shared. This setting is required, the main sharing button will appear over the player only if you specify an URL.
+
+*Allowed values:*
+* _@any valid url@_
+
+*Example:*
+
+bc(language-markup). <video class='sublime' data-sharing-url='http://yourdomain.com'>
+  ...
+</video>
+
+h3(#sharing-title). "@sharing-title@":#sharing-title
+
+Defines the title to be shared. This setting will only be used for social networks that support a title and a text (currently used only for Facebook).
+
+*Allowed values:*
+* _@any string@_
+
+*Example:*
+
+bc(language-markup). <video class='sublime' data-sharing-title='Check out this video!'>
+  ...
+</video>
+
+h3(#sharing-text). "@sharing-text@":#sharing-text
+
+Defines the text to be shared.
+
+*Allowed values:*
+* _@any string@_
+
+*Example:*
+
+bc(language-markup). <video class='sublime' data-sharing-text='Check out this video!'>
+  ...
+</video>
+
+h3(#sharing-twitter-text). "@sharing-twitter-text@":#sharing-twitter-text
+
+Defines the text to be shared via Twitter. If the setting isn't specified, the default @sharing-text@ will be used instead.
+
+*Allowed values:*
+* _@any string@_ - It must be shorter or equal to 140 characters.
+
+*Example:*
+
+bc(language-markup). <video class='sublime' data-sharing-twitter-text='Twitter users, check it out!'>
+  ...
+</video>
+
+
+h3(#sharing-image). "@sharing-image@":#sharing-image
+
+Defines the image to be shared (currently supported by Facebook and Pinterest).
+
+*Allowed values:*
+* @auto@ - Depending on the social network, the image will be extract from Open Graph, the DOM or the @video@ poster frame.
+* @poster@ - The @video@ poster frame will be used as image.
+* _@any valid url@_ - custom image.
+
+*Example:*
+
+bc(language-markup). <video class='sublime' data-sharing-image='poster'>
+  ...
+</video>
 
 h3(#open_graph). "About Open Graph":#open_graph
 
