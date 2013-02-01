@@ -159,7 +159,7 @@ bc(language-markup). <video class='sublime' data-sharing-title='Check out this v
 
 h3(#sharing-text). "@sharing-text@":#sharing-text
 
-Defines the main text to be shared (Used for Facebook, Twtter and Pinterest). If your message is longer than 140 character, remember to provide shorter and specific version for Twitter via the "sharing-twitter-text":#sharing-twitter-text setting. If you omit this setting, Facebook will extract this info from the @og:description@ metadata.
+Defines the main text to be shared (Used for Facebook, Twtter and Pinterest). If your message is longer than 140 characters, remember to provide shorter and specific version for Twitter via the "sharing-twitter-text":#sharing-twitter-text setting. If you omit this setting, Facebook will extract this info from the @og:description@ metadata.
 
 *Allowed values:*
 * _@any string@_
