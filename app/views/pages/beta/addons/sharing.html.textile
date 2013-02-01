@@ -23,16 +23,15 @@ Like most of our add-ons, you can set up its default options that should apply t
 
 The table below gives you an overview of all the sharing options available and from where you can actually set them up.
 
-table(supported_browsers desktop).
-(alt). |_{width:30%}. Sharing option             |_{width:20%}. Player editor |_{width:20%}. Video Publishing Assistant |_. Notes |
-|        Main sharing button icon on player      | X                          |                                         |         |
-(alt). | Order of social sharing buttons in pane | X                          |                                         |         |
-|        Sharing URL                             | X                          | X                                       |         |
-(alt). | Sharing message text                    | X                          |                                         |         |
-|        Sharing message title                   |                            | X                                       | Currently used for Facebook sharing. |
-(alt). | Sharing message image                   | X                          | X                                       | Currently used for Facebook and Pinterest sharing. |
-|        Twitter sharing text                    |                            | X                                       | Specific sharing message for Twitter limited to 140 chars. |
-
+table(supported_browsers generic).
+(alt). |_{width:30%}. Sharing option             |_{width:20%}. Player editor                |_{width:20%}. Video Publishing Assistant  |_. Notes |
+|        Main sharing button icon on player      |(ok). <span class="icon-checkmark"></span> |                                          |         |
+(alt). | Order of social sharing buttons in pane |(ok). <span class="icon-checkmark"></span> |                                          |         |
+|        Sharing URL                             |(ok). <span class="icon-checkmark"></span> |(ok). <span class="icon-checkmark"></span>|         |
+(alt). | Sharing message text                    |(ok). <span class="icon-checkmark"></span> |                                          |         |
+|        Sharing message title                   |                                           |(ok). <span class="icon-checkmark"></span>| Currently used for Facebook sharing. |
+(alt). | Sharing message image                   |(ok). <span class="icon-checkmark"></span>*|(ok). <span class="icon-checkmark"></span>| Currently used for Facebook and Pinterest sharing. |
+|        Twitter sharing text                    |                                           |(ok). <span class="icon-checkmark"></span>| Specific sharing message for Twitter limited to 140 chars. |
 
 <small>*: You won't be able to provide a specific image URL from here, use the Video Publish Assistant for that.</small>
 
