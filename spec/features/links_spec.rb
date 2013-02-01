@@ -2,21 +2,29 @@
 require 'spec_helper'
 
 feature 'checks all links' do
-  it "routes all links" do
-    visit '/'
-    all('nav#docs_menu a').each do |a|
-      if a[:href] =~ %r{\A(/|http://docs\.sublimevideo\.dev)}
-        puts "On: #{current_url}, click on #{a[:href]} in the menu."
-        a.click
+  %w[stable beta].each do |stage|
+    it "routes all links in #{stage} stage" do
+      visit "http://docs.sublimevideo.dev/?new_stage=#{stage}"
+      stage = nil if stage == 'stable'
 
-        current_url_match(a[:href])
+      all('nav#docs_menu a').each do |a|
+        if a[:href] =~ %r{\A(/|http://docs\.sublimevideo\.dev)} || a[:href] !~ %r{\A(https?:|#)}
+          puts "On: #{current_url}, click on #{a[:href]} in the menu."
+          a.click
 
-        all('div.content_wrapper a').each do |a|
-          if a[:href] =~ %r{\A(/|http://docs\.sublimevideo\.dev)}
-            puts "\tOn: #{current_url}, click on #{a[:href]}."
-            a.click
+          current_url_match(a[:href], stage: stage)
 
-            current_url_match(a[:href])
+          back_to_page = current_url
+
+          all('#content .content_wrapper a').each do |a|
+            if a[:href] =~ %r{\A(/|http://docs\.sublimevideo\.dev)} || a[:href] !~ %r{\A(https?:|#)}
+              puts "\tOn: #{current_url}, click on #{a[:href]}."
+              a.click
+
+              current_url_match(a[:href], stage: stage, referer: back_to_page)
+
+              visit back_to_page
+            end
           end
         end
       end
@@ -24,18 +32,34 @@ feature 'checks all links' do
   end
 end
 
-def current_url_match(href)
-  if href =~ %r{\A/}
-    current_url.should eq "http://docs.sublimevideo.dev#{route_with_redirect(href)}"
+def current_url_match(href, options = {})
+  if href !~ %r{\Ahttps?:}
+    url = relative_url?(href) && multi_level_path?(options[:referer], options) ? [options[:referer].sub(%r{/[^/]+\z}, '')] : ['http://docs.sublimevideo.dev']
+    url << options[:stage] if href !~ %r{\A(https?:|/)} && !multi_level_path?(options[:referer], options)
+    url << route_with_redirect(href).sub(%r{\A/+}, '')
+    current_url.should eq url.compact.join('/')
   else
-    current_url.should eq href.sub(/#.+/, '')
+    expected_url = route_with_redirect(href)
+    expected_url.blank? || (current_url.should eq expected_url)
   end
+end
+
+def relative_url?(url)
+  url !~ %r{\A(https?:|/)}
+end
+
+def multi_level_path?(path, options = {})
+  path.sub(%r{http://docs\.sublimevideo\.dev/#{options[:stage]}/?}, '') =~ %r{/}
 end
 
 def route_with_redirect(href)
   case href
-  when %r{/(settings|javascript-api)\z}
+  when %r{(/settings|javascript-api)\z}
     href + '/usage'
+  when %r{custom-play-button\z}
+    '/custom-start-view'
+  when %r{optimize-for-stats\z}
+    '/addons/stats'
   else
     href
   end.sub(/#.+/, '')

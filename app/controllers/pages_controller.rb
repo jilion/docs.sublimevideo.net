@@ -28,26 +28,28 @@ class PagesController < ApplicationController
   end
 
   def page_for(*args)
-    page_realpath(*args).sub(%r{^.+/views/}, '').sub(%r{/_}, '/')
+    page_realpath(*args).sub(%r{^.+/views/}, '').sub(%r{/_}, '/').sub(/\.html\.(haml|textile)$/, '')
   end
-  helper_method :page_for
 
   def page_realpath(stage, page_parts, options = {})
-    options.reverse_merge!(partial: false)
+    @page_realpaths ||= Hash.new({})
+    @page_realpaths[stage][page_parts] ||= begin
+      options.reverse_merge!(partial: false)
 
-    filename = Array.wrap(page_parts).join('/')
-    filename.sub!(/([^\/]+)(\/)/, '\1\2_') if options[:partial]
+      filename = Array.wrap(page_parts).join('/')
+      filename.sub!(/([^\/]+)(\/)/, '\1\2_') if options[:partial]
 
-    page_expanded_path(stage, filename).to_s
+      page_expanded_path(stage, filename).to_s
+    end
   end
   helper_method :page_realpath
 
   def page_expanded_path(stage, filename)
     if f = Dir.glob("app/views/pages/{#{stage},stable}/#{filename}.html.{haml,textile}").try(:first)
       return f
-    else
-      raise ActionController::RoutingError.new("#{stage}/#{filename} couldn't be found.")
     end
+
+    raise ActionController::RoutingError.new("#{stage}/#{filename} couldn't be found.")
   end
 
 end
