@@ -36,14 +36,16 @@ table(supported_browsers desktop).
 
 h3(#sharing_url). "Properly linking to a video":#sharing_url
 
-In general you have one video in the page which is visible at the top part of your page, so you can simply use the url of the page as the sharing url. But in the following cases, it's not enough to use only the page url:
+If you have one video per page (clearly visible at the top of the page), then linking to it is straightforward because you can simply use the URL of that page as your video sharing URL.
+
+But in the following cases, you should not just use your plain page URL:
 
 # if you have multiple videos in the same page
 # if your video is somewhere at the bottom of your page
 # if your video is shown through a lightbox
 # if your video is loaded via AJAX or in a playlist
 
-For 1. and 2. you can simply append a unique @#hashtag@ (see _myvideo1_ in the sample code below) to the page url in order to have an anchor link that will scroll the page where the video is located.
+For *1.* and *2.* you can simply append a unique @#hashtag@ (see _myvideo1_ in the sample code below) to the page URL, and have an anchor link element just before your @<video>@ element, so that when your sharing URL is visited, the page will scroll down where the video is located.
 
 bc(language-markup). <a id="myvideo1"></a> <!-- Place this anchor link just before your video element -->
 <video class='sublime' data-sharing-url='http://mysite.com/#myvideo1'>
@@ -51,7 +53,7 @@ bc(language-markup). <a id="myvideo1"></a> <!-- Place this anchor link just befo
   <source src='video.webm' />
 </video>
 
-For 3. and 4. you will have to add some JavaScript in order to display the right video. The following JavaScript code gets the @#hashtag@ from the page url and passes it to a method of your choice which will be used to show the proper video.
+For *3.* and *4.* you will have to add some JavaScript code in order to display the right video. The following sample code shows you how to extract the @#hashtag@ from the sharing URL and pass it to a method of your choice which will be used to display the proper video.
 
 bc(language-javascript). var hashtag = "#myvideo1";
 if (document.location.hash == hashtag) {
@@ -61,15 +63,12 @@ function showTheVideo(hashtag) {
   // Display your video.
 }
 
-You may want to refer to our "JavaScript API":/javascript-api to adapt this code to your existing setup.
+You may want to refer to our "JavaScript API":/beta/javascript-api to adapt this code to your existing setup.
 
 h3(#settings). "Settings":#settings
 
-
-<span class="red">Please note that all the settings described here can be set via the "Players" page on <%= link_to "MySublimeVideo", my_url('sites') %>.
+<span class="red">Please note: the settings described below can be configured "graphically" via the Player editor page on <%= link_to "MySublimeVideo", my_url('sites') %> and via the "Video Publishing Assistant":/beta/video-publishing-assistant.
 </span>
-
-If you need to override a player default settings for a specific video, you can do it with the following settings.
 
 h3(#sharing-enable). "@sharing-enable@":#sharing-enable
 
@@ -204,7 +203,5 @@ bc(language-markup). <video class='sublime' data-sharing-image='poster'>
 </video>
 
 h3(#open_graph). "About Open Graph":#open_graph
-
-h3(#sharing_image). "Sharing image":#sharing_image
 
 h3(#demo). "Demo":#demo
