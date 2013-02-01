@@ -1,0 +1,2 @@
+* <span class="label new">new</span> "Social Sharing":http://blog.jilion.com/2013/02/01/introducing-sublimevideo-social-sharing-add-on add-on.
+* <span class="label new">new</span> Keyboard shortcuts help in contextual menu.
