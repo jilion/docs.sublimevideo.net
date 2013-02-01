@@ -30,9 +30,11 @@ table(supported_browsers desktop).
 |        Sharing URL                             | X                          | X                                       |         |
 (alt). | Sharing message text                    | X                          |                                         |         |
 |        Sharing message title                   |                            | X                                       | Currently used for Facebook sharing. |
-(alt). | Sharing message image                   |                            | X                                       | Currently used for Facebook and Pinterest sharing. |
+(alt). | Sharing message image                   | X*                         | X                                       | Currently used for Facebook and Pinterest sharing. |
 |        Twitter sharing text                    |                            | X                                       | Specific sharing message for Twitter limited to 140 chars. |
 
+
+<small>*: You won't be able to provide a specific image URL from here, use the Video Publish Assistant for that.</small>
 
 h3(#sharing_url). "Properly linking to a video":#sharing_url
 
