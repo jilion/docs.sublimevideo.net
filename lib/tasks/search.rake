@@ -11,13 +11,13 @@ namespace :search do
 
     Array(stages).each do |stage|
       documents  = []
-      pages_glob = Rails.root.join('app', 'views', 'pages', stage, '**', '*.html.haml')
+      pages_glob = Rails.root.join('app', 'views', 'pages', stage, '**', '*.html.{haml,textile}')
       Dir[pages_glob].each do |page|
-        permalink = page.sub(/#{Rails.root.join('app', 'views', 'pages', stage).to_s}\/([\w\-\/]+)\.html\.haml$/, '\1')
+        permalink = page.sub(/#{Rails.root.join('app', 'views', 'pages', stage).to_s}\/([\w\-\/]+)\.html\.(haml|textile)$/, '\1')
         next if permalink =~ /_/ # skip partial pages
 
         text = if stage == 'beta' and complex_page = %w[player-faq service-faq troubleshooting].find { |page| page == permalink }
-          sub_pages_glob = Rails.root.join('app', 'views', 'pages', stage, complex_page, '_*.html.haml')
+          sub_pages_glob = Rails.root.join('app', 'views', 'pages', stage, complex_page, '_*.html.{haml,textile}')
           Dir[pages_glob].inject('') { |memo, page| memo += File.new(page).read }
         else
           File.new(page).read
