@@ -90,8 +90,8 @@ h3(#sharing-icon). "@sharing-icon@":#sharing-icon
 Defines the icon to be displayed inside the main sharing button.
 
 *Allowed values:*
-* @default@ – _(Default)_ Default sharing icon.
-* @alt@ – Alternative icon.
+* @default@ – _(Default)_ Default sharing icon. <%= image_tag('sharing/sharing_default_icon@2x.png', class: 'text_top', height: '16px', title: 'Default sharing icon') %>
+* @alt@ – Alternative icon. <%= image_tag('sharing/sharing_alt_icon@2x.png', class: 'text_top', height: '16px', title: 'Alternative sharing icon') %>
 
 *Example:*
 
@@ -102,7 +102,7 @@ bc(language-markup). <video class='sublime' data-sharing-icon='alt'>
 
 h3(#sharing-buttons). "@sharing-buttons@":#sharing-buttons
 
-Defines the social network buttons to be shown in the sharing pane. Insert a _space_ (" ") between social network names to specify multiple values. The buttons will appear in the same order as they were listed.
+Defines the social network buttons to be shown in the sharing pane. Add a _space_ (" ") between social network names to specify multiple values. The buttons will appear in the same order as they were listed.
 
 *Supported social networks:*
 * @twitter@
@@ -132,7 +132,9 @@ bc(language-markup). <video class='sublime' data-sharing-link-enable='false'>
 
 h3(#sharing-url). "@sharing-url@":#sharing-url
 
-Defines the URL to be shared. This setting is required, the main sharing button will appear over the player only if you specify an URL.
+Defines the URL to be shared. This setting is _required_ - the main sharing button will appear only if an URL has been specified.
+
+See also out how to "properly linking to a video":#sharing_url.
 
 *Allowed values:*
 * _@any valid url@_
@@ -145,7 +147,7 @@ bc(language-markup). <video class='sublime' data-sharing-url='http://yourdomain.
 
 h3(#sharing-title). "@sharing-title@":#sharing-title
 
-Defines the title to be shared. This setting will only be used for social networks that support a title and a text (currently used only for Facebook).
+Defines the title to be shared. This setting will only be used for social networks that let you share a title and a text (currently used for Facebook).
 
 *Allowed values:*
 * _@any string@_
@@ -158,7 +160,7 @@ bc(language-markup). <video class='sublime' data-sharing-title='Check out this v
 
 h3(#sharing-text). "@sharing-text@":#sharing-text
 
-Defines the text to be shared.
+Defines the main text to be shared (Used for Facebook, Twtter and Pinterest).
 
 *Allowed values:*
 * _@any string@_
@@ -188,7 +190,10 @@ h3(#sharing-image). "@sharing-image@":#sharing-image
 Defines the image to be shared (currently supported by Facebook and Pinterest).
 
 *Allowed values:*
-* @auto@ - Depending on the social network, the image will be extract from Open Graph, the DOM or the @video@ poster frame.
+* @auto@ - Depending on the social network, the image will be taken from "Open Graph":#open_graph, the _img_ elements on the page or the _video_ poster.
+** Facebook will first check Open Graph tags in your page and will fallback to the DOM when necessary.
+** Pinterest will use the _video_ poster frame.
+
 * @poster@ - The @video@ poster frame will be used as image.
 * _@any valid url@_ - custom image.
 
