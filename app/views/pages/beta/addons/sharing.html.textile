@@ -1,5 +1,15 @@
 h2. <%= title('Social Sharing') %>
 
+h3. Table of Contents
+
+* "How to configure the different options":#configure-options
+* "Properly linking to a video":#sharing_url
+* "Settings":#settings
+* "About Open Graph":#open_graph
+
+<div class="breakline"></div>
+<p></p>
+
 This add-on provides social sharing feature to your player. It displays a sharing button on the top-right corner of the player which opens a pane with different sharing options/services of your choice:
 
 * Twitter
@@ -17,7 +27,7 @@ _The sharing pane complete with social sharing and link field._
 <%= image_tag('sharing/sharing_pane_simpler.jpg', class: 'screenshot', title: 'Simpler sharing pane') %>
 _Simpler sharing pane with just Twitter and Facebook in our "Flat":http://sublimevideo.net/modular-player#player_designs player._
 
-h3. How to configure the different options
+h3(#configure-options). "How to configure the different options":#configure-options
 
 Like most of our add-ons, you can set up its default options that should apply to all of your videos from your site's Player editor page on <%= link_to "MySublimeVideo", my_url('sites') %>. But you can also set more options and override the default ones on a per video basis via the "Video Publishing Assistant":/beta/video-publishing-assistant, or manually, using the "data-settings":/beta/settings/usage attribute directly on the @<video>@ elements.
 
@@ -49,9 +59,9 @@ But in the following cases, you should not just use your plain page URL:
 For *1.* and *2.* you can simply append a unique @#hashtag@ (see _myvideo1_ in the sample code below) to the page URL, and have an anchor link element just before your @<video>@ element, so that when your sharing URL is visited, the page will scroll down where the video is located.
 
 bc(language-markup). <a id="myvideo1"></a> <!-- Place this anchor link just before your video element -->
-<video class='sublime' data-sharing-url='http://mysite.com/#myvideo1'>
-  <source src='video.mp4' />
-  <source src='video.webm' />
+<video class="sublime" data-sharing-url="http://mysite.com/#myvideo1">
+  <source src="video.mp4" />
+  <source src="video.webm" />
 </video>
 
 For *3.* and *4.* you will have to add some JavaScript code in order to display the right video. The following sample code shows you how to extract the @#hashtag@ from the sharing URL and pass it to a method of your choice which will be used to display the proper video.
