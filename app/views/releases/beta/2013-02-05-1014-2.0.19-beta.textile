@@ -1,0 +1,3 @@
+* <span class="label improved">improved</span> Various improvements to the social sharing add-on.
+* <span class="label improved">improved</span> Better handling of cases where the width and height attributes are not set on the @<video>@ element.
+* <span class="label fixed">fixed</span> Text color issue on IE < 9.
