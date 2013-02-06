@@ -1,6 +1,6 @@
 h2. <%= title('Embed') %>
 
-This add-on allows your audience to easily share your videos by embedding them into their own sites or elsewhere on the web. It displays an embed button on the top-right corner of the player which opens a pane with the actual embed code and the possibility to change the video embed size.
+This add-on allows your audience to easily share your videos by embedding them into their own sites or elsewhere on the web. It displays an embed button on the top-right corner of the player which opens a pane with the actual embed code and the possibility to change the embedded player size.
 
 <%= image_tag('sharing/sharing_button.jpg', class: 'screenshot', title: 'Sharing button') %>
 _The main embed button in our <%= link_to "Classic", layout_url('modular-player#player_designs') %> player._
@@ -51,6 +51,6 @@ The table below gives you an overview of all the embed options available and fro
 
 table(supported_browsers generic).
 (alt). |_{width:30%}. Embed option        |_{width:20%}. Player editor                |_{width:20%}. Video Publishing Assistant  |_. Notes |
-|        Main embed button icon on player |(ok). <span class="icon-checkmark"></span> |                                          |         |
-(alt).|  Embed URL                        |                                           |(ok). <span class="icon-checkmark"></span>| Put the URL of the HTML page you've created in the step 1 |
-|        Embed size                       |(ok). <span class="icon-checkmark"></span> |(ok). <span class="icon-checkmark"></span>|         |
+|        Enable/Disable the add-on |(ok). <span class="icon-checkmark"></span> |                                          |         |
+(alt).|  Embed URL                        |                                           |(ok). <span class="icon-checkmark"></span>| the URL of the HTML page you created in the step 1 |
+|        Default embed size               |(ok). <span class="icon-checkmark"></span> |(ok). <span class="icon-checkmark"></span>|         |
