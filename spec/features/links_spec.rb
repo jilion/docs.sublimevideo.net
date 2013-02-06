@@ -36,10 +36,10 @@ def current_url_match(href, options = {})
   if href !~ %r{\Ahttps?:}
     url = relative_url?(href) && multi_level_path?(options[:referer], options) ? [options[:referer].sub(%r{/[^/]+\z}, '')] : ['http://docs.sublimevideo.dev']
     url << options[:stage] if href !~ %r{\A(https?:|/)} && !multi_level_path?(options[:referer], options)
-    url << route_with_redirect(href).sub(%r{\A/+}, '')
+    url << route_with_redirect(href, options[:stage]).sub(%r{\A/+}, '')
     current_url.should eq url.compact.join('/')
   else
-    expected_url = route_with_redirect(href)
+    expected_url = route_with_redirect(href, options[:stage])
     expected_url.blank? || (current_url.should eq expected_url)
   end
 end
@@ -52,7 +52,7 @@ def multi_level_path?(path, options = {})
   path.sub(%r{http://docs\.sublimevideo\.dev/#{options[:stage]}/?}, '') =~ %r{/}
 end
 
-def route_with_redirect(href)
+def route_with_redirect(href, stage)
   case href
   when %r{(/settings|javascript-api)\z}
     href + '/usage'
@@ -60,6 +60,8 @@ def route_with_redirect(href)
     '/custom-start-view'
   when %r{optimize-for-stats\z}
     '/addons/stats'
+  when %r{embeds\z}
+    stage == 'beta' ? '/addons/embed' : href
   else
     href
   end.sub(/#.+/, '')
