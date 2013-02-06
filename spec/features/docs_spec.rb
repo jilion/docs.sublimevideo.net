@@ -128,6 +128,11 @@ feature "shortcut beta redirects" do
     visit '/beta/javascript-api'
     current_url.should eq "http://docs.sublimevideo.dev/beta/javascript-api/usage"
   end
+
+  it "redirects /beta/embeds to /beta/addons/embed" do
+    visit '/beta/embeds'
+    current_url.should eq "http://docs.sublimevideo.dev/beta/addons/embed"
+  end
 end
 
 feature "viewable pages" do
