@@ -2,10 +2,10 @@ h2. <%= title('Embed') %>
 
 This add-on allows your audience to easily share your videos by embedding them into their own sites or elsewhere on the web. It displays an embed button on the top-right corner of the player which opens a pane with the actual embed code and the possibility to change the video embed size.
 
-<%= image_tag('sharing/sharing_button.jpg', class: 'screenshot', title: 'Sharing button') %>
+<%= image_tag('embed/embed_button.jpg', class: 'screenshot', title: 'Embed button') %>
 _The main embed button in our <%= link_to "Classic", layout_url('modular-player#player_designs') %> player._
 
-<%= image_tag('sharing/sharing_pane.jpg', class: 'screenshot', title: 'Sharing pane') %>
+<%= image_tag('embed/embed_pane.jpg', class: 'screenshot', title: 'Embed pane') %>
 _The embed pane._
 
 h3(#setup). "Set up your embeds":#setup
