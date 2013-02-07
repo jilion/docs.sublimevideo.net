@@ -88,7 +88,7 @@ bc(language-markup). <video class='sublime' data-settings='autoresize:fill'>
 
 h3(#autoplay). "@autoplay@":#autoplay
 
-Allows you to autoplay the video upon page load.
+Allows you to autoplay the video upon page load. This flag may have no effect on touch devices since user interaction is required to start playing the video.
 
 *Allowed values:*
 * @true@ – Autoplay the video upon page load.

@@ -25,6 +25,7 @@ h3(#play). "@player.play()@":#play
 
 Plays the video. If the video is already playing, the call has no effect.
 
+*Note:* on touch devices user interaction is required to start playing the video.
 
 h3(#pause). "@player.pause()@":#pause
 

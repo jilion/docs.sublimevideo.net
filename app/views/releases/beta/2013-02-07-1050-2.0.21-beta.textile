@@ -1,0 +1,1 @@
+* <span class="label improved">improved</span> Better handling of autoplay (and @player.play@ API method) on mobile devices.
