@@ -1,0 +1,2 @@
+* <span class="label new">new</span> "Embed Add-on":http://blog.jilion.com/2013/02/07/introducing-sublimevideo-social-sharing-add-on.
+* <span class="label improved">improved</span> Handling case where width and height values of the @video@ element are specified with decimal values.
