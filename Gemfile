@@ -5,7 +5,7 @@ ruby '1.9.3'
 
 gem 'bundler'
 
-gem 'rails',                '3.2.11'
+gem 'rails',                '3.2.12'
 gem 'sublime_video_layout', '~> 2.0' # hosted on gemfury
 
 # Views
@@ -21,6 +21,7 @@ gem 'airbrake'
 gem 'oj' # fastest json
 gem 'librato-rails', github: 'librato/librato-rails', branch: 'feature/rack_first'
 gem 'lograge'
+gem 'json'
 
 # Gems used only for assets and not required
 # in production environments by default.
