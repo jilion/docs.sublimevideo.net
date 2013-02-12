@@ -3,19 +3,13 @@
 = content_for :javascript, sublimevideo_docs_include_tag
 
 = content_for :header do
-  #stages{ class: params[:stage] }
-    .s_wrap
-      - if params[:stage] == 'beta'
+  - if stage?('beta')
+    #stages{ class: params[:stage] }
+      .s_wrap
         You’re reading the
-        %strong>= ' New SublimeVideo (beta) documentation'
+        %strong>= ' beta documentation'
         = '.'
         = link_to('View the Stable documentation', root_path + '?new_stage=stable') + '.'
-      - else
-        You’re reading the Stable documentation.
-        We recommend that you check out the
-        = link_to(root_path + '?new_stage=beta') do
-          %strong>= 'New SublimeVideo (beta) documentation'
-        = ' instead.'
   = render('layouts/header')
 
 = content_for :content_menu, render('layouts/menu')
