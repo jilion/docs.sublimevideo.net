@@ -16,17 +16,17 @@ module Search
       end
 
       def add_documents(stage, documents)
-        puts "Indexing #{documents.size} documents in index 'idx:#{stage}'..."
+        puts "Indexing #{documents.size} documents in index 'idx_#{stage}'..."
         index(stage).batch_insert(documents)
       end
 
       def add_function(stage, num, fn)
-        puts "Adding function ##{num}: #{fn} to index 'idx:#{stage}"
+        puts "Adding function ##{num}: #{fn} to index 'idx_#{stage}"
         index(stage).functions(num, fn).add
       end
 
       def delete_index(stage)
-        puts "Deleting 'idx:#{stage}' index..."
+        puts "Deleting 'idx_#{stage}' index..."
         index(stage).delete
         @index = nil
       end
@@ -40,13 +40,13 @@ module Search
       def index(stage = 'stable')
         @index ||= {}
         @index[stage] ||= begin
-          idx = client.indexes("idx:#{stage}")
+          idx = client.indexes("idx_#{stage}")
 
           unless idx.exists?
-            puts "Creating 'idx:#{stage}' index..."
+            puts "Creating 'idx_#{stage}' index..."
             idx.add public_search: false
             sleep 0.5 while !idx.running?
-            puts "'idx:#{stage}' index created!"
+            puts "'idx_#{stage}' index created!"
           end
 
           idx
