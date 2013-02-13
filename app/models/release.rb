@@ -2,6 +2,7 @@ Release = Struct.new(:version, :datetime, :content) do
 
   def self.all(stage = 'stable')
     base_path = Rails.root.join('app', 'views', 'releases', stage)
+    return [] unless File.directory?(base_path)
 
     base_path.entries.inject([]) do |releases, file_path|
       if release_attributes = detect_beta_release(file_path) || detect_stable_release(file_path)
