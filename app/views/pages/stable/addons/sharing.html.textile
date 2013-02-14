@@ -29,7 +29,7 @@ _Simpler sharing pane with just Twitter and Facebook in our "Flat":http://sublim
 
 h3(#configure-options). "How to configure the different options":#configure-options
 
-Like most of our add-ons, you can set up its default options that should apply to all of your videos from your site's Player editor page on <%= link_to "MySublimeVideo", my_url('sites') %>. But you can also set more options and override the default ones on a per video basis via the "Video Publishing Assistant":/beta/video-publishing-assistant, or manually, using the "data-settings":/beta/settings/usage attribute directly on the @<video>@ elements.
+Like most of our add-ons, you can set up its default options that should apply to all of your videos from your site's Player editor page on <%= link_to "MySublimeVideo", my_url('sites') %>. But you can also set more options and override the default ones on a per video basis via the "Video Publishing Assistant":/video-publishing-assistant, or manually, using the "data-settings":/settings/usage attribute directly on the @<video>@ elements.
 
 The table below gives you an overview of all the sharing options available and from where you can actually set them up.
 
@@ -74,11 +74,11 @@ function showTheVideo(hashtag) {
   // Display your video.
 }
 
-You may want to refer to our "JavaScript API":/beta/javascript-api to adapt this code to your existing setup.
+You may want to refer to our "JavaScript API":/javascript-api to adapt this code to your existing setup.
 
 h3(#settings). "Settings":#settings
 
-<span class="red">Please note: the settings described below can be configured "graphically" via the Player editor page on <%= link_to "MySublimeVideo", my_url('sites') %> and via the "Video Publishing Assistant":/beta/video-publishing-assistant.
+<span class="red">Please note: the settings described below can be configured "graphically" via the Player editor page on <%= link_to "MySublimeVideo", my_url('sites') %> and via the "Video Publishing Assistant":/video-publishing-assistant.
 </span>
 
 h3(#sharing-enable). "@sharing-enable@":#sharing-enable

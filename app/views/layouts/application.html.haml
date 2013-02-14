@@ -2,15 +2,7 @@
 - @body_class = params[:stage]
 = content_for :javascript, sublimevideo_docs_include_tag
 
-= content_for :header do
-  - if stage?('beta')
-    #stages{ class: params[:stage] }
-      .s_wrap
-        You’re reading the
-        %strong>= ' beta documentation'
-        = '.'
-        = link_to('View the Stable documentation', root_path + '?new_stage=stable') + '.'
-  = render('layouts/header')
+= content_for :header, render('layouts/header')
 
 = content_for :content_menu, render('layouts/menu')
 

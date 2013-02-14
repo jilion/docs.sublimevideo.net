@@ -18,7 +18,7 @@ h3(#settings). "Settings":#settings
 <span class="red">Please note that all the settings described here can be set via the "Players" page on <%= link_to "MySublimeVideo", my_url('sites') %>.
 </span>
 
-If you need to override a player default settings for a specific video, you can do it with the following "settings":/beta/settings/usage.
+If you need to override a player default settings for a specific video, you can do it with the following "settings":/settings/usage.
 
 
 h3(#logo-enable). "@logo-enable@":#logo-enable

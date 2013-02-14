@@ -17,6 +17,6 @@ h3(#demo). "Demo":#demo
 
 h3(#responsive). Responsive playlist
 
-If you designed your site to be responsive/fluid and want to add a playlist, you will have to start by adding the "autoresize":/beta/responsive-layout attribute to your @<video>@ elements, and update the playlist's CSS to get the design you want.
+If you designed your site to be responsive/fluid and want to add a playlist, you will have to start by adding the "autoresize":/responsive-layout attribute to your @<video>@ elements, and update the playlist's CSS to get the design you want.
 
 Check out a "demo of a responsive playlist":http://test.sublimevideo.net/playlists-autoresize (with thumbnails at the bottom of the video).

@@ -23,7 +23,7 @@ bc(language-markup). <a class="sublime" href="#video1">Play the video with the I
 
 h3(#lightbox-settings). "Lightbox settings":#lightbox-settings
 
-Please see the "Lightbox settings":/beta/settings/lightbox-settings page.
+Please see the "Lightbox settings":/settings/lightbox-settings page.
 
 h3(#demo). "Demo":#demo
 

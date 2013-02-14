@@ -21,4 +21,4 @@ On the <%= link_to "My Sites", my_url('sites') %> page, you can quickly access a
 
 h3(#whats-next). "What's next?":#whats-next
 
-Learn how to display your video in a "Lightbox":lightbox, play with our "JS API":javascript-api or "customize your player":/beta/settings.
+Learn how to display your video in a "Lightbox":lightbox, play with our "JS API":javascript-api or "customize your player":/settings.

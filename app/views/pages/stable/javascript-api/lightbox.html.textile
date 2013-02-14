@@ -2,13 +2,13 @@ h2. <%= title('Lightbox API') %>
 
 *Methods*
 
-"(c)@open@":/beta/javascript-api/lightbox#open "(c)@close@":/beta/javascript-api/lightbox#close "(c)@on@":/beta/javascript-api/lightbox#on
+"(c)@open@":/javascript-api/lightbox#open "(c)@close@":/javascript-api/lightbox#close "(c)@on@":/javascript-api/lightbox#on
 
 *Events*
 
-"(c)@contentready@":/beta/javascript-api/lightbox#event-contentready "(c)@didopen@":/beta/javascript-api/lightbox#event-didopen "(c)@didclose@":/beta/javascript-api/lightbox#event-didclose
+"(c)@contentready@":/javascript-api/lightbox#event-contentready "(c)@didopen@":/javascript-api/lightbox#event-didopen "(c)@didclose@":/javascript-api/lightbox#event-didclose
 
-See also "Using the JavaScript API":/beta/javascript-api/usage, "Application API":/beta/javascript-api/application and "Player API":/beta/javascript-api/player.
+See also "Using the JavaScript API":/javascript-api/usage, "Application API":/javascript-api/application and "Player API":/javascript-api/player.
 
 h3(#methods). Methods
 
@@ -57,7 +57,7 @@ bc(language-javascript). sublime('my_lightbox_trigger_id').on({
 
 h3(#events). Events
 
-Below are all the events supported by the lightbox. You listen to these events via the "(c)@lightbox.on@":/beta/javascript-api/lightbox#on method.
+Below are all the events supported by the lightbox. You listen to these events via the "(c)@lightbox.on@":/javascript-api/lightbox#on method.
 
 bc(language-javascript). sublime('my_lightbox_trigger_id').on('<event_name>', my_callback_function);
 

@@ -63,7 +63,7 @@ Please share your comments and suggestions about how you think we can improve ou
 
 h3(#google-analytics-note). "A note for Google Analytics users":#google-analytics-note
 
-In case you are using Google Analytics to track the traffic of your site, you may use it to track your video statistics. Please refer to our "specific help page":/beta/google-analytics-integration to get more information about how to configure it.
+In case you are using Google Analytics to track the traffic of your site, you may use it to track your video statistics. Please refer to our "specific help page":/google-analytics-integration to get more information about how to configure it.
 
 This is also valid for most web analytics solutions.
 
@@ -87,7 +87,7 @@ Although this id can be any string, we recommend that you use small strings (bet
 *Notes:*
 
 * If you plan to use video statistics extensively, we recommend that you always set the @data-uid@ attribute to all of your @<video>@ elements.*
-* The @data-uid@ setting respects the "Player settings syntax":/beta/settings/player-settings.
+* The @data-uid@ setting respects the "Player settings syntax":/settings/player-settings.
 
 
 h4(#data-name). "The _data-name_ attribute":#data-name
@@ -113,4 +113,4 @@ bc(language-markup). <video class="sublime" poster="some-great-landscapes.jpg" d
 *Notes:*
 
 * You can update the @data-name@ as often as you’d like. Such changes will be reflected in the statistics page in near real-time.
-* The @data-name@ setting respects the "Player settings syntax":/beta/settings/player-settings.
+* The @data-name@ setting respects the "Player settings syntax":/settings/player-settings.
