@@ -10,6 +10,7 @@ gem 'sublime_video_layout', '~> 2.0' # hosted on gemfury
 
 # Views
 gem 'haml'
+gem 'haml-contrib'
 gem 'RedCloth'
 # gem 'turbolinks', '0.5.1'
 # gem 'google-analytics-turbolinks'
