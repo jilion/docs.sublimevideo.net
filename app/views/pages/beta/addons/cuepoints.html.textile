@@ -12,7 +12,7 @@ h3(#add). "@cuepoints.add([id,] cuepoints, callback)@":#add
 
 * <span class="param">@id@</span> (@String@) - A string representing the name of the list of cuepoints. Pass this parameter only if you plan to remove the list at a given time.
 
-* <span class="param">@cuepoints@</span> (@Array@) - A list of numbers representing the cuepoints.
+* <span class="param">@cuepoints@</span> (@Array@) - A list of numbers representing the cuepoints. Negative numbers will be computed starting from the end of the playback. For instance, -2 will be converted to (duration - 2).
 
 * <span class="param">@callback@</span> (@Function@) - The function to call when a cuepoint is reached.
 
@@ -21,7 +21,7 @@ Register the list of cuepoints to the player. If a list with the same provided i
 
 **Example - registering cuepoints**
 
-bc(language-javascript). player.cuepoints.add([1.3, 6, 9], function(player, cuepoint) {
+bc(language-javascript). player.cuepoints.add([1.3, 6, 9, -49.5], function(player, cuepoint) {
   console.log('index: ' + cuepoint.index);
   console.log('time: ' + cuepoint.time);
 });
