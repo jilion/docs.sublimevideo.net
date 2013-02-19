@@ -1,0 +1,2 @@
+* <span class="label improved">improved</span> Compatibility with existing CSS (top, bottom, left and right properties).
+* <span class="label fixed">fixed</span> SVG rendering issue on Firefox browsers.
