@@ -12,8 +12,8 @@ gem 'sublime_video_layout', '~> 2.0' # hosted on gemfury
 gem 'haml'
 gem 'haml-contrib'
 gem 'RedCloth'
-# gem 'turbolinks', '0.5.1'
-# gem 'google-analytics-turbolinks'
+gem 'turbolinks', github: 'jilion/turbolinks', branch: 'ios_video_issue'
+gem 'google-analytics-turbolinks'
 
 # Internals
 gem 'mongoid'

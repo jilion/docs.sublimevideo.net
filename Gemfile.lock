@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/jilion/turbolinks.git
+  revision: c800a62e398ffa4724f8b83c49fc66090409325b
+  branch: ios_video_issue
+  specs:
+    turbolinks (1.0.0)
+      coffee-rails
+
+GIT
   remote: git://github.com/librato/librato-rails.git
   revision: 82a95ae54f2ed990135a7b655293107384da2796
   branch: feature/rack_first
@@ -99,6 +107,7 @@ GEM
       nokogiri (~> 1.5.0)
       ruby-hmac
     formatador (0.2.4)
+    google-analytics-turbolinks (0.0.1)
     guard (1.6.2)
       listen (>= 0.6.0)
       lumberjack (>= 1.0.2)
@@ -276,6 +285,7 @@ DEPENDENCIES
   coffee-rails
   dalli
   database_cleaner
+  google-analytics-turbolinks
   guard-livereload
   guard-pow
   guard-rspec
@@ -306,4 +316,5 @@ DEPENDENCIES
   sublime_video_layout (~> 2.0)
   terminal-notifier-guard
   thin
+  turbolinks!
   uglifier
