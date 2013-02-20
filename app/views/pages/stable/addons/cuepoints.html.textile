@@ -6,8 +6,6 @@ These API methods are to be called on a @cuepoints@ object, which you can retrie
 
 bc(language-javascript). var cuepoints = sublime.player(elementOrId).cuepoints;
 
-
-
 h3(#add). "@cuepoints.add([id,] cuepoints, callback)@":#add
 
 * <span class="param">@id@</span> (@String@) - A string representing the name of the list of cuepoints. Pass this parameter only if you plan to remove the list at a given time.
@@ -16,8 +14,15 @@ h3(#add). "@cuepoints.add([id,] cuepoints, callback)@":#add
 
 * <span class="param">@callback@</span> (@Function@) - The function to call when a cuepoint is reached.
 
+Register the list of cuepoints to the player. If a list with the same provided id already exists, it will be replaced by the new list.
 
-Register the list of cuepoints to the player. If a list with the same provided id already exsits, it will be replaced by the new list.
+*Callback parameters*
+
+* <span class="param">@player@</span> (@Object@) - The player API object.
+* <span class="param">@cuepoint@</span> (@Object@) - The cuepoint API object. This object has only two attributes:
+    - @index@: The index of the cuepoint in the cuepoints list.
+    - @time@: The actual time at which the cuepoint callback is called.
+* <span class="param">@id@</span> (@String@) - The id of the cuepoints list. This parameter is passed only for a cuepoints list with an id.
 
 **Example - registering cuepoints**
 
@@ -42,8 +47,6 @@ Remove the list of cuepoints with the given id. The call has no effect if a list
 **Example - removing a list of cuepoints**
 
 bc(language-javascript). player.cuepoints.remove('list_id');
-
-
 
 h3(#removeAll). "@cuepoints.removeAll()@":#removeAll
 
