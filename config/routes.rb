@@ -5,6 +5,9 @@ class DocsPages
 end
 
 DocsSublimeVideo::Application.routes.draw do
+  get '(/:stage)/search' => 'search#index', as: 'search', stage: /stable|beta/, defaults: { stage: 'stable' }
+  get '(/:stage)/releases' => 'releases#index', stage: /stable|beta/, defaults: { stage: 'stable' }, as: 'releases'
+
   get '/beta/*path' => redirect { |params, _| "/#{params[:path]}" }
 
   # Legacy redirect
@@ -37,8 +40,6 @@ DocsSublimeVideo::Application.routes.draw do
     get "/#{path}" => redirect { |params, _| "/custom-start-view" }
   end
 
-  get '(/:stage)/search' => 'search#index', as: 'search', stage: /stable|beta/, defaults: { stage: 'stable' }
-  get '(/:stage)/releases' => 'releases#index', stage: /stable|beta/, defaults: { stage: 'stable' }, as: 'releases'
   get '(/:stage)/*page' => 'pages#show', as: 'page', constraints: DocsPages, stage: /stable|beta/, defaults: { stage: 'stable' }, format: false
 
   root to: 'pages#redirect_from_root'
