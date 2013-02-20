@@ -3,6 +3,7 @@
 #= require turbolinks
 
 $(window).bind 'page:change', ->
+  SublimeVideo.documentReady()
   SublimeVideo.prepareVideoPlayers()
   SublimeVideo.hightlightCode()
 
