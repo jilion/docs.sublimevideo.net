@@ -3,17 +3,16 @@
 
 %h2= @page_title
 
-- if stage?('stable')
-  %p= raw "Don't miss the #{link_to "release notes for the new Player (in beta)", "http://docs.sublimevideo.net/beta/releases" } powered by SublimeVideo Horizon."
-
 #releases
-  - @releases.each do |release|
-    - id = release.datetime.strftime("%Y-%m-%d-%H-%M")
-    %h4{ id: id }
-      - if stage?('beta')
+  - if stage?('beta') && @releases.empty?
+    = 'The beta player is currently identical to the stable player.'
+    = raw "Read the stable #{link_to "release notes", docs_url('/releases')}."
+  - else
+    - @releases.each do |release|
+      - id = release.datetime.strftime("%Y-%m-%d-%H-%M")
+      %h4{ id: id }
         = link_to "##{id}" do
           = l(release.datetime, format: :long_without_time)
-          %span.version= release.version
-      - else
-        = link_to l(release.datetime, format: :long), "##{id}"
-    = release.content
+          - if release.version.present?
+            %span.version= release.version
+      = release.content

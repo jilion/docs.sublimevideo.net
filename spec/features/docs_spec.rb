@@ -23,44 +23,34 @@ feature 'redirect legacy custom-start-view routes' do
     visit '/custom-play-button'
     current_url.should eq "http://docs.sublimevideo.dev/custom-start-view"
 
-    visit '/beta/custom-play-button'
-    current_url.should eq "http://docs.sublimevideo.dev/beta/custom-start-view"
+    visit '/custom-play-button'
+    current_url.should eq "http://docs.sublimevideo.dev/custom-start-view"
   end
 end
 
 feature 'redirect legacy autoplay routes' do
-  it "redirects /autoplay-video-upon-page-load" do
+  it "redirects /autoplay-video-upon-page-load to /settings/player-settings#autoplay" do
     visit '/autoplay-video-upon-page-load'
-    current_url.should eq "http://docs.sublimevideo.dev/autoplay"
+    current_url.should eq "http://docs.sublimevideo.dev/settings/player-settings"
   end
 
   it "routes /autoplay in stable" do
     visit '/autoplay'
-    current_url.should eq "http://docs.sublimevideo.dev/autoplay"
+    current_url.should eq "http://docs.sublimevideo.dev/settings/player-settings"
   end
 end
 
 feature 'redirect legacy loop routes' do
-  it "redirects /loop-a-video to /loop" do
+  it "redirects /loop-a-video to /settings/player-settings#on-end" do
     visit '/loop-a-video'
-    current_url.should eq "http://docs.sublimevideo.dev/loop"
-  end
-
-  it "routes /loop in stable" do
-    visit '/loop'
-    current_url.should eq "http://docs.sublimevideo.dev/loop"
+    current_url.should eq "http://docs.sublimevideo.dev/settings/player-settings"
   end
 end
 
 feature 'redirect legacy back-to-initial-state-on-end routes' do
-  it "redirects /returning-to-the-initial-state-once-video-playback-ends to /back-to-initial-state-on-end" do
+  it "redirects /returning-to-the-initial-state-once-video-playback-ends to /settings/player-settings#on-end" do
     visit '/returning-to-the-initial-state-once-video-playback-ends'
-    current_url.should eq "http://docs.sublimevideo.dev/back-to-initial-state-on-end"
-  end
-
-  it "routes /back-to-initial-state-on-end in stable" do
-    visit '/back-to-initial-state-on-end'
-    current_url.should eq "http://docs.sublimevideo.dev/back-to-initial-state-on-end"
+    current_url.should eq "http://docs.sublimevideo.dev/settings/player-settings"
   end
 end
 
@@ -80,24 +70,24 @@ feature 'redirect other legacy routes' do
     visit '/faq'
     current_url.should eq "http://docs.sublimevideo.dev/player-faq"
 
-    visit '/beta/faq'
-    current_url.should eq "http://docs.sublimevideo.dev/beta/player-faq"
+    visit '/faq'
+    current_url.should eq "http://docs.sublimevideo.dev/player-faq"
   end
 
   it "redirect /real-time-stats to /addons/stats" do
     visit '/real-time-stats'
     current_url.should eq "http://docs.sublimevideo.dev/addons/stats"
 
-    visit '/beta/real-time-stats'
-    current_url.should eq "http://docs.sublimevideo.dev/beta/addons/stats"
+    visit '/real-time-stats'
+    current_url.should eq "http://docs.sublimevideo.dev/addons/stats"
   end
 
   it "redirect /optimize-for-stats to /addons/stats" do
     visit '/optimize-for-stats'
     current_url.should eq "http://docs.sublimevideo.dev/addons/stats"
 
-    visit '/beta/optimize-for-stats'
-    current_url.should eq "http://docs.sublimevideo.dev/beta/addons/stats"
+    visit '/optimize-for-stats'
+    current_url.should eq "http://docs.sublimevideo.dev/addons/stats"
   end
 
   it "redirect /supported-browsers-and-platforms to /supported-platforms" do
@@ -107,9 +97,9 @@ feature 'redirect other legacy routes' do
 end
 
 feature "shortcut redirects" do
-  it "redirects root to /beta/quickstart-guide" do
+  it "redirects root to /quickstart-guide" do
     visit '/'
-    current_url.should eq "http://docs.sublimevideo.dev/beta/quickstart-guide"
+    current_url.should eq "http://docs.sublimevideo.dev/quickstart-guide"
   end
 
   it "redirects /javascript-api to /javascript-api/usage" do
@@ -119,19 +109,19 @@ feature "shortcut redirects" do
 end
 
 feature "shortcut beta redirects" do
-  it "redirects /beta/settings to /settings/usage" do
-    visit '/beta/settings'
-    current_url.should eq "http://docs.sublimevideo.dev/beta/settings/usage"
+  it "redirects /settings to /settings/usage" do
+    visit '/settings'
+    current_url.should eq "http://docs.sublimevideo.dev/settings/usage"
   end
 
-  it "redirects /beta/javascript-api to /beta/javascript-api/usage" do
-    visit '/beta/javascript-api'
-    current_url.should eq "http://docs.sublimevideo.dev/beta/javascript-api/usage"
+  it "redirects /javascript-api to /javascript-api/usage" do
+    visit '/javascript-api'
+    current_url.should eq "http://docs.sublimevideo.dev/javascript-api/usage"
   end
 
-  it "redirects /beta/embeds to /beta/addons/embed" do
-    visit '/beta/embeds'
-    current_url.should eq "http://docs.sublimevideo.dev/beta/addons/embed"
+  it "redirects /embeds to /addons/embed" do
+    visit '/embeds'
+    current_url.should eq "http://docs.sublimevideo.dev/addons/embed"
   end
 end
 
@@ -184,47 +174,47 @@ end
 
 feature "viewable beta pages" do
   it "renders beta/encode-videos-for-the-web" do
-    visit '/beta/encode-videos-for-the-web'
-    current_url.should eq "http://docs.sublimevideo.dev/beta/encode-videos-for-the-web"
+    visit '/encode-videos-for-the-web'
+    current_url.should eq "http://docs.sublimevideo.dev/encode-videos-for-the-web"
   end
 
   it "renders beta/player-faq" do
-    visit '/beta/player-faq'
-    current_url.should eq "http://docs.sublimevideo.dev/beta/player-faq"
+    visit '/player-faq'
+    current_url.should eq "http://docs.sublimevideo.dev/player-faq"
   end
 
   it "renders beta/service-faq" do
-    visit '/beta/service-faq'
-    current_url.should eq "http://docs.sublimevideo.dev/beta/service-faq"
+    visit '/service-faq'
+    current_url.should eq "http://docs.sublimevideo.dev/service-faq"
   end
 
   it "renders beta/lightbox" do
-    visit '/beta/lightbox'
-    current_url.should eq "http://docs.sublimevideo.dev/beta/lightbox"
+    visit '/lightbox'
+    current_url.should eq "http://docs.sublimevideo.dev/lightbox"
   end
 
   it "renders beta/quickstart-guide" do
-    visit '/beta/quickstart-guide'
-    current_url.should eq "http://docs.sublimevideo.dev/beta/quickstart-guide"
+    visit '/quickstart-guide'
+    current_url.should eq "http://docs.sublimevideo.dev/quickstart-guide"
   end
 
   it "renders beta/supported-platforms" do
-    visit '/beta/supported-platforms'
-    current_url.should eq "http://docs.sublimevideo.dev/beta/supported-platforms"
+    visit '/supported-platforms'
+    current_url.should eq "http://docs.sublimevideo.dev/supported-platforms"
   end
 
   it "renders beta/troubleshooting" do
-    visit '/beta/troubleshooting'
-    current_url.should eq "http://docs.sublimevideo.dev/beta/troubleshooting"
+    visit '/troubleshooting'
+    current_url.should eq "http://docs.sublimevideo.dev/troubleshooting"
   end
 
   it "renders beta/releases" do
-    visit '/beta/releases'
-    current_url.should eq "http://docs.sublimevideo.dev/beta/releases"
+    visit '/releases'
+    current_url.should eq "http://docs.sublimevideo.dev/releases"
   end
 
   it "renders beta/write-proper-video-elements" do
-    visit '/beta/write-proper-video-elements'
-    current_url.should eq "http://docs.sublimevideo.dev/beta/write-proper-video-elements"
+    visit '/write-proper-video-elements'
+    current_url.should eq "http://docs.sublimevideo.dev/write-proper-video-elements"
   end
 end

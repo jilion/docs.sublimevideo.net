@@ -1,9 +1,9 @@
 h2. <%= title('Player settings') %>
 
-<span class="red">Please note that most of the settings described in this page can be set via the "Video Publishing Assistant":/beta/video-publishing-assistant and via the "Players" page on <%= link_to "MySublimeVideo", my_url('sites') %>.
+<span class="red">Please note that most of the settings described in this page can be set via the "Video Publishing Assistant":/video-publishing-assistant and via the "Players" page on <%= link_to "MySublimeVideo", my_url('sites') %>.
 </span>
 
-These settings can be set on the @<video>@ element to customize the player aspect and behavior. Please note that, if you are using our "(c)JavaScript API":/beta/javascript-api/usage to prepare your players, these settings must be set @before@ preparing them.
+These settings can be set on the @<video>@ element to customize the player aspect and behavior. Please note that, if you are using our "(c)JavaScript API":/javascript-api/usage to prepare your players, these settings must be set @before@ preparing them.
 
 h4. Start view settings
 
@@ -48,7 +48,7 @@ bc(language-markup). <video class='sublime' data-settings='initial-overlay-enabl
   ...
 </video>
 
-See the "Custom start view":/beta/custom-start-view page for more information and live demos.
+See the "Custom start view":/custom-start-view page for more information and live demos.
 
 
 h3(#initial-overlay-visibility). "@initial-overlay-visibility@":#initial-overlay-visibility
@@ -65,7 +65,7 @@ bc(language-markup). <video class='sublime' data-settings='initial-overlay-visib
   ...
 </video>
 
-See the "Custom start view":/beta/custom-start-view page for more information and live demos.
+See the "Custom start view":/custom-start-view page for more information and live demos.
 
 
 h3(#autoresize). "@autoresize@":#autoresize
@@ -221,7 +221,7 @@ bc(language-markup). <video class='sublime' data-settings='youtube-id:rAq2rNEru8
   ...
 </video>
 
-*Note:* See the "Use SublimeVideo with YouTube videos":/beta/youtube page for more information.
+*Note:* See the "Use SublimeVideo with YouTube videos":/youtube page for more information.
 
 
 h3(#name). "@name@":#name
@@ -237,7 +237,7 @@ bc(language-markup). <video class='sublime' data-settings='name:My awesome video
   ...
 </video>
 
-*Note:* This setting is used in your "Statistics dashboard":/beta/addons/stats.
+*Note:* This setting is used in your "Statistics dashboard":/addons/stats.
 
 
 h3(#uid). "@uid@":#uid
@@ -253,4 +253,4 @@ bc(language-markup). <video class='sublime' data-settings='uid:video1'>
   ...
 </video>
 
-*Note:* This setting is used in your "Statistics dashboard":/beta/addons/stats.
+*Note:* This setting is used in your "Statistics dashboard":/addons/stats.
