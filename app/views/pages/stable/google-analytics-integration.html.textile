@@ -10,7 +10,7 @@ h3(#step-2). "Step 2: Setup the events to track":#step-2
 
 Put the following code in a @<script>@ element.
 
-<pre data-line=11,12><code class="language-javascript">/*
+<pre><code class="language-javascript">/*
 Note: This is only a simple example, Google Analytics event tracking lets you
 customize the way you track events
 Be sure to check out the Google Analytics integration guides for any more info:
@@ -20,10 +20,23 @@ Be sure to check out the Google Analytics integration guides for any more info:
 */
 sublime.ready(function() {
   sublime.player('my_video').on({
-    start: function() { _gaq.push(["_trackEvent", "Videos", "Started"]); },
-    end:   function() { _gaq.push(["_trackEvent", "Videos", "Ended"]); }
+    start: trackVideoStart,
+    end:   trackVideoEnd
   });
-});</code></pre>
+});
+
+function trackVideoStart(player) {
+  _gaq.push(["_trackEvent", "Videos", "Started", videoName(player)]);
+}
+
+function trackVideoEnd(player) {
+  _gaq.push(["_trackEvent", "Videos", "Ended", videoName(player)]);
+}
+
+function videoName(player) {
+  return player.videoElement().getAttribute('data-name');
+}
+</code></pre>
 
 *Note:* Make sure to replace _my_video_ with the actual ID of your @<video>@.
 
