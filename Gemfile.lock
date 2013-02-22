@@ -248,7 +248,7 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sublime_video_layout (2.5.22)
+    sublime_video_layout (2.5.23)
       coffee-rails
       haml
       jquery-rails
