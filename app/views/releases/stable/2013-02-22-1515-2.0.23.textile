@@ -1,0 +1,3 @@
+* <span class="label improved">improved</span> Autoresize algorithm for responsive layout support.
+* <span class="label fixed">fixed</span> Autoplay issue with deprecated API method @sublimevideo.prepareAndPlay@ on mobile devices.
+

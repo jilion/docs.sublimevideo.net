@@ -1,0 +1,3 @@
+* <span class="label improved">improved</span> Dismiss contextual menu when the page scrolls.
+* <span class="label fixed">fixed</span> Positioning issue of contextual menu when the body element has CSS margins.
+* <span class="label fixed">fixed</span> Controls + Flash issue that was preventing the volume slider from working properly.
