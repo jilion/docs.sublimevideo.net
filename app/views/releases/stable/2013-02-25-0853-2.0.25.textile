@@ -1,1 +1,1 @@
-* <span class="label fixed">fixed</span> Issue with video file extensions that, in some cases, was preventing the video from playing.
+* <span class="label fixed">fixed</span> Issue with video file extensions that, in some cases, were preventing the video from playing.

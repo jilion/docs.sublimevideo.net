@@ -1,3 +1,3 @@
-* <span class="label improved">improved</span> Autoresize algorithm to better hande the case when the parent size is 0.
-* <span class="label fixed">fixed</span> Autoplay issue of legacy method @sublimevideo.prepareAndPlay@ on mobiles.
-* <span class="label fixed">fixed</span> Issue about flash object injection.
+* <span class="label improved">improved</span> Autoresize algorithm for responsive layout support.
+* <span class="label fixed">fixed</span> Autoplay issue with deprecated API method @sublimevideo.prepareAndPlay@ on mobile devices.
+
