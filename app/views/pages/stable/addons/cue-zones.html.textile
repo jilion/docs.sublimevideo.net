@@ -1,6 +1,22 @@
 h2. <%= title('Cue Zones') %>
 
-h3(#Methods). "Methods":#Methods
+This add-on allows you to perform a JavaScript action when the viewer enters or exits a certain zone in the video timeline.
+
+You've probably already heard about "cue points". A cue point is a user defined "marker" at a specific time in the video when a custom event is designed to occur. The Cue Zones add-on allows you to define not only a starting but also an ending point - hence "zones" - in your video where those custom actions should start and end occurring.
+
+You can use the Cue Zones API to trigger any custom action, such as synchronizing slides alongside a video presentation, displaying side-advertising or creating chapters in your video.
+
+h3(#demo). "Demo":#demo
+
+The first demo uses the Cue Zones API to update the background image and title at every video sequence change.
+
+<%= jsfiddle_embed('4vv6G', height: 520, panes: 'result,html,js,css') %>
+
+The following demo adds a chapters menu below the player which allows you to jump to the different sequences in the video (using the "@cuezones.goTo@":#goTo method).
+
+<%= jsfiddle_embed('4vv6G', height: 520, panes: 'result,html,js,css') %>
+
+h3(#methods). Methods
 
 These API methods are to be called on a @cuezones@ object, which you can retrieve in the following way
 
