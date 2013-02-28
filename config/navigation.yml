@@ -17,6 +17,7 @@ stable:
     'addons/on-video-logo': 'On-Video Logo'
     'addons/sharing': 'Social Sharing'
     'addons/embed': 'Embed'
+    'addons/cue-zones': 'Cue Zones'
   'Integration':
     'custom-start-view': 'Custom start view'
     'wordpress': 'WordPress plugin'
@@ -58,7 +59,6 @@ beta:
     'addons/on-video-logo': 'On-Video Logo'
     'addons/sharing': 'Social Sharing'
     'addons/embed': 'Embed'
-    'addons/cue-zones': 'Cue Zones'
   'Integration':
     'custom-start-view': 'Custom start view'
     'wordpress': 'WordPress plugin'

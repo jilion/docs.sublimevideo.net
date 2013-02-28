@@ -2,56 +2,81 @@ h2. <%= title('Cue Zones') %>
 
 h3(#Methods). "Methods":#Methods
 
-These API methods are to be called on a @cuepoints@ object, which you can retrieve in the following way
+These API methods are to be called on a @cuezones@ object, which you can retrieve in the following way
 
-bc(language-javascript). var cuepoints = sublime.player(elementOrId).cuepoints;
+bc(language-javascript). var cuezones = sublime.player(elementOrId).cuezones;
 
-h3(#add). "@cuepoints.add([id,] cuepoints, callback)@":#add
+h3(#add). "@cuezones.addGroup(group)@":#add
 
-* <span class="param">@id@</span> (@String@) - A string representing the name of the list of cuepoints. Pass this parameter only if you plan to remove the list at a given time.
+* <span class="param">@group@</span> (@Object@) - The group object. This object has the following keys:
+    - @id@: The id of the group (required only if you plan to use @goTo@).
+    - @cuezones@: a list of cue zones of objects that contains @from@ or @to@ keys and @id@ (required only if you plan to use @goTo@).
+    - @onenter@: The callback to fire when the playback enters a cue zone.
+    - @onexit@: The callback to fire when the playback exits a cue zone.
 
-* <span class="param">@cuepoints@</span> (@Array@) - A list of numbers representing the cuepoints. Negative numbers will be computed starting from the end of the playback. For instance, -2 will be converted to (duration - 2).
+Register a group of cue zones to the player. If a group with the same id already exists, it will be replaced by the new group.
 
-* <span class="param">@callback@</span> (@Function@) - The function to call when a cuepoint is reached.
-
-Register the list of cuepoints to the player. If a list with the same provided id already exists, it will be replaced by the new list.
-
-*Callback parameters*
-
+*onenter/onexit callback parameters*
 * <span class="param">@player@</span> (@Object@) - The player API object.
-* <span class="param">@cuepoint@</span> (@Object@) - The cuepoint API object. This object has only two attributes:
-    - @index@: The index of the cuepoint in the cuepoints list.
-    - @time@: The actual time at which the cuepoint callback is called.
-* <span class="param">@id@</span> (@String@) - The id of the cuepoints list. This parameter is passed only for a cuepoints list with an id.
+* <span class="param">@groupId@</span> (@String@) - The id of the group (if specified when adding the group).
+* <span class="param">@cuezone@</span> (@Object@) - The cuezone API object. This object has the attributes:
+  - @id@: The id of the cuezone (may be undefined).
+  - @from@: The time that defines the start of the zone (may be undefined).
+  - @computedFrom@: The computed time that defines the start of the zone (negative values are replaced by their corresponding positive values).
+  - @to@: The time that defines the end of the zone (may be undefined).
+  - @computedTo@: The computed time that defines the end of the zone (negative values are replaced by their corresponding positive values).
 
-**Example - registering cuepoints**
+**Example - registering cuezones**
 
-bc(language-javascript). player.cuepoints.add([1.3, 6, 9, -49.5], function(player, cuepoint) {
-  console.log('index: ' + cuepoint.index);
-  console.log('time: ' + cuepoint.time);
-});
+bc(language-javascript). var cuezones = [{
+    id: 'Paris',
+    from: 0,
+    to: 5
+  }, {
+    id: 'London',
+    from: 30
+  }, {
+    id: 'NYC',
+    from: -10
+}];
+// we are now ready to register our cuezones
+player.cuezones.addGroup({
+  id: 'cities',
+  cuezones: cuezones,
+  onenter: function(player, groupId, cuezone, index) {
+    console.log('entered cue zone ' + cuezone.id);
+  },
+  onexit: function(player, groupId, cuezone, index) {
+    console.log('exited cue zone ' + cuezone.id);
+  }
+})
 
-**Example - registering cuepoints with an id**
+h3(#goTo). "@cuezones.goTo(cuezoneId)@":#goTo
 
-bc(language-javascript). player.cuepoints.add('list_id', [1.3, 9], function(player, cuepoint, id) {
-  console.log('list id: ' + id);
-});
+* <span class="param">@cuezoneId@</span> (@<groupId>.<cuezoneId>@) - The id of the cuezone you wish to seek to.
 
+Seek to the start of the cuezone with the given id.
 
-h3(#remove). "@cuepoints.remove(id)@":#remove
+**Example - seeking to the cue zone "London" of the group "cities"**
 
-* <span class="param">@id@</span> (@String@) - The id of the list to be removed.
+bc(language-javascript). // Let's say we added a group with id "cities"
+// that contains a cue zone with id "London"
+player.cuezones.goTo('cities.London');
 
-Remove the list of cuepoints with the given id. The call has no effect if a list with the given id cannot be found.
+h3(#removeGroup). "@cuezones.removeGroup(id)@":#removeGroup
 
-**Example - removing a list of cuepoints**
+* <span class="param">@id@</span> (@String@) - The id of the group to be removed.
 
-bc(language-javascript). player.cuepoints.remove('list_id');
+Remove the group of cuezones with the given id. The call has no effect if a group with the given id cannot be found.
 
-h3(#removeAll). "@cuepoints.removeAll()@":#removeAll
+**Example - removing a list of cuezones**
 
-Remove all cuepoints registered to the video player.
+bc(language-javascript). player.cuezones.removeGroup('my_group_id');
 
-**Example - removing all registered lists of cuepoints**
+h3(#removeAllGroups). "@cuezones.removeAllGroups()@":#removeAllGroups
 
-bc(language-javascript). player.cuepoints.removeAll();
+Remove all cuezones registered to the video player.
+
+**Example - removing all registered groups of cuezones**
+
+bc(language-javascript). player.cuezones.removeAllGroups();
