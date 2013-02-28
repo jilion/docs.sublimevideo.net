@@ -1,7 +1,6 @@
 h2. <%= title('Using the data settings') %>
 
-<span class="red">Please note that most of the settings described here can be set via the "Video Publishing Assistant":/video-publishing-assistant and via the "Players" page on <%= link_to "MySublimeVideo", my_url('sites') %>.
-</span>
+%(red)Please note that most of the settings described in this page can be set via the "Video Publishing Assistant":/video-publishing-assistant and via the "Players" page on <%= link_to "MySublimeVideo", my_url('sites') %>.%
 
 Data settings are settings that you add to a DOM element (before being prepared by the SublimeVideo application) in order to alter it's behaviour once prepared. You can write data settings in two ways
 

@@ -78,8 +78,7 @@ You may want to refer to our "JavaScript API":/javascript-api to adapt this code
 
 h3(#settings). "Settings":#settings
 
-<span class="red">Please note: the settings described below can be configured "graphically" via the Player editor page on <%= link_to "MySublimeVideo", my_url('sites') %> and via the "Video Publishing Assistant":/video-publishing-assistant.
-</span>
+%(red)Please note the settings described below can be set via the "Video Publishing Assistant":/video-publishing-assistant and via the "Players" page on <%= link_to "MySublimeVideo", my_url('sites') %>.%
 
 h3(#sharing-enable). "@sharing-enable@":#sharing-enable
 

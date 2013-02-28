@@ -1,7 +1,6 @@
 h2. <%= title('Lightbox settings') %>
 
-<span class="red">Please note that most of the settings described in this page can be set via the "Video Publishing Assistant":/video-publishing-assistant and via the "Players" page on <%= link_to "MySublimeVideo", my_url('sites') %>.
-</span>
+%(red)Please note that most of the settings described in this page can be set via the "Video Publishing Assistant":/video-publishing-assistant and via the "Players" page on <%= link_to "MySublimeVideo", my_url('sites') %>.%
 
 These settings can be set on the @<a>@ element that triggers the "Lightbox":/lightbox to customize its aspect and behavior. Please note that, if you are using our "(c)JavaScript API":/javascript-api/usage to prepare your lightboxes, these settings must be set @before@ preparing them.
 

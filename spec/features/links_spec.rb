@@ -58,8 +58,6 @@ def route_with_redirect(href, stage)
     href + '/usage'
   when %r{custom-play-button\z}
     '/custom-start-view'
-  when %r{optimize-for-stats\z}
-    '/addons/stats'
   when %r{embeds\z}
     stage == 'beta' ? '/addons/embed' : href
   else
