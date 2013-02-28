@@ -58,7 +58,7 @@ beta:
     'addons/on-video-logo': 'On-Video Logo'
     'addons/sharing': 'Social Sharing'
     'addons/embed': 'Embed'
-    'addons/cuepoints': 'Cuepoints'
+    'addons/cue-zones': 'Cue Zones'
   'Integration':
     'custom-start-view': 'Custom start view'
     'wordpress': 'WordPress plugin'
