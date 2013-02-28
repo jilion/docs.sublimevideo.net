@@ -2,7 +2,7 @@ h2. <%= title('Cue Zones') %>
 
 This add-on allows you to perform a JavaScript action when the viewer enters or exits a certain zone in the video timeline.
 
-You've probably already heard about "cue points". A cue point is a user defined "marker" at a specific time in the video when a custom event is designed to occur. The Cue Zones add-on allows you to define not only a starting but also an ending point - hence "zones" - in your video where those custom actions should start and end occurring.
+You've probably already heard about "cue points". A cue point is a user defined marker at a specific time in the video when a custom event is designed to occur. The Cue Zones add-on allows you to define not only a starting but also an ending point - hence "zones" - in your video where those custom actions should start and end occurring. The fact you're automatically notified when the playback leaves a zone can be extremely useful if the user is jumping ahead or back in the timeline, because you can easily keep in sync with the zones he might have skipped through.
 
 You can use the Cue Zones API to trigger any custom action, such as synchronizing slides alongside a video presentation, displaying side-advertising or creating chapters in your video.
 
@@ -22,6 +22,8 @@ The Cue Zones API methods are to be called on a @cuezones@ object, which you can
 
 bc(language-javascript). var cuezones = sublime.player(elementOrId).cuezones;
 
+A player can manage multiple groups of cue zones. A group of cue zones is identified by a string (@id@). You always need to add at least a group, even if you are only registering a single cue zone.
+
 h3(#add). "@cuezones.addGroup(group)@":#add
 
 * <span class="param">@group@</span> (@Object@) - The group object. This object has the following keys:
@@ -39,15 +41,15 @@ The @addGroup@ method registers a group of cue zones to the player. If a group w
 * <span class="param">@player@</span> (@Object@) - The player API object.
 * <span class="param">@groupId@</span> (@String@) - The id of the group (if specified when adding the group).
 * <span class="param">@cuezone@</span> (@Object@) - The cuezone API object. This object has the attributes:
-  - @id@ The id of the cuezone (may be undefined).
+  - @id@ The id of the cue zone (may be undefined).
   - @from@ The time defining the start of the zone (may be undefined).
   - @computedFrom@ The computed time defining the start of the zone (negative values are replaced by their corresponding positive values).
   - @to@ The time defining the end of the zone (may be undefined).
   - @computedTo@ The computed time defining the end of the zone (negative values are replaced by their corresponding positive values).
 
-**Example - registering cuezones**
+**Example - registering cue zones**
 
-bc(language-javascript). var cuezones = [{
+bc(language-javascript).. var cuezones = [{
     id: 'Paris',
     from: 0,
     to: 5
@@ -58,6 +60,7 @@ bc(language-javascript). var cuezones = [{
     id: 'NYC',
     from: -10
 }];
+
 // we are now ready to register our cue zones
 player.cuezones.addGroup({
   id: 'cities',
@@ -74,7 +77,7 @@ h3(#goTo). "@cuezones.goTo(cuezoneId)@":#goTo
 
 * <span class="param">@cuezoneId@</span> (@<groupId>.<cuezoneId>@) - The id of the cuezone you wish to seek to.
 
-Seek to the start of the cuezone with the given id.
+Seek to the start of the cue zone with the given id.
 
 **Example - seeking to the cue zone "London" of the group "cities"**
 
@@ -88,7 +91,7 @@ h3(#removeGroup). "@cuezones.removeGroup(id)@":#removeGroup
 
 Remove the group of cue zones with the given id. The call has no effect if a group with the given id cannot be found.
 
-**Example - removing a list of cuezones**
+**Example - removing a list of cue zones**
 
 bc(language-javascript). player.cuezones.removeGroup('my_group_id');
 
@@ -96,6 +99,6 @@ h3(#removeAllGroups). "@cuezones.removeAllGroups()@":#removeAllGroups
 
 Remove all cue zones registered to the video player.
 
-**Example - removing all registered groups of cuezones**
+**Example - removing all registered groups of cue zones**
 
 bc(language-javascript). player.cuezones.removeAllGroups();
