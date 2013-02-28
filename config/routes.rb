@@ -22,8 +22,8 @@ DocsSublimeVideo::Application.routes.draw do
   get '/video-code-generator' => redirect('/video-publishing-assistant')
   get '/supported-browsers-and-platforms' => redirect('/supported-platforms')
 
-
   get '(/:stage)/embeds' => redirect('/addons/embed')
+  get '(/:stage)/cuezones' => redirect('/addons/cue-zones')
   get '(/:stage)/faq' => redirect { |params, _| "#{"/#{params[:stage]}" if params[:stage]}/player-faq" }, stage: /stable|beta/
   get '(/:stage)/real-time-stats' => redirect { |params, _| "#{"/#{params[:stage]}" if params[:stage]}/addons/stats" }, stage: /stable|beta/
   get '(/:stage)/optimize-for-stats' => redirect { |params, _| "#{"/#{params[:stage]}" if params[:stage]}/addons/stats#optimize-for-stats" }, stage: /stable|beta/
