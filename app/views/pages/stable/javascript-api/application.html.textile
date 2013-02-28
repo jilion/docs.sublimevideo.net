@@ -30,10 +30,8 @@ bc(language-javascript). sublime.ready(function(){
   // Code to execute once the SublimeVideo JS API is ready!
 });
 
-<span class="red">
-*Important* - All the following methods are to be called once the application is loaded,
-preferably inside the @sublime.ready@ block.
-</span>
+%(red)*Important note*: All the following methods are to be called once the application is loaded,
+preferably inside the @sublime.ready@ block.%
 
 h3(#prepare). "@sublime.prepare(elementOrId, callback)@":#prepare
 

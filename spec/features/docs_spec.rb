@@ -69,23 +69,14 @@ feature 'redirect other legacy routes' do
   it "redirect /faq to /player-faq" do
     visit '/faq'
     current_url.should eq "http://docs.sublimevideo.dev/player-faq"
-
-    visit '/faq'
-    current_url.should eq "http://docs.sublimevideo.dev/player-faq"
   end
 
   it "redirect /real-time-stats to /addons/stats" do
     visit '/real-time-stats'
     current_url.should eq "http://docs.sublimevideo.dev/addons/stats"
-
-    visit '/real-time-stats'
-    current_url.should eq "http://docs.sublimevideo.dev/addons/stats"
   end
 
   it "redirect /optimize-for-stats to /addons/stats" do
-    visit '/optimize-for-stats'
-    current_url.should eq "http://docs.sublimevideo.dev/addons/stats"
-
     visit '/optimize-for-stats'
     current_url.should eq "http://docs.sublimevideo.dev/addons/stats"
   end

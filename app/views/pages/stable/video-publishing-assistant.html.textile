@@ -1,0 +1,36 @@
+h2. <%= title('Video Publishing Assistant') %>
+
+The <%= link_to "Video Publishing Assistant", my_url('publish-video') %> helps you create properly configured @<video>@ elements that are automatically optimized for SublimeVideo.
+
+Just copy the generated video code and paste it into the page(s) where you want the video to be published.
+
+h3(#under-the-hood). "Under the hood":#under-the-hood
+
+The Video Publishing Assistant includes some useful features to assist you in resolving common problems you may face when creating your own @<video>@ elements:
+
+h4(#video-sources-errors). "1. Video sources errors":#video-sources-errors
+
+<%= image_tag('video-publishing-assistant/sources_with_errors.jpg', width: 640, class: 'screenshot', title: 'Source with errors') %>
+
+* *If a source cannot be found:* The Assistant will tell you if it cannot find a source. In that case, please ensure that the source address you entered is correct.
+* *If a source is hosted and served with the incorrect MIME Type:* This is a common issue that will prevent some browsers from being able to play your video. The Assistant automatically detects the video source's MIME Type and informs you if your web server needs to be reconfigured. In that case, please see how to "setup correct MIME Types":troubleshooting#videos-wont-play.
+
+h4(#incorrectly-configured-video-elements). "2. Incorrectly configured &lt;video&gt; elements":#incorrectly-configured-video-elements
+
+<%= image_tag('video-publishing-assistant/player_size.png', class: 'screenshot', width: 640, title: 'Player Size') %>
+
+A common example of a @<video>@ element being configured incorrectly would be when its width or height values don’t retain the source’s aspect ratio, resulting in a letterboxed/pillarboxed player (black bars around the video). The Video Publishing Assistant detects the original size and aspect ratio of the source file(s) and automatically provides the user with correctly proportioned width and height values. It also fixes other common configuration issues including incorrect ordering of the @<source>@ elements.
+
+h4(#malformed-video-code). "3. Malformed &lt;video&gt; code":#malformed-video-code
+
+<%= link_to image_tag('video-publishing-assistant/get_the_code.png', class: 'screenshot', style: 'float:left; margin: 20px 20px 0 0;', title: 'Get the Code'), '#get_the_code' %>
+
+It's common to see the @<video>@ code formatted incorrectly. For example, being split across multiple lines or missing small elements of the code itself.
+
+The Video Publishing Assistant always generates properly formatted @<video>@ elements, so you no longer have to worry about formatting details.
+
+h3(#optimized-for-sublimevideo). "Optimized for SublimeVideo":#optimized-for-sublimevideo
+
+In addition to helping you resolve these issues, the Video Publishing Assistant also helps you set up SublimeVideo-specific features such as "Lightboxes":lightbox, "HD Switching":hd-switching, "Embeds":addons/embed and video metadata to setup your videos for SublimeVideo's "Real-Time Statistics platform":addons/stats.
+
+<%= image_tag('video-publishing-assistant/code_popup.jpg', title: 'Code pop-up', id: 'get_the_code', style: 'display:none') %>
