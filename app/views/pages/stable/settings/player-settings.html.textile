@@ -245,6 +245,7 @@ Allows you to define a unique ID for your video.
 
 *Allowed values:*
 * _@string@_ – A *unique string* among all your videos. The string must be composed of alphanumeric, "-" (hyphen) and "_" (underscore) characters exclusively (case insensitive) and must be at least 1 character and less than 65 characters.
+The actual regular expression used to validate the uid is: @^[a-z0-9_\-]{1,64}$@.
 
 *Example:*
 
