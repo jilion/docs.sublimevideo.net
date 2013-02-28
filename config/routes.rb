@@ -23,6 +23,7 @@ DocsSublimeVideo::Application.routes.draw do
   get '/supported-browsers-and-platforms' => redirect('/supported-platforms')
   get '(/:stage)/optimize-for-stats' => redirect { |env, req| "#{"/#{env[:stage]}" if env[:stage]}/addons/stats#setup-for-stats" }, stage: /stable|beta/
   get '(/:stage)/embeds' => redirect('/addons/embed')
+  get '(/:stage)/cuezones' => redirect('/addons/cue-zones')
   get '(/:stage)/faq' => redirect { |env, req| "#{"/#{env[:stage]}" if env[:stage]}/player-faq" }, stage: /stable|beta/
   get '(/:stage)/real-time-stats' => redirect { |env, req| "#{"/#{env[:stage]}" if env[:stage]}/addons/stats" }, stage: /stable|beta/
 
