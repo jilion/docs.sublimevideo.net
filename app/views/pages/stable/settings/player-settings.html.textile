@@ -1,7 +1,6 @@
 h2. <%= title('Player settings') %>
 
-<span class="red">Please note that most of the settings described in this page can be set via the "Video Publishing Assistant":/video-publishing-assistant and via the "Players" page on <%= link_to "MySublimeVideo", my_url('sites') %>.
-</span>
+%(red)Please note that most of the settings described in this page can be set via the "Video Publishing Assistant":/video-publishing-assistant and via the "Players" page on <%= link_to "MySublimeVideo", my_url('sites') %>.%
 
 These settings can be set on the @<video>@ element to customize the player aspect and behavior. Please note that, if you are using our "(c)JavaScript API":/javascript-api/usage to prepare your players, these settings must be set @before@ preparing them.
 
@@ -229,7 +228,7 @@ h3(#name). "@name@":#name
 Allows you to define a name for your video.
 
 *Allowed values:*
-* _@any string@_
+* _@string@_
 
 *Example:*
 
@@ -245,7 +244,8 @@ h3(#uid). "@uid@":#uid
 Allows you to define a unique ID for your video.
 
 *Allowed values:*
-* _@any string@_ – This string *must be unique* among all your videos.
+* _@string@_ – A *unique string* among all your videos. The string must be composed of alphanumeric, "-" (hyphen) and "_" (underscore) characters exclusively (case insensitive) and must be at least 1 character and less than 65 characters.
+The actual regular expression used to validate the uid is: @^[a-z0-9_\-]{1,64}$@.
 
 *Example:*
 
