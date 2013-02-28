@@ -10,7 +10,7 @@ h3(#demo). "Demo":#demo
 
 The first demo uses the Cue Zones API to update the background image and title at every video sequence change.
 
-<%= jsfiddle_embed('4vv6G', height: 520, panes: 'result,html,js,css') %>
+<%= jsfiddle_embed('n4RNB', height: 520, panes: 'result,html,js,css') %>
 
 The following demo adds a chapters menu below the player which allows you to jump to the different sequences in the video (using the "@cuezones.goTo@":#goTo method).
 
@@ -18,29 +18,32 @@ The following demo adds a chapters menu below the player which allows you to jum
 
 h3(#methods). Methods
 
-These API methods are to be called on a @cuezones@ object, which you can retrieve in the following way
+The Cue Zones API methods are to be called on a @cuezones@ object, which you can retrieve in the following way
 
 bc(language-javascript). var cuezones = sublime.player(elementOrId).cuezones;
 
 h3(#add). "@cuezones.addGroup(group)@":#add
 
 * <span class="param">@group@</span> (@Object@) - The group object. This object has the following keys:
-    - @id@: The id of the group (required only if you plan to use @goTo@).
-    - @cuezones@: a list of cue zones of objects that contains @from@ or @to@ keys and @id@ (required only if you plan to use @goTo@).
-    - @onenter@: The callback to fire when the playback enters a cue zone.
-    - @onexit@: The callback to fire when the playback exits a cue zone.
+** @id@ The id of the group (required only if you plan to use the "@goTo@":#goTo or "@removeGroup@":#removeGroup methods).
+** @cuezones@ a list of objects, each one representing a cue zone containing:
+  - @id@ the id of the zone (required if you plan to use the "@goTo@":#goTo method)
+  - @from@ The time defining the start of the zone
+  - @to@ The time defining the end of the zone
+** @onenter@ The callback function to call when the playback enters a cue zone.
+** @onexit@ The callback function to call when the playback exits a cue zone.
 
-Register a group of cue zones to the player. If a group with the same id already exists, it will be replaced by the new group.
+The @addGroup@ method registers a group of cue zones to the player. If a group with the same id already exists, it will be replaced by the new group.
 
 *onenter/onexit callback parameters*
 * <span class="param">@player@</span> (@Object@) - The player API object.
 * <span class="param">@groupId@</span> (@String@) - The id of the group (if specified when adding the group).
 * <span class="param">@cuezone@</span> (@Object@) - The cuezone API object. This object has the attributes:
-  - @id@: The id of the cuezone (may be undefined).
-  - @from@: The time that defines the start of the zone (may be undefined).
-  - @computedFrom@: The computed time that defines the start of the zone (negative values are replaced by their corresponding positive values).
-  - @to@: The time that defines the end of the zone (may be undefined).
-  - @computedTo@: The computed time that defines the end of the zone (negative values are replaced by their corresponding positive values).
+  - @id@ The id of the cuezone (may be undefined).
+  - @from@ The time defining the start of the zone (may be undefined).
+  - @computedFrom@ The computed time defining the start of the zone (negative values are replaced by their corresponding positive values).
+  - @to@ The time defining the end of the zone (may be undefined).
+  - @computedTo@ The computed time defining the end of the zone (negative values are replaced by their corresponding positive values).
 
 **Example - registering cuezones**
 
@@ -55,7 +58,7 @@ bc(language-javascript). var cuezones = [{
     id: 'NYC',
     from: -10
 }];
-// we are now ready to register our cuezones
+// we are now ready to register our cue zones
 player.cuezones.addGroup({
   id: 'cities',
   cuezones: cuezones,
@@ -83,7 +86,7 @@ h3(#removeGroup). "@cuezones.removeGroup(id)@":#removeGroup
 
 * <span class="param">@id@</span> (@String@) - The id of the group to be removed.
 
-Remove the group of cuezones with the given id. The call has no effect if a group with the given id cannot be found.
+Remove the group of cue zones with the given id. The call has no effect if a group with the given id cannot be found.
 
 **Example - removing a list of cuezones**
 
@@ -91,7 +94,7 @@ bc(language-javascript). player.cuezones.removeGroup('my_group_id');
 
 h3(#removeAllGroups). "@cuezones.removeAllGroups()@":#removeAllGroups
 
-Remove all cuezones registered to the video player.
+Remove all cue zones registered to the video player.
 
 **Example - removing all registered groups of cuezones**
 
