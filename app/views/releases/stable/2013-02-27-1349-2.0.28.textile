@@ -1,0 +1,4 @@
+* <span class="label improved">improved</span> Performances on Firefox browsers.
+* <span class="label fixed">fixed</span> Positioning issue of Flash videos on same web pages.
+* <span class="label fixed">fixed</span> @end@ player event behavior on IE < 9.
+* <span class="label fixed">fixed</span> Autoplay issue with deprecated API method @sublimevideo.play@ on mobile devices.
