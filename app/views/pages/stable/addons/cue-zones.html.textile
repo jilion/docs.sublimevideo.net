@@ -24,6 +24,9 @@ bc(language-javascript). var cuezones = sublime.player(elementOrId).cuezones;
 
 A player can manage multiple groups of cue zones. A group of cue zones is identified by a string (@id@). You always need to add at least a group, even if you are only registering a single cue zone.
 
+Every @id@ you set on the following methods must have the format @/^[a-z0-9_-]+$/i@
+(dots and spaces not allowed).
+
 h3(#add). "@cuezones.addGroup(group)@":#add
 
 * <span class="param">@group@</span> (@Object@) - The group object. This object has the following keys:
