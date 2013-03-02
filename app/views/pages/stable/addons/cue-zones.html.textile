@@ -18,7 +18,7 @@ The following demo adds a chapters menu below the player which allows you to jum
 
 h3(#methods). Methods
 
-The Cue Zones API methods are to be called on a @cuezones@ object, which you can retrieve in the following way
+The Cue Zones API methods described in this section are to be called on a @cuezones@ object, which you can retrieve in the following way
 
 bc(language-javascript). var cuezones = sublime.player(elementOrId).cuezones;
 
