@@ -1,1 +1,1 @@
-* <span class="label fixed">fixed</span> Various minor issues on Cue Zones Add-on.
+* <span class="label fixed">fixed</span> Various minor issues with Cue Zones.
