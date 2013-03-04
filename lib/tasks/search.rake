@@ -18,7 +18,7 @@ namespace :search do
 
         text = if complex_page = %w[player-faq service-faq troubleshooting].find { |page| page == permalink }
           sub_pages_glob = Rails.root.join('app', 'views', 'pages', stage, complex_page, '_*.html.{haml,textile}')
-          Dir[pages_glob].inject('') { |memo, page| memo += File.new(page).read }
+          Dir[sub_pages_glob].inject('') { |memo, page| memo += File.new(page).read }
         else
           File.new(page).read
         end
