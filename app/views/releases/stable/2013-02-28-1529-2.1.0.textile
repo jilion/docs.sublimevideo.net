@@ -1,4 +1,4 @@
 * <span class="label new">new</span> "Cue Zones Add-on":http://blog.jilion.com/2013/02/28/introducing-the-sublimevideo-cue-zones-add-on.
 * <span class="label improved">improved</span> Additional performance improvements on Firefox browsers.
-* <span class="label fixed">fixed</span> Seek feature with YouTube videos when YouTube is in HTML5 mode.
+* <span class="label fixed">fixed</span> Seeking with YouTube videos when YouTube is in HTML5 mode.
 * <span class="label fixed">fixed</span> Seek issue with Flash videos that was occasionally preventing the playback from resuming.
