@@ -13,6 +13,13 @@ All these settings can be configured via your site's "Players" page on <%= link_
 
 %(red)*Important note:*% When uploading your own logo, please make sure to double the size of the image (@2x) to allow optimal rendering on Retina displays.
 
+h3(#demo). "Demo":#demo
+
+<%= jsfiddle_embed('vHFsy', height: 436) %>
+
+<%= jsfiddle_embed('J9W5b', height: 436) %>
+
+
 h3(#settings). "Settings":#settings
 
 The settings described below can be set via the "Players" page on <%= link_to "MySublimeVideo", my_url('sites') %> but if you want to override a player default settings for a specific video, you can do it with the following "settings":/settings/usage.

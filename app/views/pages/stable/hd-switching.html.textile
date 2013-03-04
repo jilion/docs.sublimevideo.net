@@ -34,4 +34,4 @@ bc(language-markup). <video class="sublime" width="640" height="360" poster="htt
 
 h3(#demo). "Demo":#demo
 
-<%= jsfiddle_embed('j4E7a') %>
+<%= jsfiddle_embed('j4E7a', height: 440) %>
