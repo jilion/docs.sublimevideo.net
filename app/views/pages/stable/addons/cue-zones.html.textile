@@ -22,7 +22,7 @@ The Cue Zones API methods described in this section are to be called on a @cuezo
 
 bc(language-javascript). var cuezones = sublime.player(elementOrId).cuezones;
 
-A player can manage multiple groups of cue zones. A group of cue zones is identified by a string (@id@). You always need to add at least a group, even if you are only registering a single cue zone.
+A player can manage multiple groups of cue zones, each dedicated to a particular task (e.g. change background images, show subtitles, popup advertisements). A group of cue zones is identified by a string (@id@). You always need to add at least a group, even if you are only registering a single cue zone.
 
 Every @id@ you set on the following methods must have the format @/^[a-z0-9_-]+$/i@
 (dots and spaces not allowed).
@@ -33,8 +33,9 @@ h3(#add). "@cuezones.addGroup(group)@":#add
 ** @id@ The id of the group (required only if you plan to use the "@goTo@":#goTo or "@removeGroup@":#removeGroup methods).
 ** @cuezones@ a list of objects, each one representing a cue zone containing:
   - @id@ the id of the zone (required if you plan to use the "@goTo@":#goTo method)
-  - @from@ The time defining the start of the zone
-  - @to@ The time defining the end of the zone
+  - @from@ The time in seconds defining the start of the zone. You can use a negative value for a time relative to the end of the video.
+  - @to@ The time in seconds defining the end of the zone. You can use a negative value for a time relative to the end of the video. If you omit this value, we'll automatically set the end of the zone to match the start of the next cue zone in the group.
+  - _@anything@_ Any other custom data you might want to add, which you'll be able to retrieve via the _cuezone_ object passed to the onenter/onexit callback functions.
 ** @onenter@ The callback function to call when the playback enters a cue zone.
 ** @onexit@ The callback function to call when the playback exits a cue zone.
 
@@ -45,10 +46,12 @@ The @addGroup@ method registers a group of cue zones to the player. If a group w
 * <span class="param">@groupId@</span> (@String@) - The id of the group (if specified when adding the group).
 * <span class="param">@cuezone@</span> (@Object@) - The cuezone API object. This object has the attributes:
   - @id@ The id of the cue zone (may be undefined).
-  - @from@ The time defining the start of the zone (may be undefined).
+  - @from@ The time in seconds defining the start of the zone (may be undefined).
   - @computedFrom@ The computed time defining the start of the zone (negative values are replaced by their corresponding positive values).
-  - @to@ The time defining the end of the zone (may be undefined).
+  - @to@ The time in seconds defining the end of the zone (may be undefined).
   - @computedTo@ The computed time defining the end of the zone (negative values are replaced by their corresponding positive values).
+  - _@anything@_ Any other custom data you might have added to the cue zone.
+
 
 **Example - registering cue zones**
 
@@ -61,7 +64,7 @@ bc(language-javascript).. var cuezones = [{
     from: 30
   }, {
     id: 'NYC',
-    from: -10
+    from: -10 // negative value => "10 seconds before the video ends"
 }];
 
 // we are now ready to register our cue zones
