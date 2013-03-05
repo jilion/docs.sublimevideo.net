@@ -172,9 +172,19 @@ h4. My theme is responsive, how can I make my videos responsive too?
 
 Simply add @settings="autoresize:fit"@ (or @settings="autoresize:fill"@) in your shortcode, as follow:
 
-bc(language-markup). [sublimevideo src1='...' width='...' height='...' settings='autoresize:fit']
+bc(language-markup). [sublimevideo src1="..." width="..." height="..." settings="autoresize:fit"]
 
-Learn more about the @autoresize@ player settings in the "Player settings":/settings/player-settings page.
+Learn more about the @autoresize@ player settings in the "Player settings":/settings/player-settings#autoresize page.
+
+h4. How can I play a YouTube video with the SublimeVideo WordPress plugin?
+
+Let's say you want to play the following video: https://www.youtube.com/watch?v=abcd1234
+
+Simply add @settings="youtube-id:abcd1234"@ in your shortcode, as follow:
+
+bc(language-markup). [sublimevideo src1="..." width="..." height="..." settings="youtube-id:abcd1234"]
+
+Learn more about the @youtube-id@ player settings in the "Player settings":/settings/player-settings#youtube-id page.
 
 h3(#troubleshooting). "Troubleshooting":#troubleshooting
 
