@@ -20,4 +20,4 @@ h4(#youtube-demo). "Demo":#youtube-demo
 
 The following video, hosted on YouTube, plays inside the SublimeVideo Classic Player.
 
-<div class="video_wrap"><video class="sublime" width="640" height="360" data-uid="docs-youtube" data-youtube-id="rAq2rNEru8A" preload="none"></video></div>
+<notextile><div class="video_wrap"><video class="sublime" width="640" height="360" data-uid="docs-youtube" data-youtube-id="rAq2rNEru8A" preload="none"></video></div></notextile>
