@@ -26,7 +26,7 @@ h4. Video source settings
 
 h4. Video metadata settings
 
-"(c)@name@":#name "(c)@uid@":#uid
+"(c)@uid@":#uid "(c)@title@":#title
 
 See also "Using the data settings":usage and "Lightbox settings":lightbox-settings.
 
@@ -43,7 +43,7 @@ Allows you to enable or disable the initial overlay.
 
 *Example:*
 
-bc(language-markup). <video class='sublime' data-settings='initial-overlay-enable:false'>
+bc(language-markup). <video class='sublime' data-initial-overlay-enable='false'>
   ...
 </video>
 
@@ -60,7 +60,7 @@ Allows you to choose how the initial overlay is displayed.
 
 *Example:*
 
-bc(language-markup). <video class='sublime' data-settings='initial-overlay-visibility:visible'>
+bc(language-markup). <video class='sublime' data-initial-overlay-visibility='visible'>
   ...
 </video>
 
@@ -78,7 +78,7 @@ Resizes the video when its parent container is resized.
 
 *Example:*
 
-bc(language-markup). <video class='sublime' data-settings='autoresize:fill'>
+bc(language-markup). <video class='sublime' data-autoresize='fill'>
   ...
 </video>
 
@@ -95,7 +95,7 @@ Allows you to autoplay the video upon page load. This flag may have no effect on
 
 *Example:*
 
-bc(language-markup). <video class='sublime' data-settings='autoplay:true'>
+bc(language-markup). <video class='sublime' data-autoplay='true'>
   ...
 </video>
 
@@ -113,7 +113,7 @@ Allows you to define the player's behavior once a video playback ends.
 
 *Example:*
 
-bc(language-markup). <video class='sublime' data-settings='on-end:replay'>
+bc(language-markup). <video class='sublime' data-on-end='replay'>
   ...
 </video>
 
@@ -128,7 +128,7 @@ Allows you to enable or disable the controls.
 
 *Example:*
 
-bc(language-markup). <video class='sublime' data-settings='controls-enable:false'>
+bc(language-markup). <video class='sublime' data-controls-enable='false'>
   ...
 </video>
 
@@ -143,7 +143,7 @@ Allows you to define the controls visibility.
 
 *Example:*
 
-bc(language-markup). <video class='sublime' data-settings='controls-visibility:visible'>
+bc(language-markup). <video class='sublime' data-controls-visibility='visible'>
   ...
 </video>
 
@@ -158,7 +158,7 @@ Allows you to enable or disable the fullmode feature.
 
 *Example:*
 
-bc(language-markup). <video class='sublime' data-settings='fullmode-enable:false'>
+bc(language-markup). <video class='sublime' data-fullmode-enable='false'>
   ...
 </video>
 
@@ -173,7 +173,7 @@ Allows you to choose the default "fullmode" method used when a visitor clicks th
 
 *Example:*
 
-bc(language-markup). <video class='sublime' data-settings='fullmode-priority:window'>
+bc(language-markup). <video class='sublime' data-fullmode-priority='window'>
   ...
 </video>
 
@@ -187,7 +187,7 @@ Allows you to set a different player than your default player.
 
 *Example:*
 
-bc(language-markup). <video class='sublime' data-settings='player-kit:2'>
+bc(language-markup). <video class='sublime' data-player-kit='2'>
   ...
 </video>
 
@@ -202,7 +202,7 @@ Allows you to enable or disable the volume control.
 
 *Example:*
 
-bc(language-markup). <video class='sublime' data-settings='volume-enable:false'>
+bc(language-markup). <video class='sublime' data-volume-enable='false'>
   ...
 </video>
 
@@ -216,32 +216,16 @@ Allows you to set the ID of a YouTube video to be played in SublimeVideo.
 
 *Example:*
 
-bc(language-markup). <video class='sublime' data-settings='youtube-id:rAq2rNEru8A'>
+bc(language-markup). <video class='sublime' data-youtube-id='rAq2rNEru8A'>
   ...
 </video>
 
 *Note:* See the "Use SublimeVideo with YouTube videos":/youtube page for more information.
 
 
-h3(#name). "@name@":#name
-
-Allows you to define a name for your video.
-
-*Allowed values:*
-* _@string@_
-
-*Example:*
-
-bc(language-markup). <video class='sublime' data-settings='name:My awesome video'>
-  ...
-</video>
-
-*Note:* This setting is used in your "Statistics dashboard":/addons/stats.
-
-
 h3(#uid). "@uid@":#uid
 
-Allows you to define a unique ID for your video.
+Allows you to define a unique ID for your video. %(red)If the "auto-embed":/addons/embed#auto-embedding feature is enabled, you must set a unique ID for your videos.%
 
 *Allowed values:*
 * _@string@_ – A *unique string* among all your videos. The string must be composed of alphanumeric, "-" (hyphen) and "_" (underscore) characters exclusively (case insensitive) and must be at least 1 character and less than 65 characters.
@@ -249,7 +233,31 @@ The actual regular expression used to validate the uid is: @/^[a-z0-9_\-]{1,64}$
 
 *Example:*
 
-bc(language-markup). <video class='sublime' data-settings='uid:video1'>
+bc(language-markup). <video class='sublime' data-uid='video1'>
+  ...
+</video>
+
+*Note:* This setting is used in your "Statistics dashboard":/addons/stats.
+
+
+h3(#title). "@title@":#title
+
+Allows you to define a title for your video. *Please note that @data-name@ and the generic @title@ attribute are also supported.*
+
+*Allowed values:*
+* _@string@_
+
+*Examples:*
+
+bc(language-markup). <video class='sublime' data-title='My awesome video'>
+  ...
+</video>
+<!-- data-name is also supported -->
+<video class='sublime' data-name='My awesome video'>
+  ...
+</video>
+<!-- as well as the generic title attribute -->
+<video class='sublime' title='My awesome video'>
   ...
 </video>
 
