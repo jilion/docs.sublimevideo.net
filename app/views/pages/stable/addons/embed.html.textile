@@ -23,7 +23,10 @@ The auto embedding feature takes care of generating the pages that will actually
 
 To enable auto embedding, subscribe to the _<%= link_to "Auto embedding", my_url('addons?h=embed-auto') %>_ add-on and  activate the feature by default for your player(s) via the "Players" page of your site on <%= link_to "MySublimeVideo", my_url('sites') %>. You can also only use this feature on a per-video basis via the <%= link_to "Video Publishing Assistant", my_url('publish-video') %>.
 
-%(red)Please note that you must set a "unique ID":/settings/player-settings#uid for your videos when this feature is enabled.%
+%(red)*Important note:*%
+
+* You *must* set a "unique ID":/settings/player-settings#uid for your videos.
+* Your video sources URLs *must not be dynamic* (i.e. different on each request).
 
 h3(#manual-embedding). "Manual embedding":#manual-embedding
 
@@ -75,10 +78,10 @@ table(supported_browsers generic).
 (alt). |_{width:30%}. Embed setting                |_{width:20%}. Player editor                |_{width:20%}. Video Publishing Assistant  |_. Notes |
 |        Enable/Disable the embed button           |(ok). <span class="icon-checkmark"></span>*|                                          |         |
 |        Enable/Disable the auto embedding fetaure |(ok). <span class="icon-checkmark"></span> |(ok). <span class="icon-checkmark"></span>|         |
-(alt).|  Embed URL                                 |                                           |(ok). <span class="icon-checkmark"></span>| the URL of the HTML page you created in step 1. |
+(alt).|  Embed URL                                 |                                           |(ok). <span class="icon-checkmark"></span>| The URL of the HTML page you created in step 1 of "Manual embedding":#manual-embedding. |
 |        Default embed size                        |(ok). <span class="icon-checkmark"></span> |(ok). <span class="icon-checkmark"></span>|         |
 
-<small>*: When enabled, you still need to provide a valid <em>embed URL</em> in order for the embed button to show up in the player.</small>
+<small>*: When manual embedding is enabled, you still need to provide a valid _embed URL_ in order for the embed button to show up in the player.</small>
 
 h3(#embed-enable). "@embed-enable@":#embed-enable
 
