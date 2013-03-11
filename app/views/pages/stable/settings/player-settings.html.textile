@@ -225,7 +225,7 @@ bc(language-markup). <video class='sublime' data-youtube-id='rAq2rNEru8A'>
 
 h3(#uid). "@uid@":#uid
 
-Allows you to define a unique ID for your video. %(red)If the "auto-embed":/addons/embed#auto-embedding feature is enabled, you must set a unique ID for your videos.%
+Allows you to define a unique ID for your video. %(red)If the "auto embedding":/addons/embed#auto-embedding feature is enabled, you must set a unique ID for your videos.%
 
 *Allowed values:*
 * _@string@_ – A *unique string* among all your videos. The string must be composed of alphanumeric, "-" (hyphen) and "_" (underscore) characters exclusively (case insensitive) and must be at least 1 character and less than 65 characters.
