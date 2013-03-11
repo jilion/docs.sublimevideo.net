@@ -1,0 +1,1 @@
+* <span class="label improved">improved</span> The player now defaults to Flash on Chrome for Windows (due to graphic card issues).
