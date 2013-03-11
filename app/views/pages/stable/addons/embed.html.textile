@@ -21,7 +21,7 @@ h3(#auto-embedding). "Auto embedding":#auto-embedding
 
 The auto embedding feature takes care of generating the pages that will actually be shared by your audience. It automatically refreshes the @<video>@ settings in the shareable page based on the original @<video>@ element you've placed in your pages.
 
-To enable auto embedding, subscribe to the _<%= link_to "Auto embedding", my_url('addons?h=embed-auto') %>_ add-on and  activate the feature by default for your player(s) via the "Players" page of your site on <%= link_to "MySublimeVideo", my_url('sites') %>. You can also only use this feature on a per-video basis via the <%= link_to "Video Publishing Assistant", my_url('publish-video') %>.
+To enable auto embedding, subscribe to the _<%= link_to "Auto embedding", my_url('addons?h=embed-auto') %>_ add-on and activate the feature by default for your player(s) via the "Players" page of your site on <%= link_to "MySublimeVideo", my_url('sites') %>. You can also only use this feature on a per-video basis via the <%= link_to "Video Publishing Assistant", my_url('publish-video') %>.
 
 %(red)*Important note:*%
 
