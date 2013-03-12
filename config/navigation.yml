@@ -18,6 +18,7 @@ stable:
     'addons/sharing': 'Social Sharing'
     'addons/embed': 'Embed'
     'addons/cue-zones': 'Cue Zones'
+    'addons/support': 'Support'
   'Integration':
     'custom-start-view': 'Custom start view'
     'wordpress': 'WordPress plugin'
