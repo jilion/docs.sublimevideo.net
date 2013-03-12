@@ -1,0 +1,2 @@
+* <span class="label fixed">fixed</span> The player defaults to Flash on Chrome for Windows only if the user didn't disabled the Flash plugin.
+* <span class="label fixed">fixed</span> Contextual menu positioning issues.
