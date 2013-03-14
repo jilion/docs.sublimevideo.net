@@ -1,0 +1,2 @@
+* <span class="label fixed">fixed</span> Potential conflicts with other JavaScript libraries on IE < 9.
+* <span class="label fixed">fixed</span> Various minor issues.

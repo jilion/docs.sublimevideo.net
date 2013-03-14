@@ -1,0 +1,41 @@
+h2. <%= title('Plan to Add-Ons Migration Information for Existing Customers') %>
+
+With the introduction of our new <%= link_to "Modular Player", layout_url('modular-player') %> powered by <%= link_to "SublimeVideo Horizon", layout_url('horizon-framework') %>, we switched to a <%= link_to 'new pricing model', layout_url('pricing') %> based on add-ons. Registered users may be wondering how they are affected by the introduction of add-ons.
+
+Don't worry - certain add-ons have automatically been offered or activated, depending on your site's plan. You'll get more, by paying the same or less.
+
+Below are the migration details for each plan:
+
+h4. Changes common to all plans
+
+* All sites now benefit from *unlimited video plays*.
+* The free _<%= link_to "Forum & email support", layout_url('modular-player#support') %>_ add-on is included for all sites.
+* Add-on prices are pro-rated by day so you only pay for the exact number of days you use a feature.
+* Invoices are issued and charged at the beginning of each month for the previous month (no more yearly billing period).
+
+h4. Users of the Free plan
+
+* No paid add-ons have been subscribed for your site.
+* *You still pay nothing.*
+
+h4. Users of the Trial plan
+
+* No paid add-ons have been subscribed for your site, since add-on subscription now starts automatically after the first 30 days.
+* *You still pay nothing.*
+
+h4. $9.90/month or $99/year Plus plan customers
+
+* *Unlimited video plays* instead of the previous 200,000 plays/month limit.
+* You've been subscribed to the _<%= link_to "No SublimeVideo logo", layout_url('modular-player#on_video_logo') %>_ add-on for a value of $9.90/month.
+* *We offer you the _<%= link_to "Real-Time Statistics", layout_url('modular-player#real_time_stats') %>_ add-on*: You have access to real-time statistics for the entire life of your site, for free (instead of $9.90/month)!
+* If you were subscribed to the $99/year Plus plan, your balance is credited for the remaining days you already paid for. This balance will automatically be used to pay future invoices.
+* *You still pay $9.90/month.*
+
+h4. $49.90/month or $499/year Premium plan customers
+
+* *Unlimited video plays* instead of the previous 1,000,000 plays/month limit.
+* You've been subscribed to the _<%= link_to "No SublimeVideo logo", layout_url('modular-player#on_video_logo') %>_ add-on for a value of $9.90/month.
+* You've been subscribed to the _<%= link_to "Real-Time Statistics", layout_url('modular-player#real_time_stats') %>_ add-on: You have access to real-time statistics for $9.90/month.
+* *We offer you the _<%= link_to "VIP Email Support", layout_url('modular-player#support') %>_ add-on*: You have access to professional/VIP email support (guaranteed response within the next business day) for the entire life of your site, for free (instead of $99.90/month)!
+* If you were subscribed to the $499/year Premium plan, your balance is credited for the remaining days you already paid for. This balance will automatically be used to pay future invoices.
+* *You now pay $19.90/month instead of $49.90/month.*
