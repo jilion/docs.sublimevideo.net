@@ -2,14 +2,14 @@ h2. <%= title('Embed') %>
 
 h3. Table of Contents
 
-* "Auto embedding":#auto-embedding
-* "Manual embedding":#manual-embedding
+* "Auto embedding":#auto
+* "Manual embedding":#manual
 * "Settings":#settings
 
 <div class="breakline"></div>
 <p></p>
 
-This add-on allows your audience to easily share your videos by embedding them into their own sites or elsewhere on the web. It displays an embed button on the top-right corner of the player which opens a pane with the actual embed code and the possibility to change the embedded player size.
+The _Auto Embed_ and _Manual Embed_ add-ons allow your audience to easily share your videos by embedding them into their own sites or elsewhere on the web. Both add-ons will display an embed button on the top-right corner of the player which opens a pane showing the actual embed code and the possibility to change the embedded player size.
 
 <%= image_tag('embed/embed_button.jpg', class: 'screenshot', title: 'Embed button') %>
 _The main embed button in our <%= link_to "Classic", layout_url('modular-player#player_designs') %> player._
@@ -17,20 +17,20 @@ _The main embed button in our <%= link_to "Classic", layout_url('modular-player#
 <%= image_tag('embed/embed_pane.jpg', class: 'screenshot', title: 'Embed pane') %>
 _The embed pane._
 
-h3(#auto-embedding). "Auto embedding":#auto-embedding
+h3(#auto). "Auto embedding":#auto
 
-The auto embedding feature takes care of generating the pages that will actually be shared by your audience. It automatically refreshes the @<video>@ settings in the shareable page based on the original @<video>@ element you've placed in your pages.
+The Auto Embed add-on is the easiest way to enable embedding for your videos. With this add-on you don't need to create an HTML page for every video you want to be embeddable: the add-on takes care of generating those files for you and automatically keeping them in sync with the original @<video>@ elements you've placed on your site.
 
-To enable auto embedding, subscribe to the _<%= link_to "Auto embedding", my_url('addons?h=embed-auto') %>_ add-on and activate the feature by default for your player(s) via the "Players" page of your site on <%= link_to "MySublimeVideo", my_url('sites') %>. You can also only use this feature on a per-video basis via the <%= link_to "Video Publishing Assistant", my_url('publish-video') %>.
+To enable this feature by default for you player(s), subscribe to the _<%= link_to "Auto Embed", my_url('addons?h=embed-auto') %>_ add-on and activate it via your site's Player editor page on <%= link_to "MySublimeVideo", my_url('sites') %>. You can also only use this feature on a per-video basis via the <%= link_to "Video Publishing Assistant", my_url('publish-video') %>.
 
-%(red)*Important note:*%
+%(red)*Important notes:*%
 
-* You *must* set a "unique ID":/settings/player-settings#uid for your videos.
+* You *must* set a "unique ID":/settings/player-settings#uid for your videos via the data-uid attribute.
 * Your video sources URLs *must not be dynamic* (i.e. different on each request).
 
-h3(#manual-embedding). "Manual embedding":#manual-embedding
+h3(#manual). "Manual embedding":#manual
 
-If you're not subscribed to the _<%= link_to "Auto embedding", my_url('addons?h=embed-auto') %>_ add-on, you will have to follow the 2 steps below to enable embedding for your videos:
+If you're not subscribed to the _<%= link_to "Auto Embed", my_url('addons?h=embed-auto') %>_ add-on, you will have to follow the 2 steps below to enable embedding for your videos:
 
 # Create a "special" HTML page for the video you want to be embeddable, this will be the iframe content.
 # Configure the embed button by providing the embed URL (URL of the HTML page created in the previous step) and its default size.
@@ -70,16 +70,16 @@ Like most of our add-ons, you can set up its default options that should apply t
 
 h3(#settings). "Settings":#settings
 
-%(red)Please note the settings described below can be set via the "Video Publishing Assistant":/video-publishing-assistant and via the "Players" page on <%= link_to "MySublimeVideo", my_url('sites') %>.%
+%(red)Please note the settings described below can be set via the "Video Publishing Assistant":/video-publishing-assistant and via your site's Player editor page on <%= link_to "MySublimeVideo", my_url('sites') %>.%
 
 The table below gives you an overview of all the embed settings available and from where you can actually set them up.
 
 table(supported_browsers generic).
 (alt). |_{width:30%}. Embed setting                |_{width:20%}. Player editor                |_{width:20%}. Video Publishing Assistant  |_. Notes |
 |        Enable/Disable the embed button           |(ok). <span class="icon-checkmark"></span>*|                                          |         |
-|        Enable/Disable the auto embedding fetaure |(ok). <span class="icon-checkmark"></span> |(ok). <span class="icon-checkmark"></span>|         |
-(alt).|  Embed URL                                 |                                           |(ok). <span class="icon-checkmark"></span>| The URL of the HTML page you created in step 1 of "Manual embedding":#manual-embedding. |
-|        Default embed size                        |(ok). <span class="icon-checkmark"></span> |(ok). <span class="icon-checkmark"></span>|         |
+(alt). | Enable/Disable the auto embedding fetaure |(ok). <span class="icon-checkmark"></span> |(ok). <span class="icon-checkmark"></span>|         |
+|        Embed URL                                 |                                           |(ok). <span class="icon-checkmark"></span>| The URL of the HTML page you created in step 1 of "Manual embedding":#manual. |
+(alt). | Default embed size                        |(ok). <span class="icon-checkmark"></span> |(ok). <span class="icon-checkmark"></span>|         |
 
 <small>*: When manual embedding is enabled, you still need to provide a valid _embed URL_ in order for the embed button to show up in the player.</small>
 
