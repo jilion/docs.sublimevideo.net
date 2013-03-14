@@ -14,10 +14,10 @@ On the <%= link_to "My Sites", my_url('sites') %> page, you can quickly access a
 
 * *Add-ons:* Subscribe to new add-ons or cancel an add-on subscription.
 * *Players:* Edit your existing players or create new ones.
-* *Publish video:* Use our "Video Publishing Assistant":video-publishing-assistant to generate proper @<video>@ elements. You can also access this page via the big blue "Publish Video" button
-* *Loader code:* Get the code that will embed SublimeVideo in your site.
+* *Publish video:* Use our "Video Publishing Assistant":video-publishing-assistant to generate proper @<video>@ elements. You can also access this page via the big blue "Publish Video" button.
+* *Loader code:* Get the line of code to add SublimeVideo to your site.
 * *Settings:* Manage your "site' settings":site-settings such as alias/staging/development domains, wildcard and path option.
-* *Invoices:* View all your site's invoices.
+* *Invoices:* View all the invoices for your site.
 
 h3(#whats-next). "What's next?":#whats-next
 
