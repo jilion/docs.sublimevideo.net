@@ -1,6 +1,6 @@
 h2. <%= title('Player settings') %>
 
-%(red)Please note that most of the settings described in this page can be set via the "Video Publishing Assistant":/video-publishing-assistant and via the "Players" page on <%= link_to "MySublimeVideo", my_url('sites') %>.%
+%(red)Please note that most of the settings described in this page can be set via the "Video Publishing Assistant":/video-publishing-assistant and via your site's Player editor page on <%= link_to "MySublimeVideo", my_url('sites') %>.%
 
 These settings can be set on the @<video>@ element to customize the player aspect and behavior. Please note that, if you are using our "(c)JavaScript API":/javascript-api/usage to prepare your players, these settings must be set @before@ preparing them.
 
@@ -225,7 +225,7 @@ bc(language-markup). <video class='sublime' data-youtube-id='rAq2rNEru8A'>
 
 h3(#uid). "@uid@":#uid
 
-Allows you to define a unique ID for your video. %(red)If the "auto embedding":/addons/embed#auto-embedding feature is enabled, you must set a unique ID for your videos.%
+Allows you to define a unique ID for your video. %(red)If the "auto embedding":/addons/embed#auto feature is enabled, you must set a unique ID for your videos.%
 
 *Allowed values:*
 * _@string@_ – A *unique string* among all your videos. The string must be composed of alphanumeric, "-" (hyphen) and "_" (underscore) characters exclusively (case insensitive) and must be at least 1 character and less than 65 characters.
