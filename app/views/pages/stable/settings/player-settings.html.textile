@@ -237,28 +237,30 @@ bc(language-markup). <video class='sublime' data-uid='video1'>
   ...
 </video>
 
-*Note:* This setting is used in your "Statistics dashboard":/addons/stats.
+*Note:* The value of this setting is also displayed in your "Statistics dashboard":/addons/stats.
 
 
 h3(#title). "@title@":#title
 
-Allows you to define a title for your video. *Please note that @data-name@ and the generic @title@ attribute are also supported.*
+Allows you to define a title for your video. The generic @title@ attribute and @data-name@ are also supported and perfectly equivalent to @data-title@ (see examples below).
 
 *Allowed values:*
 * _@string@_
 
 *Examples:*
 
-bc(language-markup). <video class='sublime' data-title='My awesome video'>
+bc(language-markup).. <video class='sublime' data-title='My awesome video'>
   ...
 </video>
-<!-- data-name is also supported -->
-<video class='sublime' data-name='My awesome video'>
-  ...
-</video>
-<!-- as well as the generic title attribute -->
+
+<!-- you can also use the generic title attribute if you prefer -->
 <video class='sublime' title='My awesome video'>
   ...
 </video>
 
-*Note:* This setting is used in your "Statistics dashboard":/addons/stats.
+<!-- data-name is also supported for back compatibility reasons -->
+<video class='sublime' data-name='My awesome video'>
+  ...
+</video>
+
+p. *Note:* The value of this setting is currently used in your "Statistics dashboard":/addons/stats.
