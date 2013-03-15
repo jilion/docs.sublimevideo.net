@@ -99,9 +99,6 @@ bc(language-markup). <video class='sublime' data-autoplay='true'>
   ...
 </video>
 
-*Note:* We also support the "HTML5 specification":http://www.w3.org/TR/html5/media-elements.html#attr-media-autoplay so you can also set the @autoplay@ attribute direclty on the @<video>@ element.
-
-
 h3(#on-end). "@on-end@":#on-end
 
 Allows you to define the player's behavior once a video playback ends.
@@ -242,7 +239,9 @@ bc(language-markup). <video class='sublime' data-uid='video1'>
 
 h3(#title). "@title@":#title
 
-Allows you to define a title for your video. The generic @title@ attribute and @data-name@ are also supported and perfectly equivalent to @data-title@ (see examples below).
+Allows you to define a title for your video. The generic @title@ attribute is also supported and perfectly equivalent to @data-title@ (see example).
+
+@data-name@ is now deprecated, but will continue to be supported for back compatibility reasons.
 
 *Allowed values:*
 * _@string@_
@@ -255,11 +254,6 @@ bc(language-markup).. <video class='sublime' data-title='My awesome video'>
 
 <!-- you can also use the generic title attribute if you prefer -->
 <video class='sublime' title='My awesome video'>
-  ...
-</video>
-
-<!-- data-name is also supported for back compatibility reasons -->
-<video class='sublime' data-name='My awesome video'>
   ...
 </video>
 
