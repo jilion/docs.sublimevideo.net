@@ -237,7 +237,7 @@ bc(language-markup). <video class='sublime' data-uid='video1'>
   ...
 </video>
 
-*Note:* The value of this setting is also displayed in your "Statistics dashboard":/addons/stats.
+*Note:* The value of this setting is displayed in your "Statistics dashboard":/addons/stats.
 
 
 h3(#title). "@title@":#title
