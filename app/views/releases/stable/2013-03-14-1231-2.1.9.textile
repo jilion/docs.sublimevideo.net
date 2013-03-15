@@ -1,3 +1,3 @@
-* <span class="label new">new</span> "Auto Embed Add-on":http://blog.jilion.com/2013/03/14/introducing-the-sublimevideo-auto-embed-add-on.
-* <span class="label new">new</span> Support for @title@ and @data-title@ video attributes "see doc".
-* <span class="label fixed">fixed</span> HD button issue after exiting fullmode.
+* <span class="label new">new</span> "Auto Embed add-on":http://blog.jilion.com/2013/03/14/introducing-the-sublimevideo-auto-embed-add-on.
+* <span class="label new">new</span> Support for "@title@":http://docs.sublimevideo.net/settings/player-settings#title and "@data-title@":http://docs.sublimevideo.net/settings/player-settings#title video attributes.
+* <span class="label fixed">fixed</span> HD button issue after exiting fullmode (fullscreen or fullwindow).
