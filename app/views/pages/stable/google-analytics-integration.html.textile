@@ -34,7 +34,7 @@ function trackVideoEnd(player) {
 }
 
 function videoName(player) {
-  return player.videoElement().getAttribute('data-name');
+  return player.videoElement().getAttribute('title');
 }
 </code></pre>
 

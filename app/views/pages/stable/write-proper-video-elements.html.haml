@@ -20,7 +20,7 @@
 
   This is an example of a properly configured @<video>@ element:
 
-  <pre data-line=1,2,3,4><code class="language-markup"><video class="sublime" width="640" height="360" poster="video-poster.jpg" data-uid="my-video-1" data-name="My Video #1" preload="none">
+  <pre data-line=1,2,3,4><code class="language-markup"><video class="sublime" title="My Video #1" width="640" height="360" poster="video-poster.jpg" data-uid="my-video-1" preload="none">
     <source src="http://yoursite.com/video.mp4" />
     <source src="http://yoursite.com/video-mobile.mp4" />
     <source src="http://yoursite.com/video.webm" />
@@ -37,7 +37,7 @@
   _Example_: if the resolution of the original video is 1280x720, you could use @width="640" height="360"@ or @width="800" height="450"@ to have the video properly scaled down with its original proportions maintained.
   * The poster frame is the image displayed behind the initial start view which represents the video until the user clicks on the play button. We recommend you always specify a poster frame.
   * The @data-uid@ attribute is mandatory if you plan to use our real-time statistics platform. "Read more":addons/stats#setup-for-stats.
-  * The @data-name@ attributes is recommended if you plan to use our real-time statistics platform. "Read more":addons/stats#setup-for-stats.
+  * The @title@ attributes is recommended if you plan to use our real-time statistics platform. "Read more":addons/stats#setup-for-stats.
   * The @preload="none"@ attribute allows you to save bandwidth by avoiding to start preloading (buffering) the video when the page is loaded. It is supported by most modern browsers (Chrome 6, Firefox 4, Safari 5 and Opera 10.6) . We recommend you always specify this attribute otherwise your videos might start preloading in the background even if the user never clicks on the initial play button.
 
   h4. The &lt;source&gt; elements
