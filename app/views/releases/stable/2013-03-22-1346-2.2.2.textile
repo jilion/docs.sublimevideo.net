@@ -1,5 +1,5 @@
-* <span class="label improved">improved</span> Improved click and tap detection.
+* <span class="label improved">improved</span> Tap detection on touch devices.
 * <span class="label fixed">fixed</span> Animation issue during page scroll on iOS6.
-* <span class="label fixed">fixed</span> Flash buffering issue with some mp4 video files.
-* <span class="label fixed">fixed</span> SublimeVideo loading issue when injected with AJAX.
-* <span class="label fixed">fixed</span> Compatibility issue with Prototype.js on IE7.
+* <span class="label fixed">fixed</span> Flash buffering issue with some MP4 video files.
+* <span class="label fixed">fixed</span> Delay issue when loading SublimeVideo by dynamically injecting the loader with JavaScript on DOM ready.
+* <span class="label fixed">fixed</span> Compatibility issue with Prototype.js on IE6-7.
