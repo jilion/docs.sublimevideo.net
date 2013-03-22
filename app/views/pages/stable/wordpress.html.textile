@@ -17,7 +17,7 @@ This plugin allows you to easily integrate SublimeVideo with your WordPress site
 
 Check out the short demo video below to see just how easy it is to use.
 
-<notextile><div class="video_wrap"><video class="sublime" width="640" height="360" poster="http://media.jilion.com/videos/SublimeVideo-WP-Plugin-Demo.jpg" preload="none" data-uid="docs-wordpress" data-name="WordPress">
+<notextile><div class="video_wrap"><video class="sublime" title="WordPress" width="640" height="360" poster="http://media.jilion.com/videos/SublimeVideo-WP-Plugin-Demo.jpg" preload="none" data-uid="docs-wordpress">
 <source src="http://media.jilion.com/videos/SublimeVideo-WP-Plugin-Demo.mp4" />
 <source src="http://media.jilion.com/videos/SublimeVideo-WP-Plugin-Demo-mobile.mp4" />
 </video></div></notextile>
@@ -117,9 +117,9 @@ h4. Video metadata settings
 
 bc(language-markup). [sublimevideo uid="unique_id" name="A nice name here"]
 
-You can set the @data-uid@ and @data-name@ "Player settings":/settings/player-settings through the @uid@ and @name@ attributes.
+You can set the @data-uid@ and @title@ "Player settings":/settings/player-settings through the @uid@ and @title@ attributes.
 
-To learn more about the @data-uid@ and @data-name@ attributes, please consult our <%= link_to "Real-Time Statistics add-on", 'addons/stats#setup-for-stats' %> page.
+To learn more about the @data-uid@ and @title@ attributes, please consult our <%= link_to "Real-Time Statistics add-on", 'addons/stats#setup-for-stats' %> page.
 
 h4. Lightbox settings
 

@@ -29,7 +29,7 @@ h3(#demo). "Demo":#demo
 
 The following video, hosted on Vimeo Pro, plays inside the SublimeVideo Classic Player.
 
-<notextile><div class="video_wrap"><video class="sublime" poster="https://secure-b.vimeocdn.com/ts/358/030/358030879_960.jpg" width="640" height="360" preload="none" data-uid="docs-vimeo" data-name="Midnight Sun (from Vimeo)">
+<notextile><div class="video_wrap"><video class="sublime" title="Midnight Sun (from Vimeo)" poster="https://secure-b.vimeocdn.com/ts/358/030/358030879_960.jpg" width="640" height="360" preload="none" data-uid="docs-vimeo">
 <source src="http://player.vimeo.com/external/51920681.sd.mp4?s=117259e431f97030b1150ddb5ce5858a" />
 <source src="http://player.vimeo.com/external/51920681.hd.mp4?s=70273279a571e027c54032e70db61253" data-quality="hd" />
 </video></div></notextile>

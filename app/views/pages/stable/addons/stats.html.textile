@@ -14,7 +14,7 @@ h3. Table of Contents
 
 SublimeVideo's statistics platform offers a truly comprehensive, real-time overview of your site's video traffic from any device, whether generated from mobile or desktop, HTML5 or Flash.
 
-<notextile><div class="video_wrap"><video class="sublime" width="640" height="360" poster="http://media.jilion.com/videos/sublimevideo-real-time-statistics.jpg" preload="none" data-uid="real-time-stats" data-name="Real-Time Statistics">
+<notextile><div class="video_wrap"><video class="sublime" title="Real-Time Statistics" width="640" height="360" poster="http://media.jilion.com/videos/sublimevideo-real-time-statistics.jpg" preload="none" data-uid="real-time-stats">
 <source src="http://media.jilion.com/videos/sublimevideo-real-time-statistics-720p.mp4" data-quality="hd" />
 <source src="http://media.jilion.com/videos/sublimevideo-real-time-statistics-360p.mp4" />
 <source src="http://media.jilion.com/videos/sublimevideo-real-time-statistics-720p.webm" data-quality="hd" />
@@ -89,16 +89,16 @@ The actual regular expression used to validate the uid is: @/^[a-z0-9_\-]{1,64}$
 
 * The @data-uid@ setting respects the "Player settings syntax":/settings/player-settings.
 
-h4(#data-name). "The _data-name_ attribute":#data-name
+h4(#title). "The _title_ attribute":#title
 
-To ensure a video is displayed with a nice title in your statistics dashboard, simply use the @data-name@ attribute. Here is an example:
+To ensure a video is displayed with a nice title in your statistics dashboard, simply use the @title@ attribute. Here is an example:
 
-bc(language-markup). <video class="sublime" data-name="My great landscapes" poster="some-great-landscapes.jpg">
+bc(language-markup). <video class="sublime" title="My great landscapes" poster="some-great-landscapes.jpg">
   <source src="http://yoursite.com/some-great-landscapes.mp4" />
   <source src="http://yoursite.com/some-great-landscapes.webm" />
 </video>
 
 *Notes:*
 
-* You can update the @data-name@ as often as you’d like. Such changes will be reflected in the statistics page in near real-time.
-* The @data-name@ setting respects the "Player settings syntax":/settings/player-settings.
+* You can update the @title@ as often as you’d like. Such changes will be reflected in the statistics page in near real-time.
+* The @title@ setting respects the "Player settings syntax":/settings/player-settings#title.

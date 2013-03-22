@@ -82,8 +82,6 @@ bc(language-markup). <video class='sublime' data-autoresize='fill'>
   ...
 </video>
 
-*Note:* If you set this setting to @fill@ or @fit@, you can omit the @width@ and @height@ attributes in your @<video>@.
-
 
 h3(#autoplay). "@autoplay@":#autoplay
 
