@@ -1,11 +1,24 @@
 h2. <%= title('Use SublimeVideo with YouTube videos') %>
 
-*<span class="red">Warning</span> - Any site using YouTube along with the SublimeVideo Player must comply with "YouTube's terms and conditions":https://developers.google.com/youtube/terms. Particularly with the current version of YouTube Player API, this integration should not be used, if a video is monetized using Overlay or TrueView Ads.*
+*%(red)Important note:% Any site using YouTube along with the SublimeVideo Player must comply with "YouTube's terms and conditions":https://developers.google.com/youtube/terms. Particularly with the current version of YouTube Player API, this integration should not be used, if a video is monetized using Overlay or TrueView Ads.*
 <div class="breakline"></div>
 
-Integrating a YouTube video with SublimeVideo is very easy:
+h3(#how-to-video). "How-to video":#how-to-video
 
-*Just copy and paste the YouTube video URL into the Video Publishing Assistant (in the “Video sources” section).*
+The following video will get you started integrating YouTube videos with SublimeVideo.
+
+<notextile><video class="sublime" title="How-To: YouTube" width="640" height="360" poster="http://media.jilion.com/videos/how-to/youtube.jpg" preload="none" data-uid="how-to-youtube" data-sharing-url="http://blog.jilion.com/2013/03/08/how-to-use-youtube-with-sublimevideo" data-sharing-text="How to Use YouTube with SublimeVideo" data-embed-url="//dehqkotcrv4fy.cloudfront.net/videos/how-to/youtube.html">
+  <source src="http://media.jilion.com/videos/how-to/youtube.mp4" />
+  <source src="http://media.jilion.com/videos/how-to/youtube-mobile.mp4" />
+</video></notextile>
+
+h3(#additional-information). "Additional information":#additional-information
+
+Following are the instructions given in the video as well as some additional information:
+
+* Copy and paste the YouTube video URL into the <%= link_to "Video Publishing Assistant", my_url('publish-video') %> (in the “Video sources” section).
+* Modify your video' settings if needed.
+* Click the "Get the Code" button and copy and paste the code where you would like the video to appear in your page.
 
 Alternatively, if you're writing your @<video>@ element manually, you need to get the YouTube video ID (see the "v" parameter “v=YOUTUBE_ID” in the URL) and set it as follow:
 
@@ -20,4 +33,4 @@ h4(#youtube-demo). "Demo":#youtube-demo
 
 The following video, hosted on YouTube, plays inside the SublimeVideo Classic Player.
 
-<div class="video_wrap"><video class="sublime" width="640" height="360" data-uid="docs-youtube" data-youtube-id="rAq2rNEru8A" preload="none"></video></div>
+<notextile><div class="video_wrap"><video class="sublime" width="640" height="360" data-uid="docs-youtube" data-youtube-id="rAq2rNEru8A" preload="none"></video></div></notextile>

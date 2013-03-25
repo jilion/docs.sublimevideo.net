@@ -1,0 +1,2 @@
+* <span class="label improved">improved</span> Poster frame resizing behavior with responsive players.
+* <span class="label fixed">fixed</span> Video issue with playlists implemented with the deprecated JavaScript API.

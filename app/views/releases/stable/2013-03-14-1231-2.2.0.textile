@@ -1,0 +1,6 @@
+* <span class="label new">new</span> "Auto Embed add-on":http://blog.jilion.com/2013/03/14/introducing-the-sublimevideo-auto-embed-add-on.
+* <span class="label new">new</span> Support for "@title@":http://docs.sublimevideo.net/settings/player-settings#title and "@data-title@":http://docs.sublimevideo.net/settings/player-settings#title video attributes.
+* <span class="label fixed">fixed</span> Issue with Wacom graphics tablets and Chrome preventing the player to be started.
+* <span class="label fixed">fixed</span> Issue with quirks mode and lightbox in IE8.
+* <span class="label fixed">fixed</span> Issue causing a JS error to be fired in IE6-8 when unpreparing the player.
+* <span class="label fixed">fixed</span> HD button issue after exiting fullmode (fullscreen or fullwindow).

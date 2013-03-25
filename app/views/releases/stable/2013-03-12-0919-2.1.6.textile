@@ -1,0 +1,2 @@
+* <span class="label improved">improved</span> The player defaults to Flash on Chrome for Windows (see "2.1.5":#2013-03-08-15-36 release) _*unless*_ the user has disabled the Flash plugin.
+* <span class="label fixed">fixed</span> Contextual menu positioning issues.

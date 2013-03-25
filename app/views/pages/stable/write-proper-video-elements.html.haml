@@ -12,7 +12,7 @@
 
   The #{link_to "Video Publishing Assistant", my_url('publish-video')} lets you easily create properly configured @<video>@ elements that are automatically optimized for SublimeVideo.
 
-  The Video Publishing Assistant includes some powerful features to assist you in resolving common problems you may face when creating your own @<video>@ elements and helps you set up video attributes to optimize your videos for SublimeVideo's "Universal, Real-Time Statistics platform":addons/stats. Learn more on "this page":video-publishing-assistant.
+  The Video Publishing Assistant includes some powerful features to assist you in resolving common problems you may face when creating your own @<video>@ elements and helps you set up video attributes to optimize your videos for SublimeVideo's "Real-Time Statistics platform":addons/stats. Learn more on "this page":video-publishing-assistant.
 
   If you want to manually create your @<video>@ elements yourself or simply better understand the code, please read on.
 
@@ -20,7 +20,7 @@
 
   This is an example of a properly configured @<video>@ element:
 
-  <pre data-line=1,2,3,4><code class="language-markup"><video class="sublime" width="640" height="360" poster="video-poster.jpg" data-uid="my-video-1" data-name="My Video #1" preload="none">
+  <pre data-line=1,2,3,4><code class="language-markup"><video class="sublime" title="My Video #1" width="640" height="360" poster="video-poster.jpg" data-uid="my-video-1" preload="none">
     <source src="http://yoursite.com/video.mp4" />
     <source src="http://yoursite.com/video-mobile.mp4" />
     <source src="http://yoursite.com/video.webm" />
@@ -36,7 +36,8 @@
   * %(red)We highly recommend that you provide the proper @width@ and @height@ attributes in order to ensure that the *proportions* of the original video are maintained%. These values don't necessarily have to match the width and height of the original video: you can use smaller values to scale down the video, but be sure the proportions are maintained. Otherwise your video will appear with a letterboxed/pillarboxed player (black bars around the video).
   _Example_: if the resolution of the original video is 1280x720, you could use @width="640" height="360"@ or @width="800" height="450"@ to have the video properly scaled down with its original proportions maintained.
   * The poster frame is the image displayed behind the initial start view which represents the video until the user clicks on the play button. We recommend you always specify a poster frame.
-  * The @data-uid@ and @data-name@ attributes are useful if you plan to use our "real-time statistics platform":addons/stats. Please note it is **highly recommended** that you set at least a @data-uid@ for each of your videos. "Read more":addons/stats#optimize-for-stats.
+  * The @data-uid@ attribute is mandatory if you plan to use our real-time statistics platform. "Read more":addons/stats#setup-for-stats.
+  * The @title@ attributes is recommended if you plan to use our real-time statistics platform. "Read more":addons/stats#setup-for-stats.
   * The @preload="none"@ attribute allows you to save bandwidth by avoiding to start preloading (buffering) the video when the page is loaded. It is supported by most modern browsers (Chrome 6, Firefox 4, Safari 5 and Opera 10.6) . We recommend you always specify this attribute otherwise your videos might start preloading in the background even if the user never clicks on the initial play button.
 
   h4. The &lt;source&gt; elements
