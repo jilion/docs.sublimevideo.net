@@ -10,6 +10,8 @@ module Search
         Timeout.timeout(20) do
           index(stage).search(*args)
         end
+      rescue IndexTank::InvalidQuery
+        nil
       rescue Timeout::Error => ex
         Airbrake.notify(ex) if Rails.env.production? || Rails.env.staging?
         nil
@@ -43,7 +45,6 @@ module Search
     private
 
       def client
-        puts "Using client #{ENV['INDEXTANK_URL']}"
         @client ||= IndexTank::Client.new(ENV['INDEXTANK_URL'])
       end
 
