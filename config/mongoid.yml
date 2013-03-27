@@ -34,39 +34,45 @@ test:
 staging:
   sessions:
     default:
-      uri: <%= ENV['MONGOHQ_URL'] %>
-      preload_models: true
-      skip_version_check: true
-      logger: false
-      op_timeout: 30
-      connect_timeout: 30
-      pool_size: 10
+      database: app3367780
+      username: <%= ENV['MONGOHQ_USERNAME'] %>
+      password: <%= ENV['MONGOHQ_PASSWORD'] %>
+      hosts:
+        - alex.mongohq.com:10042
       options:
-        consistency: :eventual
+        consistency: :strong
+        op_timeout: 30
+        connect_timeout: 30
+        pool_size: 10
   options:
-    use_activesupport_time_zone: false
+    preload_models: true
     use_utc: true
+    skip_version_check: true
 
 production:
+<% if ARGV.join.include? 'assets:precompile' %>
   sessions:
     default:
-<% if ARGV.join.include? 'assets:precompile' %>
-      # make rake asset:precompile work
-      database: sv-docs-dev
-      preload_models: false
+      database: app3367763
       hosts:
-        - localhost:27017
-<% else %>
-      uri: <%= ENV['MONGOHQ_URL'] %>
-      preload_models: true
-      skip_version_check: true
-      logger: false
-      op_timeout: 30
-      connect_timeout: 30
-      pool_size: 10
-<% end %>
-      options:
-        consistency: :eventual
+        - localhost:10040
   options:
-    use_activesupport_time_zone: false
+    preload_models: false
+<% else %>
+  sessions:
+    default:
+      database: app3367763
+      username: <%= ENV['MONGOHQ_USERNAME'] %>
+      password: <%= ENV['MONGOHQ_PASSWORD'] %>
+      hosts:
+        - alex.mongohq.com:10040
+      options:
+        consistency: :strong
+        op_timeout: 30
+        connect_timeout: 30
+        pool_size: 10
+  options:
+    preload_models: true
     use_utc: true
+    skip_version_check: true
+<% end %>
