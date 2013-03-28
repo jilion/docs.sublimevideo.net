@@ -67,8 +67,6 @@ In case you are using Google Analytics to track the traffic of your site, you ma
 
 This is also valid for most web analytics solutions.
 
-<a name='optimize-for-stats' href='#'></a>
-
 h3(#setup-for-stats). "Setup &lt;video&gt; elements for stats":#setup-for-stats
 
 Please note that the settings described below can be set via the "Video Publishing Assistant":/video-publishing-assistant.
