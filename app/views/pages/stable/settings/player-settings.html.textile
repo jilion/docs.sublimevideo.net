@@ -239,7 +239,7 @@ h3(#title). "@title@":#title
 
 Allows you to define a title for your video. The generic @title@ attribute is also supported and perfectly equivalent to @data-title@ (see example).
 
-@data-name@ is now deprecated, but will continue to be supported for back compatibility reasons.
+_@data-name@ is now deprecated, but will continue to be supported for back compatibility reasons._
 
 *Allowed values:*
 * _@string@_
