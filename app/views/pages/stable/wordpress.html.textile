@@ -203,6 +203,8 @@ h4. Why don't I see any site in the Settings page?
 * It's probably because your WordPress site's domain is not properly registered in your <%= link_to "SublimeVideo", my_url('sites') %> account. You may find other possible reasons for this problem in the "Troubleshooting":/troubleshooting#not-properly-registered page.
 * Another possibility is that you previously linked the plugin with another <%= link_to "SublimeVideo", my_url('sites') %> account account. The easiest solution is to deactivate the plugin and re-activate it right away. Then follow the "Installation steps":#installation (skipping the 2 first steps, obviously).
 
+If you have any other issue, please visit our "Troubleshooting":/troubleshooting page.
+
 h3(#changelog). "Changelog":#changelog
 
 h4. 1.8.0
