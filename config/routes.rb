@@ -8,15 +8,23 @@ DocsSublimeVideo::Application.routes.draw do
   get '(/:stage)/search' => 'search#index', as: 'search', stage: /stable|beta/, defaults: { stage: 'stable' }
   get '(/:stage)/releases' => 'releases#index', stage: /stable|beta/, defaults: { stage: 'stable' }, as: 'releases'
 
-  get '/beta/*path' => redirect { |env, req| "/#{env[:path]}" }
+  get '/beta/*path' => redirect { |env, req|
+    url = "#{req.env['rack.url_scheme']}://#{req.host}/#{env[:path]}"
+    begin
+      uri = URI.parse(url)
+      uri.to_s
+    rescue URI::InvalidURIError => encoding
+      URI.encode(url)
+    end
+  }
 
   # Legacy redirect
   get '/put-video-in-a-floating-lightbox' => redirect('/lightbox')
   %w[autoplay-video-upon-page-load autoplay].each do |path|
-    get "/#{path}" => redirect { |env, req|"/settings/player-settings#autoplay" }
+    get "/#{path}" => redirect { |env, req| "/settings/player-settings#autoplay" }
   end
   %w[returning-to-the-initial-state-once-video-playback-ends back-to-initial-state-on-end loop-a-video loop].each do |path|
-    get "/#{path}" => redirect { |env, req|"/settings/player-settings#on-end" }
+    get "/#{path}" => redirect { |env, req| "/settings/player-settings#on-end" }
   end
   get '/ssl' => redirect('/player-faq#use-sublimevideo-in-ssl-site')
   get '/video-code-generator' => redirect('/video-publishing-assistant')

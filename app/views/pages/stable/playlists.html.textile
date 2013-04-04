@@ -10,7 +10,7 @@ h3(#demo). "Demo":#demo
 
 * In this example, we are making extensive use of our "JavaScript API":javascript-api.
 * Make sure you embed the jQuery library in your page! You can find the latest version "here":http://code.google.com/apis/libraries/devguide.html#jquery.
-* Put the JavaScript code in a @<script>@ element just before the @</body>@ tag, or in an external file.
+* Put the JavaScript code in a @<script>@ element just before the @</body>@ tag, or in an external file. Either way, be sure to load it **after** your site's loader code!
 * Put the CSS code in a @<style>@ element in the @<head>@ tag, or in an external file.
 * Please make sure to adapt the CSS code to your site's own design as well as uploading the "playlist_play_icon.png":http://f.cl.ly/items/3M0u0p0i0k1l3S0v2b1G/playlist_play_icon.png image to your own server.
 * In the future, we plan to include a built-in playlist function that will make this feature even easier to implement, without the need to know any JavaScript.
