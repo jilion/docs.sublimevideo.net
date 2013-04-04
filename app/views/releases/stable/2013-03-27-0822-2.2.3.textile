@@ -1,2 +1,1 @@
 * <span class="label fixed">fixed</span> Video rendering issue on Firefox 19 for Android.
-* <span class="label fixed">fixed</span> Various minor issues.
