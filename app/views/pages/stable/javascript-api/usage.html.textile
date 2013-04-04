@@ -45,9 +45,9 @@ h4. "Application":/javascript-api/application
 
 h4. "Player":/javascript-api/player
 
-*Methods*: "(c)@play@":/javascript-api/player#play "(c)@pause@":/javascript-api/player#pause "(c)@stop@":/javascript-api/player#stop "(c)@setSize@":/javascript-api/player#setSize "(c)@videoId@":/javascript-api/player#videoId "(c)@videoElement@":/javascript-api/player#videoElement "(c)@on@":/javascript-api/player#on
+*Methods*: "(c)@play@":/javascript-api/player#play "(c)@pause@":/javascript-api/player#pause "(c)@stop@":/javascript-api/player#stop "(c)@setSize@":/javascript-api/player#setSize "(c)@videoId@":/javascript-api/player#videoId "(c)@videoElement@":/javascript-api/player#videoElement "(c)@on@":/javascript-api/player#on "(c)@seekTo@":/javascript-api/player#seekTo "(c)@duration@":/javascript-api/player#duration  "(c)@playbackTime@":/javascript-api/player#playbackTime "(c)@videoWidth@":/javascript-api/player#videoWidth "(c)@videoHeight@":/javascript-api/player#videoHeight
 
-*Events*: "(c)@start@":/javascript-api/player#event-start "(c)@play@":/javascript-api/player#event-play "(c)@pause@":/javascript-api/player#event-pause "(c)@end@":/javascript-api/player#event-end "(c)@stop@":/javascript-api/player#event-stop
+*Events*: "(c)@start@":/javascript-api/player#event-start "(c)@play@":/javascript-api/player#event-play "(c)@pause@":/javascript-api/player#event-pause "(c)@end@":/javascript-api/player#event-end "(c)@stop@":/javascript-api/player#event-stop "(c)@seek@":/javascript-api/player#event-seek "(c)@metadata@":/javascript-api/player#event-metadata "(c)@timeUpdate@":/javascript-api/player#event-timeupdate
 
 h4. "Lightbox":/javascript-api/lightbox
 

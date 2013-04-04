@@ -2,11 +2,11 @@ h2. <%= title('Player API') %>
 
 *Methods*
 
-"(c)@play@":/javascript-api/player#play "(c)@pause@":/javascript-api/player#pause "(c)@stop@":/javascript-api/player#stop "(c)@setSize@":/javascript-api/player#setSize "(c)@videoId@":/javascript-api/player#videoId "(c)@videoElement@":/javascript-api/player#videoElement "(c)@on@":/javascript-api/player#on
+"(c)@play@":/javascript-api/player#play "(c)@pause@":/javascript-api/player#pause "(c)@stop@":/javascript-api/player#stop "(c)@setSize@":/javascript-api/player#setSize "(c)@videoId@":/javascript-api/player#videoId "(c)@videoElement@":/javascript-api/player#videoElement "(c)@on@":/javascript-api/player#on "(c)@seekTo@":/javascript-api/player#seekTo "(c)@duration@":/javascript-api/player#duration  "(c)@playbackTime@":/javascript-api/player#playbackTime "(c)@videoWidth@":/javascript-api/player#videoWidth "(c)@videoHeight@":/javascript-api/player#videoHeight
 
 *Events*
 
-"(c)@start@":/javascript-api/player#event-start "(c)@play@":/javascript-api/player#event-play "(c)@pause@":/javascript-api/player#event-pause "(c)@end@":/javascript-api/player#event-end "(c)@stop@":/javascript-api/player#event-stop
+"(c)@start@":/javascript-api/player#event-start "(c)@play@":/javascript-api/player#event-play "(c)@pause@":/javascript-api/player#event-pause "(c)@end@":/javascript-api/player#event-end "(c)@stop@":/javascript-api/player#event-stop "(c)@seek@":/javascript-api/player#event-seek "(c)@metadata@":/javascript-api/player#event-metadata "(c)@timeUpdate@":/javascript-api/player#event-timeupdate
 
 See also "Using the JavaScript API":/javascript-api/usage, "Application API":/javascript-api/application and "Lightbox API":/javascript-api/lightbox.
 
@@ -86,6 +86,35 @@ bc(language-javascript). sublime.player('my_player_id').on({
   end:   function(player) { console.log('playback ended.') }
 });
 
+h3(#seekTo). "@player.seekTo(time)@":#seekTo
+
+* <span class="param">@time@</span> (@Number@) - The time in seconds to seek to.
+
+Seeks to the specified playback time. Flash allows you to seek to only some predefined frames, the so called @keyframes@. The more keyframes your videos have, the more precise the seek feature will be (you can specify the number of keyframes during the encoding). Hence the seek precision with Flash may vary from 1 to 5 (or even more) seconds.
+
+
+
+
+h3(#duration). "@player.duration() ⇒ Number@":#duration
+
+Returns the video duration in seconds. The duration is avaiable only once the video metadata has been loaded, hence calling this method before obtaining the metadata will return @undefined@.
+
+h3(#playbackTime). "@player.playbackTime() ⇒ Number@":#playbackTime
+
+Returns the current playback time. This method will return @0@ if the video has not been started yet.
+
+h3(#videoWidth). "@player.videoWidth() ⇒ Number@":#videoWidth
+
+Returns the video width for the current quality. The video resolution is avaiable only once the metadata has been loaded, hence calling this method before obtaining the metadata will return @undefined@.
+
+With YouTube videos this value is just an estimation, since it's not possible to obtain the real value via their API.
+
+h3(#videoHeight). "@player.videoHeight() ⇒ Number@":#videoHeight
+
+Returns the video height for the current quality. The video resolution is avaiable only once the metadata has been loaded, hence calling this method before obtaining the metadata will return @undefined@.
+
+With YouTube videos this value is just an estimation, since it's not possible to obtain the real value via their API.
+
 h3(#events). Events
 
 Below are all the events supported by the player. You listen to these events via the "(c)@player.on@":/javascript-api/player#on method.
@@ -134,3 +163,32 @@ Fired when the playback stops.
 *Callback parameters*
 
 * <span class="param">@player@</span> (@Object@) - The player API object.
+
+
+h3(#event-seek). "@seek@":#event-seek
+
+Fired when the player seeked.
+
+*Callback parameters*
+
+* <span class="param">@player@</span> (@Object@) - The player API object.
+
+
+h3(#event-metadata). "@metadata@":#event-metadata
+
+Fired as soon as the video metadata is loaded.
+
+*Callback parameters*
+
+* <span class="param">@player@</span> (@Object@) - The player API object.
+
+
+h3(#event-timeupdate). "@timeUpdate@":#event-timeupdate
+
+Fired everytime the playback time changes.
+
+*Callback parameters*
+
+* <span class="param">@player@</span> (@Object@) - The player API object.
+
+* <span class="param">@playbackTime@</span> (@Number@) - The current playback time.
