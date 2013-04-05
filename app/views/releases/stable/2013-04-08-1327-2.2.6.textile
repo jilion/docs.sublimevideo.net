@@ -1,0 +1,1 @@
+* <span class="label new">new</span>"Setting":http://docs.sublimevideo.net/settings/player-settings#youtube-suggested-quality to specify the suggested playback quality for YouTube videos (use it to start YouTube videos in HD).
