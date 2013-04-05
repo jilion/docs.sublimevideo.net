@@ -1,0 +1,3 @@
+* <span class="label improved">improved</span> Lightbox can now open TIFF images.
+* <span class="label fixed">fixed</span> Issue that in some cases was preventing the intial play button from hiding with YouTube videos.
+* <span class="label fixed">fixed</span> Typo on alert message.
