@@ -172,7 +172,7 @@ Fired when the playback stops.
 
 h3(#event-seek). "@seek@":#event-seek
 
-Fired when the video is seeked.
+Fired when the seek process ends.
 
 *Callback parameters*
 
