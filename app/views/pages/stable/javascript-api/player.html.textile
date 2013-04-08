@@ -90,7 +90,7 @@ h3(#seekTo). "@player.seekTo(time)@":#seekTo
 
 * <span class="param">@time@</span> (@Number@) - The time in seconds to seek to.
 
-Seeks to the specified playback time. Flash allows you to seek to only some predefined frames, the so called @keyframes@. The more keyframes your videos have, the more precise the seek feature will be (you can specify the number of keyframes during the encoding). Hence the seek precision with Flash may vary from 1 to 5 (or even more) seconds.
+Seeks to the specified playback time. Flash allows you to seek to only some predefined frames, the @keyframes@. The more keyframes your videos have, the more precise the seek feature will be. You can specify the number of keyframes during the encoding phase, however adding many keyframes may significantly increase the size of your videos.
 
 
 
