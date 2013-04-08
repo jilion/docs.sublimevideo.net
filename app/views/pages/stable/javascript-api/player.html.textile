@@ -100,6 +100,12 @@ h3(#duration). "@player.duration() ⇒ Number@":#duration
 
 Returns the video duration in seconds. The duration is available only once the video metadata has been loaded, hence calling this method before obtaining the metadata will return @undefined@.
 
+**Example - retrieving video duration**
+
+bc(language-javascript). sublime.player('my_player_id').on('metadata', function(player) {
+  console.log(player.duration());
+});
+
 
 h3(#playbackTime). "@player.playbackTime() ⇒ Number@":#playbackTime
 
@@ -112,6 +118,11 @@ Returns the video width for the current quality. The video resolution is availab
 
 Note: With YouTube videos this value is just an estimation, since it's not possible to obtain the real value via their API.
 
+**Example - retrieving video width**
+
+bc(language-javascript). sublime.player('my_player_id').on('metadata', function(player) {
+  console.log(player.videoWidth());
+});
 
 h3(#videoHeight). "@player.videoHeight() ⇒ Number@":#videoHeight
 
@@ -119,6 +130,11 @@ Returns the video height for the current quality. The video resolution is availa
 
 Note: With YouTube videos this value is just an estimation, since it's not possible to obtain the real value via their API.
 
+**Example - retrieving video height**
+
+bc(language-javascript). sublime.player('my_player_id').on('metadata', function(player) {
+  console.log(player.videoHeight());
+});
 
 h3(#events). Events
 
