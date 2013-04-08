@@ -10,6 +10,7 @@ h2. <%= title('Player API') %>
 
 See also "Using the JavaScript API":/javascript-api/usage, "Application API":/javascript-api/application and "Lightbox API":/javascript-api/lightbox.
 
+
 h3(#methods). Methods
 
 These API methods are to be called on a @player@ object, which you can retrieve in the following way
@@ -26,6 +27,7 @@ h3(#play). "@player.play()@":#play
 Plays the video. If the video is already playing, the call has no effect.
 
 *Note:* on touch devices user interaction is required to start playing the video.
+
 
 h3(#pause). "@player.pause()@":#pause
 
@@ -86,6 +88,7 @@ bc(language-javascript). sublime.player('my_player_id').on({
   end:   function(player) { console.log('playback ended.') }
 });
 
+
 h3(#seekTo). "@player.seekTo(time)@":#seekTo
 
 * <span class="param">@time@</span> (@Number@) - The time in seconds to seek to.
@@ -93,31 +96,33 @@ h3(#seekTo). "@player.seekTo(time)@":#seekTo
 Seeks to the specified playback time. Flash allows you to seek to only some predefined frames, the @keyframes@. The more keyframes your videos have, the more precise the seek feature will be. You can specify the number of keyframes during the encoding phase, however adding many keyframes may significantly increase the size of your videos.
 
 
-
-
 h3(#duration). "@player.duration() ⇒ Number@":#duration
 
-Returns the video duration in seconds. The duration is avaiable only once the video metadata has been loaded, hence calling this method before obtaining the metadata will return @undefined@.
+Returns the video duration in seconds. The duration is available only once the video metadata has been loaded, hence calling this method before obtaining the metadata will return @undefined@.
+
 
 h3(#playbackTime). "@player.playbackTime() ⇒ Number@":#playbackTime
 
 Returns the current playback time. This method will return @0@ if the video has not been started yet.
 
+
 h3(#videoWidth). "@player.videoWidth() ⇒ Number@":#videoWidth
 
-Returns the video width for the current quality. The video resolution is avaiable only once the metadata has been loaded, hence calling this method before obtaining the metadata will return @undefined@.
+Returns the video width for the current quality. The video resolution is available only once the metadata has been loaded, hence calling this method before obtaining the metadata will return @undefined@.
 
-With YouTube videos this value is just an estimation, since it's not possible to obtain the real value via their API.
+Note: With YouTube videos this value is just an estimation, since it's not possible to obtain the real value via their API.
+
 
 h3(#videoHeight). "@player.videoHeight() ⇒ Number@":#videoHeight
 
-Returns the video height for the current quality. The video resolution is avaiable only once the metadata has been loaded, hence calling this method before obtaining the metadata will return @undefined@.
+Returns the video height for the current quality. The video resolution is available only once the metadata has been loaded, hence calling this method before obtaining the metadata will return @undefined@.
 
-With YouTube videos this value is just an estimation, since it's not possible to obtain the real value via their API.
+Note: With YouTube videos this value is just an estimation, since it's not possible to obtain the real value via their API.
+
 
 h3(#events). Events
 
-Below are all the events supported by the player. You listen to these events via the "(c)@player.on@":/javascript-api/player#on method.
+Below are all the events supported by the player. You may listen to these events via the "(c)@player.on@":/javascript-api/player#on method.
 
 
 h3(#event-start). "@start@":#event-start
@@ -167,7 +172,7 @@ Fired when the playback stops.
 
 h3(#event-seek). "@seek@":#event-seek
 
-Fired when the player seeked.
+Fired when the video is seeked.
 
 *Callback parameters*
 
