@@ -53,4 +53,4 @@ h4. "Lightbox":/javascript-api/lightbox
 
 *Methods*: "(c)@open@":/javascript-api/lightbox#open "(c)@close@":/javascript-api/lightbox#close "(c)@on@":/javascript-api/lightbox#on
 
-*Events*: "(c)@contentready@":/javascript-api/lightbox#event-contentready "(c)@didopen@":/javascript-api/lightbox#event-didopen "(c)@didclose@":/javascript-api/lightbox#event-didclose
+*Events*: "(c)@contentReady@":/javascript-api/lightbox#event-contentready "(c)@didOpen@":/javascript-api/lightbox#event-didopen "(c)@didClose@":/javascript-api/lightbox#event-didclose
