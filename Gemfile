@@ -24,6 +24,7 @@ gem 'librato-rails', github: 'librato/librato-rails', branch: 'feature/rack_firs
 gem 'lograge'
 gem 'json'
 gem 'net-scp', '1.0.4'
+gem 'rack-status'
 
 # Gems used only for assets and not required
 # in production environments by default.
