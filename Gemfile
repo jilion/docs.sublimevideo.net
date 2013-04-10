@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 source 'https://gems.gemfury.com/8dezqz7z7HWea9vtaFwg' # thibaud@jilion.com account
 
-ruby '1.9.3'
+ruby '2.0.0'
 
 gem 'bundler'
 
@@ -39,7 +39,7 @@ group :production do
 end
 
 group :staging, :production do
-  gem 'thin'
+  gem 'unicorn'
   gem 'dalli'
   gem 'rack-cache'
   gem 'rack-ssl-enforcer'
