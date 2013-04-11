@@ -1,0 +1,2 @@
+* <span class="label fixed">fixed</span> Compatibility issue with Prototype.js and jQuery.
+* <span class="label fixed">fixed</span> Layout issue when setting the controls size after that the video ended playing.
