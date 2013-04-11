@@ -1,2 +1,1 @@
-* <span class="label new">new</span>Added more methods and events to the "Player API":http://docs.sublimevideo.net/javascript-api/player.
-* <span class="label fixed">fixed</span> HTML5 Video issue causing a JS error to be fired.
+* <span class="label new">new</span>Added "more":http://blog.jilion.com/2013/04/11/introducing-sublimevideo-advanced-player-api methods and events to the "Player API":http://docs.sublimevideo.net/javascript-api/player.
