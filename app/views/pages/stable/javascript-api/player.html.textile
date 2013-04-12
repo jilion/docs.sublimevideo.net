@@ -111,7 +111,7 @@ bc(language-javascript). sublime.player('my_player_id').on('metadata', function(
 
 h3(#playbackTime). "@player.playbackTime() ⇒ Number@":#playbackTime
 
-Returns the current playback time. This method will return @0@ if the video has not been started yet.
+Returns the current playback time in seconds. This method will return @0@ if the video has not been started yet.
 
 
 h3(#videoWidth). "@player.videoWidth() ⇒ Number@":#videoWidth
