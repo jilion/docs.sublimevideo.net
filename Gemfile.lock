@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/jilion/configurator.git
+  revision: 3a8df3f51dea0e414bc9cd86fea1f85b1a30745a
+  specs:
+    configurator (1.0.0)
+      activesupport (>= 3.2.12)
+
+GIT
   remote: git://github.com/jilion/turbolinks.git
   revision: f5142ba901aa4ce7f2faf4b4e2cdc6c9a2f91c49
   branch: ios_video_issue
@@ -264,6 +271,7 @@ DEPENDENCIES
   bundler
   capybara
   coffee-rails
+  configurator!
   dalli
   database_cleaner
   google-analytics-turbolinks
