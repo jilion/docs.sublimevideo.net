@@ -11,10 +11,10 @@ h3. Table of Contents
 
 The _Auto Embed_ and _Manual Embed_ add-ons allow your audience to easily share your videos by embedding them into their own sites or elsewhere on the web. Both add-ons will display an embed button on the top-right corner of the player which opens a pane showing the actual embed code and the possibility to change the embedded player size.
 
-<%= image_tag('embed/embed_button.jpg', class: 'screenshot', title: 'Embed button') %>
+<%= image_tag('addons/embed/embed_button.jpg', class: 'screenshot', title: 'Embed button') %>
 _The main embed button in our <%= link_to "Classic", layout_url('modular-player#player_designs') %> player._
 
-<%= image_tag('embed/embed_pane.jpg', class: 'screenshot', title: 'Embed pane') %>
+<%= image_tag('addons/embed/embed_pane.jpg', class: 'screenshot', title: 'Embed pane') %>
 _The embed pane._
 
 h3(#auto). "Auto embedding":#auto
@@ -77,7 +77,7 @@ The table below gives you an overview of all the embed settings available and fr
 table(supported_browsers generic).
 (alt). |_{width:30%}. Embed setting                |_{width:20%}. Player editor                |_{width:20%}. Video Publishing Assistant  |_. Notes |
 |        Enable/Disable the embed button           |(ok). <span class="icon-checkmark"></span>*|                                          |         |
-(alt). | Enable/Disable the auto embedding fetaure |(ok). <span class="icon-checkmark"></span> |(ok). <span class="icon-checkmark"></span>|         |
+(alt). | Enable/Disable the auto embedding feature |(ok). <span class="icon-checkmark"></span> |(ok). <span class="icon-checkmark"></span>|         |
 |        Embed URL                                 |                                           |(ok). <span class="icon-checkmark"></span>| The URL of the HTML page you created in step 1 of "Manual embedding":#manual. |
 (alt). | Default embed size                        |(ok). <span class="icon-checkmark"></span> |(ok). <span class="icon-checkmark"></span>|         |
 

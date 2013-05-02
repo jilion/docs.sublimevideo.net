@@ -1,5 +1,13 @@
 h2. <%= title('Social Sharing') %>
 
+This add-on provides social sharing feature to your player. It displays a sharing button on the top-right corner of the player which opens a pane with different sharing options/services of your choice:
+
+* Twitter
+* Facebook
+* Google+
+* Pinterest
+* Plain link sharing
+
 h3. Table of Contents
 
 * "How to configure the different options":#configure-options
@@ -10,21 +18,13 @@ h3. Table of Contents
 <div class="breakline"></div>
 <p></p>
 
-This add-on provides social sharing feature to your player. It displays a sharing button on the top-right corner of the player which opens a pane with different sharing options/services of your choice:
-
-* Twitter
-* Facebook
-* Google+
-* Pinterest
-* Plain link sharing
-
-<%= image_tag('sharing/sharing_button.jpg', class: 'screenshot', title: 'Sharing button') %>
+<%= image_tag('addons/sharing/sharing_button.jpg', class: 'screenshot', title: 'Sharing button') %>
 _The main sharing button in our "Classic":http://sublimevideo.net/modular-player#player_designs player._
 
-<%= image_tag('sharing/sharing_pane.jpg', class: 'screenshot', title: 'Sharing pane') %>
+<%= image_tag('addons/sharing/sharing_pane.jpg', class: 'screenshot', title: 'Sharing pane') %>
 _The sharing pane complete with social sharing and link field._
 
-<%= image_tag('sharing/sharing_pane_simpler.jpg', class: 'screenshot', title: 'Simpler sharing pane') %>
+<%= image_tag('addons/sharing/sharing_pane_simpler.jpg', class: 'screenshot', title: 'Simpler sharing pane') %>
 _Simpler sharing pane with just Twitter and Facebook in our "Flat":http://sublimevideo.net/modular-player#player_designs player._
 
 h3(#configure-options). "How to configure the different options":#configure-options
@@ -99,8 +99,8 @@ h3(#sharing-icon). "@sharing-icon@":#sharing-icon
 Defines the icon to be displayed inside the main sharing button.
 
 *Allowed values:*
-* @default@ – _(Default)_ Default sharing icon. <%= image_tag('sharing/sharing_default_icon@2x.png', class: 'text_top', height: '16px', title: 'Default sharing icon') %>
-* @alt@ – Alternative icon. <%= image_tag('sharing/sharing_alt_icon@2x.png', class: 'text_top', height: '16px', title: 'Alternative sharing icon') %>
+* @default@ – _(Default)_ Default sharing icon. <%= image_tag('addons/sharing/sharing_default_icon@2x.png', class: 'text_top', height: '16px', title: 'Default sharing icon') %>
+* @alt@ – Alternative icon. <%= image_tag('addons/sharing/sharing_alt_icon@2x.png', class: 'text_top', height: '16px', title: 'Alternative sharing icon') %>
 
 *Example:*
 
