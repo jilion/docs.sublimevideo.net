@@ -10,13 +10,25 @@ This add-on provides social sharing feature to your player. It displays a sharin
 
 h3. Table of Contents
 
-* "How to configure the different options":#configure-options
+* "Presentation":#presentation
+* "Subscribe":#subscribe
+* "Settings":#settings
 * "Properly linking to a video":#sharing_url
 * "Settings":#settings
 * "About Open Graph":#open_graph
 
 <div class="breakline"></div>
 <p></p>
+
+h3(#presentation). "Presentation":#presentation
+
+This add-on provides social sharing feature to your player. It displays a sharing button on the top-right corner of the player which opens a pane with different sharing options/services of your choice:
+
+* Twitter
+* Facebook
+* Google+
+* Pinterest
+* Plain link sharing
 
 <%= image_tag('addons/sharing/sharing_button.jpg', class: 'screenshot', title: 'Sharing button') %>
 _The main sharing button in our "Classic":http://sublimevideo.net/modular-player#player_designs player._
@@ -27,7 +39,11 @@ _The sharing pane complete with social sharing and link field._
 <%= image_tag('addons/sharing/sharing_pane_simpler.jpg', class: 'screenshot', title: 'Simpler sharing pane') %>
 _Simpler sharing pane with just Twitter and Facebook in our "Flat":http://sublimevideo.net/modular-player#player_designs player._
 
-h3(#configure-options). "How to configure the different options":#configure-options
+h3(#subscribe). "Subscribe":#subscribe
+
+<a href='<%= my_url('addons/social_sharing?p=standard') %>'>Choose a site and subscribe to the Social Sharing add-on <span class='icon-arrow'></span></a>
+
+h3(#settings). "Settings":#settings
 
 Like most of our add-ons, you can set up its default options that should apply to all of your videos from your site's Player editor page on <%= link_to "MySublimeVideo", my_url('sites') %>. But you can also set more options and override the default ones on a per video basis via the "Video Publishing Assistant":/video-publishing-assistant, or manually, using the "data-settings":/settings/usage attribute directly on the @<video>@ elements.
 

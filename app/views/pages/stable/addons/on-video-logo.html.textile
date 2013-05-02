@@ -1,5 +1,17 @@
 h2. <%= title('On-Video Logo') %>
 
+h3. Table of Contents
+
+* "Presentation":#presentation
+* "Subscribe":#subscribe
+* "Settings":#settings
+* "Demo":#demo
+
+<div class="breakline"></div>
+<p></p>
+
+h3(#presentation). "Presentation":#presentation
+
 This add-on allows you to set several settings for the logo displayed on video (either the SublimeVideo logo or your own):
 
 * Choose the logo visibility behavior (auto-hide or always visible).
@@ -13,11 +25,9 @@ All these settings can be configured via your site's Player editor page on <%= l
 
 %(red)*Important note:*% When uploading your own logo, please make sure to double the size of the image (@2x) to allow optimal rendering on Retina displays.
 
-h3(#demo). "Demo":#demo
+h3(#subscribe). "Subscribe":#subscribe
 
-<%= jsfiddle_embed('J9W5b', height: 436) %>
-
-<%= jsfiddle_embed('vHFsy', height: 436) %>
+<a href='<%= my_url('addons/logo?p=disabled') %>'>Choose a site and subscribe to the On-Video Logo add-on <span class='icon-arrow'></span></a>
 
 h3(#settings). "Settings":#settings
 
@@ -102,3 +112,9 @@ bc(language-markup). <video class='sublime' data-logo-link-url='http://yourdomai
   <source src='video.mp4' />
   <source src='video.webm' />
 </video>
+
+h3(#demo). "Demo":#demo
+
+<%= jsfiddle_embed('J9W5b', height: 436) %>
+
+<%= jsfiddle_embed('vHFsy', height: 436) %>

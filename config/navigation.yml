@@ -13,11 +13,12 @@ stable:
     'responsive-layout': 'Responsive layout'
     'keyboard': 'Keyboard control'
   'Add-Ons':
-    'addons/stats': 'Real-Time Statistics'
     'addons/on-video-logo': 'On-Video Logo'
+    'addons/google-analytics': 'Google Analytics'
+    'addons/stats': 'Real-Time Statistics'
     'addons/sharing': 'Social Sharing'
-    'addons/embed': 'Embed'
     'addons/cue-zones': 'Cue Zones'
+    'addons/embed': 'Embed'
     'addons/support': 'Support'
   'Integration':
     'custom-start-view': 'Custom start view'
