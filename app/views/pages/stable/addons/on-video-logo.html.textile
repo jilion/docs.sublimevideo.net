@@ -7,7 +7,7 @@ This add-on allows you to set several settings for the logo displayed on video (
 * Upload an image to use as your own logo. ***
 * Specify the URL to which redirect a user that clicks on the logo. ***
 
-*&nbsp;: Only available with the _<%= link_to "Your logo", my_url('addons?h=logo-custom') %>_ add-on.
+*&nbsp;: Only available with the _<%= link_to 'Your logo', my_url('addons?h=logo-custom') %>_ add-on.
 
 All these settings can be configured via your site's Player editor page on <%= link_to "MySublimeVideo", my_url('sites') %> but can also be overridden on per video basis with the settings described below.
 
