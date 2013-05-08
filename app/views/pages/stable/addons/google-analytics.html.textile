@@ -124,15 +124,16 @@ table(supported_browsers generic).
 (alt). | _Fullmode enter_                | The viewer has clicked the fullmode (fullwindow/fullscreen) button. |
 |        _Quality select - HD_           | The video has been played in HD quality. |
 (alt). | _Quality select - Base_         | The video has been played in SD quality. |
-|        _Sharing pane open_ ***         | The sharing button has been clicked and the sharing pane has opened. |
-(alt). | _Sharing click - Twitter_ ***   | The Twitter sharing button has been clicked. |
-| _Sharing click - Facebook_ ***         | The Facebook sharing button has been clicked. |
-(alt). | _Sharing click - Pinterest_ *** | The Pinterest sharing button has been clicked. |
-| _Sharing click - Google+_ ***          | The Google+ sharing button has been clicked. |
+|        _Sharing pane open_ "^1^":#note-1         | The sharing button has been clicked and the sharing pane has opened. |
+(alt). | _Sharing click - Twitter_ "^1^":#note-1   | The Twitter sharing button has been clicked. |
+| _Sharing click - Facebook_ "^1^":#note-1         | The Facebook sharing button has been clicked. |
+(alt). | _Sharing click - Pinterest_ "^1^":#note-1 | The Pinterest sharing button has been clicked. |
+| _Sharing click - Google+_ "^1^":#note-1          | The Google+ sharing button has been clicked. |
 (alt). | _Embed pane open_               | The embed button has been clicked and the embed pane has opened. |
-|        _Logo click_                    | The on-video logo has been clicked. |
+|        _Logo click_ "^2^":#note-2                | The on-video logo has been clicked. |
 
-*&nbsp;: Only available if you're subscribed to the "Social Sharing add-on":/addons/sharing.
+<a name='note-1'></a> ^1^ : Only available if you're subscribed to the "Social Sharing add-on":/addons/sharing.
+<a name='note-2'></a> ^2^ : Only available if you're subscribed to the "Your Logo add-on":/addons/on-video-logo.
 
 h4. Label
 
