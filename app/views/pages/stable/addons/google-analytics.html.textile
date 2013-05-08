@@ -4,6 +4,7 @@ h3. Table of Contents
 
 * "Presentation":#presentation
 * "Subscribe":#subscribe
+* "Setup your &lt;video&gt;":#setup
 * "Settings":#settings
 * "How it works":#how-it-works
 * "Tracked events":#tracked-events
@@ -23,7 +24,47 @@ h3(#subscribe). "Subscribe":#subscribe
 
 <a href='<%= my_url('addons/google_analytics?p=standard') %>'>Choose a site and subscribe to the Google Analytics add-on <span class='icon-arrow'></span></a>
 
-*Note:* Once subscribed, make sure to enable events tracking via your site's Player editor page on <%= link_to "MySublimeVideo", my_url('sites') %>.
+*Note:*
+
+Once subscribed, make sure to:
+
+# "Setup your &lt;video&gt;":#setup,
+# Enable events tracking via your site's Player editor page on <%= link_to "MySublimeVideo", my_url('sites') %>.
+
+h3(#setup). "Setup your &lt;video&gt;":#setup
+
+Please note that the settings described below can be set via the "Video Publishing Assistant":/video-publishing-assistant.
+
+h4(#data-uid). "The _data-uid_ attribute":#data-uid
+
+In order to make a video showing up in your "Google Analytics Dashboard":https://www.google.com/analytics/web, *you must give it a unique uid* with the @data-uid@ attribute. Here is an example:
+
+bc(language-markup). <video class="sublime" data-uid="landscape1" poster="some-great-landscapes.jpg">
+  <source src="http://yoursite.com/some-great-landscapes.mp4" />
+  <source src="http://yoursite.com/some-great-landscapes.webm" />
+</video>
+
+%(red)*Important note:* It should be a *unique string* among all your videos. The string must be composed of alphanumeric, "-" (hyphen) and "_" (underscore) characters exclusively (case insensitive) and must be at least 1 character and less than 65 characters.
+The actual regular expression used to validate the uid is: @/^[a-z0-9_\-]{1,64}$/i@.%
+
+*Notes:*
+
+* If you change the video @uid@, subsequent events for this video will be reported as if it's a new video.
+* The @data-uid@ setting respects the "Player settings syntax":/settings/player-settings.
+
+h4(#title). "The _title_ attribute":#title
+
+To ensure a video is displayed with a nice title in your Google Analytics Dashboard, simply use the @title@ attribute. Here is an example:
+
+bc(language-markup). <video class="sublime" title="My great landscapes" poster="some-great-landscapes.jpg">
+  <source src="http://yoursite.com/some-great-landscapes.mp4" />
+  <source src="http://yoursite.com/some-great-landscapes.webm" />
+</video>
+
+*Notes:*
+
+* If you change the video @title@, subsequent events for this video will be reported as if it's a new video.
+* The @title@ setting respects the "Player settings syntax":/settings/player-settings#title.
 
 h3(#settings). "Settings":#settings
 
