@@ -68,7 +68,7 @@ bc(language-markup). <video class="sublime" title="My great landscapes" poster="
 
 h3(#settings). "Settings":#settings
 
-The add-on has only 2 settings that can be set via your site's Player editor page on <%= link_to "MySublimeVideo", my_url('sites') %> or on a per-video basis through "Player Settings":/settings/player-settings.
+The add-on has only two settings that can be set via your site's Player editor page on <%= link_to "MySublimeVideo", my_url('sites') %> or on a per-video basis through "Player Settings":/settings/player-settings.
 
 h3(#google-analytics-enable). "@google-analytics-enable@":#google-analytics-enable
 
@@ -117,24 +117,28 @@ table(supported_browsers generic).
 h4. Actions
 
 table(supported_browsers generic).
-(alt). |_{width:40%}. Action name    |_. Decription |
-|        _Video load_                | The video has been loaded (i.e. SublimeVideo has "prepared" it). |
-(alt). | _Video start_               | The play button has been clicked or the @sublime.play@ API method has been called. |
-|        _Video end_                 | The video playback has reached the video duration or the @sublime.stop@ API method has been called. |
-(alt). | _Fullmode enter_            | The viewer has clicked the fullmode (fullwindow/fullscreen) button. |
-|        _Quality select - HD_       | The video has been played in HD quality. |
-(alt). | _Quality select - Base_     | The video has been played in SD quality. |
-|        _Sharing pane open_         | The sharing button has been clicked and the sharing pane has opened. |
-(alt). | _Embed pane open_           | The embed button has been clicked and the embed pane has opened. |
-|        _Sharing click - Twitter_   | The Twitter sharing button has been clicked. |
-(alt). | _Sharing click - Facebook_  | The Facebook sharing button has been clicked. |
-|        _Sharing click - Pinterest_ | The Pinterest sharing button has been clicked. |
-(alt). | _Sharing click - Google+_   | The Google+ sharing button has been clicked. |
-|        _Logo click_                | The on-video logo has been clicked. |
+(alt). |_{width:40%}. Action name        |_. Decription |
+|        _Video load_                    | The video has been loaded (i.e. SublimeVideo has "prepared" it). |
+(alt). | _Video start_                   | The play button has been clicked or the @sublime.play@ API method has been called. |
+|        _Video end_                     | The video playback has reached the video duration or the @sublime.stop@ API method has been called. |
+(alt). | _Fullmode enter_                | The viewer has clicked the fullmode (fullwindow/fullscreen) button. |
+|        _Quality select - HD_           | The video has been played in HD quality. |
+(alt). | _Quality select - Base_         | The video has been played in SD quality. |
+|        _Sharing pane open_ ***         | The sharing button has been clicked and the sharing pane has opened. |
+(alt). | _Sharing click - Twitter_ ***   | The Twitter sharing button has been clicked. |
+| _Sharing click - Facebook_ ***         | The Facebook sharing button has been clicked. |
+(alt). | _Sharing click - Pinterest_ *** | The Pinterest sharing button has been clicked. |
+| _Sharing click - Google+_ ***          | The Google+ sharing button has been clicked. |
+(alt). | _Embed pane open_               | The embed button has been clicked and the embed pane has opened. |
+|        _Logo click_                    | The on-video logo has been clicked. |
+
+*&nbsp;: Only available if you're subscribed to the "Social Sharing add-on":/addons/sharing.
 
 h4. Label
 
 The label is computed from the video's "@title@":/settings/player-settings#title and "@uid@":/settings/player-settings#uid: _"&lt;video title&gt; (&lt;video uid&gt;)"_
+
+_Please read the "Setup your &lt;video&gt;":#setup section for instructions on how to set these attributes._
 
 If you don't specify a @title@ for your video, it will reported as _"untitled (&lt;video uid&gt;)"_.
 
@@ -143,7 +147,5 @@ For instance, the label for the following video will be _"The homepage video (ho
 bc(language-markup). <video class='sublime' data-uid='home-video' title='The homepage video'>
   ...
 </video>
-
-*Note:* If you change either the video @title@ or its @uid@, subsequent events for this video will be reported as if it's a new video.
 
 <%= image_tag('addons/google_analytics/google_analytics-sidebar.png', title: "'Events' section of the Google Analytics Dashboard sidebar", id: 'google_analytics-sidebar-screenshot', style: 'display:none') %>
