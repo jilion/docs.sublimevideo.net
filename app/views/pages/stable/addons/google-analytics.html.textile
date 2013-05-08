@@ -132,8 +132,8 @@ table(supported_browsers generic).
 (alt). | _Embed pane open_               | The embed button has been clicked and the embed pane has opened. |
 |        _Logo click_ "^2^":#note-2                | The on-video logo has been clicked. |
 
-<a name='note-1'></a> ^1^ : Only available if you're subscribed to the "Social Sharing add-on":/addons/sharing.
-<a name='note-2'></a> ^2^ : Only available if you're subscribed to the "Your Logo add-on":/addons/on-video-logo.
+<a id='note-1'></a> ^1^ : Only available if you're subscribed to the "Social Sharing add-on":/addons/sharing.
+<a id='note-2'></a> ^2^ : Only available if you're subscribed to the "Your Logo add-on":/addons/on-video-logo.
 
 h4. Label
 
