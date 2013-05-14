@@ -13,9 +13,9 @@ h3(#how-to-video). "How-to video":#how-to-video
 
 The following video will get you started adding an On-Video Logo to your video.
 
-<notextile><video class="sublime" title="How-To: On-Video logo" width="640" height="360" poster="http://media.jilion.com/videos/how-to/youtube.jpg" preload="none" data-uid="how-to-on-video-logo" data-sharing-url="http://blog.jilion.com/2013/03/08/how-to-use-youtube-with-sublimevideo" data-sharing-text="How to Add an On-Video Logo to Your Video with SublimeVideo" data-embed-url="//dehqkotcrv4fy.cloudfront.net/videos/how-to/youtube.html">
-  <source src="http://media.jilion.com/videos/how-to/youtube.mp4" />
-  <source src="http://media.jilion.com/videos/how-to/youtube-mobile.mp4" />
+<notextile><video class="sublime" title="How-To: On-Video logo" width="640" height="360" poster="http://media.jilion.com/videos/how-to/on-video-logo.jpg" preload="none" data-uid="how-to-on-video-logo" data-sharing-url="http://blog.jilion.com/2013/05/08/how-to-add-a-logo-on-your-video-with-sublimevideo" data-sharing-text="How to Add a Logo on Your Video with SublimeVideo" data-embed-type="auto">
+  <source src="http://media.jilion.com/videos/how-to/on-video-logo.mp4" />
+  <source src="http://media.jilion.com/videos/how-to/on-video-logo-mobile.mp4" />
 </video></notextile>
 
 h3(#additional-information). "Additional information":#additional-information
