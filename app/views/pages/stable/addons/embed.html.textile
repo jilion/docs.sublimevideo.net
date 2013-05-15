@@ -21,7 +21,7 @@ h3(#auto). "Auto embedding":#auto
 
 The Auto Embed add-on is the easiest way to enable embedding for your videos. With this add-on you don't need to create an HTML page for every video you want to be embeddable: the add-on takes care of generating those files for you and automatically keeping them in sync with the original @<video>@ elements you've placed on your site.
 
-To enable this feature by default for you player(s), subscribe to the _<%= link_to "Auto Embed", my_url('addons?h=embed-auto') %>_ add-on and activate it via your site's Player editor page on <%= link_to "MySublimeVideo", my_url('sites') %>. You can also only use this feature on a per-video basis via the <%= link_to "Video Publishing Assistant", my_url('publish-video') %>.
+To enable this feature by default for you player(s), subscribe to the _<%= link_to "Auto Embed", my_url('addons/embed?p=auto') %>_ add-on and activate it via your site's Player editor page on <%= link_to "MySublimeVideo", my_url('sites') %>. You can also only use this feature on a per-video basis via the <%= link_to "Video Publishing Assistant", my_url('publish-video') %>.
 
 %(red)*Important notes:*%
 
@@ -30,7 +30,7 @@ To enable this feature by default for you player(s), subscribe to the _<%= link_
 
 h3(#manual). "Manual embedding":#manual
 
-If you're not subscribed to the _<%= link_to "Auto Embed", my_url('addons?h=embed-auto') %>_ add-on, you will have to follow the 2 steps below to enable embedding for your videos:
+If you're not subscribed to the _<%= link_to "Auto Embed", my_url('addons/embed?p=auto') %>_ add-on, you will have to follow the 2 steps below to enable embedding for your videos:
 
 # Create a "special" HTML page for the video you want to be embeddable, this will be the iframe content.
 # Configure the embed button by providing the embed URL (URL of the HTML page created in the previous step) and its default size.
@@ -99,7 +99,7 @@ bc(language-markup). <video class='sublime' data-embed-enable='false'>
 
 h3(#embed-type). "@embed-type@":#embed-type
 
-Defines the type of embedding you want to use: manual or auto. Auto embedding is only available if you're subscribed to the _<%= link_to "Auto embedding", my_url('addons?h=embed-auto') %>_ add-on. %(red)If you set the type to "auto", you must set a "unique ID":/settings/player-settings#uid for your videos.%
+Defines the type of embedding you want to use: manual or auto. Auto embedding is only available if you're subscribed to the _<%= link_to "Auto embedding", my_url('addons/embed?p=auto') %>_ add-on. %(red)If you set the type to "auto", you must set a "unique ID":/settings/player-settings#uid for your videos.%
 
 *Allowed values:*
 * @manual@ – _(Default)_ Use the manual embedding feature.
