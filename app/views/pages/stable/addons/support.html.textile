@@ -7,7 +7,7 @@ Use the <%= link_to 'support form', my_url('help') %> to email us directly your 
 
 h3(#vip-email-support). "VIP Email Support":#vip-email-support
 
-If you need extra support and enhanced reactivity, we also offer a _<%= link_to 'VIP Email Support', my_url('addons?h=support-vip') %>_ add-on with a *guaranteed response within the next business day*.
+If you need extra support and enhanced reactivity, we also offer a _<%= link_to 'VIP Email Support', my_url('addons/support?p=vip') %>_ add-on with a *guaranteed response within the next business day*.
 
 h3(#documentation-and-community-forum). "Documentation & Community Forum":#documentation-and-community-forum
 
