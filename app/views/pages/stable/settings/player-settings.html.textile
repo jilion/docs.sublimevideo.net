@@ -20,13 +20,13 @@ h4. Controls settings
 
 "(c)@controls-enable@":#controls-enable "(c)@controls-visibility@":#controls-visibility "(c)@volume-enable@":#volume-enable
 
-h4. Video source settings
-
-"(c)@youtube-id@":#youtube-id
-
 h4. Video metadata settings
 
 "(c)@uid@":#uid "(c)@title@":#title
+
+h4. YouTube video settings
+
+"(c)@youtube-id@":#youtube-id "(c)@youtube-suggested-quality@":#youtube-suggested-quality
 
 See also "Using the data settings":usage and "Lightbox settings":lightbox-settings.
 
@@ -212,10 +212,23 @@ Allows you to set the ID of a YouTube video to be played in SublimeVideo.
 *Example:*
 
 bc(language-markup). <video class='sublime' data-youtube-id='rAq2rNEru8A'>
-  ...
 </video>
 
 *Note:* See the "Use SublimeVideo with YouTube videos":/youtube page for more information.
+
+
+h3(#youtube-suggested-quality). "@youtube-suggested-quality@":#youtube-suggested-quality
+
+Specifies the suggested playback quality for YouTube videos. You can use this setting to start YouTube videos in HD.
+
+*Allowed values:*
+* @none@ – _(Default)_ No suggested playback quality.
+* @hd@ – Starts YouTube video in HD (720p).
+
+*Example:*
+
+bc(language-markup). <video class='sublime' data-youtube-suggested-quality="hd" data-youtube-id='rAq2rNEru8A'>
+</video>
 
 
 h3(#uid). "@uid@":#uid

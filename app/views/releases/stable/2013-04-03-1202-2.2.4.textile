@@ -1,0 +1,4 @@
+* <span class="label fixed">fixed</span> Workaround for new bug introduced in Chrome 26 with Flash and wmode transparent.
+* <span class="label fixed">fixed</span> Seek issue with YouTube videos on iOS devices.
+* <span class="label fixed">fixed</span> Issue on iOS devices that was causing YouTube videos to replay even if the @on-end@ flag was set to @stop@.
+* <span class="label fixed">fixed</span> Issue causing a JS error to be fired in IE7 when preparing the player with our JavaScript API.

@@ -39,6 +39,8 @@ _Please note that it's currently not possible to upload media directly from this
 
 h4(#poster-frame). Poster frame
 
+*Note for YouTube videos:* If you want to use the default poster frame from YouTube, don't choose any poster frame here.
+
 <%= image_tag('wordpress/poster_frame.png', class: 'screenshot', title: 'Poster frame') %>
 _The SublimeVideo WordPress plugin's poster frame browser._
 
@@ -47,6 +49,15 @@ Images in the browser are ordered by date of upload. Simply click an image to ch
 If your poster frame is stored on an external server, you can click the "Or use an external URL" link to directly enter the URL of your poster frame.
 
 h4(#video-sources). Video sources
+
+h5. YouTube video
+
+<%= image_tag('wordpress/video_source_youtube.png', class: 'screenshot', title: 'Video from YouTube') %>
+
+Copy and paste the YouTube video URL into the "Your YouTube video ID" field, and that's it!
+<br />
+
+h5. Media library or external video
 
 <%= image_tag('wordpress/video_sources.png', class: 'screenshot', title: 'Video sources') %>
 
@@ -188,6 +199,10 @@ Learn more about the @autoresize@ player settings in the "Player settings":/sett
 
 h4. How can I play a YouTube video with the SublimeVideo WordPress plugin?
 
+Since the version 1.8.0, you can use the visual editor to set your YouTube video.
+
+For older versions, or if you want to do it manually, please read the following instructions.
+
 Let's say you want to play the following video: https://www.youtube.com/watch?v=abcd1234
 
 Simply add @settings="youtube-id:abcd1234"@ in your shortcode, as follow:
@@ -207,18 +222,22 @@ If you have any other issue, please visit our "Troubleshooting":/troubleshooting
 
 h3(#changelog). "Changelog":#changelog
 
-h4. 1.8.0
+h4. 1.8.1 – April 3, 2013
+
+* Fix an issue with dimensions fields.
+
+h4. 1.8.0 – March 28, 2013
 
 * Add support for "YouTube":/youtube videos in the visual editor.
 * Add support for the "@title@":#shortcodes-attributes-video-metadata-settings shortcode attribute.
 * Deprecate the "@data_name@":#shortcodes-attributes-video-metadata-settings shortcode attribute.
 
-h4. 1.7.0
+h4. 1.7.0 – March 6, 2013
 
 * New @lightbox_settings@ shortcode attribute to allow to pass "lightbox specific settings":/settings/lightbox-settings.
 * When a @youtube-id@ is set in the @settings@ attribute, the @uid@ is set to the YouTube video id.
 
-h4. 1.6.0
+h4. 1.6.0 – March 5, 2013
 
 * Unique DOM id are now generated for all new video elements.
 * Unique data-uid are now generated for all new video elements.
@@ -227,58 +246,58 @@ h4. 1.6.0
 * Fix a "Undefined property" warning visible in debug mode.
 * Refactor the SublimeVideoShortcodes class.
 
-h4. 1.5.2
+h4. 1.5.2 – December 14, 2012
 
 * Fix a warning visible in debug mode.
 * Fix a button design issue.
 
-h4. 1.5.1
+h4. 1.5.1 – December 14, 2012
 
 * Fix issue: Added a missing file.
 
-h4. 1.5.0
+h4. 1.5.0 – December 14, 2012
 
 * Add support for the <%= link_to "new SublimeVideo player", layout_url('modular-player') %>.
 * Add support for the @uid@, @name@ and @settings@ attributes (mapping to @data-uid@, @data-name@ and @data-settings@ HTML attribute). See the "Player settings":/settings/player-settings page to learn more about these attributes.
 * Improvement: From now on, when you deactivate the plugin, its settings are deleted.
 
-h4. 1.4.1
+h4. 1.4.1 – August 30, 2012
 
 * Fix issue: major issue that was occuring for old PHP versions.
 
-h4. 1.4.0
+h4. 1.4.0 – August 30, 2012
 
 * Add support for the @data_settings@ attribute (mapping to the @data-settings@ HTML attribute).
 
-h4. 1.3.2
+h4. 1.3.2 – May 9, 2012
 
 * Fix issue: Autoplay and loop features didn't work in IE < 9.
 
-h4. 1.3.1
+h4. 1.3.1 – March 26, 2012
 
 * Update: The lightbox shortcode is now @[sublimevideo-lightbox][/sublimevideo-lightbox]@.
 
-h4. 1.3.0
+h4. 1.3.0 – March 26, 2012
 
 * Fix issue: @src1@ declared after @src2@ was leading to a wrong sources' order in the generated code.
 * Add support for the floating lightbox feature in shortcode.
 
-h4. 1.2.1
+h4. 1.2.1 – January 5, 2012
 
 * Fix issue: HD switch wasn't displayed in the live preview.
 * Add support for the "style" attribute in shortcode.
 
-h4. 1.2.0
+h4. 1.2.0 – December 2, 2011
 
 * Fix issue: SSL certificate verification.
 * Fix issue: Custom port was preventing the plugin from working properly.
 * Add support for the @data_uid@ and @data_name@ attributes (mapping to @data-uid@ and @data-name@ HTML attribute). <%= link_to "See details", 'addons/stats#setup-for-stats' %>.
 * Add support for HD sources. "See details":hd-switching.
 
-h4. 1.1.0
+h4. 1.1.0 – November 30, 2011
 
 * Update for the new API endpoint which is https://api.sublimevideo.net.
 
-h4. 1.0.0
+h4. 1.0.0 – September 20, 2011
 
 * Initial release

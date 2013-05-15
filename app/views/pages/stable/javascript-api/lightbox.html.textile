@@ -6,7 +6,7 @@ h2. <%= title('Lightbox API') %>
 
 *Events*
 
-"(c)@contentready@":/javascript-api/lightbox#event-contentready "(c)@didopen@":/javascript-api/lightbox#event-didopen "(c)@didclose@":/javascript-api/lightbox#event-didclose
+"(c)@contentReady@":/javascript-api/lightbox#event-contentready "(c)@didOpen@":/javascript-api/lightbox#event-didopen "(c)@didClose@":/javascript-api/lightbox#event-didclose
 
 See also "Using the JavaScript API":/javascript-api/usage, "Application API":/javascript-api/application and "Player API":/javascript-api/player.
 
@@ -42,16 +42,16 @@ Registers and invokes the given callbacks every time that the corresponding even
 
 **Example - listening a single event**
 
-bc(language-javascript). sublime('my_lightbox_trigger_id').on('didopen', function(lightbox) {
+bc(language-javascript). sublime('my_lightbox_trigger_id').on('didOpen', function(lightbox) {
   console.log('lightbox opened.');
 });
 
 **Example - listening more events**
 
 bc(language-javascript). sublime('my_lightbox_trigger_id').on({
-  contentready: function(lightbox, player) { console.log('content ready.') },
-  didopen:      function(lightbox) { console.log('lightbox opened.') },
-  didclose:     function(lightbox) { console.log('lightbox closed.') }
+  contentReady: function(lightbox, player) { console.log('content ready.') },
+  didOpen:      function(lightbox) { console.log('lightbox opened.') },
+  didClose:     function(lightbox) { console.log('lightbox closed.') }
 });
 
 
@@ -62,7 +62,7 @@ Below are all the events supported by the lightbox. You listen to these events v
 bc(language-javascript). sublime('my_lightbox_trigger_id').on('<event_name>', my_callback_function);
 
 
-h3(#event-contentready). "@contentready@":#event-contentready
+h3(#event-contentready). "@contentReady@":#event-contentready
 
 Fired when the lightbox's content (e.g. the video player) has been prepared.
 
@@ -71,12 +71,12 @@ Fired when the lightbox's content (e.g. the video player) has been prepared.
 * <span class="param">@lightbox@</span> (@Object@) - The lightbox api object.
 * <span class="param">@content@</span> (@Object@) - The content api object, which in most cases will be the player.
 
-bc(language-javascript). sublime('my_lightbox_trigger_id').on('contentready', function(lightbox, player) {
+bc(language-javascript). sublime('my_lightbox_trigger_id').on('contentReady', function(lightbox, player) {
   // player is now ready (prepared)
 });
 
 
-h3(#event-didopen). "@didopen@":#event-didopen
+h3(#event-didopen). "@didOpen@":#event-didopen
 
 Fired when the lightbox did open (after the opening transition has finished).
 
@@ -84,12 +84,12 @@ Fired when the lightbox did open (after the opening transition has finished).
 
 * <span class="param">@lightbox@</span> (@Object@) - The lightbox api object.
 
-bc(language-javascript). sublime('my_lightbox_trigger_id').on('didopen', function(lightbox) {
+bc(language-javascript). sublime('my_lightbox_trigger_id').on('didOpen', function(lightbox) {
   // lightbox did open
 });
 
 
-h3(#event-didclose). "@didclose@":#event-didclose
+h3(#event-didclose). "@didClose@":#event-didclose
 
 Fired when the lightbox did close (after the closing transition has finished).
 
@@ -97,6 +97,6 @@ Fired when the lightbox did close (after the closing transition has finished).
 
 * <span class="param">@lightbox@</span> (@Object@) - The lightbox api object.
 
-bc(language-javascript). sublime('my_lightbox_trigger_id').on('didclose', function(lightbox) {
+bc(language-javascript). sublime('my_lightbox_trigger_id').on('didClose', function(lightbox) {
   // lightbox did close
 });

@@ -1,0 +1,1 @@
+* <span class="label new">new</span>Added "more":http://blog.jilion.com/2013/04/11/introducing-sublimevideo-advanced-player-api methods and events to the "Player API":http://docs.sublimevideo.net/javascript-api/player.
