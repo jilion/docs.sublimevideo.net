@@ -1,0 +1,1 @@
+* <span class="label fixed">fixed</span> Issue causing a JS error to be fired in IE6-8 when unpreparing the player.
