@@ -1,13 +1,5 @@
 h2. <%= title('Social Sharing add-on') %>
 
-This add-on provides social sharing feature to your player. It displays a sharing button on the top-right corner of the player which opens a pane with different sharing options/services of your choice:
-
-* Twitter
-* Facebook
-* Google+
-* Pinterest
-* Plain link sharing
-
 h3. Table of Contents
 
 * "Presentation":#presentation
