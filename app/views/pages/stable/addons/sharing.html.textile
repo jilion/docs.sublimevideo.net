@@ -10,7 +10,7 @@ This add-on provides social sharing feature to your player. It displays a sharin
 
 h3. Table of Contents
 
-* "Presentation":#presentation
+* "Introduction":#intro
 * "Subscribe":#subscribe
 * "Settings":#settings
 * "Properly linking to a video":#sharing_url
@@ -20,7 +20,7 @@ h3. Table of Contents
 <div class="breakline"></div>
 <p></p>
 
-h3(#presentation). "Presentation":#presentation
+h3(#intro). "Introduction":#intro
 
 This add-on provides social sharing feature to your player. It displays a sharing button on the top-right corner of the player which opens a pane with different sharing options/services of your choice:
 

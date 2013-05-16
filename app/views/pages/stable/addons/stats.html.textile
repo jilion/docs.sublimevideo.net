@@ -2,7 +2,7 @@ h2. <%= title('Real-Time Statistics add-on') %>
 
 h3. Table of Contents
 
-* "Presentation":#presentation
+* "Introduction":#intro
 * "Subscribe":#subscribe
 * "Statistics Over Time":#statistics-over-time
 * "Video Popularity":#video-popularity
@@ -14,7 +14,7 @@ h3. Table of Contents
 <div class="breakline"></div>
 <p></p>
 
-h3(#presentation). "Presentation":#presentation
+h3(#intro). "Introduction":#intro
 
 SublimeVideo's statistics platform offers a truly comprehensive, real-time overview of your site's video traffic from any device, whether generated from mobile or desktop, HTML5 or Flash.
 

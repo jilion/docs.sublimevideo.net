@@ -2,7 +2,7 @@ h2. <%= title('Cue Zones add-on') %>
 
 h3. Table of Contents
 
-* "Presentation":#presentation
+* "Introduction":#intro
 * "Subscribe":#subscribe
 * "Methods":#methods
 * "Demo":#demo
@@ -10,7 +10,7 @@ h3. Table of Contents
 <div class="breakline"></div>
 <p></p>
 
-h3(#presentation). "Presentation":#presentation
+h3(#intro). "Introduction":#intro
 
 This add-on allows you to perform a JavaScript action when the viewer enters or exits a certain zone in the video timeline.
 
