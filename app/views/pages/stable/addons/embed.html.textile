@@ -8,9 +8,6 @@ h3. Table of Contents
 * "Manual embedding":#manual
 * "Settings":#settings
 
-<div class="breakline"></div>
-<p></p>
-
 h3(#presentation). "Presentation":#presentation
 
 The _Auto Embed_ and _Manual Embed_ add-ons allow your audience to easily share your videos by embedding them into their own sites or elsewhere on the web. Both add-ons will display an embed button on the top-right corner of the player which opens a pane showing the actual embed code and the possibility to change the embedded player size.

@@ -9,9 +9,6 @@ h3. Table of Contents
 * "How it works":#how-it-works
 * "Tracked events":#tracked-events
 
-<div class="breakline"></div>
-<p></p>
-
 h3(#presentation). "Presentation":#presentation
 
 This add-on automatically tracks actions performed by your audience such as when:

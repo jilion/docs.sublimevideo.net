@@ -7,9 +7,6 @@ h3. Table of Contents
 * "Settings":#settings
 * "Demo":#demo
 
-<div class="breakline"></div>
-<p></p>
-
 h3(#presentation). "Presentation":#presentation
 
 This add-on allows you to set several settings for the logo displayed on video (either the SublimeVideo logo or your own):

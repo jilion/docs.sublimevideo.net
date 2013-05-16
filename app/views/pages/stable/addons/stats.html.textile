@@ -11,9 +11,6 @@ h3. Table of Contents
 * "A note for Google Analytics users":#google-analytics-note
 * "Setup &lt;video&gt; elements for stats":#setup-for-stats
 
-<div class="breakline"></div>
-<p></p>
-
 h3(#presentation). "Presentation":#presentation
 
 SublimeVideo's statistics platform offers a truly comprehensive, real-time overview of your site's video traffic from any device, whether generated from mobile or desktop, HTML5 or Flash.
