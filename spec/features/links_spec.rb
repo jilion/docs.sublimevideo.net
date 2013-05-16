@@ -8,8 +8,8 @@ feature 'checks all links' do
       stage = nil if stage == 'stable'
 
       all('nav#docs_menu a').each do |a|
-        if a[:href] =~ %r{\A(/|http://docs\.sublimevideo\.dev)} || a[:href] !~ %r{\A(https?:|#)}
-          puts "On: #{current_url}, click on #{a[:href]} in the menu."
+        if a[:href].present? && (a[:href] =~ %r{\A(/|http://docs\.sublimevideo\.dev)} || a[:href] !~ %r{\A(https?:|#)})
+          puts "On #{current_url}, click #{a[:href]} in the menu."
           a.click
 
           current_url_match(a[:href], stage: stage)
@@ -17,8 +17,8 @@ feature 'checks all links' do
           back_to_page = current_url
 
           all('#content .content_wrapper a').each do |a|
-            if a[:href] =~ %r{\A(/|http://docs\.sublimevideo\.dev)} || a[:href] !~ %r{\A(https?:|#)}
-              puts "\tOn: #{current_url}, click on #{a[:href]}."
+            if a[:href].present? && (a[:href] =~ %r{\A(/|http://docs\.sublimevideo\.dev)} || a[:href] !~ %r{\A(https?:|#)})
+              puts "\tOn #{current_url}, click #{a[:href]}."
               a.click
 
               current_url_match(a[:href], stage: stage, referer: back_to_page)

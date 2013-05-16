@@ -14,7 +14,7 @@ def require_dependency(file_name, message = "No such file to load -- %s")
     raise ArgumentError, "the file name must be a String -- you passed #{file_name.inspect}"
   end
   if defined? ActiveSupport::Dependencies
-    ActiveSupport::Dependencies.depend_on(file_name, false, message)
+    ActiveSupport::Dependencies.depend_on(file_name, message)
   else
     require file_name
   end

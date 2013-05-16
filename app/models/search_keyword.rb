@@ -12,7 +12,7 @@ class SearchKeyword
   def self.increment(keyword)
     Librato.increment 'docs.search'
     sk = create(k: keyword) unless sk = where(k: keyword).first
-    sk.inc(:c, 1)
+    sk.inc(c: 1)
   end
 
   def self.ranking
