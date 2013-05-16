@@ -1,13 +1,14 @@
-h2. <%= title('Embed') %>
+h2. <%= title('Embed add-on') %>
 
 h3. Table of Contents
 
+* "Introduction":#intro
+* "Subscribe":#subscribe
 * "Auto embedding":#auto
 * "Manual embedding":#manual
 * "Settings":#settings
 
-<div class="breakline"></div>
-<p></p>
+h3(#intro). "Introduction":#intro
 
 The _Auto Embed_ and _Manual Embed_ add-ons allow your audience to easily share your videos by embedding them into their own sites or elsewhere on the web. Both add-ons will display an embed button on the top-right corner of the player which opens a pane showing the actual embed code and the possibility to change the embedded player size.
 
@@ -16,6 +17,10 @@ _The main embed button in our <%= link_to "Classic", layout_url('modular-player#
 
 <%= image_tag('addons/embed/embed_pane.jpg', class: 'screenshot', title: 'Embed pane') %>
 _The embed pane._
+
+h3(#subscribe). "Subscribe":#subscribe
+
+<a href='<%= my_url('addons/embed?p=auto') %>'>Choose a site and subscribe to the Embed add-on <span class='icon-arrow'></span></a>
 
 h3(#auto). "Auto embedding":#auto
 

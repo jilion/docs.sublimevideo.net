@@ -5,7 +5,7 @@ ruby '2.0.0'
 
 gem 'bundler'
 
-gem 'rails', '3.2.12' # until 3.2.14 is out!
+gem 'rails', '4.0.0.rc1'
 gem 'sublime_video_layout', '~> 2.0' # hosted on gemfury
 
 # Views
@@ -16,25 +16,21 @@ gem 'turbolinks', github: 'jilion/turbolinks', branch: 'ios_video_issue'
 gem 'google-analytics-turbolinks'
 
 # Internals
-gem 'mongoid'
+gem 'mongoid', github: 'mongoid/mongoid'
 gem 'indextank'
-gem 'honeybadger'
 gem 'oj' # fastest json
-gem 'librato-rails', github: 'librato/librato-rails', branch: 'feature/rack_first'
 gem 'configurator', github: 'jilion/configurator'
 gem 'lograge'
-gem 'json'
-gem 'net-scp', '1.0.4'
 gem 'rack-status'
+gem 'librato-rails', github: 'librato/librato-rails', branch: 'feature/rack_first'
+gem 'honeybadger'
 
 # Gems used only for assets and not required
 # in production environments by default.
-group :assets do
-  gem 'asset_sync'
-  gem 'sass-rails'
-  gem 'coffee-rails'
-  gem 'uglifier'
-end
+gem 'asset_sync'
+gem 'sass-rails', '4.0.0.rc1'
+gem 'coffee-rails', '4.0.0'
+gem 'uglifier'
 
 group :production do
   gem 'rack-google-analytics'
@@ -64,12 +60,9 @@ end
 
 group :tools do
   gem 'powder'
-  gem 'pry'
 
   # Guard
   gem 'terminal-notifier-guard'
-  gem 'rb-fsevent'
-
   gem 'guard-pow'
   gem 'guard-livereload'
   gem 'guard-rspec'

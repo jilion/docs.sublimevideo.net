@@ -1,4 +1,13 @@
-h2. <%= title('On-Video Logo') %>
+h2. <%= title('On-Video Logo add-on') %>
+
+h3. Table of Contents
+
+* "Introduction":#intro
+* "Subscribe":#subscribe
+* "Settings":#settings
+* "Demo":#demo
+
+h3(#intro). "Introduction":#intro
 
 This add-on allows you to set several settings for the logo displayed on video (either the SublimeVideo logo or your own):
 
@@ -9,8 +18,6 @@ This add-on allows you to set several settings for the logo displayed on video (
 
 *&nbsp;: Only available with the _<%= link_to "Your logo", my_url('addons/logo?p=custom') %>_ add-on.
 
-h3(#how-to-video). "How-to video":#how-to-video
-
 The following video will get you started adding an On-Video Logo to your video.
 
 <notextile><video class="sublime" title="How-To: On-Video logo" width="640" height="360" poster="http://media.jilion.com/videos/how-to/on-video-logo.jpg" preload="none" data-uid="how-to-on-video-logo" data-sharing-url="http://blog.jilion.com/2013/05/08/how-to-add-a-logo-on-your-video-with-sublimevideo" data-sharing-text="How to Add a Logo on Your Video with SublimeVideo" data-embed-type="auto">
@@ -18,17 +25,11 @@ The following video will get you started adding an On-Video Logo to your video.
   <source src="http://media.jilion.com/videos/how-to/on-video-logo-mobile.mp4" />
 </video></notextile>
 
-h3(#additional-information). "Additional information":#additional-information
-
-All the settings listed above can be configured via your site's Player editor page on <%= link_to "MySublimeVideo", my_url('sites') %> but can also be overridden on per video basis with the settings described below.
-
 %(red)*Important note:*% When uploading your own logo, please make sure to double the size of the image (@2x) to allow optimal rendering on Retina displays.
 
-h3(#demo). "Demo":#demo
+h3(#subscribe). "Subscribe":#subscribe
 
-<%= jsfiddle_embed('J9W5b', height: 436) %>
-
-<%= jsfiddle_embed('vHFsy', height: 436) %>
+<a href='<%= my_url('addons/logo?p=disabled') %>'>Choose a site and subscribe to the On-Video Logo add-on <span class='icon-arrow'></span></a>
 
 h3(#settings). "Settings":#settings
 
@@ -113,3 +114,9 @@ bc(language-markup). <video class='sublime' data-logo-link-url='http://yourdomai
   <source src='video.mp4' />
   <source src='video.webm' />
 </video>
+
+h3(#demo). "Demo":#demo
+
+<%= jsfiddle_embed('J9W5b', height: 436) %>
+
+<%= jsfiddle_embed('vHFsy', height: 436) %>

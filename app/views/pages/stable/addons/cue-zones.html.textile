@@ -1,4 +1,13 @@
-h2. <%= title('Cue Zones') %>
+h2. <%= title('Cue Zones add-on') %>
+
+h3. Table of Contents
+
+* "Introduction":#intro
+* "Subscribe":#subscribe
+* "Methods":#methods
+* "Demo":#demo
+
+h3(#intro). "Introduction":#intro
 
 This add-on allows you to perform a JavaScript action when the viewer enters or exits a certain zone in the video timeline.
 
@@ -6,17 +15,11 @@ You've probably already heard about "cue points". A cue point is a user defined 
 
 You can use the Cue Zones API to trigger any custom action, such as synchronizing slides alongside a video presentation, displaying side-advertising or creating chapters in your video.
 
-h3(#demo). "Demo":#demo
+h3(#subscribe). "Subscribe":#subscribe
 
-The first demo uses the Cue Zones API to update the background image and title at every video sequence change.
+<a href='<%= my_url('addons/cuezones?p=standard') %>'>Choose a site and subscribe to the Cue Zones add-on <span class='icon-arrow'></span></a>
 
-<%= jsfiddle_embed('n4RNB', height: 520, panes: 'result,html,js,css') %>
-
-The following demo adds a chapters menu below the player which allows you to jump to the different sequences in the video (using the "@cuezones.goTo@":#goTo method).
-
-<%= jsfiddle_embed('4vv6G', height: 520, panes: 'result,html,js,css') %>
-
-h3(#methods). Methods
+h3(#methods). "Methods":#methods
 
 The Cue Zones API methods described in this section are to be called on a @cuezones@ object, which you can retrieve in the following way
 
@@ -108,3 +111,13 @@ Remove all cue zones registered to the video player.
 **Example - removing all registered groups of cue zones**
 
 bc(language-javascript). player.cuezones.removeAllGroups();
+
+h3(#demo). "Demo":#demo
+
+The first demo uses the Cue Zones API to update the background image and title at every video sequence change.
+
+<%= jsfiddle_embed('n4RNB', height: 520, panes: 'result,html,js,css') %>
+
+The following demo adds a chapters menu below the player which allows you to jump to the different sequences in the video (using the "@cuezones.goTo@":#goTo method).
+
+<%= jsfiddle_embed('4vv6G', height: 520, panes: 'result,html,js,css') %>

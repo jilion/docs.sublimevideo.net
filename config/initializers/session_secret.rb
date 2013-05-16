@@ -4,5 +4,5 @@ class SessionSecret
   include Configurator
 
   config_file 'session_secret.yml'
-  config_accessor :token
+  config_accessor :token, :key_base
 end

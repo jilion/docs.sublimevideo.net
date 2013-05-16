@@ -27,12 +27,8 @@ module DocsSublimeVideo
     # in config/application.rb, though in that case templates cannot see
     # application objects or methods. Heroku requires this to be false.
     config.assets.initialize_on_precompile = false
-    # Duplicated from svl engine because not loader when initialize_on_precompile is false
+    # Duplicated from svl engine because not loaded when initialize_on_precompile is false
     config.assets.precompile += %w[errors.css ie.css]
-
-    # Only load the plugins named here, in the order given (default is alphabetical).
-    # :all can be used as a placeholder for all plugins not explicitly named.
-    # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
 
     # Activate observers that should always be running.
     # config.active_record.observers = :cacher, :garbage_collector, :forum_observer
@@ -46,7 +42,7 @@ module DocsSublimeVideo
     # config.i18n.default_locale = :de
 
     # Configure the default encoding used in templates for Ruby 1.9.
-    config.encoding = "utf-8"
+    config.encoding = 'utf-8'
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
