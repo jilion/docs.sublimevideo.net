@@ -2,42 +2,41 @@ h2. <%= title('Google Analytics add-on') %>
 
 h3. Table of Contents
 
-* "Presentation":#presentation
+* "Introduction":#intro
 * "Subscribe":#subscribe
-* "Setup your &lt;video&gt;":#setup
-* "Settings":#settings
-* "How it works":#how-it-works
+* "Set up your &lt;video&gt;":#setup
 * "Tracked events":#tracked-events
+* "Settings":#settings
 
 <div class="breakline"></div>
 <p></p>
 
-h3(#presentation). "Presentation":#presentation
+h3(#intro). "Introduction":#intro
 
-This add-on automatically tracks actions performed by your audience such as when:
-* a video starts and ends,
-* fullscreen is entered,
+Once "subscribed":#subscribe and "configured":#settings, the Google Analytics add-on automatically tracks a "list of events":#tracked-events that will appear in your Google Analytics dashboard under the <%= link_to('"Events" section', '#google_analytics-sidebar-screenshot', class: 'sublime lightbox')%>. Tracked events includes:
+* when a video starts and ends,
 * a sharing button is clicked,
+* fullscreen is entered,
 * and "many more":#tracked-events!
+
+In your Google Analytics dashboard, you can filter tracked events by categories, actions and labels. For a thorough description of Google Analytics Events, please refer to the "'Event Components' section of Google Analytics help page":https://support.google.com/analytics/answer/1033068?hl=en.
 
 h3(#subscribe). "Subscribe":#subscribe
 
 <a href='<%= my_url('addons/google_analytics?p=standard') %>'>Choose a site and subscribe to the Google Analytics add-on <span class='icon-arrow'></span></a>
 
-*Note:*
-
 Once subscribed, make sure to:
 
-# "Setup your &lt;video&gt;":#setup,
-# Enable events tracking via your site's Player editor page on <%= link_to "MySublimeVideo", my_url('sites') %>.
+# "Set up your &lt;video&gt;":#setup,
+# Enable the Google Analytics integration via your site's Player editor page on <%= link_to "MySublimeVideo", my_url('sites') %>.
 
-h3(#setup). "Setup your &lt;video&gt;":#setup
+h3(#setup). "Set up your &lt;video&gt;":#setup
 
-Please note that the settings described below can be set via the "Video Publishing Assistant":/video-publishing-assistant.
+Please note that the attributes described below can be set via the "Video Publishing Assistant":/video-publishing-assistant.
 
 h4(#data-uid). "The _data-uid_ attribute":#data-uid
 
-In order to make a video showing up in your "Google Analytics Dashboard":https://www.google.com/analytics/web, *you must give it a unique uid* with the @data-uid@ attribute. Here is an example:
+In order to make a video show up in your "Google Analytics dashboard":https://www.google.com/analytics/web, *you must give it a unique uid* with the @data-uid@ attribute. Here is an example:
 
 bc(language-markup). <video class="sublime" data-uid="landscape1" poster="some-great-landscapes.jpg">
   <source src="http://yoursite.com/some-great-landscapes.mp4" />
@@ -54,7 +53,7 @@ The actual regular expression used to validate the uid is: @/^[a-z0-9_\-]{1,64}$
 
 h4(#title). "The _title_ attribute":#title
 
-To ensure a video is displayed with a nice title in your Google Analytics Dashboard, simply use the @title@ attribute. Here is an example:
+To ensure a video is displayed with a nice title in your Google Analytics dashboard, simply use the @title@ attribute. Here is an example:
 
 bc(language-markup). <video class="sublime" title="My great landscapes" poster="some-great-landscapes.jpg">
   <source src="http://yoursite.com/some-great-landscapes.mp4" />
@@ -65,45 +64,6 @@ bc(language-markup). <video class="sublime" title="My great landscapes" poster="
 
 * If you change the video @title@, subsequent events for this video will be reported as if it's a new video.
 * The @title@ setting respects the "Player settings syntax":/settings/player-settings#title.
-
-h3(#settings). "Settings":#settings
-
-The add-on has only two settings that can be set via your site's Player editor page on <%= link_to "MySublimeVideo", my_url('sites') %> or on a per-video basis through "Player Settings":/settings/player-settings.
-
-h3(#google-analytics-enable). "@google-analytics-enable@":#google-analytics-enable
-
-Allows you to enable or disable the Google Analytics events tracking.
-
-*Allowed values:*
-* @true@ – Enable Google Analytics events tracking.
-* @false@ – _(Default)_ Disable Google Analytics events tracking.
-
-*Example:*
-
-bc(language-markup). <video class='sublime' data-google-analytics-enable='true'>
-  ...
-</video>
-
-h3(#google-analytics-account). "@google-analytics-account@":#google-analytics-account
-
-By default, SublimeVideo detects the Google Analytics account ID used in your page but you can use a different Google Analytics account ID by using this setting.
-
-*Allowed values:*
-* @player id@ – Any valid Google Analytics account ID. You can find yours in "the Google Analytics Dashboard":https://www.google.com/analytics/web.
-
-*Example:*
-
-bc(language-markup). <video class='sublime' data-google-analytics-account='UA-12344321-1'>
-  ...
-</video>
-
-h3(#how-it-works). "How it works":#how-it-works
-
-Once "subscribed":#subscribe and "configured":#settings, the Google Analytics add-on automatically tracks a "list of events":#tracked-events that will appear in your Google Analytics Dashboard under the <%= link_to('"Events" section', '#google_analytics-sidebar-screenshot', class: 'sublime lightbox')%>.
-
-In your Google Analytics Dashboard, you can filter tracked events by categories, actions and labels. For a thorough description of Google Analytics Events, please refer to the "'Event Components' section of Google Analytics help page":https://support.google.com/analytics/answer/1033068?hl=en.
-
-Read on for the exhaustive list of tracked events.
 
 h3(#tracked-events). "Tracked events":#tracked-events
 
@@ -139,7 +99,7 @@ h4. Label
 
 The label is computed from the video's "@title@":/settings/player-settings#title and "@uid@":/settings/player-settings#uid: _"&lt;video title&gt; (&lt;video uid&gt;)"_
 
-_Please read the "Setup your &lt;video&gt;":#setup section for instructions on how to set these attributes._
+_Please read the "Set up your &lt;video&gt;":#setup section for instructions on how to set these attributes._
 
 If you don't specify a @title@ for your video, it will reported as _"untitled (&lt;video uid&gt;)"_.
 
@@ -149,4 +109,35 @@ bc(language-markup). <video class='sublime' data-uid='home-video' title='The hom
   ...
 </video>
 
-<%= image_tag('addons/google_analytics/google_analytics-sidebar.png', title: "'Events' section of the Google Analytics Dashboard sidebar", id: 'google_analytics-sidebar-screenshot', style: 'display:none') %>
+<%= image_tag('addons/google_analytics/google_analytics-sidebar.png', title: "'Events' section of the Google Analytics dashboard sidebar", id: 'google_analytics-sidebar-screenshot', style: 'display:none') %>
+
+h3(#settings). "Settings":#settings
+
+The add-on has only two settings that can be set via your site's Player editor page on <%= link_to "MySublimeVideo", my_url('sites') %> or on a per-video basis through "Player Settings":/settings/player-settings.
+
+h3(#google-analytics-enable). "@google-analytics-enable@":#google-analytics-enable
+
+Allows you to enable or disable the Google Analytics events tracking.
+
+*Allowed values:*
+* @true@ – Enable Google Analytics events tracking.
+* @false@ – _(Default)_ Disable Google Analytics events tracking.
+
+*Example:*
+
+bc(language-markup). <video class='sublime' data-google-analytics-enable='true'>
+  ...
+</video>
+
+h3(#google-analytics-account). "@google-analytics-account@":#google-analytics-account
+
+By default, SublimeVideo detects the Google Analytics account ID used in your page but you can use a different Google Analytics account ID by using this setting.
+
+*Allowed values:*
+* @player id@ – Any valid Google Analytics account ID. You can find yours in "the Google Analytics dashboard":https://www.google.com/analytics/web.
+
+*Example:*
+
+bc(language-markup). <video class='sublime' data-google-analytics-account='UA-12344321-1'>
+  ...
+</video>
