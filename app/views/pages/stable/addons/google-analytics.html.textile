@@ -8,9 +8,6 @@ h3. Table of Contents
 * "Tracked events":#tracked-events
 * "Settings":#settings
 
-<div class="breakline"></div>
-<p></p>
-
 h3(#intro). "Introduction":#intro
 
 Once "subscribed":#subscribe and "configured":#settings, the Google Analytics add-on automatically tracks a "list of events":#tracked-events that will appear in your Google Analytics dashboard under the <%= link_to('"Events" section', '#google_analytics-sidebar-screenshot', class: 'sublime lightbox')%>. Tracked events includes:

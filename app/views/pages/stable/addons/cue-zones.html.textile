@@ -7,9 +7,6 @@ h3. Table of Contents
 * "Methods":#methods
 * "Demo":#demo
 
-<div class="breakline"></div>
-<p></p>
-
 h3(#intro). "Introduction":#intro
 
 This add-on allows you to perform a JavaScript action when the viewer enters or exits a certain zone in the video timeline.
