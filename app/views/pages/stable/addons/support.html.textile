@@ -1,4 +1,4 @@
-h2. <%= title('Support') %>
+h2. <%= title('Support add-on') %>
 
 h3. Table of Contents
 

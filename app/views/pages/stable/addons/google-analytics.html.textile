@@ -1,4 +1,4 @@
-h2. <%= title('Google Analytics') %>
+h2. <%= title('Google Analytics add-on') %>
 
 h3. Table of Contents
 

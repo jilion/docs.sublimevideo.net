@@ -1,4 +1,4 @@
-h2. <%= title('On-Video Logo') %>
+h2. <%= title('On-Video Logo add-on') %>
 
 h3. Table of Contents
 

@@ -1,4 +1,4 @@
-h2. <%= title('Cue Zones') %>
+h2. <%= title('Cue Zones add-on') %>
 
 h3. Table of Contents
 
