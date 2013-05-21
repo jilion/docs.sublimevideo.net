@@ -2,14 +2,10 @@ h2. <%= title('Support add-on') %>
 
 h3. Table of Contents
 
-* "Subscribe":#subscribe
 * "Documentation & Community Forum":#documentation-and-community-forum
 * "Email Support":#email-support
 * "VIP Email Support":#vip-email-support
-
-h3(#subscribe). "Subscribe":#subscribe
-
-<a href='<%= my_url('addons/support?p=vip') %>'>Choose a site and subscribe to the Support add-on <span class='icon-arrow'></span></a>
+* "Enterprise Email Support":#enterprise-email-support
 
 h3(#documentation-and-community-forum). "Documentation & Community Forum":#documentation-and-community-forum
 
@@ -23,4 +19,12 @@ Use the <%= link_to 'support form', my_url('help') %> to email us directly your 
 
 h3(#vip-email-support). "VIP Email Support":#vip-email-support
 
-If you need extra support and enhanced reactivity, we also offer a _<%= link_to 'VIP Email Support', my_url('addons?h=support-vip') %>_ add-on with a *guaranteed response within the next business day*.
+If you need extra support and enhanced reactivity, we also offer a _<%= link_to 'VIP Email Support', my_url('addons/support?p=vip') %>_ add-on with a *guaranteed response within the next business day*.
+
+<a href='<%= my_url('addons/support?p=vip') %>'>Subscribe to the VIP Email Support add-on <span class='icon-arrow'></span></a>
+
+h3(#enterprise-email-support). "Enterprise Email Support":#enterprise-email-support
+
+Last but not least, for our enterprise customers we offer an _<%= link_to 'Enterprise Email Support', my_url('addons/support?p=enterprise') %>_ add-on with a *guaranteed 1-hour response time during business hours and a 7/7 availability*.
+
+<a href='<%= my_url('addons/support?p=enterprise') %>'>Subscribe to the Enterprise Email Support add-on <span class='icon-arrow'></span></a>
