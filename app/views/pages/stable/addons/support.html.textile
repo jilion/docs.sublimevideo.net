@@ -10,7 +10,7 @@ h3. Table of Contents
 h3(#documentation-and-community-forum). "Documentation & Community Forum":#documentation-and-community-forum
 
 All users have access to our <%= link_to "documentation", layout_url('help#documentation') %> and <%= link_to "community forum", layout_url('help#community_forum') %>.
-We are monitoring the community forum and we make a "best effort" to answer your questions, but without guarantee.
+We are monitoring the community forum as well as "Twitter":https://twitter.com/jilion and we do our best effort to answer your questions.
 
 h3(#email-support). "Email Support":#email-support
 
