@@ -21,7 +21,7 @@ SublimeVideo's statistics platform offers a truly comprehensive, real-time overv
 <source src="http://media.jilion.com/videos/sublimevideo-real-time-statistics-360p.webm" />
 </video></div></notextile>
 
-<%= image_tag('real-time-stats/stats_preview.jpg', class: 'screenshot', style: 'float:left; margin:20px 20px 0 0', title: 'Stats preview') %>
+<%= image_tag('addons/real-time-stats/stats_preview.jpg', class: 'screenshot', style: 'float:left; margin:20px 20px 0 0', title: 'Stats preview') %>
 To access the Real-Time Statistics dashboard, simply click the 'View Stats' button next to
 your site(s) on the _<%= link_to "My Sites", my_url('sites') %>_ page.
 
@@ -29,19 +29,19 @@ h3(#statistics-over-time). "Statistics Over Time":#statistics-over-time
 
 At the top of the Real-Time Statistics dashboard, you will find buttons to display the video statistics for the chosen site from the last 60 seconds (real-time), last 60 minutes, last 24 hours, last 30 days and last 365 days.
 
-<%= link_to(image_tag('real-time-stats/time_period_selector.jpg', width: 640, class: 'screenshot', title: 'Time period selector'), asset_path('real-time-stats/time_period_selector.jpg'), class: 'sublime lightbox') %>
+<%= link_to(image_tag('addons/real-time-stats/time_period_selector.jpg', width: 640, class: 'screenshot', title: 'Time period selector'), asset_path('addons/real-time-stats/time_period_selector.jpg'), class: 'sublime lightbox') %>
 
 It's worth noting that these buttons display miniature graph previews that update in real-time. Obviously, can be more easily perceived in the 60 seconds miniature. Nonetheless, it can sometimes be useful to keep an eye on your stats for the last 60 minutes or even 24 hours (for example, if you have just released a new video and are primarily monitoring traffic in real-time).
 
 Selecting a time range updates the entire page to display stats for the chosen time period. You can also use the drop-down selector to enter a custom time range. On the large graph, video plays (in green) VS page visits (in gray) are displayed, so you can get an idea for how popular your video is compared to the rest of a page's content. At this time, statistics for video plays from videos embedded elsewhere are not displayed.
 
-<%= link_to(image_tag('real-time-stats/graph.jpg', width: 640, class: 'screenshot', title: 'Video plays VS page visits graph'), asset_path('real-time-stats/graph.jpg'), class: 'sublime lightbox') %>
+<%= link_to(image_tag('addons/real-time-stats/graph.jpg', width: 640, class: 'screenshot', title: 'Video plays VS page visits graph'), asset_path('addons/real-time-stats/graph.jpg'), class: 'sublime lightbox') %>
 
 h3(#video-popularity). "Video Popularity":#video-popularity
 
 You can also see a list of all the videos you may have on a site, complete with loads VS plays and a graph preview for the currently selected time range. The list and graph previews are updated in real-time, making it easy to keep an eye on which videos are most popular - especially during periods of heavy traffic.
 
-<%= link_to(image_tag('real-time-stats/most_played_videos.jpg', width: 640, class: 'screenshot', title: 'Most played videos'), asset_path('real-time-stats/most_played_videos.jpg'), class: 'sublime lightbox') %>
+<%= link_to(image_tag('addons/real-time-stats/most_played_videos.jpg', width: 640, class: 'screenshot', title: 'Most played videos'), asset_path('addons/real-time-stats/most_played_videos.jpg'), class: 'sublime lightbox') %>
 
 Please note your videos *must have a uid* in order to appear in this section. "Read more":#setup-for-stats.
 
@@ -49,11 +49,11 @@ h3(#browser-device-html5-flash-stats). "Browser, Device & HTML5 / Flash Statisti
 
 Browser + OS and HTML5 / Flash statistics are clearly displayed alongside device type usage (mobile or desktop), showing you what the most popular load-cases are for your videos within the currently selected time range. These statistics are also updated in real-time.
 
-<%= link_to(image_tag('real-time-stats/browser_os_and_HTML5_flash.jpg', width: 640, class: 'screenshot', title: 'Browser, Device & HTML5 / Flash Statistics'), asset_path('real-time-stats/browser_os_and_HTML5_flash.jpg'), class: 'sublime lightbox') %>
+<%= link_to(image_tag('addons/real-time-stats/browser_os_and_HTML5_flash.jpg', width: 640, class: 'screenshot', title: 'Browser, Device & HTML5 / Flash Statistics'), asset_path('addons/real-time-stats/browser_os_and_HTML5_flash.jpg'), class: 'sublime lightbox') %>
 
 h3(#data-export). "Data Export":#data-export
 
-<%= image_tag('real-time-stats/data_export.jpg', class: 'screenshot', style: 'float:left; margin:20px 20px 20px 0', title: 'Data export') %>
+<%= image_tag('addons/real-time-stats/data_export.jpg', class: 'screenshot', style: 'float:left; margin:20px 20px 20px 0', title: 'Data export') %>
 
 You can export your stats data in CSV format for the selected period (days only). The CSV file includes loads and plays data for both normal and iframe embedded videos.
 

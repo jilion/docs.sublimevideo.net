@@ -13,7 +13,7 @@ module Search
       rescue IndexTank::InvalidQuery
         nil
       rescue Timeout::Error => ex
-        Airbrake.notify(ex) if Rails.env.production? || Rails.env.staging?
+        Honeybadger.notify_or_ignore(ex)
         nil
       end
 
