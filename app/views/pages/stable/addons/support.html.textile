@@ -17,6 +17,8 @@ h3(#email-support). "Email Support":#email-support
 Dedicated email support is offered to all customers with at least a paid add-on.
 Use the <%= link_to 'support form', my_url('help') %> to email us directly your issue or question and we'll send you a *personal response within the next 5 business days*.
 
+*Important:* Before contacting us for any issue or question, please make sure to read our "support policy":/support-policy.
+
 h3(#vip-email-support). "VIP Email Support":#vip-email-support
 
 If you need extra support and enhanced reactivity, we also offer a _<%= link_to 'VIP Email Support', my_url('addons/support?p=vip') %>_ add-on with a *guaranteed response within the next business day*.

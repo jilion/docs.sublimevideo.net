@@ -1,0 +1,21 @@
+h2. <%= title('Support policy') %>
+
+h3(#hours). "Support hours":#hours
+
+Our general support hours are Monday to Friday, 9am to 6pm ("CET":http://en.wikipedia.org/wiki/Central_European_Time / GMT+2).
+
+h3(#coverage). "Support coverage":#coverage
+
+We can only support our own product: the SublimeVideo player and service. We will provide you with help regarding:
+
+* installing SublimeVideo on your site,
+* setting up your add-ons and players,
+* generating proper @<video>@ elements.
+
+We can not give general support about HTML, CSS, JavaScript or WordPress (for general WordPress support, please use the "WP.org":http://www.wordpress.org/support forums).
+
+We can not provide support on 3rd party browser plugins nor 3rd party WordPress plugins (all 3rd party plugins should be disabled before contacting us for support).
+
+h3(#bug-fixing). "Bug fixing":#bug-fixing
+
+It is our commitment to fix any bugs as quickly as possible after they are brought to our attention. We will also try to provide a solution via our help desk for smaller bug fixes, after which we will update the player / service in our scheduled updates.
