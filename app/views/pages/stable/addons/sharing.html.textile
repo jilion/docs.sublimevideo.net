@@ -28,7 +28,7 @@ _Simpler sharing pane with just Twitter and Facebook in our "Flat":http://sublim
 
 h3(#subscribe). "Subscribe":#subscribe
 
-<a href='<%= my_url('addons/social_sharing?p=standard') %>'>Subscribe to the Social Sharing add-on <span class='icon-arrow'></span></a>
+<%= subscribe_addon_link 'Social Sharing', 'social_sharing', 'standard' %>
 
 h3(#sharing_url). "Properly linking to a video":#sharing_url
 

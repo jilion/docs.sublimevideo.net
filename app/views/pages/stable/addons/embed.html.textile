@@ -27,7 +27,7 @@ To enable this feature by default for you player(s), subscribe to the _<%= link_
 * You *must* set a "unique ID":/settings/player-settings#uid for your videos via the data-uid attribute.
 * Your video sources URLs *must not be dynamic* (i.e. different on each request).
 
-<a href='<%= my_url('addons/embed?p=auto') %>'>Subscribe to the Auto Embed add-on <span class='icon-arrow'></span></a>
+<%= subscribe_addon_link 'Auto Embed', 'embed', 'auto' %>
 
 h3(#manual). "Manual embedding":#manual
 

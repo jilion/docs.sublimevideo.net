@@ -16,7 +16,7 @@ You can use the Cue Zones API to trigger any custom action, such as synchronizin
 
 h3(#subscribe). "Subscribe":#subscribe
 
-<a href='<%= my_url('addons/cuezones?p=standard') %>'>Subscribe to the Cue Zones add-on <span class='icon-arrow'></span></a>
+<%= subscribe_addon_link 'Cue Zones', 'cuezones', 'standard' %>
 
 h3(#methods). "Methods":#methods
 

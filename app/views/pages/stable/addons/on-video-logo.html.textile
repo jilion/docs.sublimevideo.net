@@ -28,7 +28,8 @@ The following video will get you started adding an On-Video Logo to your video.
 
 h3(#subscribe). "Subscribe":#subscribe
 
-<a href='<%= my_url('addons/logo?p=disabled') %>'>Subscribe to the On-Video Logo add-on <span class='icon-arrow'></span></a>
+* <%= subscribe_addon_link 'No SublimeVideo Logo', 'logo', 'disabled' %>
+* <%= subscribe_addon_link 'Your Logo', 'logo', 'custom' %>
 
 h3(#settings). "Settings":#settings
 

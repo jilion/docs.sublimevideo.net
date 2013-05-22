@@ -21,10 +21,10 @@ h3(#vip-email-support). "VIP Email Support":#vip-email-support
 
 If you need extra support and enhanced reactivity, we also offer a _<%= link_to 'VIP Email Support', my_url('addons/support?p=vip') %>_ add-on with a *guaranteed response within the next business day*.
 
-<a href='<%= my_url('addons/support?p=vip') %>'>Subscribe to the VIP Email Support add-on <span class='icon-arrow'></span></a>
+<%= subscribe_addon_link 'VIP Email Support', 'support', 'vip' %>
 
 h3(#enterprise-email-support). "Enterprise Email Support":#enterprise-email-support
 
 Last but not least, for our enterprise customers we offer an _<%= link_to 'Enterprise Email Support', my_url('addons/support?p=enterprise') %>_ add-on with a *guaranteed 1-hour response time during business hours and a 7/7 availability*.
 
-<a href='<%= my_url('addons/support?p=enterprise') %>'>Subscribe to the Enterprise Email Support add-on <span class='icon-arrow'></span></a>
+<%= subscribe_addon_link 'Enterprise Email Support', 'support', 'enterprise' %>
