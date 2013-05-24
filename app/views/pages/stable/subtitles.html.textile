@@ -1,0 +1,114 @@
+h2. <%= title('Subtitles') %>
+
+h3. Table of Contents
+
+* "Supported subtitles formats":#supported-formats
+* "Create subtitles files":#create-subtitles
+* "Add subtitles to your video":#add-subtitles
+* "Demo":#demo
+
+The Subtitles feature allows you to increase your videos' global reach and provide a great experience to your hearing-impaired audience by adding subtitles to your videos. SublimeVideo supports multi-language subtitles on all desktop browsers and the latest mobile platforms.
+
+h3(#supported-formats). "Supported subtitles formats":#supported-formats
+
+We currently support both @.srt@ and @.vtt@ formats.
+
+h3(#create-subtitles). "Create subtitles files":#create-subtitles
+
+You can use online tools like "Amara":http://www.amara.org/en to create your subtitle files.
+
+h3(#add-subtitles). "Add subtitles to your video":#add-subtitles
+
+Each subtitles file has to be added through individual HTML5 @<track>@ elements using the @src@ attribute:
+
+bc(language-markup). <video id='video1' style='display:none' width='640' height='360' poster='video-poster.jpg' preload='none'>
+  <source src='http://yoursite.com/video.mp4' />
+  <source src='http://yoursite.com/video.webm' />
+  <track src='/subs/en.srt' srclang='en'></track>
+  <track src='http://yoursite.com/subs/fr.vtt' srclang='fr'></track>
+</video>
+
+*Note:* The @src@ attribute value can either be a relative path or an absolute URL (only if the domain of the URL is the same as the current domain).
+
+h4(#specify-subtitles-language). "Specify subtitles language":#specify-subtitles-language
+
+You *must specify the language of the track file* either with the @srclang@ attribute or the @label@ attribute:
+
+bc(language-markup). <video id='video1' style='display:none' width='640' height='360' poster='video-poster.jpg' preload='none'>
+  <source src='http://yoursite.com/video.mp4' />
+  <source src='http://yoursite.com/video.webm' />
+  <track src='/subs/en.srt' srclang='en'></track>
+  <track src='/subs/eo.vtt' label='Esperanto'></track>
+</video>
+
+If the subtitles' language is present in the following table, simply use its tag for the @srclang@ attribute. Otherwise, you can use the @label@ attribute to specify an arbitrary label to display in the subtitle selection menu.
+
+*List of supported language tags*
+
+table(supported_browsers generic).
+(alt). |_. Tag |_. Label    |
+| af    | Afrikaans  |
+(alt). | ar    | Arabic     |
+| bg    | Bulgarian  |
+(alt). | bn    | Bengali    |
+| bs    | Bosnian    |
+(alt). | ca    | Catalan    |
+| cs    | Czech      |
+(alt). | da    | Danish     |
+| de    | German     |
+(alt). | el    | Greek      |
+| en    | English    |
+(alt). | es    | Spanish    |
+| fa    | Persian    |
+(alt). | fi    | Finnish    |
+| fr    | French     |
+(alt). | gu    | Gujarati   |
+| he    | Hebrew     |
+(alt). | hi    | Hindi      |
+| hr    | Croatian   |
+(alt). | hu    | Hungarian  |
+| id    | Indonesian |
+(alt). | is    | Icelandic  |
+| it    | Italian    |
+(alt). | ja    | Japanese   |
+| kn    | Kannada    |
+(alt). | ko    | Korean     |
+| lv    | Latvian    |
+(alt). | ml    | Malayalam  |
+| mr    | Marathi    |
+(alt). | nb    | Norwegian  |
+| nl    | Dutch      |
+(alt). | or    | Oriya      |
+| pa    | Punjabi    |
+(alt). | pl    | Polish     |
+| pt    | Portuguese |
+(alt). | ru    | Russian    |
+| si    | Sinhalese  |
+(alt). | sk    | Slovak     |
+| sq    | Albanian   |
+(alt). | sr    | Serbian    |
+| sv    | Swedish    |
+(alt). | ta    | Tamil      |
+| te    | Telugu     |
+(alt). | th    | Thai       |
+| uk    | Ukrainian  |
+(alt). | zh    | Chinese    |
+
+h4(#default-subtitles-track). "Set a default subtitles track":#default-subtitles-track
+
+You can set a @<track>@ element as the default by adding the @default@ attribute to it:
+
+bc(language-markup). <video id='video1' style='display:none' width='640' height='360' poster='video-poster.jpg' preload='none'>
+    <source src='http://yoursite.com/video.mp4' />
+    <source src='http://yoursite.com/video.webm' />
+    <track src='/subs/en.srt' srclang='en' default></track>
+    <track src='http://yoursite.com/subs/fr.vtt' srclang='fr'></track>
+  </video>
+
+h4. Additional information
+
+For more information about the HTML5 @<track>@ element, please read the "W3C specification":http://www.w3.org/TR/html5/embedded-content-0.html#the-track-element
+
+h3(#demo). "Demo":#demo
+
+<%= jsfiddle_embed('ZLzDk', height: 500) %>
