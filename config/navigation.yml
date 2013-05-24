@@ -8,6 +8,7 @@ stable:
     'youtube': 'YouTube'
     'vimeo-pro': 'Vimeo Pro'
   'Built-in Features':
+    'subtitles': 'Subtitles'
     'lightbox': 'Lightbox'
     'hd-switching': 'HD switching'
     'responsive-layout': 'Responsive layout'
