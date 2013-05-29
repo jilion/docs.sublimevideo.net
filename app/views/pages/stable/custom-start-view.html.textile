@@ -1,20 +1,25 @@
 h2. <%= title('Customize the start view') %>
 
-The default start view ensures compatibility across all browsers (down to IE6). We strongly discourage you from modifying it using CSS.
+We provide two levels of customization for the start view:
 
-h3. Customize or disable the initial overlay
+* "Customize or disable the initial overlay":#customize-or-disable-initial-overlay
+* "Replace the default start view and use yours instead":#use-a-custom-start-view
 
-To customize or disable the initial overlay, please use the "@initial-overlay-enable@ and @initial-overlay-visibility@ player settings":settings/player-settings#initial-overlay-enable.
+*Note:* Please don't try to modify the start view using CSS, you could potentially break the compatibility with some browsers (and we would not provide you with support in that case).
+
+h3(#customize-or-disable-initial-overlay). "Customize or disable the initial overlay":#customize-or-disable-initial-overlay
+
+To customize or disable the initial overlay, please use the "@initial-overlay-enable@ and @initial-overlay-visibility@ player settings":settings/player-settings#initial-overlay-enable. Here is an example:
 
 h4(#demo-1). "Demo":#demo-1
 
 <%= jsfiddle_embed('JpjXu', height: 390) %>
 
-h3. Use a custom start view
+h3(#use-a-custom-start-view). "Use a custom start view":#use-a-custom-start-view
 
-You can also use your own custom start view using our "JavaScript API":javascript-api to start the video playback as soon as the user clicks on your new custom view.
+You can also use your own custom start view using our "JavaScript API":javascript-api to start the video playback as soon as the user clicks on your custom start view.
 
-In the example below we're using a simple @<div>@ placeholder as the custom start view.
+In the example below we're simply using some text in the @<a>@ element as the custom start view but you could obviously replace it with an @<img>@ element.
 
 h4(#demo-2). "Demo":#demo-2
 
