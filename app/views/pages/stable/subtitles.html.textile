@@ -3,50 +3,61 @@ h2. <%= title('Subtitles') %>
 h3. Table of Contents
 
 * "Supported subtitles formats":#supported-formats
-* "Create subtitles files":#create-subtitles
-* "Add subtitles to your video":#add-subtitles
+* "Adding subtitles to your video":#add_subtitles
+* "Using subtitles files hosted on a different domain":#cors
+* "Specifying the subtitles language":#subtitles_language
+* "Setting a default subtitles track":#default_subtitles_track
+* "Creating subtitles files":#create-subtitles
+* "Additional information":#additional_info
 * "Demo":#demo
 
-The Subtitles feature allows you to increase your videos' global reach and provide a great experience to your hearing-impaired audience by adding subtitles to your videos. SublimeVideo supports multi-language subtitles on all desktop browsers and the latest mobile platforms.
+SublimeVideo comes with built-in support for multi-language subtitles allowing you to increase your videos' global reach and provide a great experience to your hearing-impaired audience.
 
 h3(#supported-formats). "Supported subtitles formats":#supported-formats
 
-We currently support both @.srt@ and @.vtt@ formats.
+We currently support both the @.vtt@ ("WebVTT":http://en.wikipedia.org/wiki/WebVTT) and @.srt@ ("SubRip":http://en.wikipedia.org/wiki/SubRip) formats.
 
-h3(#create-subtitles). "Create subtitles files":#create-subtitles
+h3(#add_subtitles). "Adding subtitles to your video":#add_subtitles
 
-You can use online tools like "Amara":http://www.amara.org/en to create your subtitle files.
+Each subtitles file has to be added using a @<track>@ element inside the @<video>@ element as shown in the example below:
 
-h3(#add-subtitles). "Add subtitles to your video":#add-subtitles
-
-Each subtitles file has to be added through individual HTML5 @<track>@ elements using the @src@ attribute:
-
-bc(language-markup). <video id='video1' style='display:none' width='640' height='360' poster='video-poster.jpg' preload='none'>
+bc(language-markup). <video class='sublime' width='640' height='360' poster='video-poster.jpg' preload='none'>
   <source src='http://yoursite.com/video.mp4' />
   <source src='http://yoursite.com/video.webm' />
-  <track src='/subs/en.srt' srclang='en'></track>
-  <track src='http://yoursite.com/subs/fr.vtt' srclang='fr'></track>
+  <track src='/subs/video-en.srt' srclang='en' />
+  <track src='/subs/video-fr.vtt' srclang='fr' />
 </video>
 
-*Note:* The @src@ attribute value can either be a relative path or an absolute URL (only if the domain of the URL is the same as the current domain).
+Please continue reading for important information regarding the @src@ and @srclang@ attributes of the @<track>@ element.
 
-h4(#specify-subtitles-language). "Specify subtitles language":#specify-subtitles-language
+h4(#cors). "Using subtitles files hosted on a different domain":#cors
 
-You *must specify the language of the track file* either with the @srclang@ attribute or the @label@ attribute:
+By default, the HTML5 @<track>@ element only accepts subtitles files hosted on the same domain (__origin__) as the page containing the @<video>@ element itself. *SublimeVideo adds support for cross-origin subtitles files*, in other words, you can host them on a different domain. This can be handy if you would like to have the subtitles files hosted on the same CDN as your video assets.
 
-bc(language-markup). <video id='video1' style='display:none' width='640' height='360' poster='video-poster.jpg' preload='none'>
+In order for this to work, the server hosting your subtitles files must support "CORS":http://en.wikipedia.org/wiki/Cross-origin_resource_sharing. If you are using Amazon S3 and Cloudfront, you can easily "enable CORS support on your S3 bucket":http://aws.typepad.com/aws/2012/08/amazon-s3-cross-origin-resource-sharing.html (Cloudfront will automatically inherit the same CORS configuration of the bucket).
+
+However, please note that CORS is not supported on IE7. If having subtitles work on IE7 is important to you, you should keep your subtitles files hosted on the same domain as your pages.
+
+h4(#subtitles_language). "Specifying the subtitles language":#subtitles_language
+
+You *must specify the language* of each track either via the @srclang@ attribute or the @label@ attribute.
+
+In most cases, you can just provide the 2-letter language code via the @srclang@ attribute and we will automatically label most of them (see "table below":#srclang_values).
+
+If the language you need is not "listed":#srclang_values or if you'd like to override the value of our automatic label, you can add your own custom label via the @label@ attribute:
+
+bc(language-markup). <video class='sublime' width='640' height='360' poster='video-poster.jpg' preload='none'>
   <source src='http://yoursite.com/video.mp4' />
   <source src='http://yoursite.com/video.webm' />
-  <track src='/subs/en.srt' srclang='en'></track>
-  <track src='/subs/eo.vtt' label='Esperanto'></track>
+  <track src='/subs/video-en.vtt' srclang='en' />
+  <track src='/subs/video-it.vtt' srclang='it' label="Italiano" />
+  <track src='/subs/video-eo.vtt' label='Esperanto' />
 </video>
 
-If the subtitles' language is present in the following table, simply use its tag for the @srclang@ attribute. Otherwise, you can use the @label@ attribute to specify an arbitrary label to display in the subtitle selection menu.
+h4(#srclang_values). List of auto-labeled @srclang@ values
 
-*List of supported language tags*
-
-table(supported_browsers generic).
-(alt). |_. Tag |_. Label    |
+table(supported_browsers generic){ width:260px }.
+(alt). |_. @srclang@ value |_. automatic label |
 | af    | Afrikaans  |
 (alt). | ar    | Arabic     |
 | bg    | Bulgarian  |
@@ -94,21 +105,34 @@ table(supported_browsers generic).
 | uk    | Ukrainian  |
 (alt). | zh    | Chinese    |
 
-h4(#default-subtitles-track). "Set a default subtitles track":#default-subtitles-track
+h4(#default_subtitles_track). "Setting a default subtitles track":#default_subtitles_track (enabling subtitles when player starts)
 
-You can set a @<track>@ element as the default by adding the @default@ attribute to it:
+By default, no track is selected and no subtitles are shown until the user selects a language from the subtitles menu in the player.
+If you want the subtitles for a particular language to be shown by default as soon as the user starts the video, you simply need to add the @default@ attribute to the desired @<track>@ element:
 
-bc(language-markup). <video id='video1' style='display:none' width='640' height='360' poster='video-poster.jpg' preload='none'>
+bc(language-markup). <video class='sublime' width='640' height='360' poster='video-poster.jpg' preload='none'>
     <source src='http://yoursite.com/video.mp4' />
     <source src='http://yoursite.com/video.webm' />
-    <track src='/subs/en.srt' srclang='en' default></track>
-    <track src='http://yoursite.com/subs/fr.vtt' srclang='fr'></track>
+    <track src='/subs/video-en.vtt' srclang='en' default />
+    <track src='/subs/video-fr.vtt' srclang='fr' />
+    <track src='/subs/video-it.vtt' srclang='it' />
   </video>
 
-h4. Additional information
+h3(#create-subtitles). "Creating subtitles files":#create-subtitles
 
-For more information about the HTML5 @<track>@ element, please read the "W3C specification":http://www.w3.org/TR/html5/embedded-content-0.html#the-track-element
+You can use online tools like "Amara":http://www.amara.org to create subtitles files for your videos.
+
+
+h3(#additional_info). "Additional information":#additional_info
+
+For more information about HTML5's @<track>@ element, please read the "W3C specification":http://www.w3.org/TR/html5/embedded-content-0.html#the-track-element.
+
+The @<track>@ element has been designed to associate different "_kinds_":http://www.w3.org/TR/html5/embedded-content-0.html#text-track-kind of information to a media element (not only subtitles). When the @kind@ attribute of a @<track>@ element is omitted, it will default to _subtitles_, which is the only kind SublimeVideo currently supports.
 
 h3(#demo). "Demo":#demo
 
-<%= jsfiddle_embed('ZLzDk', height: 500) %>
+<%= jsfiddle_embed('ZLzDk', height: 450) %>
+
+<%= jsfiddle_embed('VBHmx', height: 450) %>
+
+<%= jsfiddle_embed('23sSy', height: 450) %>
