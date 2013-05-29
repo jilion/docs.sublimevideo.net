@@ -2,12 +2,11 @@ h2. <%= title('On-Video Logo add-on') %>
 
 h3. Table of Contents
 
-* "Introduction":#intro
 * "Subscribe":#subscribe
 * "Settings":#settings
 * "Demo":#demo
 
-h3(#intro). "Introduction":#intro
+<div class="breakline_addon"></div>
 
 This add-on allows you to set several settings for the logo displayed on video (either the SublimeVideo logo or your own):
 
@@ -29,7 +28,8 @@ The following video will get you started adding an On-Video Logo to your video.
 
 h3(#subscribe). "Subscribe":#subscribe
 
-<a href='<%= my_url('addons/logo?p=disabled') %>'>Choose a site and subscribe to the On-Video Logo add-on <span class='icon-arrow'></span></a>
+* <%= subscribe_addon_link 'No SublimeVideo Logo', 'logo', 'disabled' %>
+* <%= subscribe_addon_link 'Your Logo', 'logo', 'custom' %>
 
 h3(#settings). "Settings":#settings
 

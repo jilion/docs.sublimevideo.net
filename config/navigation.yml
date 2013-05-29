@@ -40,6 +40,7 @@ stable:
     'encode-videos-for-the-web': 'Video encoding'
     'create-poster-frame': 'Create poster frame'
     'supported-platforms': 'Supported platforms'
+    'support-policy': 'Support policy'
     'site-settings': 'Site settings'
     'releases': 'Release Notes'
 beta:

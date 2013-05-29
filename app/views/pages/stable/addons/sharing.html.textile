@@ -2,15 +2,14 @@ h2. <%= title('Social Sharing add-on') %>
 
 h3. Table of Contents
 
-* "Introduction":#intro
 * "Subscribe":#subscribe
 * "Properly linking to a video":#sharing_url
 * "Settings":#settings
 * "About Open Graph":#open_graph
 
-h3(#intro). "Introduction":#intro
+<div class="breakline_addon"></div>
 
-This add-on provides social sharing feature to your player. It displays a sharing button on the top-right corner of the player which opens a pane with different sharing options/services of your choice:
+The Social Sharing add-on displays a sharing button in the upper right hand corner of the player which –once clicked– opens a pane with different sharing options/services of your choice:
 
 * Twitter
 * Facebook
@@ -29,7 +28,7 @@ _Simpler sharing pane with just Twitter and Facebook in our "Flat":http://sublim
 
 h3(#subscribe). "Subscribe":#subscribe
 
-<a href='<%= my_url('addons/social_sharing?p=standard') %>'>Choose a site and subscribe to the Social Sharing add-on <span class='icon-arrow'></span></a>
+<%= subscribe_addon_link 'Social Sharing', 'social_sharing', 'standard' %>
 
 h3(#sharing_url). "Properly linking to a video":#sharing_url
 

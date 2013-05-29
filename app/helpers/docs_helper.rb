@@ -77,6 +77,12 @@ module DocsHelper
     "<iframe style='width: 100%; height: #{options[:height]}px' src='//jsfiddle.net/sublimevideo/#{token}/embedded/#{options[:panes]}' allowfullscreen webkitallowfullscreen mozallowfullscreen frameborder='0'></iframe>".html_safe
   end
 
+  def subscribe_addon_link(addon_title, addon_name, addon_plan_name)
+    raw(link_to(my_url("addons/#{addon_name}?p=#{addon_plan_name}")) do
+      "Subscribe to the #{addon_title} add-on #{content_tag(:span, '', class: 'icon-arrow')}".html_safe
+    end)
+  end
+
   private
 
   def render_erb(text)

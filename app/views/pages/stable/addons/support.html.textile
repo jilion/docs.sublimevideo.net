@@ -2,25 +2,33 @@ h2. <%= title('Support add-on') %>
 
 h3. Table of Contents
 
-* "Subscribe":#subscribe
-* "Documentation & Community Forum":#documentation-and-community-forum
+* "Documentation, Community Forums & Twitter":#documentation-community-forums-twitter
 * "Email Support":#email-support
 * "VIP Email Support":#vip-email-support
+* "Enterprise Email Support":#enterprise-email-support
 
-h3(#subscribe). "Subscribe":#subscribe
+h3(#documentation-community-forums-twitter). "Documentation, Community Forums & Twitter":#documentation-community-forums-twitter
 
-<a href='<%= my_url('addons/support?p=vip') %>'>Choose a site and subscribe to the Support add-on <span class='icon-arrow'></span></a>
+Access to our documentation and "community forums":https://getsatisfaction.com/sublimevideo is free for all our users.
+We are monitoring the community forum as well as "Twitter":https://twitter.com/jilion and we do our best effort to answer your questions.
 
-h3(#documentation-and-community-forum). "Documentation & Community Forum":#documentation-and-community-forum
-
-All users have access to our <%= link_to "documentation", layout_url('help#documentation') %> and <%= link_to "community forum", layout_url('help#community_forum') %>.
-We are monitoring the community forum and we make a "best effort" to answer your questions, but without guarantee.
+*If you want a guaranteed response to your questions or issues, you can either "subscribe to any paid add-on":#email-support or to the "VIP Email Support":#vip-email-support or "Enterprise Email Support":#enterprise-email-support add-ons.*
 
 h3(#email-support). "Email Support":#email-support
 
 Dedicated email support is offered to all customers with at least a paid add-on.
-Use the <%= link_to 'support form', my_url('help') %> to email us directly your issue or question and we'll send you a *personal response within the next 5 business days*.
+Use the <%= link_to 'support form', my_url('help') %> to submit a ticket and we'll send you a *personal response within the next 5 business days* between 9pm and 6pm "CET":http://en.wikipedia.org/wiki/Central_European_Time.
+
+*Important:* Before contacting us for any issue or question, please make sure to read our "support policy":/support-policy.
 
 h3(#vip-email-support). "VIP Email Support":#vip-email-support
 
-If you need extra support and enhanced reactivity, we also offer a _<%= link_to 'VIP Email Support', my_url('addons?h=support-vip') %>_ add-on with a *guaranteed response within the next business day*.
+If you need extra support and enhanced reactivity, we also offer a _<%= link_to 'VIP Email Support', my_url('addons/support?p=vip') %>_ add-on with a *guaranteed response within the next business day* between 9pm and 6pm CET.
+
+<%= subscribe_addon_link 'VIP Email Support', 'support', 'vip' %>
+
+h3(#enterprise-email-support). "Enterprise Email Support":#enterprise-email-support
+
+Last but not least, for our enterprise customers we offer an _<%= link_to 'Enterprise Email Support', my_url('addons/support?p=enterprise') %>_ add-on with a *guaranteed 1-hour response time* from Monday to Friday between 9pm and 9pm CET, and a 3-hours response time during the weekends between 9pm and 9pm CET.
+
+<%= subscribe_addon_link 'Enterprise Email Support', 'support', 'enterprise' %>

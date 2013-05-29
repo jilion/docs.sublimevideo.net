@@ -2,7 +2,6 @@ h2. <%= title('Real-Time Statistics add-on') %>
 
 h3. Table of Contents
 
-* "Introduction":#intro
 * "Subscribe":#subscribe
 * "Statistics Over Time":#statistics-over-time
 * "Video Popularity":#video-popularity
@@ -11,7 +10,7 @@ h3. Table of Contents
 * "A note for Google Analytics users":#google-analytics-note
 * "Setup &lt;video&gt; elements for stats":#setup-for-stats
 
-h3(#intro). "Introduction":#intro
+<div class="breakline_addon"></div>
 
 SublimeVideo's statistics platform offers a truly comprehensive, real-time overview of your site's video traffic from any device, whether generated from mobile or desktop, HTML5 or Flash.
 
@@ -28,7 +27,7 @@ your site(s) on the _<%= link_to "My Sites", my_url('sites') %>_ page.
 
 h3(#subscribe). "Subscribe":#subscribe
 
-<a href='<%= my_url('addons/stats?p=realtime') %>'>Choose a site and subscribe to the Real-Time Statistics add-on <span class='icon-arrow'></span></a>
+<%= subscribe_addon_link 'Real-Time Statistics', 'stats', 'realtime' %>
 
 h3(#statistics-over-time). "Statistics Over Time":#statistics-over-time
 

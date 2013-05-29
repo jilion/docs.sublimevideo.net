@@ -2,13 +2,12 @@ h2. <%= title('Google Analytics add-on') %>
 
 h3. Table of Contents
 
-* "Introduction":#intro
 * "Subscribe":#subscribe
 * "Set up your &lt;video&gt;":#setup
 * "Tracked events":#tracked-events
 * "Settings":#settings
 
-h3(#intro). "Introduction":#intro
+<div class="breakline_addon"></div>
 
 Once "subscribed":#subscribe and "configured":#settings, the Google Analytics add-on automatically tracks a "list of events":#tracked-events that will appear in your Google Analytics dashboard under the <%= link_to('"Events" section', '#google_analytics-sidebar-screenshot', class: 'sublime lightbox')%>. Tracked events includes:
 * when a video starts and ends,
@@ -20,9 +19,9 @@ In your Google Analytics dashboard, you can filter tracked events by categories,
 
 h3(#subscribe). "Subscribe":#subscribe
 
-<a href='<%= my_url('addons/google_analytics?p=standard') %>'>Choose a site and subscribe to the Google Analytics add-on <span class='icon-arrow'></span></a>
+<%= subscribe_addon_link 'Google Analytics', 'google_analytics', 'standard' %>
 
-Once subscribed, make sure to:
+Once subscribed, please make sure to:
 
 # "Set up your &lt;video&gt;":#setup,
 # Enable the Google Analytics integration via your site's Player editor page on <%= link_to "MySublimeVideo", my_url('sites') %>.
