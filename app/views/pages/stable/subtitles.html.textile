@@ -131,8 +131,8 @@ The @<track>@ element has been designed to associate different "_kinds_":http://
 
 h3(#demo). "Demo":#demo
 
-<%= jsfiddle_embed('ZLzDk', height: 450) %>
+<%= jsfiddle_embed('ZLzDk', height: 460) %>
 
-<%= jsfiddle_embed('VBHmx', height: 450) %>
+<%= jsfiddle_embed('VBHmx', height: 460) %>
 
-<%= jsfiddle_embed('23sSy', height: 450) %>
+<%= jsfiddle_embed('23sSy', height: 460) %>
