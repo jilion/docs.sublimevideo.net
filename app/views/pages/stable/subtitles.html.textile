@@ -3,12 +3,12 @@ h2. <%= title('Subtitles') %>
 h3. Table of Contents
 
 * "Supported subtitles formats":#supported-formats
-* "Adding subtitles to your video":#add_subtitles
+* "Adding subtitles to your video":#add-subtitles
 * "Using subtitles files hosted on a different domain":#cors
-* "Specifying the subtitles language":#subtitles_language
-* "Setting a default subtitles track":#default_subtitles_track
+* "Specifying the subtitles language":#subtitles-language
+* "Setting a default subtitles track":#default-subtitles-track
 * "Creating subtitles files":#create-subtitles
-* "Additional information":#additional_info
+* "Additional information":#additional-info
 * "Demo":#demo
 
 SublimeVideo comes with built-in support for multi-language subtitles allowing you to increase your videos' global reach and provide a great experience to your hearing-impaired audience.
@@ -17,7 +17,7 @@ h3(#supported-formats). "Supported subtitles formats":#supported-formats
 
 We currently support both the @.vtt@ ("WebVTT":http://en.wikipedia.org/wiki/WebVTT) and @.srt@ ("SubRip":http://en.wikipedia.org/wiki/SubRip) formats.
 
-h3(#add_subtitles). "Adding subtitles to your video":#add_subtitles
+h3(#add-subtitles). "Adding subtitles to your video":#add-subtitles
 
 Each subtitles file has to be added using a @<track>@ element inside the @<video>@ element as shown in the example below:
 
@@ -38,13 +38,13 @@ In order for this to work, the server hosting your subtitles files must support 
 
 However, please note that CORS is not supported on IE7. If having subtitles work on IE7 is important to you, you should keep your subtitles files hosted on the same domain as your pages.
 
-h4(#subtitles_language). "Specifying the subtitles language":#subtitles_language
+h4(#subtitles-language). "Specifying the subtitles language":#subtitles-language
 
 You *must specify the language* of each track either via the @srclang@ attribute or the @label@ attribute.
 
-In most cases, you can just provide the 2-letter language code via the @srclang@ attribute and we will automatically label most of them (see "table below":#srclang_values).
+In most cases, you can just provide the 2-letter language code via the @srclang@ attribute and we will automatically label most of them (see "table below":#srclang-values).
 
-If the language you need is not "listed":#srclang_values or if you'd like to override the value of our automatic label, you can add your own custom label via the @label@ attribute:
+If the language you need is not "listed":#srclang-values or if you'd like to override the value of our automatic label, you can add your own custom label via the @label@ attribute:
 
 bc(language-markup). <video class='sublime' width='640' height='360' poster='video-poster.jpg' preload='none'>
   <source src='http://yoursite.com/video.mp4' />
@@ -54,7 +54,7 @@ bc(language-markup). <video class='sublime' width='640' height='360' poster='vid
   <track src='/subs/video-eo.vtt' label='Esperanto' />
 </video>
 
-h4(#srclang_values). List of auto-labeled @srclang@ values
+h4(#srclang-values). List of auto-labeled @srclang@ values
 
 table(supported_browsers generic){ width:260px }.
 (alt). |_. @srclang@ value |_. automatic label |
@@ -105,7 +105,7 @@ table(supported_browsers generic){ width:260px }.
 | uk    | Ukrainian  |
 (alt). | zh    | Chinese    |
 
-h4(#default_subtitles_track). "Setting a default subtitles track":#default_subtitles_track (enabling subtitles when player starts)
+h4(#default-subtitles-track). "Setting a default subtitles track":#default-subtitles-track (enabling subtitles when player starts)
 
 By default, no track is selected and no subtitles are shown until the user selects a language from the subtitles menu in the player.
 If you want the subtitles for a particular language to be shown by default as soon as the user starts the video, you simply need to add the @default@ attribute to the desired @<track>@ element:
@@ -122,8 +122,7 @@ h3(#create-subtitles). "Creating subtitles files":#create-subtitles
 
 You can use online tools like "Amara":http://www.amara.org to create subtitles files for your videos.
 
-
-h3(#additional_info). "Additional information":#additional_info
+h3(#additional-info). "Additional information":#additional-info
 
 For more information about HTML5's @<track>@ element, please read the "W3C specification":http://www.w3.org/TR/html5/embedded-content-0.html#the-track-element.
 
