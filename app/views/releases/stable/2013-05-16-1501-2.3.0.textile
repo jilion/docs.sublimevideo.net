@@ -1,0 +1,3 @@
+* <span class="label new">new</span> "Google Analytics add-on":http://blog.jilion.com/2013/05/16/introducing-the-sublimevideo-google-analytics-add-on.
+* <span class="label improved">improved</span> UI rendering perfomance on all browsers.
+* <span class="label improved">improved</span> "Flat":http://sublimevideo.net/modular-player#player_designs design (slightly darker and fatter).
