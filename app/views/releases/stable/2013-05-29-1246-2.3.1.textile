@@ -1,0 +1,1 @@
+* <span class="label improved">improved</span> Streamlined the fullscreen controls in our _Classic_ design.

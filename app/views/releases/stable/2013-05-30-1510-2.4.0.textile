@@ -1,0 +1,2 @@
+* <span class="label new">new</span> "Subtitles support":http://blog.jilion.com/2013/05/30/introducing-sublimevideo-subtitles.
+* <span class="label new">new</span> Time tooltip indicator when moving the mouse cursor over the seek bar (in our "Classic":http://sublimevideo.net/modular-player#player_designs and "Flat":http://sublimevideo.net/modular-player#player_designs designs).
