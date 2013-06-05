@@ -1,12 +1,15 @@
-The most common cause of this problem are MIME type (i.e. Content-types) misconfigurations in your web server. While most web servers are already configured to serve _.mp4_ files with the proper MIME type, they are often not configured to properly serve _.ogv_ and _.webm_ files.
+The most common cause of this problem are MIME type (i.e. Content-types) misconfigurations in your web server. While most web servers are already configured to serve _.mp4_ files with the proper MIME type, they are often not configured to properly serve _.webm_, _.ogv_ and _.mov_ files.
 
 Here is how MIME types should be configured in your web server:
 
 table(simple).
 |_. File extension|_. MIME type|
-|.mp4, m4v|video/mp4|
-|.ogv|video/ogg|
+|.mp4, m4v, mov<strong><notextile>*</notextile></strong>|video/mp4|
 |.webm|video/webm|
+|.ogv|video/ogg|
+
+
+<notextile>*</notextile>: We recommend using the _.mp4_ format over _.mov_. %(red)*Videos in .mov format*% can still be used but you really need to make sure they are served with the proper MIME type @video/mp4@ and *not* @video/quicktime@ or your videos won't play on IE ≥ 9.
 
 h4. Check your MIME types
 
