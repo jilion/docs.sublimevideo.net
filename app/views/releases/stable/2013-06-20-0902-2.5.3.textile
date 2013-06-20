@@ -1,0 +1,2 @@
+* <span class="label fixed">fixed</span> Issue with YouTube videos and lightbox.
+* <span class="label fixed">fixed</span> Bug in Safari 6 preventing fullscreen in iframe embeds from properly exiting when pressing the Esc key.
