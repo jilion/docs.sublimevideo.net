@@ -1,0 +1,1 @@
+* <span class="label improved">improved</span> Compatibility with existing CSS (max-height, causing issues with poster frame).
