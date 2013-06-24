@@ -1,27 +1,24 @@
 ## PROJECT::GENERAL
 coverage
 rdoc
-*.dat
+# *.dat
 public/assets
-!config/database.yml
 tmp/restart.txt
 backup.db
 public/uploads
 logfile
 db/*.sqlite3
 db/backups/*
-log/
-tmp/
+doc/js/
 .sass-cache/
 vendor/ruby
 vendor/bundler
-!Guardfile
-!Gemfile
-!Gemfile.lock
 !.bundle
-!.bundle/*
-!public/assets/*.gz
-.env
-config/env.yml
+!.env
+.env.*
+uploads
+.tddium*
 *.sublime-project
 !.sublime-project
+public/test.html
+routes.txt
