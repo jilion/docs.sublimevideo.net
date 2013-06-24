@@ -5,7 +5,8 @@ ruby '2.0.0'
 
 gem 'bundler'
 
-gem 'rails', '4.0.0.rc1'
+gem 'rails', '4.0.0.rc2'
+gem 'rails_12factor' # Heroku integration: https://devcenter.heroku.com/articles/rails-integration-gems
 gem 'sublime_video_layout', '~> 2.0' # hosted on gemfury
 
 # Views
@@ -28,7 +29,7 @@ gem 'honeybadger'
 # Gems used only for assets and not required
 # in production environments by default.
 gem 'asset_sync'
-gem 'sass-rails', '4.0.0.rc1'
+gem 'sass-rails',   '4.0.0.rc2'
 gem 'coffee-rails', '4.0.0'
 gem 'uglifier'
 
