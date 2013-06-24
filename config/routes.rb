@@ -1,52 +1,51 @@
 class DocsPages
   def self.matches?(request)
-    Dir.glob("app/views/pages/{stable,beta}/#{request.params["page"]}.html.{haml,textile}").any?
+    Dir.glob("app/views/pages/#{request.params["page"]}.html.{haml,textile}").any?
   end
 end
 
 DocsSublimeVideo::Application.routes.draw do
-  get '(/:stage)/search' => 'search#index', as: 'search', stage: /stable|beta/, defaults: { stage: 'stable' }
-  get '(/:stage)/releases' => 'releases#index', stage: /stable|beta/, defaults: { stage: 'stable' }, as: 'releases'
-
   get '/beta/*path' => redirect { |env, req|
     url = "#{req.env['rack.url_scheme']}://#{req.host}/#{env[:path]}"
     begin
-      uri = URI.parse(url)
-      uri.to_s
+      URI.parse(url).to_s
     rescue URI::InvalidURIError => encoding
       URI.encode(url)
     end
   }
 
+  get '/search' => 'search#index', as: 'search'
+  get '/releases' => 'releases#index', as: 'releases'
+
   # Legacy redirect
   get '/put-video-in-a-floating-lightbox' => redirect('/lightbox')
   %w[autoplay-video-upon-page-load autoplay].each do |path|
-    get "/#{path}" => redirect { |env, req| "/settings/player-settings#autoplay" }
+    get "/#{path}" => redirect('/settings/player-settings#autoplay')
   end
   %w[returning-to-the-initial-state-once-video-playback-ends back-to-initial-state-on-end loop-a-video loop].each do |path|
-    get "/#{path}" => redirect { |env, req| "/settings/player-settings#on-end" }
+    get "/#{path}" => redirect('/settings/player-settings#on-end')
   end
   get '/ssl' => redirect('/player-faq#use-sublimevideo-in-ssl-site')
   get '/video-code-generator' => redirect('/video-publishing-assistant')
   get '/supported-browsers-and-platforms' => redirect('/supported-platforms')
-  get '(/:stage)/optimize-for-stats' => redirect { |env, req| "#{"/#{env[:stage]}" if env[:stage]}/addons/stats#setup-for-stats" }, stage: /stable|beta/
-  get '(/:stage)/embeds' => redirect('/addons/embed')
-  get '(/:stage)/cuezones' => redirect('/addons/cue-zones')
-  get '(/:stage)/faq' => redirect { |env, req| "#{"/#{env[:stage]}" if env[:stage]}/player-faq" }, stage: /stable|beta/
-  get '(/:stage)/real-time-stats' => redirect { |env, req| "#{"/#{env[:stage]}" if env[:stage]}/addons/stats" }, stage: /stable|beta/
+  get '/optimize-for-stats' => redirect('/addons/stats#setup-for-stats')
+  get '/embeds' => redirect('/addons/embed')
+  get '/cuezones' => redirect('/addons/cue-zones')
+  get '/faq' => redirect('/player-faq')
+  get '/real-time-stats' => redirect('/addons/stats')
 
   # Shortcut redirect
   %w[javascript-api js-api].each do |path|
-    get "/#{path}" => redirect { |env, req| "/javascript-api/usage" }
+    get "/#{path}" => redirect('/javascript-api/usage')
   end
   %w[settings].each do |path|
-    get "/#{path}" => redirect { |env, req| "/settings/usage" }
+    get "/#{path}" => redirect('/settings/usage')
   end
   %w[customizing-the-initial-play-button custom-play-button].each do |path|
-    get "/#{path}" => redirect { |env, req| "/custom-start-view" }
+    get "/#{path}" => redirect('/custom-start-view')
   end
 
-  get '(/:stage)/*page' => 'pages#show', as: 'page', constraints: DocsPages, stage: /stable|beta/, defaults: { stage: 'stable' }, format: false
+  get '/*page' => 'pages#show', as: 'page', constraints: DocsPages, format: false
 
   root to: 'pages#redirect_from_root'
 end

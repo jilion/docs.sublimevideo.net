@@ -1,11 +1,4 @@
-stable:
-  'custom-start-view': "How can I customize the appearance of the initial start view?"
-  'hidden-video-still-shows-up': "I have my video hidden, but it still shows up when the page loads, why?"
-  'streaming-protocols-support': "Does SublimeVideo support streaming protocols?"
-  'use-sublimevideo-in-ssl-site': "How to use SublimeVideo Player over SSL (https://)?"
-
-beta:
-  'custom-start-view': "How can I customize the appearance of the initial start view?"
-  'hidden-video-still-shows-up': "I have my video hidden, but it still shows up when the page loads, why?"
-  'streaming-protocols-support': "Does SublimeVideo support streaming protocols?"
-  'use-sublimevideo-in-ssl-site': "How to use SublimeVideo Player over SSL (https://)?"
+'custom-start-view': "How can I customize the appearance of the initial start view?"
+'hidden-video-still-shows-up': "I have my video hidden, but it still shows up when the page loads, why?"
+'streaming-protocols-support': "Does SublimeVideo support streaming protocols?"
+'use-sublimevideo-in-ssl-site': "How to use SublimeVideo Player over SSL (https://)?"

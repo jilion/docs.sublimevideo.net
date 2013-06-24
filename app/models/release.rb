@@ -1,24 +1,24 @@
 Release = Struct.new(:version, :datetime, :content) do
 
-  def self.all(stage = 'stable')
-    base_path = Rails.root.join('app', 'views', 'releases', stage)
+  def self.all
+    base_path = Rails.root.join('app', 'views', 'releases', 'stable')
     return [] unless File.directory?(base_path)
 
     base_path.entries.inject([]) do |releases, file_path|
-      if release_attributes = detect_beta_release(file_path) || detect_stable_release(file_path)
+      if release_attributes = detect_new_release(file_path) || detect_old_release(file_path)
         releases << new(*release_attributes, release_content(base_path, file_path))
       end
       releases
     end.sort_by { |r| r.datetime }
   end
 
-  def self.detect_stable_release(file_path)
+  def self.detect_old_release(file_path)
     if matches = file_path.to_s.match(/([0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9]{2}:[0-9]{2})\.textile/)
       [nil, DateTime.parse(matches[1])]
     end
   end
 
-  def self.detect_beta_release(file_path)
+  def self.detect_new_release(file_path)
     if matches = file_path.to_s.match(/([0-9]{4}-[0-9]{2}-[0-9]{2})-([0-9]{2})([0-9]{2})-([a-z0-9\-\.]+)\.textile/)
       [matches[4], DateTime.parse("#{matches[1]}-#{matches[2]}:#{matches[3]}")]
     end

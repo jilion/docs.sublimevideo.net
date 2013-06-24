@@ -3,9 +3,9 @@ require 'timeout'
 
 class IndexTankWrapper
 
-  def self.search(stage, *args)
+  def self.search(*args)
     Timeout.timeout(20) do
-      index(stage).search(*args)
+      index.search(*args)
     end
   rescue IndexTank::InvalidQuery
     nil
@@ -14,28 +14,28 @@ class IndexTankWrapper
     nil
   end
 
-  def self.add_document(stage, document)
-    puts "==> Indexing #{document[:docid]} in index 'idx_#{stage}'..."
-    index(stage).document(document[:docid]).add(document[:fields])
-    puts "    #{document[:docid]} indexed in 'idx_#{stage}'!"
+  def self.add_document(document)
+    puts "==> Indexing #{document[:docid]} in index 'idx_stable'..."
+    index.document(document[:docid]).add(document[:fields])
+    puts "    #{document[:docid]} indexed in 'idx_stable'!"
   end
 
-  def self.add_documents(stage, documents)
-    puts "==> Indexing #{documents.size} documents in index 'idx_#{stage}'..."
-    index(stage).batch_insert(documents)
-    puts "    #{documents.size} documents indexed in 'idx_#{stage}'!"
+  def self.add_documents(documents)
+    puts "==> Indexing #{documents.size} documents in index 'idx_stable'..."
+    index.batch_insert(documents)
+    puts "    #{documents.size} documents indexed in 'idx_stable'!"
   end
 
-  def self.add_function(stage, num, fn)
-    puts "==> Adding function ##{num}: #{fn} to index 'idx_#{stage}"
-    index(stage).functions(num, fn).add
-    puts "    Function ##{num}: #{fn} added to index 'idx_#{stage}!"
+  def self.add_function(num, fn)
+    puts "==> Adding function ##{num}: #{fn} to index 'idx_stable"
+    index.functions(num, fn).add
+    puts "    Function ##{num}: #{fn} added to index 'idx_stable!"
   end
 
-  def self.delete_index(stage)
-    puts "==> Deleting 'idx_#{stage}' index..."
-    index(stage).delete
-    puts "    'idx_#{stage}' index deleted!"
+  def self.delete_index
+    puts "==> Deleting 'idx_stable' index..."
+    index.delete
+    puts "    'idx_stable' index deleted!"
     @index = nil
   end
 
@@ -45,17 +45,16 @@ class IndexTankWrapper
     @client ||= IndexTank::Client.new(ENV['INDEXTANK_URL'])
   end
 
-  def self.index(stage = 'stable')
-    @index ||= {}
-    @index[stage] ||= begin
-      idx = client.indexes("idx_#{stage}")
+  def self.index
+    @index ||= begin
+      idx = client.indexes('idx_stable')
 
       unless idx.exists?
-        puts "\n==> Creating 'idx_#{stage}' index..."
+        puts "\n==> Creating 'idx_stable' index..."
         idx.add public_search: false
-        puts "    'idx_#{stage}' index created!"
+        puts "    'idx_stable' index created!"
         sleep 0.5 while !idx.running?
-        puts "    'idx_#{stage}' index running!"
+        puts "    'idx_stable' index running!"
       end
 
       idx

@@ -1,6 +1,6 @@
 %nav#docs_menu
   .search_form
-    %form{ action: "#{"/#{current_stage}" unless stage?('stable')}/search", method: 'get' }
+    %form{ action: '/search', method: 'get' }
       = label_tag "q", "" do
         %span= "Search"
       = text_field_tag :q, '', value: params[:q], placeholder: "Search", autocomplete: :off, class: "search"

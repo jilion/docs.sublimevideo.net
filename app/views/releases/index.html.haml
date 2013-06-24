@@ -1,18 +1,14 @@
-- feed_name = stage?('beta') ? 'sublimevideo-releases-beta' : 'sublimevideo-releases'
-- @page_title = "#{'Beta ' if stage?('beta')}Player Release Notes"
+- feed_name = 'sublimevideo-releases'
+- @page_title = 'Player Release Notes'
 
 %h2= @page_title
 
 #releases
-  - if stage?('beta') && @releases.empty?
-    = 'The beta player is currently identical to the stable player.'
-    = raw "Read the stable #{link_to "release notes", docs_url('/releases')}."
-  - else
-    - @releases.each do |release|
-      - id = release.datetime.strftime("%Y-%m-%d-%H-%M")
-      %h4{ id: id }
-        = link_to "##{id}" do
-          = l(release.datetime, format: :long_without_time)
-          - if release.version.present?
-            %span.version= release.version
-      = release.content
+  - @releases.each do |release|
+    - id = release.datetime.strftime("%Y-%m-%d-%H-%M")
+    %h4{ id: id }
+      = link_to "##{id}" do
+        = l(release.datetime, format: :long_without_time)
+        - if release.version.present?
+          %span.version= release.version
+    = release.content

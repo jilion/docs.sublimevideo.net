@@ -1,6 +1,6 @@
-- @page_title_prefix = "SublimeVideo #{"#{params[:stage].titleize} " if params[:stage] != 'stable'}Documentation"
-- @body_class = params[:stage]
-= content_for :javascript, sublimevideo_docs_include_tag
+- @page_title_prefix = 'SublimeVideo Documentation'
+
+= content_for :javascript, sublimevideo_loader_tag(:www).html_safe
 
 = content_for :header, render('layouts/header')
 

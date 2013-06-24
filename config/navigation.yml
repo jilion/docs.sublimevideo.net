@@ -1,86 +1,44 @@
-stable:
-  'Getting Started':
-    'quickstart-guide': 'Quickstart Guide'
-    'troubleshooting': 'Troubleshooting'
-    'player-faq': 'Player FAQ'
-    'service-faq': 'Service FAQ'
-  'Video Hosting':
-    'youtube': 'YouTube'
-    'vimeo-pro': 'Vimeo Pro'
-  'Built-in Features':
-    'subtitles': 'Subtitles'
-    'lightbox': 'Lightbox'
-    'hd-switching': 'HD switching'
-    'responsive-layout': 'Responsive layout'
-    'keyboard': 'Keyboard control'
-  'Add-Ons':
-    'addons/on-video-logo': 'On-Video Logo'
-    'addons/google-analytics': 'Google Analytics'
-    'addons/stats': 'Real-Time Statistics'
-    'addons/sharing': 'Social Sharing'
-    'addons/cue-zones': 'Cue Zones'
-    'addons/embed': 'Embed'
-    'addons/support': 'Support'
-  'Integration':
-    'custom-start-view': 'Custom start view'
-    'wordpress': 'WordPress plugin'
-    'playlists': 'Playlists'
-    'video-publishing-assistant': 'Video publishing assistant'
-    'google-analytics-integration': 'Google Analytics integration'
-  'Settings':
-    'settings/usage': 'Usage'
-    'settings/player-settings': 'Player settings'
-    'settings/lightbox-settings': 'Lightbox settings'
-  'JavaScript API':
-    'javascript-api/usage': 'Usage'
-    'javascript-api/application': 'Application'
-    'javascript-api/player': 'Player'
-    'javascript-api/lightbox': 'Lightbox'
-  'Other':
-    'write-proper-video-elements': 'Write <video> elements'
-    'encode-videos-for-the-web': 'Video encoding'
-    'create-poster-frame': 'Create poster frame'
-    'supported-platforms': 'Supported platforms'
-    'site-settings': 'Site settings'
-    'releases': 'Release Notes'
-beta:
-  'Getting Started':
-    'quickstart-guide': 'Quickstart Guide'
-    'troubleshooting': 'Troubleshooting'
-    'player-faq': 'Player FAQ'
-    'service-faq': 'Service FAQ'
-  'Video Hosting':
-    'youtube': 'YouTube'
-    'vimeo-pro': 'Vimeo Pro'
-  'Built-in Features':
-    'lightbox': 'Lightbox'
-    'hd-switching': 'HD switching'
-    'responsive-layout': 'Responsive layout'
-    'keyboard': 'Keyboard control'
-  'Add-Ons':
-    'addons/stats': 'Real-Time Statistics'
-    'addons/on-video-logo': 'On-Video Logo'
-    'addons/sharing': 'Social Sharing'
-    'addons/embed': 'Embed'
-  'Integration':
-    'custom-start-view': 'Custom start view'
-    'wordpress': 'WordPress plugin'
-    'playlists': 'Playlists'
-    'video-publishing-assistant': 'Video publishing assistant'
-    'google-analytics-integration': 'Google Analytics integration'
-  'Settings':
-    'settings/usage': 'Usage'
-    'settings/player-settings': 'Player settings'
-    'settings/lightbox-settings': 'Lightbox settings'
-  'JavaScript API':
-    'javascript-api/usage': 'Usage'
-    'javascript-api/application': 'Application'
-    'javascript-api/player': 'Player'
-    'javascript-api/lightbox': 'Lightbox'
-  'Other':
-    'write-proper-video-elements': 'Write <video> elements'
-    'encode-videos-for-the-web': 'Video encoding'
-    'create-poster-frame': 'Create poster frame'
-    'supported-platforms': 'Supported platforms'
-    'site-settings': 'Site settings'
-    'releases': 'Release Notes'
+'Getting Started':
+  'quickstart-guide': 'Quickstart Guide'
+  'troubleshooting': 'Troubleshooting'
+  'player-faq': 'Player FAQ'
+  'service-faq': 'Service FAQ'
+'Video Hosting':
+  'youtube': 'YouTube'
+  'vimeo-pro': 'Vimeo Pro'
+'Built-in Features':
+  'subtitles': 'Subtitles'
+  'lightbox': 'Lightbox'
+  'hd-switching': 'HD switching'
+  'responsive-layout': 'Responsive layout'
+  'keyboard': 'Keyboard control'
+'Add-Ons':
+  'addons/on-video-logo': 'On-Video Logo'
+  'addons/google-analytics': 'Google Analytics'
+  'addons/stats': 'Real-Time Statistics'
+  'addons/sharing': 'Social Sharing'
+  'addons/cue-zones': 'Cue Zones'
+  'addons/embed': 'Embed'
+  'addons/support': 'Support'
+'Integration':
+  'custom-start-view': 'Custom start view'
+  'wordpress': 'WordPress plugin'
+  'playlists': 'Playlists'
+  'video-publishing-assistant': 'Video publishing assistant'
+  'google-analytics-integration': 'Google Analytics integration'
+'Settings':
+  'settings/usage': 'Usage'
+  'settings/player-settings': 'Player settings'
+  'settings/lightbox-settings': 'Lightbox settings'
+'JavaScript API':
+  'javascript-api/usage': 'Usage'
+  'javascript-api/application': 'Application'
+  'javascript-api/player': 'Player'
+  'javascript-api/lightbox': 'Lightbox'
+'Other':
+  'write-proper-video-elements': 'Write <video> elements'
+  'encode-videos-for-the-web': 'Video encoding'
+  'create-poster-frame': 'Create poster frame'
+  'supported-platforms': 'Supported platforms'
+  'site-settings': 'Site settings'
+  'releases': 'Release Notes'

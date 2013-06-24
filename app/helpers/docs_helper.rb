@@ -3,35 +3,21 @@ require 'complex_page'
 
 module DocsHelper
 
-  def sublimevideo_docs_include_tag
-    case params[:stage]
-    when 'beta'
-      sublimevideo_loader_tag(:www, stage: 'beta').html_safe
-    else
-      sublimevideo_loader_tag(:www).html_safe
-    end
-  end
-
   def title(title)
     @page_title = title
   end
 
   def display_menu
     html = ''
-    Navigation.tree(params[:stage]).each do |section, items|
-      if params[:stage] != 'stable'
-        # html += content_tag(:h3, link_to(section, '#'), class: 'accordion') + content_tag(:ul, submenu(items), class: ['pages', params[:stage]])
-        html += content_tag(:h3, section, class: 'accordion') + content_tag(:ul, submenu(items), class: ['pages', params[:stage]])
-      else
-        html += content_tag(:h3, section) + content_tag(:ul, submenu(items), class: ['pages', params[:stage]])
-      end
+    Navigation.tree.each do |section, items|
+      html += content_tag(:h3, section) + content_tag(:ul, submenu(items), class: ['pages'])
     end
     raw html
   end
 
   def display_complex_page_index(page)
     html = ''
-    ComplexPage.tree(params[:stage], page).each do |permalink, title|
+    ComplexPage.tree(page).each do |permalink, title|
       html += content_tag(:li, link_to(title.html_safe, "##{permalink}"))
     end
     raw content_tag :ul, html.html_safe
@@ -39,17 +25,17 @@ module DocsHelper
 
   def display_complex_page_list(page)
     html = []
-    ComplexPage.tree(params[:stage], page).each do |permalink, title|
+    ComplexPage.tree(page).each do |permalink, title|
       html << content_tag(:h3, link_to(title.html_safe, "##{permalink}", id: permalink))
-      html << "\n\n#{File.new(Rails.root.join(page_realpath(params[:stage], [page, permalink], partial: true))).read}"
+      html << "\n\n#{File.new(Rails.root.join(page_realpath([page, permalink], partial: true))).read}"
     end
 
     render_erb(html.join(''))
   end
 
-  def section_and_page_title_from_permalink(stage, permalink)
-    if section = Navigation.section_from_permalink(stage, permalink)
-      "#{section[0]}: " + (section.size == 2 ? "#{section[1]} > " : '') + Navigation.page_title_from_permalink(stage, permalink)
+  def section_and_page_title_from_permalink(permalink)
+    if section = Navigation.section_from_permalink(permalink)
+      "#{section[0]}: " + (section.size == 2 ? "#{section[1]} > " : '') + Navigation.page_title_from_permalink(permalink)
     else
       ''
     end
@@ -67,7 +53,7 @@ module DocsHelper
 
   def li_with_page_link(page, title)
     content_tag :li, class: (page == params[:page] ? 'active' : nil) do
-      link_to(title, "#{params[:stage] != 'stable' ? "/#{params[:stage]}" : ''}/#{page}")
+      link_to(title, "/#{page}")
     end
   end
 
