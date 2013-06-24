@@ -1,4 +1,6 @@
-require 'spec_helper'
+require 'fast_spec_helper'
+
+require 'navigation'
 
 describe Navigation do
   let(:stable_tree) do

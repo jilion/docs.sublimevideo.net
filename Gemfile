@@ -20,7 +20,6 @@ gem 'google-analytics-turbolinks'
 gem 'mongoid', github: 'mongoid/mongoid'
 gem 'indextank'
 gem 'oj' # fastest json
-gem 'configurator', github: 'jilion/configurator'
 gem 'lograge'
 gem 'rack-status'
 gem 'librato-rails', github: 'librato/librato-rails', branch: 'feature/rack_first'
@@ -46,6 +45,7 @@ group :staging, :production do
 end
 
 group :development, :test do
+  gem 'dotenv-rails'
   gem 'rack-livereload'
   gem 'rack-nocache'
   gem 'quiet_assets'

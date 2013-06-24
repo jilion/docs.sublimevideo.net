@@ -1,4 +1,4 @@
-require_dependency 'search'
-require_dependency 'search/index_tank_wrapper'
+require 'search'
+require 'index_tank_wrapper'
 
-Search.wrapper = Search::IndexTankWrapper
+Search.wrapper = IndexTankWrapper

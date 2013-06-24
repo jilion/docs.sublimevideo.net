@@ -2,6 +2,7 @@
   name  = YOUR NAME
   email = YOUR EMAIL
 
+
 [core]
   repositoryformatversion = 0
   filemode                = true

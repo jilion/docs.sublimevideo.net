@@ -1,5 +1,5 @@
-require_dependency 'controller_helpers/cookies'
-require_dependency 'controller_helpers/stages'
+require 'controller_helpers/cookies'
+require 'controller_helpers/stages'
 
 class ApplicationController < ActionController::Base
   include ControllerHelpers::Cookies
