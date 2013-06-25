@@ -69,7 +69,7 @@ See a "demo":#demo.
 
 h3(#close-button-visibility). "@close-button-visibility@":#close-button-visibility
 
-Allows you to choose how the initial overlay is displayed.
+Allows you to choose how the lightbox close button is displayed.
 
 *Allowed values:*
 * @autohide@ – _(Default)_ The close button appears on mousover.
