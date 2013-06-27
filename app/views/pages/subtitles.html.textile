@@ -1,3 +1,5 @@
+<%= demo_link('subtitles') %>
+
 h2. <%= title('Subtitles') %>
 
 h3. Table of Contents
@@ -9,7 +11,6 @@ h3. Table of Contents
 * "Setting a default subtitles track":#default-subtitles-track
 * "Creating subtitles files":#create-subtitles
 * "Additional information":#additional-info
-* "Demo":#demo
 
 SublimeVideo comes with built-in support for multi-language subtitles allowing you to increase your videos' global reach and provide a great experience to your hearing-impaired audience.
 
@@ -127,11 +128,3 @@ h3(#additional-info). "Additional information":#additional-info
 For more information about HTML5's @<track>@ element, please read the "W3C specification":http://www.w3.org/TR/html5/embedded-content-0.html#the-track-element.
 
 The @<track>@ element has been designed to associate different "_kinds_":http://www.w3.org/TR/html5/embedded-content-0.html#text-track-kind of information to a media element (not only subtitles). When the @kind@ attribute of a @<track>@ element is omitted, it will default to _subtitles_, which is the only kind SublimeVideo currently supports.
-
-h3(#demo). "Demo":#demo
-
-<%= jsfiddle_embed('ZLzDk', height: 460) %>
-
-<%= jsfiddle_embed('VBHmx', height: 460) %>
-
-<%= jsfiddle_embed('23sSy', height: 460) %>

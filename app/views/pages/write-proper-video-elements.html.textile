@@ -18,7 +18,7 @@ h3(#manually-configuring-video). "Manually configuring your &lt;video&gt; elemen
 
 This is an example of a properly configured @<video>@ element:
 
-<pre data-line=1,2,3,4><code class="language-markup"><video class="sublime" title="My Video #1" width="640" height="360" poster="video-poster.jpg" data-uid="my-video-1" preload="none">
+<pre data-line=1,2,3,4><code class="language-markup"><video class="sublime" width="640" height="360" poster="video-poster.jpg" data-uid="my-video-1" title="My Video #1" preload="none">
   <source src="http://yoursite.com/video.mp4" />
   <source src="http://yoursite.com/video-mobile.mp4" />
   <source src="http://yoursite.com/video.webm" />

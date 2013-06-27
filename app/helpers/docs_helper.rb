@@ -57,6 +57,10 @@ module DocsHelper
     end
   end
 
+  def demo_link(feature)
+    link_to 'Demo', layout_url("demos/#{feature}"), onclick: 'window.open(this); return false'
+  end
+
   def jsfiddle_embed(token, options = {})
     options.reverse_merge!(height: 300, panes: 'result,html')
 

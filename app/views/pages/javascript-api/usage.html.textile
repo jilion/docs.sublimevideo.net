@@ -1,3 +1,5 @@
+<%= demo_link('player-api') %>
+
 h2. <%= title('Using the JavaScript API') %>
 
 h3(#api-object). "Overview":#api-object

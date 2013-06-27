@@ -1,3 +1,5 @@
+<%= demo_link('on-video-logo') %>
+
 h2. <%= title('On-Video Logo add-on') %>
 
 h3. Table of Contents
@@ -5,7 +7,6 @@ h3. Table of Contents
 * "Introduction":#intro
 * "Subscribe":#subscribe
 * "Settings":#settings
-* "Demo":#demo
 
 h3(#intro). "Introduction":#intro
 
@@ -114,9 +115,3 @@ bc(language-markup). <video class='sublime' data-logo-link-url='http://yourdomai
   <source src='video.mp4' />
   <source src='video.webm' />
 </video>
-
-h3(#demo). "Demo":#demo
-
-<%= jsfiddle_embed('J9W5b', height: 436) %>
-
-<%= jsfiddle_embed('vHFsy', height: 436) %>

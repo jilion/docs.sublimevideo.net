@@ -1,3 +1,5 @@
+<%= demo_link('embed') %>
+
 h2. <%= title('Embed add-on') %>
 
 h3. Table of Contents
@@ -130,7 +132,6 @@ Defines the URL of the HTML page with the embeddable player (a.k.a the "iframe c
 bc(language-markup). <video class='sublime' data-embed-url='http://yourdomain.com/embeds/video1.html'>
   ...
 </video>
-
 
 h3(#embed-size). "@embed-size@":#embed-size
 

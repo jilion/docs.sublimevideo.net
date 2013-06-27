@@ -14,6 +14,8 @@ SublimeVideo Player and the @sublime@ API object are automatically loaded upon p
 
 h3(#ready). "@sublime.ready(callback)@":#ready
 
+<%= demo_link('player-api') %>
+
 * <span class="param">@callback@</span> (@Function@) - The function to call when the event occurs.
 
 The @sublime@ API object might not be immediately available when the DOM is loaded.
@@ -34,6 +36,8 @@ bc(language-javascript). sublime.ready(function(){
 preferably inside the @sublime.ready@ block.%
 
 h3(#prepare). "@sublime.prepare(elementOrId, callback)@":#prepare
+
+<%= demo_link('player-api') %>
 
 * <span class="param">@elementOrId@</span> (@DOM Element@ | @String@) - The DOM element to prepare, or its @id@. Pass @<video>@ element to prepare players and @<a>@ element to prepare lightboxes.
 
@@ -66,6 +70,8 @@ Since in most cases you use this method when you're done with the video and you 
 
 
 h3(#player). "@sublime.player(elementOrId) ⇒ Object@":#player
+
+<%= demo_link('player-api') %>
 
 * <span class="param">@elementOrId@</span> (@DOM Element@ | @String@) - The DOM @<video>@ element or its @id@.
 

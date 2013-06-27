@@ -1,3 +1,5 @@
+<%= demo_link('choose-your-hosting/vimeo-pro') %>
+
 h2. <%= title('Use SublimeVideo with Vimeo Pro') %>
 
 Integrate a "Vimeo Pro":http://vimeo.com/pro video with SublimeVideo is very easy.
@@ -22,17 +24,3 @@ h3(#step-3). "3 - Grab direct links to the media files":#step-3
 <%= link_to(image_tag('video-hosting/vimeo_step_3.1.jpg', class: 'screenshot', width: 100, style: 'float:left; margin:20px 20px 0 0'), '#vimeo_step_3_1', class: 'sublime lightbox') %>
 
 Click the _Video File_ tab. On this page you can get the actual video files URLs. Simply copy/paste the _Standard Def_ and _High Def_ URLs and put them in our <%= link_to "Video Publishing Assistant", my_url('publish-video'), onclick: 'window.open(this); return false' %> (or create one @<source>@ element for each of the URLs if you "create your @<video>@ elements manually":write-proper-video-elements#manually-configuring-video).
-
-<div class="spacer"></div>
-
-h3(#demo). "Demo":#demo
-
-The following video, hosted on Vimeo Pro, plays inside the SublimeVideo Classic Player.
-
-<notextile><div class="video_wrap"><video class="sublime" title="Midnight Sun (from Vimeo)" poster="https://secure-b.vimeocdn.com/ts/358/030/358030879_960.jpg" width="640" height="360" preload="none" data-uid="docs-vimeo">
-<source src="http://player.vimeo.com/external/51920681.sd.mp4?s=117259e431f97030b1150ddb5ce5858a" />
-<source src="http://player.vimeo.com/external/51920681.hd.mp4?s=70273279a571e027c54032e70db61253" data-quality="hd" />
-</video></div></notextile>
-
-<%= image_tag('video-hosting/vimeo_step_2.1.png', title: 'Video Settings / Privacy', id: 'vimeo_step_2_1', style: 'display:none') %>
-<%= image_tag('video-hosting/vimeo_step_3.1.jpg', title: 'Grab direct links to the media files', id: 'vimeo_step_3_1', style: 'display:none') %>

@@ -24,6 +24,8 @@ bc(language-javascript). var player = sublime(elementOrId);
 
 h3(#play). "@player.play()@":#play
 
+<%= demo_link('player-api') %>
+
 Plays the video. If the video is already playing, the call has no effect.
 
 *Note:* on touch devices user interaction is required to start playing the video.
@@ -63,11 +65,10 @@ This method has no effect if the player is in fullmode (fullscreen or fullwindow
 **Fluid width and responsive layouts**
 If you want to integrate SublimeVideo in your fluid width or responsive layout, you can simply take advantage of the "@autoresize@ player setting":/settings/player-settings#autoresize.
 
-**Example**
-* "Integration in a responsive layout":/responsive-layout
-
 
 h3(#on). "@player.on(eventOrHash, [callback])@":#on
+
+<%= demo_link('player-api') %>
 
 * <span class="param">@eventOrHash@</span> (@String@ | @Object@) - A string representing the event name to listen, or an object where its keys are events and its values are callbacks.
 
@@ -91,6 +92,8 @@ bc(language-javascript). sublime.player('my_player_id').on({
 
 h3(#seekTo). "@player.seekTo(time)@":#seekTo
 
+<%= demo_link('player-api/seek-to') %>
+
 * <span class="param">@time@</span> (@Number@) - The time in seconds to seek to.
 
 Seeks to the specified playback time.
@@ -99,6 +102,8 @@ Note: if the player is using Flash to decode the video, seeking can be inaccurat
 
 
 h3(#duration). "@player.duration() ⇒ Number@":#duration
+
+<%= demo_link('player-api/seek-to') %>
 
 Returns the video duration in seconds. The duration is available only once the video metadata has been loaded, hence calling this method before obtaining the "(c)@metadata@":/javascript-api/player#event-metadata will return @undefined@.
 
@@ -198,6 +203,8 @@ Fired when a seek action is completed.
 
 
 h3(#event-metadata). "@metadata@":#event-metadata
+
+<%= demo_link('player-api/seek-to') %>
 
 Fired as soon as the video metadata is loaded.
 

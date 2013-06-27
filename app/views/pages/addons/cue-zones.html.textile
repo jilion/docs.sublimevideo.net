@@ -1,3 +1,5 @@
+<%= demo_link('cue-zones') %>
+
 h2. <%= title('Cue Zones add-on') %>
 
 h3. Table of Contents
@@ -5,7 +7,6 @@ h3. Table of Contents
 * "Introduction":#intro
 * "Subscribe":#subscribe
 * "Methods":#methods
-* "Demo":#demo
 
 h3(#intro). "Introduction":#intro
 
@@ -111,13 +112,3 @@ Remove all cue zones registered to the video player.
 **Example - removing all registered groups of cue zones**
 
 bc(language-javascript). player.cuezones.removeAllGroups();
-
-h3(#demo). "Demo":#demo
-
-The first demo uses the Cue Zones API to update the background image and title at every video sequence change.
-
-<%= jsfiddle_embed('n4RNB', height: 520, panes: 'result,html,js,css') %>
-
-The following demo adds a chapters menu below the player which allows you to jump to the different sequences in the video (using the "@cuezones.goTo@":#goTo method).
-
-<%= jsfiddle_embed('4vv6G', height: 520, panes: 'result,html,js,css') %>

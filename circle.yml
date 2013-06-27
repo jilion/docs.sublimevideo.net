@@ -1,0 +1,5 @@
+deployment:
+  staging:
+    branch: new
+    heroku:
+      appname: sv-docs-staging

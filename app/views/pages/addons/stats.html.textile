@@ -1,3 +1,5 @@
+<%= demo_link('stats') %>
+
 h2. <%= title('Real-Time Statistics add-on') %>
 
 h3. Table of Contents
