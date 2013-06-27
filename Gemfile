@@ -17,7 +17,8 @@ gem 'turbolinks', github: 'jilion/turbolinks', branch: 'ios_video_issue'
 gem 'google-analytics-turbolinks'
 
 # Internals
-gem 'mongoid'
+# gem 'bson_ext'
+gem 'mongoid', github: 'mongoid/mongoid' # until 4.0.0
 gem 'indextank'
 gem 'oj' # fastest json
 gem 'lograge'
