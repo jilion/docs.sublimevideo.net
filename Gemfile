@@ -7,7 +7,9 @@ gem 'bundler'
 
 gem 'rails', '~> 4.0.0'
 gem 'rails_12factor' # Heroku integration: https://devcenter.heroku.com/articles/rails-integration-gems
-gem 'sublime_video_layout', '~> 2.0' # hosted on gemfury
+# gem 'sublime_video_layout', '3.0.0.alpha' # hosted on gemfury
+# Pro-tip: bundle config local.sublime_video_layout ~/Code/Jilion/Products/SublimeVideo/sublime_video_layout
+gem 'sublime_video_layout', github: 'jilion/sublime_video_layout', branch: 'new'
 
 # Views
 gem 'haml'

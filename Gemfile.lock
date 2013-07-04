@@ -1,4 +1,18 @@
 GIT
+  remote: git://github.com/jilion/sublime_video_layout.git
+  revision: 14d31c9e5b85f7c1bfe11efaf1df4e9e73e260b9
+  branch: new
+  specs:
+    sublime_video_layout (3.0.0.alpha)
+      bourbon
+      coffee-rails
+      haml
+      jquery-rails
+      jquery-ui-rails
+      rails (>= 3.2.13)
+      slim
+
+GIT
   remote: git://github.com/jilion/turbolinks.git
   revision: 0a192f579ec837dd616623592dcdaaf2305a9583
   branch: ios_video_issue
@@ -61,6 +75,9 @@ GEM
       activemodel
       fog
     atomic (1.1.10)
+    bourbon (3.1.8)
+      sass (>= 3.2.0)
+      thor
     builder (3.1.4)
     capybara (2.1.0)
       mime-types (>= 1.16)
@@ -139,6 +156,9 @@ GEM
     jquery-rails (3.0.1)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
+    jquery-ui-rails (4.0.3)
+      jquery-rails
+      railties (>= 3.1.0)
     json (1.8.0)
     kgio (2.8.0)
     librato-metrics (1.0.4)
@@ -240,6 +260,9 @@ GEM
     shoulda-matchers (2.2.0)
       activesupport (>= 3.0.0)
     silent-postgres (0.1.1)
+    slim (2.0.0)
+      temple (~> 0.6.5)
+      tilt (~> 1.3, >= 1.3.3)
     slop (3.4.5)
     sprockets (2.10.0)
       hike (~> 1.2)
@@ -250,11 +273,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
-    sublime_video_layout (2.6.6)
-      coffee-rails
-      haml
-      jquery-rails
-      rails (>= 3.2.12)
+    temple (0.6.5)
     terminal-notifier-guard (1.5.3)
     thor (0.18.1)
     thread_safe (0.1.0)
@@ -314,7 +333,7 @@ DEPENDENCIES
   sass-rails
   shoulda-matchers
   silent-postgres
-  sublime_video_layout (~> 2.0)
+  sublime_video_layout!
   terminal-notifier-guard
   turbolinks!
   uglifier
