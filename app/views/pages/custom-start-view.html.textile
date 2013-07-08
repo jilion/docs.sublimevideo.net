@@ -1,4 +1,6 @@
-h2. <%= title('Customize the start view') %>
+<% @disable_two_col_actions_menu = true %>
+
+<% title('Customize the start view') %>
 
 We provide two levels of customization for the start view:
 

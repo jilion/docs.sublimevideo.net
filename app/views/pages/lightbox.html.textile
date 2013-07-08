@@ -1,6 +1,4 @@
-<%= demo_link('lightbox') %>
-
-h2. <%= title('Lightbox') %>
+<% title('Lightbox') %>
 
 The Lightbox feature displays your videos but also your images in a floating player. The Lightbox-opening trigger is a simple @<a>@ element, and you can have multiple @<a>@ that open the same video or image in a lightbox.
 

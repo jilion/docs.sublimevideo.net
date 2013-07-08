@@ -1,4 +1,4 @@
-h2. <%= title('Application API') %>
+<% title('Application API') %>
 
 "(c)@load@":/javascript-api/application#load "(c)@ready@":/javascript-api/application#ready "(c)@prepare@":/javascript-api/application#prepare "(c)@unprepare@":/javascript-api/application#unprepare "(c)@player@":/javascript-api/application#player "(c)@lightbox@":/javascript-api/application#lightbox "(c)@version@":/javascript-api/application#version "(c)@env@":/javascript-api/application#env
 

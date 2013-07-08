@@ -1,4 +1,6 @@
-h2. <%= title('Player settings') %>
+<% @disable_two_col_actions_menu = true %>
+
+<% title('Player settings') %>
 
 %(red)Please note that most of the settings described in this page can be set via the "Video Publishing Assistant":/video-publishing-assistant and via your site's Player editor page on <%= link_to "MySublimeVideo", my_url('sites') %>.%
 

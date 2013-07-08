@@ -1,4 +1,4 @@
-h2. <%= title('Player API') %>
+<% title('Player API') %>
 
 *Methods*
 

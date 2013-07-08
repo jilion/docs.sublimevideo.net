@@ -1,6 +1,4 @@
-<%= demo_link('embed') %>
-
-h2. <%= title('Embed add-on') %>
+<% title('Embed add-on') %>
 
 h3. Table of Contents
 

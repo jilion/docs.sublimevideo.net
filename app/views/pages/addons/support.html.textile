@@ -1,4 +1,6 @@
-h2. <%= title('Support add-on') %>
+<% @disable_two_col_actions_menu = true %>
+
+<% title('Support add-on') %>
 
 h3. Table of Contents
 

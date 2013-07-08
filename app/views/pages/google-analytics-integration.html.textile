@@ -1,4 +1,6 @@
-h2. <%= title('Google Analytics integration') %>
+<% @disable_two_col_actions_menu = true %>
+
+<% title('Google Analytics integration') %>
 
 **Make sure to check out our "Google Analytics add-on":/addons/google-analytics for an automated integration and to track more events without having to code anything.**
 

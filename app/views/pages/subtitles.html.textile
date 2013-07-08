@@ -1,6 +1,4 @@
-<%= demo_link('subtitles') %>
-
-h2. <%= title('Subtitles') %>
+<% title('Subtitles') %>
 
 h3. Table of Contents
 

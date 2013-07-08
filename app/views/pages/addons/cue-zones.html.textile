@@ -1,6 +1,4 @@
-<%= demo_link('cue-zones') %>
-
-h2. <%= title('Cue Zones add-on') %>
+<% title('Cue Zones add-on') %>
 
 h3. Table of Contents
 

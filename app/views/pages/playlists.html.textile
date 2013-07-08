@@ -1,6 +1,4 @@
-<%= demo_link('playlists') %>
-
-h2. <%= title('Playlists') %>
+<% title('Playlists') %>
 
 The example presented here allows your visitors to select which video to play by clicking on any of the thumbnails in the playlist. The selected video will be shown in the player; once the video finishes playing, the next one will automatically play.
 

@@ -1,4 +1,6 @@
-h2. <%= title('Google Analytics add-on') %>
+<% @disable_two_col_actions_menu = true %>
+
+<% title('Google Analytics add-on') %>
 
 h3. Table of Contents
 

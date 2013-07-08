@@ -1,0 +1,42 @@
+<% @disable_two_col_actions_menu = true %>
+
+<% title('Site settings') %>
+
+You can access your site' settings from the _<%= link_to "My Sites", my_url('sites') %>_ page by clicking on the "gear" icon in your site's row and select "Settings".
+
+h3(#main-domain). "Production domains":#main-domain
+
+*Video plays and page visits are counted for the production domains only.*
+
+h4(#main-domain). "Main domain":#main-domain
+
+Use this field to specify the main domain name of your site. Technically, this is a hostname, so you can also enter a subdomain (example: _blog.yourdomain.com_).
+
+h4(#alias-domains). "Alias domains":#alias-domains
+
+Use this field to specify extra domains, e.g.: _mydomain.fr_, _mydomain.ch_.  This field is meant to be used *exclusively* for domains that are leading to the *same content* as your main domain. Localized domains (for instance _yourdomain.fr_ and _yourdomain.es_ that "look" like _yourdomain.com_ but contain translated content) are also allowed.
+
+
+h3(#staging-and-dev-domains). "Staging and development domains":#staging-and-dev-domains
+
+*Use the staging and development domains fields to enter domains on which video plays and page visits should not be counted in your stats.*
+
+h4(#staging-domains). "Staging domains":#staging-domains
+
+Use this field to specify staging domains, e.g.: _staging.mydomain.com_, _mydomain-staging.com_.
+
+h4(#dev-domains). "Development domains":#dev-domains
+
+Use this field to specify *local* development domains (e.g.: _mydomain.local_, _mydomain.dev_). Local domains with a suffix (or top-level-domain) that does not appear in the "Public Suffix List":http://publicsuffix.org.
+
+
+h3(#advanced-settings). "Advanced settings":#advanced-settings
+
+h4(#path). "Custom path":#path
+
+Use this field to restrict your SublimeVideo player license to a specific path of your domain.
+As general rule, if you don't own the main domain, we highly recommend you use this field to restrict the player to your pages only.
+
+h4(#wildcard). "Wildcard":#wildcard
+
+Enable the wildcard option to extend your SublimeVideo player license to any subdomains of your main, alias, staging and development domains.

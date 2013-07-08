@@ -1,4 +1,6 @@
-h2. <%= title('Player FAQ') %>
+<% @disable_two_col_actions_menu = true %>
+
+<% title('Player FAQ') %>
 
 h3. Table of Contents
 

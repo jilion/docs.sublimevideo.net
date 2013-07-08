@@ -1,0 +1,12 @@
+en:
+  demos:
+    vimeo-pro: 'choose-your-hosting/vimeo-pro'
+    addons/on-video-logo: 'on-video-logo'
+    addons/stats: 'stats'
+    addons/sharing: 'social-sharing'
+    addons/cue-zones: 'cue-zones'
+    addons/embed: 'embed'
+    javascript-api/usage: 'player-api'
+    javascript-api/application: 'player-api'
+    javascript-api/player: 'player-api'
+    javascript-api/lightbox: 'player-api'

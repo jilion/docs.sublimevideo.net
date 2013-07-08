@@ -10,7 +10,9 @@ module DocsHelper
   def display_menu
     html = ''
     Navigation.tree.each do |section, items|
-      html += content_tag(:h3, section) + content_tag(:ul, submenu(items), class: ['pages'])
+      html += content_tag(:li) do
+        content_tag(:h4, section, class: 'two-col-menu-title') + content_tag(:ul, submenu(items), class: ['l-stacked'])
+      end
     end
     raw html
   end
@@ -52,7 +54,7 @@ module DocsHelper
   end
 
   def li_with_page_link(page, title)
-    content_tag :li, class: (page == params[:page] ? 'active' : nil) do
+    content_tag :li, class: (page == params[:page] ? 'two-col-sidebar-active' : nil) do
       link_to(title, "/#{page}")
     end
   end

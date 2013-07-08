@@ -1,4 +1,4 @@
-h2. <%= title('Lightbox API') %>
+<% title('Lightbox API') %>
 
 *Methods*
 

@@ -1,6 +1,4 @@
-<%= demo_link('responsive') %>
-
-h2. <%= title('Integration in a responsive layout') %>
+<% title('Integration in a responsive layout') %>
 
 SublimeVideo now comes with an integrated resizing feature so you only have to set one setting on your @<video>@ element and SublimeVideo takes care of the rest.
 

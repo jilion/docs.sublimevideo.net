@@ -1,5 +1,6 @@
-<%- title('Write proper video elements') %>
-h2. Write proper &lt;video&gt; elements
+<% @disable_two_col_actions_menu = true %>
+
+<% title('Write proper <video> elements') %>
 
 The @<video>@ tag is the core element used to insert videos in HTML5.
 *SublimeVideo relies exclusively on this element to define the video you want to insert*.

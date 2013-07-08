@@ -1,7 +1,6 @@
 - feed_name = 'sublimevideo-releases'
 - @page_title = 'Player Release Notes'
-
-%h2= @page_title
+- @disable_two_col_actions_menu = true
 
 #releases
   - @releases.each do |release|

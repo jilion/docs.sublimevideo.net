@@ -1,6 +1,4 @@
-<%= demo_link('social-sharing') %>
-
-h2. <%= title('Social Sharing add-on') %>
+<% title('Social Sharing add-on') %>
 
 h3. Table of Contents
 

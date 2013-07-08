@@ -1,4 +1,6 @@
-h2. <%= title('Troubleshooting') %>
+<% @disable_two_col_actions_menu = true %>
+
+<% title('Troubleshooting') %>
 
 h3. Table of Contents
 

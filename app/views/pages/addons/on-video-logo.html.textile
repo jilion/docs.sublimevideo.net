@@ -1,6 +1,4 @@
-<%= demo_link('on-video-logo') %>
-
-h2. <%= title('On-Video Logo add-on') %>
+<% title('On-Video Logo add-on') %>
 
 h3. Table of Contents
 

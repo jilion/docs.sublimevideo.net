@@ -1,6 +1,4 @@
-<%= demo_link('hd') %>
-
-h2. <%= title('HD switching') %>
+<% title('HD switching') %>
 
 SublimeVideo comes with an integrated HD switch which enables the viewer to toggle SD-HD video sources with a single click. It's really easy to set up: all you need to do is add an additional @<source />@ element and set its @data-quality@ attribute to _hd_.
 

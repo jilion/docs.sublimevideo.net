@@ -1,4 +1,6 @@
-h2. <%= title('Quickstart Guide') %>
+<% @disable_two_col_actions_menu = true %>
+
+<% title('Quickstart Guide') %>
 
 h3(#setup). "Setup your site with the Setup Assistant":#setup
 

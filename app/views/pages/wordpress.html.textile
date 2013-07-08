@@ -1,4 +1,6 @@
-h2. <%= title('WordPress plugin') %>
+<% @disable_two_col_actions_menu = true %>
+
+<% title('WordPress plugin') %>
 
 h3. Table of Contents
 
