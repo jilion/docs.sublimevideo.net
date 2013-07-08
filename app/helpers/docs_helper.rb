@@ -54,8 +54,8 @@ module DocsHelper
   end
 
   def li_with_page_link(page, title)
-    content_tag :li, class: (page == params[:page] ? 'two-col-sidebar-active' : nil) do
-      link_to(title, "/#{page}")
+    content_tag :li do
+      link_to(title, "/#{page}", class: (page == params[:page] ? 'two-col-sidebar-active' : nil))
     end
   end
 
