@@ -1,9 +1,11 @@
 - @page_title_prefix = 'SublimeVideo Documentation'
+- @header_class = "l-mini"
+- @page_category = "Documentation"
 
 = content_for :javascript, sublimevideo_loader_tag(:www).html_safe
 
-= content_for :header, render('layouts/header_docs')
+-# = content_for :header, render('layouts/header_docs')
 
--#= content_for :content_menu, render('layouts/menu')
+= content_for :content_menu, render('layouts/menu')
 
 = render template: 'layouts/sublimevideo'
