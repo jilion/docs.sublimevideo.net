@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/jilion/sublime_video_layout.git
-  revision: 1b0ea41a825cc84cb75f55ade82866ec448be4fd
+  revision: 6ccaeb82f1341f3cb60a3aabc861b597c387ccdd
   branch: new
   specs:
     sublime_video_layout (3.0.0.alpha)
@@ -300,6 +300,7 @@ PLATFORMS
 DEPENDENCIES
   RedCloth
   asset_sync
+  bourbon
   bundler
   capybara
   coffee-rails
