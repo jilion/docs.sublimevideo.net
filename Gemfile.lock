@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/jilion/sublime_video_layout.git
-  revision: af5f054db87ed32def0fcfb75916e224e48c10b5
+  revision: 2749fa0dd902d022aaf4cfceff8c026656b656bc
   branch: new
   specs:
     sublime_video_layout (3.0.0.alpha)
