@@ -1,4 +1,4 @@
-//@import "css3";
+@import "bourbon";
 
 /**
  * prism.js default theme for JavaScript, CSS and HTML
@@ -36,8 +36,8 @@ pre[class*="language-"] {
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
 	background:#fff;
-//  @include border-radius(4px);
-//  @include box-shadow(inset hsla(220,25.8533%,68%,.7) 0 0 10px);
+  @include border-top-radius(4px);
+  @include border-bottom-radius(4px);
 }
 
 /* Inline code */
@@ -141,7 +141,8 @@ pre[data-line] {
 		vertical-align: .3em;
 		text-shadow: none;
 		box-shadow: 0 1px white;
-//    @include border-radius(999px);
+    @include border-top-radius(50%);
+    @include border-bottom-radius(50%);
 	}
 
 	.line-highlight[data-end]:after {
