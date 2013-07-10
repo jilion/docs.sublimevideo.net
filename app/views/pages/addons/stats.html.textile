@@ -28,7 +28,7 @@ your site(s) on the _<%= link_to "My Sites", my_url('sites') %>_ page.
 
 h3(#subscribe). "Subscribe":#subscribe
 
-<a href='<%= my_url('addons/stats?p=realtime') %>'>Choose a site and subscribe to the Real-Time Statistics add-on <span class='icon-arrow'></span></a>
+<a href='<%= my_url('addons/stats?p=realtime') %>'>Choose a site and subscribe to the Real-Time Statistics add-on <span class='icon-uniF473'></span></a>
 
 h3(#statistics-over-time). "Statistics Over Time":#statistics-over-time
 

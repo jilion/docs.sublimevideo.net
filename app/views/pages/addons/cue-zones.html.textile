@@ -16,7 +16,7 @@ You can use the Cue Zones API to trigger any custom action, such as synchronizin
 
 h3(#subscribe). "Subscribe":#subscribe
 
-<a href='<%= my_url('addons/cuezones?p=standard') %>'>Choose a site and subscribe to the Cue Zones add-on <span class='icon-arrow'></span></a>
+<a href='<%= my_url('addons/cuezones?p=standard') %>'>Choose a site and subscribe to the Cue Zones add-on <span class='icon-uniF473'></span></a>
 
 h3(#methods). "Methods":#methods
 
@@ -55,7 +55,7 @@ The @addGroup@ method registers a group of cue zones to the player. If a group w
   - _@anything@_ Any other custom data you might have added to the cue zone.
 
 
-**Example - registering cue zones**
+*Example - registering cue zones*
 
 bc(language-javascript).. var cuezones = [{
     id: 'Paris',
@@ -87,7 +87,7 @@ h3(#goTo). "@cuezones.goTo(cuezoneId)@":#goTo
 
 Seek to the start of the cue zone with the given id.
 
-**Example - seeking to the cue zone "London" of the group "cities"**
+*Example - seeking to the cue zone "London" of the group "cities"*
 
 bc(language-javascript). // Let's say we added a group with id "cities"
 // that contains a cue zone with id "London"
@@ -99,7 +99,7 @@ h3(#removeGroup). "@cuezones.removeGroup(id)@":#removeGroup
 
 Remove the group of cue zones with the given id. The call has no effect if a group with the given id cannot be found.
 
-**Example - removing a list of cue zones**
+*Example - removing a list of cue zones*
 
 bc(language-javascript). player.cuezones.removeGroup('my_group_id');
 
@@ -107,6 +107,6 @@ h3(#removeAllGroups). "@cuezones.removeAllGroups()@":#removeAllGroups
 
 Remove all cue zones registered to the video player.
 
-**Example - removing all registered groups of cue zones**
+*Example - removing all registered groups of cue zones*
 
 bc(language-javascript). player.cuezones.removeAllGroups();

@@ -20,7 +20,7 @@ _The embed pane._
 
 h3(#subscribe). "Subscribe":#subscribe
 
-<a href='<%= my_url('addons/embed?p=auto') %>'>Choose a site and subscribe to the Embed add-on <span class='icon-arrow'></span></a>
+<a href='<%= my_url('addons/embed?p=auto') %>'>Choose a site and subscribe to the Embed add-on <span class='icon-uniF473'></span></a>
 
 h3(#auto). "Auto embedding":#auto
 

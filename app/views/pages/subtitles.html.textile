@@ -55,7 +55,7 @@ bc(language-markup). <video class='sublime' width='640' height='360' poster='vid
 
 h4(#srclang-values). List of auto-labeled @srclang@ values
 
-table(supported_browsers generic){ width:260px }.
+table(supported_browsers generic){ width:40% }.
 (alt). |_. @srclang@ value |_. automatic label |
 | af    | Afrikaans  |
 (alt). | ar    | Arabic     |

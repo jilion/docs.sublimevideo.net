@@ -11,7 +11,7 @@ h3. Table of Contents
 
 h3(#subscribe). "Subscribe":#subscribe
 
-<a href='<%= my_url('addons/support?p=vip') %>'>Choose a site and subscribe to the Support add-on <span class='icon-arrow'></span></a>
+<a href='<%= my_url('addons/support?p=vip') %>'>Choose a site and subscribe to the Support add-on <span class='icon-uniF473'></span></a>
 
 h3(#documentation-and-community-forum). "Documentation & Community Forum":#documentation-and-community-forum
 

@@ -28,7 +28,7 @@ The following video will get you started adding an On-Video Logo to your video.
 
 h3(#subscribe). "Subscribe":#subscribe
 
-<a href='<%= my_url('addons/logo?p=disabled') %>'>Choose a site and subscribe to the On-Video Logo add-on <span class='icon-arrow'></span></a>
+<a href='<%= my_url('addons/logo?p=disabled') %>'>Choose a site and subscribe to the On-Video Logo add-on <span class='icon-uniF473'></span></a>
 
 h3(#settings). "Settings":#settings
 
@@ -113,3 +113,5 @@ bc(language-markup). <video class='sublime' data-logo-link-url='http://yourdomai
   <source src='video.mp4' />
   <source src='video.webm' />
 </video>
+
+<div class="l-height-margin"></div>

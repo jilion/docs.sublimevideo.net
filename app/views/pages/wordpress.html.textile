@@ -52,14 +52,13 @@ If your poster frame is stored on an external server, you can click the "Or use 
 
 h4(#video-sources). Video sources
 
-h5. YouTube video
+_YouTube video_
 
 <%= image_tag('wordpress/video_source_youtube.png', class: 'screenshot', title: 'Video from YouTube') %>
 
 Copy and paste the YouTube video URL into the "Your YouTube video ID" field, and that's it!
-<br />
 
-h5. Media library or external video
+_Media library or external video_
 
 <%= image_tag('wordpress/video_sources.png', class: 'screenshot', title: 'Video sources') %>
 

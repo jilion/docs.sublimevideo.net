@@ -22,7 +22,7 @@ In your Google Analytics dashboard, you can filter tracked events by categories,
 
 h3(#subscribe). "Subscribe":#subscribe
 
-<a href='<%= my_url('addons/google_analytics?p=standard') %>'>Choose a site and subscribe to the Google Analytics add-on <span class='icon-arrow'></span></a>
+<a href='<%= my_url('addons/google_analytics?p=standard') %>'>Choose a site and subscribe to the Google Analytics add-on <span class='icon-uniF473'></span></a>
 
 Once subscribed, make sure to:
 

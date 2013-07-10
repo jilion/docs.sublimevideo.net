@@ -2,7 +2,7 @@
 
 <% title('Google Analytics integration') %>
 
-**Make sure to check out our "Google Analytics add-on":/addons/google-analytics for an automated integration and to track more events without having to code anything.**
+*Make sure to check out our "Google Analytics add-on":/addons/google-analytics for an automated integration and to track more events without having to code anything.*
 
 Integrating Google Analytics Event Tracking with SublimeVideo is very simple. Using our current "JavaScript API":/javascript-api you can track "video started" and "video ended" events. Here are the two steps you'll need to implement this integration.
 

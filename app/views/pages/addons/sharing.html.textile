@@ -29,7 +29,7 @@ _Simpler sharing pane with just Twitter and Facebook in our "Flat":http://sublim
 
 h3(#subscribe). "Subscribe":#subscribe
 
-<a href='<%= my_url('addons/social_sharing?p=standard') %>'>Choose a site and subscribe to the Social Sharing add-on <span class='icon-arrow'></span></a>
+<a href='<%= my_url('addons/social_sharing?p=standard') %>'>Choose a site and subscribe to the Social Sharing add-on <span class='icon-uniF473'></span></a>
 
 h3(#sharing_url). "Properly linking to a video":#sharing_url
 
@@ -101,8 +101,8 @@ h3(#sharing-icon). "@sharing-icon@":#sharing-icon
 Defines the icon to be displayed inside the main sharing button.
 
 *Allowed values:*
-* @default@ – _(Default)_ Default sharing icon. <%= image_tag('addons/sharing/sharing_default_icon@2x.png', class: 'text_top', height: '16px', title: 'Default sharing icon') %>
-* @alt@ – Alternative icon. <%= image_tag('addons/sharing/sharing_alt_icon@2x.png', class: 'text_top', height: '16px', title: 'Alternative sharing icon') %>
+* @default@ – _(Default)_ Default sharing icon. <%= image_tag('addons/sharing/sharing_default_icon@2x.png', class: 'vert-mid', height: 16, title: 'Default sharing icon') %>
+* @alt@ – Alternative icon. <%= image_tag('addons/sharing/sharing_alt_icon@2x.png', class: 'vert-mid', height: 16, title: 'Alternative sharing icon') %>
 
 *Example:*
 
