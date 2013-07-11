@@ -13,7 +13,6 @@ h3. Table of Contents
 * "Changelog":#changelog
 
 <div class="breakline"></div>
-<p></p>
 
 This plugin allows you to easily integrate SublimeVideo with your WordPress site. It automatically connects to your <%= link_to "SublimeVideo", my_url('sites'), onclick: 'window.open(this); return false' %> account, gathers the necessary license information and provides an easy-to-use visual editor that will help you generate "shortcodes":#shortcodes for your videos.
 
