@@ -110,12 +110,12 @@ By default, no track is selected and no subtitles are shown until the user selec
 If you want the subtitles for a particular language to be shown by default as soon as the user starts the video, you simply need to add the @default@ attribute to the desired @<track>@ element:
 
 bc(language-markup). <video class='sublime' width='640' height='360' poster='video-poster.jpg' preload='none'>
-    <source src='http://yoursite.com/video.mp4' />
-    <source src='http://yoursite.com/video.webm' />
-    <track src='/subs/video-en.vtt' srclang='en' default />
-    <track src='/subs/video-fr.vtt' srclang='fr' />
-    <track src='/subs/video-it.vtt' srclang='it' />
-  </video>
+  <source src='http://yoursite.com/video.mp4' />
+  <source src='http://yoursite.com/video.webm' />
+  <track src='/subs/video-en.vtt' srclang='en' default />
+  <track src='/subs/video-fr.vtt' srclang='fr' />
+  <track src='/subs/video-it.vtt' srclang='it' />
+</video>
 
 h3(#create-subtitles). "Creating subtitles files":#create-subtitles
 
