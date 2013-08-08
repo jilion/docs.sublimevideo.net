@@ -14,7 +14,7 @@ gem 'sublime_video_layout', github: 'jilion/sublime_video_layout', branch: 'new'
 # Views
 gem 'haml'
 gem 'haml-contrib'
-gem 'bourbon'
+gem 'bourbon', github: "octave/bourbon"
 gem 'RedCloth'
 gem 'turbolinks', github: 'jilion/turbolinks', branch: 'ios_video_issue'
 gem 'google-analytics-turbolinks'
