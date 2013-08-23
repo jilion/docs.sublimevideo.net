@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/jilion/turbolinks.git
+  remote: https://github.com/jilion/turbolinks.git
   revision: 0a192f579ec837dd616623592dcdaaf2305a9583
   branch: ios_video_issue
   specs:
@@ -7,7 +7,7 @@ GIT
       coffee-rails
 
 GIT
-  remote: git://github.com/librato/librato-rails.git
+  remote: https://github.com/librato/librato-rails.git
   revision: 82a95ae54f2ed990135a7b655293107384da2796
   branch: feature/rack_first
   specs:
@@ -16,8 +16,8 @@ GIT
       rails (>= 3.0)
 
 GIT
-  remote: git://github.com/mongoid/mongoid.git
-  revision: cb541fa1fd7cf9ab0a725c757490d0ac435a79f7
+  remote: https://github.com/mongoid/mongoid.git
+  revision: d0fc225a81a27dfdd69f17134a564208bbe501c6
   specs:
     mongoid (4.0.0)
       activemodel (~> 4.0.0)
@@ -27,7 +27,7 @@ GIT
 
 GEM
   remote: https://rubygems.org/
-  remote: https://gems.gemfury.com/8dezqz7z7HWea9vtaFwg/
+  remote: https://8dezqz7z7HWea9vtaFwg:@gem.fury.io/me/
   specs:
     RedCloth (4.2.9)
     actionmailer (4.0.0)
@@ -156,11 +156,12 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    memcachier (0.0.2)
     method_source (0.8.1)
     mime-types (1.23)
     mini_portile (0.5.1)
     minitest (4.7.5)
-    moped (1.5.0)
+    moped (1.5.1)
     multi_json (1.7.7)
     multipart-post (1.2.0)
     net-scp (1.1.2)
@@ -295,6 +296,7 @@ DEPENDENCIES
   indextank
   librato-rails!
   lograge
+  memcachier
   mongoid!
   newrelic_rpm
   oj
