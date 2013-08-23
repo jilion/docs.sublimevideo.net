@@ -22,7 +22,7 @@ gem 'indextank'
 gem 'oj' # fastest json
 gem 'lograge'
 gem 'rack-status'
-gem 'librato-rails', github: 'librato/librato-rails', branch: 'feature/rack_first'
+gem 'librato-rails', github: 'librato/librato-rails'
 gem 'honeybadger'
 
 # Gems used only for assets and not required
