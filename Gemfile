@@ -58,13 +58,13 @@ group :development do
 end
 
 group :development, :test do
+  gem 'rspec-rails'
   gem 'dotenv-rails'
   gem 'rack-livereload'
   gem 'rack-nocache'
 end
 
 group :test do
-  gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'capybara'
   gem 'database_cleaner'
