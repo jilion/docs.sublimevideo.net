@@ -1,4 +1,4 @@
-* <span class="label new">new</span> Rewritten from the ground up using our new "SublimeVideo Horizon":http://sublimevideo.net/horizon-framework framework.
+* <span class="label new">new</span> Rewritten from the ground up using our new "SublimeVideo Framework":http://sublimevideo.net/framework.
 * <span class="label new">new</span> Runs with no feature or design degradation even on "tablets and the latest smartphones":http://docs.sublimevideo.dev/supported-platforms#mobile.
 * <span class="label new">new</span> Vector-based rendering of every control and UI element.
 * <span class="label new">new</span> Seamless "YouTube integration":http://sublimevideo.net/youtube.
