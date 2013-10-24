@@ -4,9 +4,10 @@ h3. Table of Contents
 
 * "Introduction":#intro
 * "Subscribe":#subscribe
-* "Statistics Over Time":#statistics-over-time
-* "Video Popularity":#video-popularity
-* "Browser, Device & HTML5 / Flash Statistics":#browser-device-html5-flash-stats
+* "Last 60 minutes stats":#last-60-minutes-stats
+* "Statistics over time":#statistics-over-time
+* "Browser, Country & Device Statistics":#browser-country-device-stats
+* "Video Statistics":#video-statistics
 * "Data Export":#data-export
 * "A note for Google Analytics users":#google-analytics-note
 * "Setup &lt;video&gt; elements for stats":#setup-for-stats
@@ -22,7 +23,7 @@ SublimeVideo's statistics platform offers a truly comprehensive, real-time overv
 <source src="http://media.jilion.com/videos/sublimevideo-real-time-statistics-360p.webm" />
 </video></div></notextile>
 
-<%= image_tag('addons/real-time-stats/stats_preview.jpg', class: 'screenshot', style: 'float:left; margin:20px 20px 0 0', title: 'Stats preview') %>
+<%= image_tag('addons/stats/stats-preview.jpg', class: 'screenshot', style: 'float:left; margin:20px 20px 0 0', title: 'Stats preview') %>
 To access the Real-Time Statistics dashboard, simply click the 'View Stats' button next to
 your site(s) on the _<%= link_to "My Sites", my_url('sites') %>_ page.
 
@@ -30,41 +31,43 @@ h3(#subscribe). "Subscribe":#subscribe
 
 <a href='<%= my_url('addons/stats?p=realtime') %>'>Choose a site and subscribe to the Real-Time Statistics add-on <span class='icon-arrow'></span></a>
 
-h3(#statistics-over-time). "Statistics Over Time":#statistics-over-time
+h3(#last-60-minutes-stats). "Last 60 minutes stats":#last-60-minutes-stats
 
-At the top of the Real-Time Statistics dashboard, you will find buttons to display the video statistics for the chosen site from the last 60 seconds (real-time), last 60 minutes, last 24 hours, last 30 days and last 365 days.
+At the top-left of the Real-Time Statistics dashboard, you will find two graphs that show you the video loads and plays per minute for the last 60 minutes.
 
-<%= link_to(image_tag('addons/real-time-stats/time_period_selector.jpg', width: 640, class: 'screenshot', title: 'Time period selector'), asset_path('addons/real-time-stats/time_period_selector.jpg'), class: 'sublime lightbox') %>
+At the top-right of the Real-Time Statistics dashboard, the last video 100 plays for the last 60 minutes appear in real-time as your visitors play your videos. For each video, we show you the browser, operating system and country of the viewer, as well as on which site he's watching the video.
 
-It's worth noting that these buttons display miniature graph previews that update in real-time. Obviously, can be more easily perceived in the 60 seconds miniature. Nonetheless, it can sometimes be useful to keep an eye on your stats for the last 60 minutes or even 24 hours (for example, if you have just released a new video and are primarily monitoring traffic in real-time).
+<%= link_to(image_tag('addons/stats/last-60-minutes-stats.jpg', width: 640, class: 'screenshot', title: 'Last 60 minutes stats'), asset_path('addons/stats/last-60-minutes-stats.jpg'), class: 'sublime lightbox') %>
 
-Selecting a time range updates the entire page to display stats for the chosen time period. You can also use the drop-down selector to enter a custom time range. On the large graph, video plays (in green) VS page visits (in gray) are displayed, so you can get an idea for how popular your video is compared to the rest of a page's content. At this time, statistics for video plays from videos embedded elsewhere are not displayed.
+h3(#statistics-over-time). "Statistics over time":#statistics-over-time
 
-<%= link_to(image_tag('addons/real-time-stats/graph.jpg', width: 640, class: 'screenshot', title: 'Video plays VS page visits graph'), asset_path('addons/real-time-stats/graph.jpg'), class: 'sublime lightbox') %>
+In the next section, you will see by default all video loads and plays for the last 24 hours and for all sites. You can change the time range to the last 30, 90 or 365 days and also choose to display video loads and plays that happen on your own site only or on external sites only (showing embedded videos' stats only).
 
-h3(#video-popularity). "Video Popularity":#video-popularity
+<%= link_to(image_tag('addons/stats/statistics-over-time.jpg', width: 640, class: 'screenshot', title: 'Statistics over time'), asset_path('addons/stats/statistics-over-time.jpg'), class: 'sublime lightbox') %>
 
-You can also see a list of all the videos you may have on a site, complete with loads VS plays and a graph preview for the currently selected time range. The list and graph previews are updated in real-time, making it easy to keep an eye on which videos are most popular - especially during periods of heavy traffic.
+Selecting a time range updates the large graph to display stats for the chosen time period as well as the three additionals stats at the bottom of the page ("Browser + OS", "Countries" and "Mobile / Desktop" sections). On the large graph, video plays (in green) VS video loads (in gray) are displayed, so you can get an idea for how popular your videos are compared to the rest of a page's content.
 
-<%= link_to(image_tag('addons/real-time-stats/most_played_videos.jpg', width: 640, class: 'screenshot', title: 'Most played videos'), asset_path('addons/real-time-stats/most_played_videos.jpg'), class: 'sublime lightbox') %>
+h3(#browser-country-device-stats). "Browser, Country & Device Statistics":#browser-country-device-stats
 
-Please note your videos *must have a uid* in order to appear in this section. "Read more":#setup-for-stats.
+Browser + OS, Country and Mobile / Desktop statistics show you what the most popular load-cases are for your videos within the currently selected time range.
 
-h3(#browser-device-html5-flash-stats). "Browser, Device & HTML5 / Flash Statistics":#browser-device-html5-flash-stats
+<%= link_to(image_tag('addons/stats/browser-country-device-stats.jpg', width: 640, class: 'screenshot', title: 'Browser, Country & Device Statistics'), asset_path('addons/stats/browser-country-device-stats.jpg'), class: 'sublime lightbox') %>
 
-Browser + OS and HTML5 / Flash statistics are clearly displayed alongside device type usage (mobile or desktop), showing you what the most popular load-cases are for your videos within the currently selected time range. These statistics are also updated in real-time.
+h3(#video-statistics). "Video Statistics":#video-statistics
 
-<%= link_to(image_tag('addons/real-time-stats/browser_os_and_HTML5_flash.jpg', width: 640, class: 'screenshot', title: 'Browser, Device & HTML5 / Flash Statistics'), asset_path('addons/real-time-stats/browser_os_and_HTML5_flash.jpg'), class: 'sublime lightbox') %>
+The Real-Time statistics add-on allows you to see per-video statistics as well. The video statistics dashboard is similar to the site statistics dashboard and can be accessed through the "Videos" page of your site.
 
 h3(#data-export). "Data Export":#data-export
 
-<%= image_tag('addons/real-time-stats/data_export.jpg', class: 'screenshot', style: 'float:left; margin:20px 20px 20px 0', title: 'Data export') %>
+<%= image_tag('addons/stats/data_export.jpg', class: 'screenshot', style: 'float:left; margin:20px 20px 20px 0', title: 'Data export') %>
 
-You can export your stats data in CSV format for the selected period (days only). The CSV file includes loads and plays data for both normal and iframe embedded videos.
+You can export your stats data in CSV format for the selected period and sources. The CSV file includes loads and plays data for both normal and iframe embedded videos.
 
 <div class="breakline" style="margin:30px 0 25px"></div>
 
 Please share your comments and suggestions about how you think we can improve our statistics platform on this "SublimeVideo Community Forum thread":http://getsatisfaction.com/sublimevideo/topics/comments_suggestions_for_sublimevideos_real_time_statistics_platform.
+
+Please note your videos *must have a uid* in order to appear in this section. "Read more":#setup-for-stats.
 
 h3(#google-analytics-note). "A note for Google Analytics users":#google-analytics-note
 
