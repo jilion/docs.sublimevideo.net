@@ -4,7 +4,7 @@ SublimeVideo supports:
 
 * "Progressive Download":http://en.wikipedia.org/wiki/Progressive_download
 
-* "HLS":http://en.wikipedia.org/wiki/HTTP_Live_Streaming (although this is currently only supported in desktop Safari and Mobile Safari)
+* "HLS":http://en.wikipedia.org/wiki/HTTP_Live_Streaming (HTTP Live Streaming is currently only supported in desktop Safari and Mobile Safari)
 
 SublimeVideo does not support:
 
