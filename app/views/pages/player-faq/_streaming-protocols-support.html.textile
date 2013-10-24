@@ -1,10 +1,11 @@
 SublimeVideo currently only supports videos delivered through HTTP. This is because HTTP is currently the only protocol consistently supported by HTML5 browsers.
 
-We do support:
+SublimeVideo supports:
 
-* "HLS":http://en.wikipedia.org/wiki/HTTP_Live_Streaming (HTTP Live Streaming is only implemented in Safari and Mobile Safari)
+* "Progressive Download":http://en.wikipedia.org/wiki/Progressive_download
 
-We do not support:
+* "HLS":http://en.wikipedia.org/wiki/HTTP_Live_Streaming (although this is currently only supported in desktop Safari and Mobile Safari)
 
-* "RTMP":http://en.wikipedia.org/wiki/Real_Time_Messaging_Protocol support is something we plan to add in the future, however, this means our player would be forced into Flash mode, because HTML5 doesn't – and will probably never – support RTMP.
+SublimeVideo does not support:
 
+* "RTMP":http://en.wikipedia.org/wiki/Real_Time_Messaging_Protocol and "HDS":http://www.adobe.com/products/hds-dynamic-streaming.html (we may support these protocols in the future, however, this means our player would be forced to use Flash, because HTML5 doesn't – and will probably never – support these protocols)
