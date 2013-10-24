@@ -1,12 +1,4 @@
 GIT
-  remote: git://github.com/librato/librato-rails.git
-  revision: 13a793b36f70fcc4ae1a77b35acc3fbe23eb8517
-  specs:
-    librato-rails (0.10.1)
-      librato-rack (~> 0.4.2)
-      rails (>= 3.0)
-
-GIT
   remote: git://github.com/mongoid/mongoid.git
   revision: ddfe7773d4689473525e2925d232889b4d6d6f90
   specs:
@@ -138,6 +130,9 @@ GEM
       multi_json
     librato-rack (0.4.3)
       librato-metrics (~> 1.1.1)
+    librato-rails (0.10.1)
+      librato-rack (~> 0.4.2)
+      rails (>= 3.0)
     listen (2.1.1)
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
@@ -293,7 +288,7 @@ DEPENDENCIES
   haml-contrib
   honeybadger
   indextank
-  librato-rails!
+  librato-rails
   lograge
   memcachier
   mongoid!

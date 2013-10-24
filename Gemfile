@@ -17,12 +17,13 @@ gem 'turbolinks'
 gem 'google-analytics-turbolinks'
 
 # Internals
+# Rails 4 support
 gem 'mongoid', github: 'mongoid/mongoid'
 gem 'indextank'
 gem 'oj' # fastest json
 gem 'lograge'
 gem 'rack-status'
-gem 'librato-rails', github: 'librato/librato-rails'
+gem 'librato-rails'
 gem 'honeybadger'
 
 # Gems used only for assets and not required
