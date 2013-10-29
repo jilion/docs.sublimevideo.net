@@ -1,9 +1,0 @@
-{
-  "folders":
-  [
-    {
-      "path": "~/Code/Jilion/Products/SublimeVideo/docs.sublimevideo.net",
-      "folder_exclude_patterns": ["vendor/cache", "vendor/ruby"]
-    }
-  ]
-}
