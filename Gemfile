@@ -28,7 +28,6 @@ gem 'honeybadger'
 
 # Gems used only for assets and not required
 # in production environments by default.
-gem 'asset_sync'
 gem 'sass-rails'
 gem 'coffee-rails'
 gem 'uglifier'
@@ -63,7 +62,7 @@ end
 
 group :tools do
   # Guard
-  gem 'terminal-notifier-guard', require: false
+  gem 'ruby_gntp', require: false
   gem 'guard-pow', require: false
   gem 'guard-livereload', require: false
   gem 'guard-rspec', require: false
