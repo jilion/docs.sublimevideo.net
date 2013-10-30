@@ -3,10 +3,7 @@ source 'https://8dezqz7z7HWea9vtaFwg:@gem.fury.io/me/' # thibaud@jilion.com acco
 
 ruby '2.0.0'
 
-gem 'bundler'
-
-gem 'rails', '4.0.0'
-gem 'rails_12factor' # Heroku integration: https://devcenter.heroku.com/articles/rails-integration-gems
+gem 'rails', '~> 4.0.0.rc.3'
 gem 'sublime_video_layout', '~> 2.0' # hosted on gemfury
 
 # Views
@@ -17,20 +14,24 @@ gem 'turbolinks'
 gem 'google-analytics-turbolinks'
 
 # Internals
-# Rails 4 support
-gem 'mongoid', github: 'mongoid/mongoid'
+gem 'mongoid', github: 'mongoid/mongoid' # Rails 4 support
 gem 'indextank'
-gem 'oj' # fastest json
-gem 'lograge'
+gem 'oj' # Faster JSON
+gem 'kgio' # Faster IO
+
+# Monitoring
 gem 'rack-status'
-gem 'librato-rails'
 gem 'honeybadger'
+gem 'librato-rails'
+
+gem 'coffee-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
-gem 'sass-rails'
-gem 'coffee-rails'
-gem 'uglifier'
+group :assets do
+  gem 'uglifier'
+  gem 'sass-rails'
+end
 
 group :production do
   gem 'rack-google-analytics'
@@ -38,10 +39,12 @@ end
 
 group :staging, :production do
   gem 'unicorn'
+  gem 'rails_12factor' # Heroku integration: https://devcenter.heroku.com/articles/rails-integration-gems
+  gem 'rack-ssl-enforcer'
   gem 'memcachier'
   gem 'dalli'
   gem 'rack-cache'
-  gem 'rack-ssl-enforcer'
+  gem 'lograge'
   gem 'newrelic_rpm'
 end
 
