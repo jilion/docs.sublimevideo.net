@@ -14,7 +14,7 @@ gem 'turbolinks'
 gem 'google-analytics-turbolinks'
 
 # Internals
-gem 'mongoid', github: 'mongoid/mongoid' # Rails 4 support
+gem 'mongoid', github: 'mongoid/mongoid', ref: 'f91fe' # Rails 4 support
 gem 'indextank'
 gem 'oj' # Faster JSON
 gem 'kgio' # Faster IO
