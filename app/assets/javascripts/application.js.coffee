@@ -1,7 +1,7 @@
 #= require sublimevideo
-#= require prism-line-highlight
 #= require turbolinks
 #= require google-analytics-turbolinks
+#= require prism-line-highlight
 
 $(window).bind 'page:change', ->
   SublimeVideo.documentReady()
