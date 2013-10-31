@@ -44,15 +44,15 @@ At the top-right of the dashboard, the last 100 video plays for the last 60 minu
 
 h3(#statistics-over-time). "Statistics over time":#statistics-over-time
 
-In the next section, you will see by default all video loads and plays for the last 24 hours and for all sites. You can change the time range to the last 30, 90 or 365 days and also choose to display video loads and plays that happen on your own site only or on external sites only (i.e. showing embedded videos' stats only).
+In the next section, you will see by default all video loads and plays for the last 24 hours and from all sites. You can change the time range to the last 30, 90 or 365 days and also choose to display video loads and plays that happen on your own site only or on external sites only (i.e. showing embedded videos' stats only).
 
 <%= link_to(image_tag('addons/stats/statistics-over-time.jpg', width: 640, class: 'screenshot', title: 'Statistics over time'), asset_path('addons/stats/statistics-over-time.jpg'), class: 'sublime lightbox') %>
 
 Selecting a time range updates the large graph to display stats for the chosen time period as well as the three additionals stats at the bottom of the page (Browser + OS, Countries and Mobile / Desktop sections). On the large graph, video plays (in green) VS video loads (in gray) are displayed, so you can get an idea for how popular your videos are compared to the rest of a page's content.
 
-h3(#browser-country-device-stats). "Browser, Country & Device Statistics":#browser-country-device-stats
+h3(#browser-country-device-stats). "Browser, Country & Device view shares":#browser-country-device-stats
 
-Browser + OS, Country and Mobile / Desktop statistics show you what the most popular load-cases are for your videos within the currently selected time range.
+The statisics in this section are all based on video plays. They show what are the most popular browsers, countries and mobile (including tablets) vs. desktop view shares within the currently selected time range.
 
 <%= link_to(image_tag('addons/stats/browser-country-device-stats.jpg', width: 640, class: 'screenshot', title: 'Browser, Country & Device Statistics'), asset_path('addons/stats/browser-country-device-stats.jpg'), class: 'sublime lightbox') %>
 
