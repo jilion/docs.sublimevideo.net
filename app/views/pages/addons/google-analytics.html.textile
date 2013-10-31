@@ -128,6 +128,8 @@ bc(language-markup). <video class='sublime' data-google-analytics-enable='true'>
 
 h3(#google-analytics-account). "@google-analytics-account@":#google-analytics-account
 
+%(red)*Warning:* This setting is not supported with the Universal Analytics (analytics.js)%
+
 By default, SublimeVideo detects the Google Analytics account ID used in your page but you can use a different Google Analytics account ID by using this setting.
 
 *Allowed values:*
