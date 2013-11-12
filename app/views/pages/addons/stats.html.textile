@@ -17,11 +17,9 @@ h3(#intro). "Introduction":#intro
 
 SublimeVideo's statistics platform offers a truly comprehensive, real-time overview of your site's video traffic from any device, whether generated from mobile or desktop, HTML5 or Flash.
 
-<notextile><div class="video_wrap"><video class="sublime" title="Real-Time Statistics" width="640" height="360" poster="http://media.jilion.com/videos/sublimevideo-real-time-statistics.jpg" preload="none" data-uid="real-time-stats">
-<source src="http://media.jilion.com/videos/sublimevideo-real-time-statistics-720p.mp4" data-quality="hd" />
-<source src="http://media.jilion.com/videos/sublimevideo-real-time-statistics-360p.mp4" />
-<source src="http://media.jilion.com/videos/sublimevideo-real-time-statistics-720p.webm" data-quality="hd" />
-<source src="http://media.jilion.com/videos/sublimevideo-real-time-statistics-360p.webm" />
+<notextile><div class="video_wrap"><video class="sublime" title="Stats 2.0" width="640" height="360" poster="http://media.jilion.com/videos/sublimevideo-statistics-2.jpg" preload="none" data-uid="real-time-stats">
+<source src="http://media.jilion.com/videos/sublimevideo-statistics-2-720p.mp4" data-quality="hd" />
+<source src="http://media.jilion.com/videos/sublimevideo-statistics-2-360p.mp4" />
 </video></div></notextile>
 
 <%= image_tag('addons/stats/stats-preview.jpg', class: 'screenshot', style: 'float:left; margin:20px 20px 0 0', title: 'Stats preview') %>
