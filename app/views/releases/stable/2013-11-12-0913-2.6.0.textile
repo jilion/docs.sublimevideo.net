@@ -1,2 +1,2 @@
-* <span class="label new">new</span> "Stats 2.0":http://blog.jilion.com/2013/11/12/introducing-sublimevideo-stats-2-0
+* <span class="label new">new</span> "Stats 2.0":http://blog.jilion.com/2013/11/12/introducing-sublimevideo-stats-2-0.
 * <span class="label improved">improved</span>Google Analytics add-on: support for the new "Universal Analytics tracking code":https://support.google.com/analytics/answer/2790010.
