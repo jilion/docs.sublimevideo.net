@@ -19,3 +19,4 @@ uploads
 !.sublime-project
 public/test.html
 routes.txt
+!.bundle/config
