@@ -7,3 +7,5 @@ The SublimeVideo service continues to be operated for the time being and your vi
 Any possible change affecting the service will be communicated to SublimeVideo's users in advance.
 
 No new feature is planned at the moment and any future plans will be communicated at a later stage.
+
+Please stay tuned on this page for up-to-date information.
