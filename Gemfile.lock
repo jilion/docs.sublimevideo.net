@@ -219,7 +219,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
-    sublime_video_layout (2.6.7)
+    sublime_video_layout (2.7.0)
       coffee-rails
       haml
       jquery-rails
@@ -285,7 +285,7 @@ DEPENDENCIES
   sass-rails
   shoulda-matchers
   silent-postgres
-  sublime_video_layout (~> 2.6)
+  sublime_video_layout (~> 2.7)
   turbolinks
   uglifier
   unicorn
