@@ -9,3 +9,7 @@ Any possible change affecting the service will be communicated to SublimeVideo's
 No new feature is planned at the moment and any future plans will be communicated at a later stage.
 
 Please stay tuned on this page for up-to-date information.
+
+–
+
+<small><em>Last update: December 10, 2013</em></small>
