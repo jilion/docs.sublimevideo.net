@@ -28,8 +28,8 @@ describe Release do
     subject { releases.first }
 
     it "should replace span and upcased label" do
-      subject.atom_content.should include("[IMPROVED]")
-      subject.atom_content.should include("[FIXED]")
+      expect(subject.atom_content).to include("[IMPROVED]")
+      expect(subject.atom_content).to include("[FIXED]")
     end
   end
 end

@@ -1,0 +1,1 @@
+* <span class="label fixed">fixed</span> Issue on Chrome that was preventing HD switching from working properly for videos with @<track>@ elements.

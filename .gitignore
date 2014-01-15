@@ -11,9 +11,6 @@ db/*.sqlite3
 db/backups/*
 doc/js/
 .sass-cache/
-vendor/ruby
-vendor/bundler
-!.bundle
 !.env
 .env.*
 uploads
@@ -22,3 +19,4 @@ uploads
 !.sublime-project
 public/test.html
 routes.txt
+!.bundle/config

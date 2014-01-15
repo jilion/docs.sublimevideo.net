@@ -1,8 +1,5 @@
-# require 'rack/maintenance'
-
 DocsSublimeVideo::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
-  # config.middleware.insert_before Rack::Cache, Rack::Maintenance, domain: 'sublimevideo.net'
   config.middleware.insert_before Rack::Cache, Rack::SslEnforcer, except_hosts: 'docs.sublimevideo.net', strict: true
   config.middleware.insert_after  Rack::SslEnforcer, Rack::GoogleAnalytics, tracker: 'UA-10280941-8'
 
@@ -19,10 +16,12 @@ DocsSublimeVideo::Application.configure do
   config.action_controller.perform_caching = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
-  config.serve_static_assets = false
+  config.serve_static_assets = true
+  config.static_cache_control = 'public, max-age=31557600'
 
   # Compress JavaScripts and CSS
-  config.assets.compress = true
+  config.assets.js_compressor = :uglifier
+  config.assets.css_compressor = :sass
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
   config.assets.compile = false
@@ -34,8 +33,7 @@ DocsSublimeVideo::Application.configure do
   # config.assets.manifest = YOUR_PATH
 
   # Specifies the header that your server uses for sending files
-  # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
-  # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
+  config.action_dispatch.x_sendfile_header = nil
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
@@ -55,14 +53,14 @@ DocsSublimeVideo::Application.configure do
   # Use a different cache store in production
   config.cache_store = :dalli_store
   # https://devcenter.heroku.com/articles/rack-cache-memcached-static-assets-rails31
+  client = Dalli::Client.new(ENV['MEMCACHIER_SERVERS'], value_max_bytes: 10485760)
   config.action_dispatch.rack_cache = {
-    metastore:    Dalli::Client.new,
-    entitystore:  'file:tmp/cache/rack/body',
-    allow_reload: false
+    metastore: client,
+    entitystore: client
   }
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server
-  config.action_controller.asset_host = '//cdn.sublimevideo.net'
+  config.action_controller.asset_host = 'd2tki5ihx4yspq.cloudfront.net'
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )

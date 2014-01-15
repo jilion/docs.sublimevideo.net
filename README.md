@@ -1,5 +1,6 @@
 # [SublimeVideo's Documentation app](http://docs.sublimevideo.net)
-[![Build Status](https://circleci.com/gh/jilion/docs.sublimevideo.net.png?circle-token=7e0bbc5a10713a231f51a353888b45acd2843795)](https://circleci.com/gh/jilion/docs.sublimevideo.net) [![Code Climate](https://codeclimate.com/repos/5148722e13d637296b006285/badges/a6066db2bb069ac226a5/gpa.png)](https://codeclimate.com/repos/5148722e13d637296b006285/feed)
+
+[![Build Status](https://circleci.com/gh/jilion/docs.sublimevideo.net.png?circle-token=f886ac53f9cf89a3886d6d4d848dafdb9df3f065)](https://circleci.com/gh/jilion/docs.sublimevideo.net) [![Code Climate](https://codeclimate.com/repos/5148722e13d637296b006285/badges/a6066db2bb069ac226a5/gpa.png)](https://codeclimate.com/repos/5148722e13d637296b006285/feed)
 
 This app is using the [SublimeVideo layout gem](https://github.com/jilion/sublime_video_layout) and [Houndsleuth](http://www.houndsleuth.com) (Freebie plan) for the full-text search.
 

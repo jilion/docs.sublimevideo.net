@@ -1,0 +1,15 @@
+<%- title('Dailymotion acquisition FAQ') %>
+
+h3. What does the acquisition of Jilion mean for the SublimeVideo player service?
+
+The SublimeVideo service continues to be operated for the time being and your videos will continue to play.
+
+Any possible change affecting the service will be communicated to SublimeVideo's users in advance.
+
+No new feature is planned at the moment and any future plans will be communicated at a later stage.
+
+Please stay tuned on this page for up-to-date information.
+
+–
+
+<small><em>Last update: December 10, 2013</em></small>

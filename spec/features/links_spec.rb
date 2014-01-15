@@ -33,10 +33,10 @@ def current_url_match(href, options = {})
   if href !~ %r{\Ahttps?:}
     url = relative_url?(href) && multi_level_path?(options[:referer], options) ? [options[:referer].sub(%r{/[^/]+\z}, '')] : ['http://docs.sublimevideo.dev']
     url << route_with_redirect(href).sub(%r{\A/+}, '')
-    current_url.should eq url.compact.join('/')
+    expect(current_url).to eq url.compact.join('/')
   else
     expected_url = route_with_redirect(href)
-    expected_url.blank? || (current_url.should eq expected_url)
+    expected_url.blank? || (expect(current_url).to eq expected_url)
   end
 end
 

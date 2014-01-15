@@ -10,43 +10,43 @@ describe Navigation do
   before { described_class.unmemoize_all }
 
   describe '.section_from_permalink' do
-      before { described_class.should_receive(:tree) { stable_tree } }
+      before { expect(described_class).to receive(:tree) { stable_tree } }
 
-      it { described_class.section_from_permalink('quickstart-guide').should eq ['Getting Started'] }
-      it { described_class.section_from_permalink('foo-bar').should eq nil }
+      it { expect(described_class.section_from_permalink('quickstart-guide')).to eq ['Getting Started'] }
+      it { expect(described_class.section_from_permalink('foo-bar')).to be_nil }
   end
 
   describe '.page_title_from_permalink' do
     context 'page dont exist' do
       it 'fallbacks to humanize (with dashes replaced by spaces)' do
-        described_class.should_receive(:tree) { stable_tree }
+        expect(described_class).to receive(:tree) { stable_tree }
 
-        described_class.page_title_from_permalink('javascript-api/methods-foo').should eq 'Methods foo'
+        expect(described_class.page_title_from_permalink('javascript-api/methods-foo')).to eq 'Methods foo'
       end
     end
 
     context 'page exists' do
       it 'uses the title found' do
-        described_class.should_receive(:tree) { stable_tree }
+        expect(described_class).to receive(:tree) { stable_tree }
 
-        described_class.page_title_from_permalink('quickstart-guide').should eq 'Quickstart Guide'
+        expect(described_class.page_title_from_permalink('quickstart-guide')).to eq 'Quickstart Guide'
       end
     end
   end
 
   describe '.sections' do
     it 'returns the list of sections' do
-      described_class.should_receive(:tree) { stable_tree }
+      expect(described_class).to receive(:tree) { stable_tree }
 
-      described_class.sections.should eq ['Getting Started', 'How To']
+      expect(described_class.sections).to eq ['Getting Started', 'How To']
     end
   end
 
   describe '.pages' do
     it 'returns the list of pages' do
-      described_class.should_receive(:tree) { stable_tree }
+      expect(described_class).to receive(:tree) { stable_tree }
 
-      described_class.pages.should == { "quickstart-guide"=>"Quickstart Guide", "lightbox"=>"Floating lightbox" }
+      expect(described_class.pages).to eq({ "quickstart-guide"=>"Quickstart Guide", "lightbox"=>"Floating lightbox" })
     end
   end
 
