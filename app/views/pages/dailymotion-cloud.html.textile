@@ -1,0 +1,20 @@
+<% title('Use SublimeVideo with Dailymotion Cloud') %>
+
+Integrate a "Dailymotion Cloud":https://dmcloud.net video with SublimeVideo is very easy.
+
+h3(#step-1). "1 - Upload your video":#step-1
+
+Upload your video(s) on the _<%= link_to 'Add media', 'https://www.dmcloud.net/backoffice/upload', onclick: 'window.open(this); return false' %>_ page. Once the upload is done, go to the <%= link_to 'media list page', 'https://www.dmcloud.net/backoffice/media', onclick: 'window.open(this); return false' %>.
+
+<div class="spacer"></div>
+
+h3(#step-2). "2 - Grab links to the media files":#step-2
+
+Follow the "Dailymotion Cloud documentation":https://www.dmcloud.net/doc/api/api-streaming.html to generate protected URLs for your media sources then put them in our <%= link_to "Video Publishing Assistant", my_url('publish-video'), onclick: 'window.open(this); return false' %> (or create one @<source>@ element for each of the URLs if you "create your @<video>@ elements manually":write-proper-video-elements#manually-configuring-video).
+
+h3(#demo). "Demo":#demo
+
+<notextile><video class="sublime" title="Use SublimeVideo with Dailymotion Cloud" width="640" height="360" poster="http://static.dmcloud.net/51da89d5947399693a0001a1/51dac0389473996fce0003a1/jpeg_thumbnail_source-1373359591.jpeg" preload="none" data-uid="use-sublimevideo-with-dailymotion-cloud">
+  <source src="http://cdn.dmcloud.net/route/51da89d5947399693a0001a1/51dac0389473996fce0003a1/mp4_h264_aac.mp4?auth=1547648016-0-51058afa0f0237b2-5ba6756c50ed501ba9ed77453f5e7fca" />
+  <source src="http://cdn.dmcloud.net/route/51da89d5947399693a0001a1/51dac0389473996fce0003a1/mp4_h264_aac_hd.mp4?auth=1547648531-0-966954010d13866d-93aac0950f44933b783121847d62203e" data-quality="hd" />
+</video></notextile>
