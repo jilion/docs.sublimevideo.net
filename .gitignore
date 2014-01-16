@@ -2,7 +2,7 @@
 coverage
 rdoc
 # *.dat
-public/assets
+!public/assets
 tmp/restart.txt
 backup.db
 public/uploads
