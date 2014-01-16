@@ -1,16 +1,14 @@
 DocsSublimeVideo::Application.configure do
   # Settings specified here will take precedence over those in config/environment.rb
-  config.middleware.insert_before Rack::Cache, Rack::SslEnforcer, except_hosts: 'docs.sublimevideo-staging.net', strict: true
-  config.middleware.insert_after Rack::SslEnforcer, Rack::Auth::Basic, 'Staging' do |u, p|
+  config.middleware.insert_before Rack::Cache, Rack::Auth::Basic, 'Staging' do |u, p|
     [u, p] == ['jilion', ENV['PRIVATE_CODE']]
   end
+
+  config.eager_load = true
 
   # One-line logs
   config.lograge.enabled = true
 
-  config.eager_load = true
-
-  # The production environment is meant for finished, "live" apps.
   # Code is not reloaded between requests
   config.cache_classes = true
 
@@ -52,7 +50,7 @@ DocsSublimeVideo::Application.configure do
   }
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server
-  config.action_controller.asset_host = '//docs.sublimevideo-staging.net'
+  config.action_controller.asset_host = "//docs.sublimevideo-staging.net"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
