@@ -3,7 +3,6 @@
 h3. Table of Contents
 
 * "Introduction":#intro
-* "Subscribe":#subscribe
 * "Last 60 minutes stats":#last-60-minutes-stats
 * "Statistics over time":#statistics-over-time
 * "Browser, Country & Device Statistics":#browser-country-device-stats
@@ -11,7 +10,6 @@ h3. Table of Contents
 * "Data Export":#data-export
 * "A note for Google Analytics users":#google-analytics-note
 * "Setup &lt;video&gt; elements for stats":#setup-for-stats
-* "Feedback":#feedback
 
 h3(#intro). "Introduction":#intro
 
@@ -29,10 +27,6 @@ To access the Real-Time Statistics dashboard, simply click the 'View Stats' butt
 your site(s) on the _<%= link_to "My Sites", my_url('sites') %>_ page.
 
 Please note your videos *must have a uid* in order to appear in this section. "Read more":#setup-for-stats.
-
-h3(#subscribe). "Subscribe":#subscribe
-
-<a href='<%= my_url('addons/stats?p=realtime') %>'>Choose a site and subscribe to the Real-Time Statistics add-on <span class='icon-uniF473'></span></a>
 
 h3(#last-60-minutes-stats). "Last 60 minutes stats":#last-60-minutes-stats
 
@@ -105,7 +99,3 @@ bc(language-markup). <video class="sublime" title="My great landscapes" poster="
 
 * You can update the @title@ as often as you’d like. Such changes will be reflected in the statistics page in near real-time.
 * The @title@ setting respects the "Player settings syntax":/settings/player-settings#title.
-
-h3(#feedback). "Feedback":#feedback
-
-Please share your comments and suggestions about how you think we can improve our statistics platform on this "SublimeVideo Community Forum thread":http://getsatisfaction.com/sublimevideo/topics/comments_suggestions_for_sublimevideos_real_time_statistics_platform.

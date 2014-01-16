@@ -3,7 +3,6 @@
 h3. Table of Contents
 
 * "Introduction":#intro
-* "Subscribe":#subscribe
 * "Properly linking to a video":#sharing_url
 * "Settings":#settings
 * "About Open Graph":#open_graph
@@ -26,10 +25,6 @@ _The sharing pane complete with social sharing and link field._
 
 <%= image_tag('addons/sharing/sharing_pane_simpler.jpg', class: 'screenshot', title: 'Simpler sharing pane') %>
 _Simpler sharing pane with just Twitter and Facebook in our "Flat":http://sublimevideo.net/modular-player#player_designs player._
-
-h3(#subscribe). "Subscribe":#subscribe
-
-<a href='<%= my_url('addons/social_sharing?p=standard') %>'>Choose a site and subscribe to the Social Sharing add-on <span class='icon-uniF473'></span></a>
 
 h3(#sharing_url). "Properly linking to a video":#sharing_url
 

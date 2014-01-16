@@ -2,27 +2,7 @@
 
 <% title('Support add-on') %>
 
-h3. Table of Contents
-
-* "Subscribe":#subscribe
-* "Documentation & Community Forum":#documentation-and-community-forum
-* "Email Support":#email-support
-* "VIP Email Support":#vip-email-support
-
-h3(#subscribe). "Subscribe":#subscribe
-
-<a href='<%= my_url('addons/support?p=vip') %>'>Choose a site and subscribe to the Support add-on <span class='icon-uniF473'></span></a>
-
 h3(#documentation-and-community-forum). "Documentation & Community Forum":#documentation-and-community-forum
 
 All users have access to our <%= link_to "documentation", layout_url('help#documentation') %> and <%= link_to "community forum", layout_url('help#community_forum') %>.
 We are monitoring the community forum and we make a "best effort" to answer your questions, but without guarantee.
-
-h3(#email-support). "Email Support":#email-support
-
-Dedicated email support is offered to all customers with at least a paid add-on.
-Use the <%= link_to 'support form', my_url('help') %> to email us directly your issue or question and we'll send you a *personal response within the next 5 business days*.
-
-h3(#vip-email-support). "VIP Email Support":#vip-email-support
-
-If you need extra support and enhanced reactivity, we also offer a _<%= link_to 'VIP Email Support', my_url('addons?h=support-vip') %>_ add-on with a *guaranteed response within the next business day*.
