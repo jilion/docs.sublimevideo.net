@@ -4,7 +4,7 @@ source 'https://8dezqz7z7HWea9vtaFwg:@gem.fury.io/me/' # thibaud@jilion.com acco
 ruby '2.0.0'
 
 gem 'rails', '~> 4.0.2'
-gem 'sublime_video_layout', '3.0.0', path: '~/Code/Jilion/Products/SublimeVideo/sublime_video_layout'
+gem 'sublime_video_layout', '~> 3.0'
 
 # Views
 gem 'haml'
@@ -44,18 +44,9 @@ group :staging, :production do
   gem 'rack-ssl-enforcer'
   gem 'memcachier'
   gem 'dalli'
-  gem 'memcachier'
   gem 'rack-cache'
   gem 'lograge'
   gem 'newrelic_rpm'
-  gem 'rails_12factor'
-end
-
-group :development do
-  gem 'ruby_gntp', require: false
-  gem 'guard-pow', require: false
-  gem 'guard-livereload', require: false
-  gem 'guard-rspec', require: false
 end
 
 group :development, :test do
