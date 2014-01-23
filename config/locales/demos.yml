@@ -1,6 +1,7 @@
 en:
   demos:
     vimeo-pro: 'choose-your-hosting/vimeo-pro'
+    dailymotion-cloud: 'choose-your-hosting/dailymotion-cloud'
     addons/on-video-logo: 'on-video-logo'
     addons/stats: 'stats'
     addons/sharing: 'social-sharing'
