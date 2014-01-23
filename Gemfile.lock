@@ -229,7 +229,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
-    sublime_video_layout (3.0.0)
+    sublime_video_layout (3.0.2)
       bourbon
       coffee-rails
       jquery-rails
