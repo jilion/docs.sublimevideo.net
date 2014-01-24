@@ -1,5 +1,7 @@
 <% title('Real-Time Statistics add-on') %>
 
+%(red)*Important note:* This add-on is only available to clients who have subscribed to it *before 29 January 2014* and to users hosting their videos on "Dailymotion Cloud":https://dmcloud.net, all other users should use the "Google Analitics add-on":google-analytics instead.%
+
 h3. Table of Contents
 
 * "Introduction":#intro
