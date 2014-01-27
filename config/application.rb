@@ -28,7 +28,7 @@ module DocsSublimeVideo
     # application objects or methods. Heroku requires this to be false.
     config.assets.initialize_on_precompile = false
     # Duplicated from svl engine because not loaded when initialize_on_precompile is false
-    config.assets.precompile += %w[errors.css ie.css]
+    config.assets.precompile += %w[errors.css ie.css flexie.js]
 
     # Activate observers that should always be running.
     # config.active_record.observers = :cacher, :garbage_collector, :forum_observer
