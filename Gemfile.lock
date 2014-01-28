@@ -166,6 +166,7 @@ GEM
     rack-livereload (0.3.15)
       rack
     rack-nocache (0.1.0)
+    rack-noie (1.0)
     rack-ssl-enforcer (0.2.6)
     rack-status (1.0.0)
     rack-test (0.6.2)
@@ -230,11 +231,12 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
-    sublime_video_layout (3.1.0)
+    sublime_video_layout (3.1.1)
       bourbon
       coffee-rails
       jquery-rails
       jquery-ui-rails
+      rack-noie
       rails (>= 3.2.13)
       slim
     temple (0.6.7)
