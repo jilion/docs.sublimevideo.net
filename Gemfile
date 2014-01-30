@@ -12,6 +12,8 @@ gem 'haml-contrib'
 gem 'bourbon', github: 'octave/bourbon', branch: 'ie10-flexbox-2009'
 gem 'sass', '~> 3.2.14'
 gem 'RedCloth'
+gem 'turbolinks'
+gem 'google-analytics-turbolinks'
 
 # Internals
 gem 'mongoid', '4.0.0.alpha2'
