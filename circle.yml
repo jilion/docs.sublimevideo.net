@@ -2,7 +2,7 @@ dependencies:
   cache_directories:
     - '.bundle'
 deployment:
-  production:
-    branch: master
+  staging:
+    branch: new
     heroku:
-      appname: sv-docs
+      appname: sv-docs-staging

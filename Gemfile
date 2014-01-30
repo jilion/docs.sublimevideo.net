@@ -4,17 +4,17 @@ source 'https://8dezqz7z7HWea9vtaFwg:@gem.fury.io/me/' # thibaud@jilion.com acco
 ruby '2.0.0'
 
 gem 'rails', '~> 4.0.2'
-gem 'sublime_video_layout', '~> 2.7' # hosted on gemfury
+gem 'sublime_video_layout', '~> 3.1.0'
 
 # Views
 gem 'haml'
 gem 'haml-contrib'
+gem 'bourbon', github: 'octave/bourbon', branch: 'ie10-flexbox-2009'
+gem 'sass', '~> 3.2.14'
 gem 'RedCloth'
-gem 'turbolinks'
-gem 'google-analytics-turbolinks'
 
 # Internals
-gem 'mongoid', github: 'mongoid/mongoid', ref: 'f91fe' # Rails 4 support
+gem 'mongoid', '4.0.0.alpha2'
 gem 'indextank'
 gem 'oj' # Faster JSON
 gem 'kgio' # Faster IO
@@ -34,7 +34,7 @@ group :assets do
 end
 
 group :production do
-  gem 'rack-google-analytics'
+  gem 'rack-google-analytics', '0.11.0'
 end
 
 group :staging, :production do
@@ -49,15 +49,13 @@ group :staging, :production do
 end
 
 group :development, :test do
+  gem 'rspec-rails'
   gem 'dotenv-rails'
   gem 'rack-livereload'
   gem 'rack-nocache'
-  gem 'quiet_assets'
-  gem 'silent-postgres'
 end
 
 group :test do
-  gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'capybara'
   gem 'database_cleaner'

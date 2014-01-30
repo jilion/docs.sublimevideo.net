@@ -1,4 +1,6 @@
-h2. <%= title('WordPress plugin') %>
+<% @disable_two_col_actions_menu = true %>
+
+<% title('WordPress plugin') %>
 
 h3. Table of Contents
 
@@ -11,7 +13,6 @@ h3. Table of Contents
 * "Changelog":#changelog
 
 <div class="breakline"></div>
-<p></p>
 
 This plugin allows you to easily integrate SublimeVideo with your WordPress site. It automatically connects to your <%= link_to "SublimeVideo", my_url('sites'), onclick: 'window.open(this); return false' %> account, gathers the necessary license information and provides an easy-to-use visual editor that will help you generate "shortcodes":#shortcodes for your videos.
 
@@ -50,14 +51,13 @@ If your poster frame is stored on an external server, you can click the "Or use 
 
 h4(#video-sources). Video sources
 
-h5. YouTube video
+_YouTube video_
 
 <%= image_tag('wordpress/video_source_youtube.png', class: 'screenshot', title: 'Video from YouTube') %>
 
 Copy and paste the YouTube video URL into the "Your YouTube video ID" field, and that's it!
-<br />
 
-h5. Media library or external video
+_Media library or external video_
 
 <%= image_tag('wordpress/video_sources.png', class: 'screenshot', title: 'Video sources') %>
 

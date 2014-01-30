@@ -1,4 +1,6 @@
-h2. <%= title('Keyboard control') %>
+<% @disable_two_col_actions_menu = true %>
+
+<% title('Keyboard control') %>
 
 The built-in keyboard control feature gives your visitors simple yet powerful keyboard shortcuts to control the video playback, source switching, fullmode and volume level.
 

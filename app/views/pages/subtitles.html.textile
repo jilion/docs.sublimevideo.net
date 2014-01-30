@@ -1,4 +1,4 @@
-h2. <%= title('Subtitles') %>
+<% title('Subtitles') %>
 
 h3. Table of Contents
 
@@ -9,7 +9,6 @@ h3. Table of Contents
 * "Setting a default subtitles track":#default-subtitles-track
 * "Creating subtitles files":#create-subtitles
 * "Additional information":#additional-info
-* "Demo":#demo
 
 SublimeVideo comes with built-in support for multi-language subtitles allowing you to increase your videos' global reach and provide a great experience to your hearing-impaired audience.
 
@@ -56,7 +55,7 @@ bc(language-markup). <video class='sublime' width='640' height='360' poster='vid
 
 h4(#srclang-values). List of auto-labeled @srclang@ values
 
-table(supported_browsers generic){ width:260px }.
+table(supported_browsers generic){ width:40% }.
 (alt). |_. @srclang@ value |_. automatic label |
 | af    | Afrikaans  |
 (alt). | ar    | Arabic     |
@@ -111,12 +110,12 @@ By default, no track is selected and no subtitles are shown until the user selec
 If you want the subtitles for a particular language to be shown by default as soon as the user starts the video, you simply need to add the @default@ attribute to the desired @<track>@ element:
 
 bc(language-markup). <video class='sublime' width='640' height='360' poster='video-poster.jpg' preload='none'>
-    <source src='http://yoursite.com/video.mp4' />
-    <source src='http://yoursite.com/video.webm' />
-    <track src='/subs/video-en.vtt' srclang='en' default />
-    <track src='/subs/video-fr.vtt' srclang='fr' />
-    <track src='/subs/video-it.vtt' srclang='it' />
-  </video>
+  <source src='http://yoursite.com/video.mp4' />
+  <source src='http://yoursite.com/video.webm' />
+  <track src='/subs/video-en.vtt' srclang='en' default />
+  <track src='/subs/video-fr.vtt' srclang='fr' />
+  <track src='/subs/video-it.vtt' srclang='it' />
+</video>
 
 h3(#create-subtitles). "Creating subtitles files":#create-subtitles
 
@@ -127,11 +126,3 @@ h3(#additional-info). "Additional information":#additional-info
 For more information about HTML5's @<track>@ element, please read the "W3C specification":http://www.w3.org/TR/html5/embedded-content-0.html#the-track-element.
 
 The @<track>@ element has been designed to associate different "_kinds_":http://www.w3.org/TR/html5/embedded-content-0.html#text-track-kind of information to a media element (not only subtitles). When the @kind@ attribute of a @<track>@ element is omitted, it will default to _subtitles_, which is the only kind SublimeVideo currently supports.
-
-h3(#demo). "Demo":#demo
-
-<%= jsfiddle_embed('ZLzDk', height: 460) %>
-
-<%= jsfiddle_embed('VBHmx', height: 460) %>
-
-<%= jsfiddle_embed('23sSy', height: 460) %>

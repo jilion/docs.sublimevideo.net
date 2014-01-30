@@ -1,9 +1,9 @@
-h2. <%= title('Troubleshooting') %>
+<% @disable_two_col_actions_menu = true %>
+
+<% title('Troubleshooting') %>
 
 h3. Table of Contents
 
 <%= display_complex_page_index('troubleshooting') %>
-
-<div class="breakline"></div>
 
 <%= display_complex_page_list('troubleshooting') %>

@@ -1,9 +1,9 @@
-h2. <%= title('Service FAQ') %>
+<% @disable_two_col_actions_menu = true %>
+
+<% title('Service FAQ') %>
 
 h3. Table of Contents
 
 <%= display_complex_page_index('service-faq') %>
-
-<div class="breakline"></div>
 
 <%= display_complex_page_list('service-faq') %>

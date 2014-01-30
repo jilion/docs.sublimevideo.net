@@ -1,0 +1,7 @@
+li.two-col-search-form
+  form action='/search' method='get'
+    = label_tag 'q', '' do
+      span.icon-search
+    = text_field_tag :q, '', value: params[:q], placeholder: 'Search', autocomplete: :off, class: 'search'
+
+= display_menu

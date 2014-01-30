@@ -4,8 +4,9 @@
   'player-faq': 'Player FAQ'
   'service-faq': 'Service FAQ'
 'Video Hosting':
-  'youtube': 'YouTube'
+  'dailymotion-cloud': 'Dailymotion Cloud'
   'vimeo-pro': 'Vimeo Pro'
+  'youtube': 'YouTube'
 'Built-in Features':
   'subtitles': 'Subtitles'
   'lightbox': 'Lightbox'

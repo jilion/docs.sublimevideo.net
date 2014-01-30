@@ -1,11 +1,10 @@
-h2. <%= title('Application API') %>
+<% title('Application API') %>
 
 "(c)@load@":/javascript-api/application#load "(c)@ready@":/javascript-api/application#ready "(c)@prepare@":/javascript-api/application#prepare "(c)@unprepare@":/javascript-api/application#unprepare "(c)@player@":/javascript-api/application#player "(c)@lightbox@":/javascript-api/application#lightbox "(c)@version@":/javascript-api/application#version "(c)@env@":/javascript-api/application#env
 
 See also "Using the JavaScript API":/javascript-api/usage, "Player API":/javascript-api/player and "Lightbox API":/javascript-api/lightbox.
 
 <div class="breakline"></div>
-
 
 h3(#load). "@sublime.load()@":#load
 
@@ -24,7 +23,7 @@ Use "(c)@sublime.ready@":#ready to be notified when the @sublime@ API object is 
 
 Please note that if you have @<video>@ elements with the _sublime_ @class@ in the DOM, the @sublime.ready@ callback will be called *after* those elements have been prepared. If you do not add the _sublime_ @class@ to your @<video>@ elements, you have to prepare them manually using the "(c)@sublime.prepare@":#prepare method that you would call inside the @sublime.ready@ block.
 
-**Example**
+*Example*
 
 bc(language-javascript). sublime.ready(function(){
   // Code to execute once the SublimeVideo JS API is ready!
@@ -41,13 +40,13 @@ h3(#prepare). "@sublime.prepare(elementOrId, callback)@":#prepare
 
 Sometimes you don't want SublimeVideo to be setup on page load because you might have some @<video>@ elements hidden in the page that you want to show on demand using JavaScript. In this case, when you initially build your @<video>@ element (in HTML or JavaScript) you *don't have to add the _sublime_ @class@* to it. When you are ready to show the video you then call this method by passing the @<video>@ element (or its @id@) as an argument.
 
-**Example - preparing a player**
+*Example - preparing a player*
 
 bc(language-javascript). sublime.prepare('my_video_id', function(player) {
   // player is now ready.
 });
 
-**Example - preparing a lightbox**
+*Example - preparing a lightbox*
 
 bc(language-javascript). sublime.prepare('my_lightbox_trigger_id', function(lightbox) {
   // lightbox is now ready.

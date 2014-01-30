@@ -1,4 +1,6 @@
-h2. <%= title('Lightbox settings') %>
+<% @disable_two_col_actions_menu = true %>
+
+<% title('Lightbox settings') %>
 
 %(red)Please note that most of the settings described in this page can be set via the "Video Publishing Assistant":/video-publishing-assistant and via your site's Player editor page on <%= link_to "MySublimeVideo", my_url('sites') %>.%
 
@@ -33,9 +35,9 @@ Allows you to define the player's behavior once the lightbox opens.
 
 bc(language-markup). <a class='sublime' href='#video1' data-settings='on-open:nothing'>
 
-See a "demo":#demo.
-
 h3(#overlay-opacity). "@overlay-opacity@":#overlay-opacity
+
+<%= demo_link('lightbox/custom-overlay-opacity') %>
 
 Allows you to choose the lightbox overlay opacity.
 
@@ -48,8 +50,6 @@ Allows you to choose the lightbox overlay opacity.
 *Example:*
 
 bc(language-markup). <a class='sublime' href='#video1' data-settings='overlay-opacity:0.25'>
-
-See a "demo":#demo.
 
 
 h3(#close-button-enable). "@close-button-enable@":#close-button-enable
@@ -64,8 +64,6 @@ Allows you to enable or disable the lightbox close button.
 
 bc(language-markup). <a class='sublime' href='#video1' data-settings='close-button-enable:false'>
 
-See a "demo":#demo.
-
 
 h3(#close-button-visibility). "@close-button-visibility@":#close-button-visibility
 
@@ -79,10 +77,10 @@ Allows you to choose how the lightbox close button is displayed.
 
 bc(language-markup). <a class='sublime' href='#video1' data-settings='close-button-visibility:visible'>
 
-See a "demo":#demo.
-
 
 h3(#close-button-position). "@close-button-position@":#close-button-position
+
+<%= demo_link('lightbox/close-button-position') %>
 
 Allows you to choose the position of the lightbox close button.
 
@@ -93,9 +91,3 @@ Allows you to choose the position of the lightbox close button.
 *Example:*
 
 bc(language-markup). <a class='sublime' href='#video1' data-settings='close-button-position:right'>
-
-See a "demo":#demo.
-
-h3(#demo). "Demo":#demo
-
-<%= jsfiddle_embed('G9748', height: 500) %>

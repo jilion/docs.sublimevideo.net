@@ -1,7 +1,7 @@
+- @disable_two_col_actions_menu = true
 - @page_title = @query ? "Search results for “#{@query}”" : "No keyword provided"
 
-%h2= @page_title
-
+.l-height-margin
 - if @results && @results['results'].present?
   %ul.search_results
     - @results['results'].each do |doc|

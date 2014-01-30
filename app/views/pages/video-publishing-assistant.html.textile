@@ -1,4 +1,6 @@
-h2. <%= title('Video Publishing Assistant') %>
+<% @disable_two_col_actions_menu = true %>
+
+<% title('Video Publishing Assistant') %>
 
 The <%= link_to "Video Publishing Assistant", my_url('publish-video') %> helps you create properly configured @<video>@ elements that are automatically optimized for SublimeVideo.
 

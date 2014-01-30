@@ -1,4 +1,4 @@
-h2. <%= title('Player API') %>
+<% title('Player API') %>
 
 *Methods*
 
@@ -60,11 +60,8 @@ If you want to scale the video proportionally, you need to compute the new size 
 
 This method has no effect if the player is in fullmode (fullscreen or fullwindow).
 
-**Fluid width and responsive layouts**
+*Fluid width and responsive layouts*
 If you want to integrate SublimeVideo in your fluid width or responsive layout, you can simply take advantage of the "@autoresize@ player setting":/settings/player-settings#autoresize.
-
-**Example**
-* "Integration in a responsive layout":/responsive-layout
 
 
 h3(#on). "@player.on(eventOrHash, [callback])@":#on
@@ -75,13 +72,13 @@ h3(#on). "@player.on(eventOrHash, [callback])@":#on
 
 Registers and invokes the given callbacks every time that the corresponding events occur.
 
-**Example - listening a single event**
+*Example - listening a single event*
 
 bc(language-javascript). sublime.player('my_player_id').on('start', function(player) {
   console.log('playback started.');
 });
 
-**Example - listening more events**
+*Example - listening more events*
 
 bc(language-javascript). sublime.player('my_player_id').on({
   start: function(player) { console.log('playback started.') },
@@ -102,7 +99,7 @@ h3(#duration). "@player.duration() ⇒ Number@":#duration
 
 Returns the video duration in seconds. The duration is available only once the video metadata has been loaded, hence calling this method before obtaining the "(c)@metadata@":/javascript-api/player#event-metadata will return @undefined@.
 
-**Example - retrieving video duration**
+*Example - retrieving video duration*
 
 bc(language-javascript). sublime.player('my_player_id').on('metadata', function(player) {
   console.log(player.duration());
@@ -120,7 +117,7 @@ Returns the video width for the current quality. The video resolution is availab
 
 Note: With YouTube videos this value is just an estimation, since it's not possible to obtain the real value via their API.
 
-**Example - retrieving video width**
+*Example - retrieving video width*
 
 bc(language-javascript). sublime.player('my_player_id').on('metadata', function(player) {
   console.log(player.videoWidth());
@@ -132,7 +129,7 @@ Returns the video height for the current quality. The video resolution is availa
 
 Note: With YouTube videos this value is just an estimation, since it's not possible to obtain the real value via their API.
 
-**Example - retrieving video height**
+*Example - retrieving video height*
 
 bc(language-javascript). sublime.player('my_player_id').on('metadata', function(player) {
   console.log(player.videoHeight());

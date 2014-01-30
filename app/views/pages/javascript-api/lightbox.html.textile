@@ -1,4 +1,4 @@
-h2. <%= title('Lightbox API') %>
+<% title('Lightbox API') %>
 
 *Methods*
 
@@ -20,17 +20,13 @@ which is equivalent to
 
 bc(language-javascript). var lightbox = sublime(elementOrId);
 
-
 h3(#open). "@lightbox.open()@":#open
 
 Opens the lightbox. If it's already opened, this call has no effect.
 
-
 h3(#close). "@lightbox.close()@":#close
 
 Closes the lightbox. If it's already closed, this call has no effect.
-
-
 
 h3(#on). "@lightbox.on(eventOrHash, [callback])@":#on
 
@@ -40,13 +36,13 @@ h3(#on). "@lightbox.on(eventOrHash, [callback])@":#on
 
 Registers and invokes the given callbacks every time that the corresponding events occur.
 
-**Example - listening a single event**
+*Example - listening a single event*
 
 bc(language-javascript). sublime('my_lightbox_trigger_id').on('didOpen', function(lightbox) {
   console.log('lightbox opened.');
 });
 
-**Example - listening more events**
+*Example - listening more events*
 
 bc(language-javascript). sublime('my_lightbox_trigger_id').on({
   contentReady: function(lightbox, player) { console.log('content ready.') },

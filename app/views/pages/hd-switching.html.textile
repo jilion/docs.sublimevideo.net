@@ -1,4 +1,4 @@
-h2. <%= title('HD switching') %>
+<% title('HD switching') %>
 
 SublimeVideo comes with an integrated HD switch which enables the viewer to toggle SD-HD video sources with a single click. It's really easy to set up: all you need to do is add an additional @<source />@ element and set its @data-quality@ attribute to _hd_.
 
@@ -31,7 +31,3 @@ bc(language-markup). <video class="sublime" width="640" height="360" poster="htt
 </video>
 
 *Note:* If you switch sources in Flash mode, the player won't remember the playback position and the video will restart from the beginning. If you use the _Universal HD switching_ method described above you will almost never encounter this issue (except in old versions of Internet Explorer).
-
-h3(#demo). "Demo":#demo
-
-<%= jsfiddle_embed('j4E7a', height: 440) %>

@@ -1,4 +1,4 @@
-@import "css3";
+@import "bourbon";
 
 /**
  * prism.js default theme for JavaScript, CSS and HTML
@@ -24,6 +24,8 @@ pre[class*="language-"] {
 	-moz-hyphens: none;
 	-ms-hyphens: none;
 	hyphens: none;
+
+  line-height:1.5em;
 }
 
 /* Code blocks */
@@ -36,8 +38,8 @@ pre[class*="language-"] {
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
 	background:#fff;
-  @include border-radius(4px);
-  @include box-shadow(inset hsla(220,25.8533%,68%,.7) 0 0 10px);
+  @include border-top-radius(4px);
+  @include border-bottom-radius(4px);
 }
 
 /* Inline code */
@@ -126,29 +128,30 @@ pre[data-line] {
 	white-space: pre;
 }
 
-	.line-highlight:before,
-	.line-highlight[data-end]:after {
-		content: attr(data-start);
-		position: absolute;
-		top: .5em;
-		left: 1.4em;
-		min-width: 1em;
-		padding: 0 .5em;
-		background-color: hsl(220,25.8533%,65%);
-		color: #fff;
-		font: bold 75%/1.5 sans-serif;
-		text-align: center;
-		vertical-align: .3em;
-		text-shadow: none;
-		box-shadow: 0 1px white;
-    @include border-radius(999px);
-	}
+.line-highlight:before,
+.line-highlight[data-end]:after {
+	content: attr(data-start);
+	position: absolute;
+	top: .5em;
+	left: 1.4em;
+	min-width: 1em;
+	padding: 0 .5em;
+	background-color: hsl(220,25.8533%,65%);
+	color: #fff;
+	font: bold 75%/1.5 sans-serif;
+	text-align: center;
+	vertical-align: .3em;
+	text-shadow: none;
+	box-shadow: 0 1px white;
+  @include border-top-radius(50%);
+  @include border-bottom-radius(50%);
+}
 
-	.line-highlight[data-end]:after {
-		content: attr(data-end);
-		top: auto;
-		bottom: .4em;
-	}
+.line-highlight[data-end]:after {
+	content: attr(data-end);
+	top: auto;
+	bottom: .4em;
+}
 .token a {
 	color: inherit;
 }

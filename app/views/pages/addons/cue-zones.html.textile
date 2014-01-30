@@ -1,11 +1,9 @@
-h2. <%= title('Cue Zones add-on') %>
+<% title('Cue Zones add-on') %>
 
 h3. Table of Contents
 
 * "Introduction":#intro
-* "Subscribe":#subscribe
 * "Methods":#methods
-* "Demo":#demo
 
 h3(#intro). "Introduction":#intro
 
@@ -14,10 +12,6 @@ This add-on allows you to perform a JavaScript action when the viewer enters or 
 You've probably already heard about "cue points". A cue point is a user defined marker at a specific time in the video when a custom event is designed to occur. The Cue Zones add-on allows you to define not only a starting but also an ending point - hence "zones" - in your video where those custom actions should start and end occurring. The fact you're automatically notified when the playback leaves a zone can be extremely useful if the user is jumping ahead or back in the timeline, because you can easily keep in sync with the zones he might have skipped through.
 
 You can use the Cue Zones API to trigger any custom action, such as synchronizing slides alongside a video presentation, displaying side-advertising or creating chapters in your video.
-
-h3(#subscribe). "Subscribe":#subscribe
-
-<a href='<%= my_url('addons/cuezones?p=standard') %>'>Choose a site and subscribe to the Cue Zones add-on <span class='icon-arrow'></span></a>
 
 h3(#methods). "Methods":#methods
 
@@ -56,7 +50,7 @@ The @addGroup@ method registers a group of cue zones to the player. If a group w
   - _@anything@_ Any other custom data you might have added to the cue zone.
 
 
-**Example - registering cue zones**
+*Example - registering cue zones*
 
 bc(language-javascript).. var cuezones = [{
     id: 'Paris',
@@ -88,7 +82,7 @@ h3(#goTo). "@cuezones.goTo(cuezoneId)@":#goTo
 
 Seek to the start of the cue zone with the given id.
 
-**Example - seeking to the cue zone "London" of the group "cities"**
+*Example - seeking to the cue zone "London" of the group "cities"*
 
 bc(language-javascript). // Let's say we added a group with id "cities"
 // that contains a cue zone with id "London"
@@ -100,7 +94,7 @@ h3(#removeGroup). "@cuezones.removeGroup(id)@":#removeGroup
 
 Remove the group of cue zones with the given id. The call has no effect if a group with the given id cannot be found.
 
-**Example - removing a list of cue zones**
+*Example - removing a list of cue zones*
 
 bc(language-javascript). player.cuezones.removeGroup('my_group_id');
 
@@ -108,16 +102,6 @@ h3(#removeAllGroups). "@cuezones.removeAllGroups()@":#removeAllGroups
 
 Remove all cue zones registered to the video player.
 
-**Example - removing all registered groups of cue zones**
+*Example - removing all registered groups of cue zones*
 
 bc(language-javascript). player.cuezones.removeAllGroups();
-
-h3(#demo). "Demo":#demo
-
-The first demo uses the Cue Zones API to update the background image and title at every video sequence change.
-
-<%= jsfiddle_embed('n4RNB', height: 520, panes: 'result,html,js,css') %>
-
-The following demo adds a chapters menu below the player which allows you to jump to the different sequences in the video (using the "@cuezones.goTo@":#goTo method).
-
-<%= jsfiddle_embed('4vv6G', height: 520, panes: 'result,html,js,css') %>
