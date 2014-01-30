@@ -1,6 +1,4 @@
 #= require sublimevideo
-#= require turbolinks
-#= require google-analytics-turbolinks
 #= require prism-line-highlight
 
 $(window).bind 'page:change', ->
