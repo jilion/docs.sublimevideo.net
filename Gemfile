@@ -3,7 +3,7 @@ source 'https://8dezqz7z7HWea9vtaFwg:@gem.fury.io/me/' # thibaud@jilion.com acco
 
 ruby '2.0.0'
 
-gem 'rails', '~> 4.0.2'
+gem 'rails', '~> 4.0.3'
 gem 'sublime_video_layout', '~> 3.1.0'
 
 # Views
@@ -16,7 +16,7 @@ gem 'turbolinks'
 gem 'google-analytics-turbolinks'
 
 # Internals
-gem 'mongoid', '4.0.0.alpha2'
+gem 'mongoid', '4.0.0.beta1'
 gem 'indextank'
 gem 'oj' # Faster JSON
 gem 'kgio' # Faster IO
@@ -36,7 +36,7 @@ group :assets do
 end
 
 group :production do
-  gem 'rack-google-analytics', '0.11.0'
+  gem 'rack-google-analytics'
 end
 
 group :staging, :production do
