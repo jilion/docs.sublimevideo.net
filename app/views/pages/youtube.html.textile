@@ -1,3 +1,5 @@
+<% @disable_two_col_actions_menu = true %>
+
 <% title('Use SublimeVideo with YouTube videos') %>
 
 <p style="line-height:1.4em;"><small>*%(red)Important note:% Any site using YouTube along with the SublimeVideo Player must comply with "YouTube's terms and conditions":https://developers.google.com/youtube/terms. Particularly with the current version of YouTube Player API, this integration should not be used, if a video is monetized using Overlay or TrueView Ads.*</small></p>
