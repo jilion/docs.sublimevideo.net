@@ -3,7 +3,7 @@ source 'https://8dezqz7z7HWea9vtaFwg:@gem.fury.io/me/' # thibaud@jilion.com acco
 
 ruby '2.0.0'
 
-gem 'rails', '~> 4.0.3'
+gem 'rails', '~> 4.0.4'
 gem 'sublime_video_layout' # hosted on gemfury
 
 # Views
@@ -32,7 +32,7 @@ gem 'coffee-rails'
 # in production environments by default.
 group :assets do
   gem 'uglifier'
-  gem 'sass-rails'
+  gem 'sass-rails', '~> 4.0.2'
 end
 
 group :production do
