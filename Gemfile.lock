@@ -77,6 +77,8 @@ GEM
     faraday_middleware (0.9.0)
       faraday (>= 0.7.4, < 0.9)
     ffi (1.9.3)
+    font_assets (0.1.11)
+      rack
     formatador (0.2.4)
     google-analytics-turbolinks (0.0.3)
     guard (2.6.0)
@@ -279,6 +281,7 @@ DEPENDENCIES
   dalli
   database_cleaner
   dotenv-rails
+  font_assets
   google-analytics-turbolinks
   guard-livereload
   guard-pow
