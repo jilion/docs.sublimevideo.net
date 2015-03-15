@@ -1,17 +1,19 @@
 <%- title('Dailymotion acquisition FAQ') %>
 
-h3. What does the acquisition of Jilion mean for the SublimeVideo player service?
+h3. We are closing.
 
-The SublimeVideo service continues to be operated for the time being and your videos will continue to play.
+With the release of dailymotion’s new video player, based on SublimeVideo technology, the framework is integrated into dailymotion’s services. Our primary goal is to make the dailymotion video viewing experience the best in the world and the new player focuses on performance, customizability and accessibility.
 
-All the add-ons are now free for everyone. The Statistics add-on is only available to users that were already subscribed to it.
+As part of this release we are closing the SublimeVideo services and we would like to take this opportunity to thank all users for their support and for using SublimeVideo.
 
-Any possible change affecting the service will be communicated to SublimeVideo's users in advance.
+You can already now try the public beta of the HTML5 Player here: "http://www.dailymotion.com/player":http://www.dailymotion.com/player
 
-No new feature is planned at the moment and any future plans will be communicated at a later stage.
+The final release of the new player (HTML5 and Flash versions) is planned in April.
 
-Please stay tuned on this page for up-to-date information.
+We are inviting you to join the "Dailymotion Partner Program":http://official.dailymotion.com to get access to the player and other powerful features, including live encoding and recording, advanced audience and revenue statistics, video editing tools, and much more.
+
+Sign-up for new users will be closed today. For current users the SublimeVideo services will continue to operate until *September 12th 2015*. At this date all services, the player and MySublimeVideo back-office, *will be closed*.
 
 –
 
-<small><em>Last update: January 16, 2014</em></small>
+<small><em>Last update: March 16, 2015</em></small>

@@ -108,7 +108,7 @@ GEM
     indextank (1.0.13)
       faraday_middleware (>= 0.9.0)
       yajl-ruby (>= 0.7.7)
-    jquery-rails (3.1.0)
+    jquery-rails (3.1.2)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (4.2.0)
@@ -240,7 +240,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
-    sublime_video_layout (3.2.0)
+    sublime_video_layout (3.2.1)
       bourbon
       coffee-rails
       jquery-rails
@@ -290,6 +290,8 @@ DEPENDENCIES
   haml-contrib
   honeybadger
   indextank
+  jquery-rails (= 3.1.2)
+  jquery-ui-rails (= 4.2.0)
   kgio
   librato-rails
   lograge
@@ -310,7 +312,9 @@ DEPENDENCIES
   sass (~> 3.2.14)
   sass-rails (~> 4.0.2)
   shoulda-matchers
-  sublime_video_layout
+  slim (= 2.0.2)
+  sublime_video_layout (= 3.2.1)
+  temple (= 0.6.7)
   turbolinks
   uglifier
   unicorn
