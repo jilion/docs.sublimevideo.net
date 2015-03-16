@@ -2,7 +2,7 @@
 
 h3. We are closing.
 
-With the release of dailymotion’s new video player, based on SublimeVideo technology, the framework is integrated into dailymotion’s services. Our primary goal is to make the dailymotion video viewing experience the best in the world and the new player focuses on performance, customizability and accessibility.
+With the release of "Dailymotion’s new video player":http://www.dailymotion.com/player, based on SublimeVideo technology, the framework is integrated into Dailymotion’s services. Our primary goal is to make the Dailymotion video viewing experience the best in the world and the new player focuses on performance, customizability and accessibility.
 
 As part of this release we are closing the SublimeVideo services and we would like to take this opportunity to thank all users for their support and for using SublimeVideo.
 
